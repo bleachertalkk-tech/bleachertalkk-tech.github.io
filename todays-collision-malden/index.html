@@ -17,7 +17,7 @@
   --fg:#f3f0ea; --dim:#a8a39a; --dim-2:#77736c;
   --o:#ff6a13; --o-2:#ff8a3d; --o-glow:rgba(255,106,19,.38); --ok:#3ddc84; --no:#ff4d4d;
   --display:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --body:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
   --r:14px; --wrap:1240px; --gut:clamp(16px,4vw,48px);
   color-scheme:dark;
 }
@@ -597,6 +597,33 @@ body{font-family:var(--body)}
   .proof span{font-size:10.5px;letter-spacing:.1em}
   .pill{min-height:56px;font-size:16px;padding-right:20px}
 }
+
+/* v5: professional tow badge, solid subhead, deeper copper section */
+.tow{display:inline-flex;width:fit-content;align-items:center;gap:14px;margin:0 0 22px;padding:8px 8px 8px 8px;border-radius:14px;background:rgba(12,12,14,.62);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 40px -20px rgba(0,0,0,.8);color:#f3f0ea;text-decoration:none;font:500 14px/1.15 var(--body);transition:border-color .25s,transform .25s}
+.tow:hover{border-color:rgba(255,106,19,.6);transform:translateY(-1px)}
+.tow:focus-visible{outline:2px solid var(--o);outline-offset:3px}
+.tow i{position:relative;width:40px;height:40px;border-radius:10px;background:var(--o);display:grid;place-items:center;color:#140800;flex:none}
+.tow i::after{content:"";position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:#3ddc84;border:2px solid #121214;animation:towp 2.4s ease-out infinite}
+@keyframes towp{0%{box-shadow:0 0 0 0 rgba(61,220,132,.55)}70%,100%{box-shadow:0 0 0 8px rgba(61,220,132,0)}}
+.tow i svg{width:20px;height:20px}
+.tow-t{display:grid;gap:3px}
+.tow-t b{font:700 11.5px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.tow-t small{font-size:12.5px;color:rgba(243,240,234,.62)}
+.tow-n{align-self:stretch;display:flex;align-items:center;padding:0 14px 0 16px;border-left:1px solid rgba(255,255,255,.12);font:700 15px/1 var(--display);letter-spacing:.01em;font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.tow i::after{animation:none}}
+@media (max-width:520px){.tow-t small{display:none}.tow{gap:12px}.tow-n{padding:0 10px 0 12px;font-size:14px}}
+.hero h1 .thin{font-family:var(--display);font-weight:500;font-stretch:92%;letter-spacing:-.01em;font-size:.27em;line-height:1.15;max-width:24em;margin-top:.55em;color:rgba(243,240,234,.82)}
+.claim.orange{background:radial-gradient(120% 140% at 0% 0%,#c25416 0%,#a8420e 45%,#8a3409 100%);color:#fff4ea}
+.claim.orange .kick,.claim.orange .kick i{color:#ffd9bd}.claim.orange .kick::before{background:#ffd9bd}
+.claim.orange h2{color:#fff}.claim.orange h2 em{color:#ffc79c}
+.claim.orange .lede{color:rgba(255,244,234,.84)}
+.claim.orange .step{background:rgba(0,0,0,.14);border-color:rgba(255,226,204,.22)}
+.claim.orange .step b{color:#fff}
+.claim.orange .step em{-webkit-text-stroke:1.5px #ffd9bd;color:transparent}
+.claim.orange .step span{color:rgba(255,244,234,.8)}
+.claim.orange .btn-o{background:#fff4ea;color:#1a0b02;box-shadow:0 14px 40px -14px rgba(0,0,0,.55)}
+.claim.orange .btn-g{background:transparent;border-color:rgba(255,226,204,.45);color:#fff4ea}
+@media (max-width:720px){.hero h1 .thin{font-size:.4em;max-width:none}}
 </style>
 </head>
 <body>
@@ -642,7 +669,7 @@ body{font-family:var(--body)}
   <div class="streak" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="tow"><i><svg><use href="#truck"/></svg></i>24-hour towing · <a href="tel:+17813216080">(781) 321-6080</a></p>
+      <a class="tow" href="tel:+17813216080"><i><svg><use href="#truck"/></svg></i><span class="tow-t"><b>24-hour towing</b><small>Day or night, we come get it</small></span><span class="tow-n">(781) 321-6080</span></a>
       <p class="status" id="status"><i></i><span>375 Washington St, Malden</span></p>
       <h1>Back to <span class="o">factory.</span><span class="thin">Collision repair in Malden, certified by Tesla, Rivian, Ford and Jaguar Land Rover.</span></h1>
       <p class="hero-sub">We work with your insurance company, help you with a rental and tow it in when it can&#39;t be driven.</p>
