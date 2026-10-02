@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0c0c0d">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Inter+Tight:ital,wght@0,400..800;1,400&display=swap">
 <link rel="preload" as="image" href="img/hero-1200.webp">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoBodyShop","name":"Today's Collision Malden","telephone":"+17813216080","address":{"@type":"PostalAddress","streetAddress":"375 Washington St","addressLocality":"Malden","addressRegion":"MA","postalCode":"02148"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"706"}}</script>
 <style>
@@ -17,12 +17,13 @@
   --fg:#f3f0ea; --dim:#a8a39a; --dim-2:#77736c;
   --o:#ff6a13; --o-2:#ff8a3d; --o-glow:rgba(255,106,19,.38); --ok:#3ddc84; --no:#ff4d4d;
   --display:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;
   --r:14px; --wrap:1240px; --gut:clamp(16px,4vw,48px);
   color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--ink);color:var(--fg);font:400 17px/1.6 var(--display);font-stretch:100%;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--ink);color:var(--fg);font:400 17px/1.6 var(--body);font-stretch:100%;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
 button{font:inherit;color:inherit;cursor:pointer}
@@ -33,10 +34,10 @@ button{font:inherit;color:inherit;cursor:pointer}
 body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
 /* type */
-.kick{font:600 12px/1 var(--display);letter-spacing:.22em;text-transform:uppercase;color:var(--o);display:flex;align-items:center;gap:12px;margin:0 0 22px}
+.kick{font:600 12px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--o);display:flex;align-items:center;gap:12px;margin:0 0 22px}
 .kick::before{content:"";width:28px;height:1px;background:var(--o)}
 .kick i{font-style:normal;color:var(--dim-2);letter-spacing:.12em}
-h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h1,h2,h3{font-family:var(--body);margin:0;text-wrap:balance}
 h2{font-size:clamp(2.1rem,5.2vw,4.2rem);line-height:.98;font-weight:800;font-stretch:112%;letter-spacing:-.02em}
 h2 em{font-style:normal;color:var(--o)}
 .lede{color:var(--dim);font-size:clamp(1rem,1.3vw,1.15rem);max-width:56ch;margin:22px 0 0}
@@ -44,7 +45,7 @@ section{position:relative}
 .sec{padding-block:clamp(84px,11vw,150px)}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:0;font:700 15px/1 var(--display);letter-spacing:.02em;text-decoration:none;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:0;font:700 15px/1 var(--body);letter-spacing:.02em;text-decoration:none;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s}
 .btn-o{background:var(--o);color:#140800;box-shadow:0 10px 40px -8px var(--o-glow),inset 0 1px 0 rgba(255,255,255,.35)}
 .btn-o:hover{transform:translateY(-2px);box-shadow:0 18px 50px -8px var(--o-glow),inset 0 1px 0 rgba(255,255,255,.35)}
 .btn-o:active{transform:scale(.97)}
@@ -57,14 +58,14 @@ section{position:relative}
 .hdr.solid{background:rgba(12,12,13,.82);backdrop-filter:blur(16px) saturate(1.2);border-color:var(--line)}
 .hdr .wrap{display:flex;align-items:center;gap:28px;height:76px}
 .brand{display:flex;flex-direction:column;text-decoration:none;line-height:1;gap:5px;margin-right:auto}
-.brand b{font:900 21px/1 var(--display);font-stretch:125%;letter-spacing:-.01em;text-transform:uppercase}
+.brand b{font:900 21px/1 var(--body);font-stretch:125%;letter-spacing:-.01em;text-transform:uppercase}
 .brand b span{color:var(--o)}
-.brand small{font:500 10.5px/1 var(--display);letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
+.brand small{font:500 10.5px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
 .nav{display:flex;gap:26px}
-.nav a{font:500 14px/1 var(--display);text-decoration:none;color:rgba(243,240,234,.78);position:relative;padding:8px 0}
+.nav a{font:500 14px/1 var(--body);text-decoration:none;color:rgba(243,240,234,.78);position:relative;padding:8px 0}
 .nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--o);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .nav a:hover{color:var(--fg)}.nav a:hover::after{transform:scaleX(1)}
-.hphone{font:700 15px/1 var(--display);text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.hphone{font:700 15px/1 var(--body);text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap;font-variant-numeric:tabular-nums}
 .hphone svg{width:16px;height:16px;color:var(--o)}
 .hdr .btn{min-height:44px;padding:0 20px;font-size:14px}
 .menu-b{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);background:rgba(12,12,13,.5);backdrop-filter:blur(8px);align-items:center;justify-content:center}
@@ -85,7 +86,7 @@ section{position:relative}
 .streak{position:absolute;z-index:-1;left:-10%;top:58%;width:120%;height:2px;background:linear-gradient(90deg,transparent,var(--o) 40%,#ffd2a8 50%,var(--o) 60%,transparent);filter:blur(.6px);box-shadow:0 0 24px 4px var(--o-glow);transform:rotate(-7deg) translateX(-100%);opacity:0;animation:streak 2.8s .5s cubic-bezier(.6,.05,.25,1) forwards}
 @keyframes streak{0%{transform:rotate(-7deg) translateX(-100%);opacity:0}15%{opacity:1}100%{transform:rotate(-7deg) translateX(0);opacity:.5}}
 .hero .wrap{width:100%;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(28px,5vw,80px);align-items:end;padding-block:150px 64px}
-.status{display:inline-flex;align-items:center;gap:9px;font:500 13.5px/1 var(--display);color:var(--dim);margin:0 0 26px}
+.status{display:inline-flex;align-items:center;gap:9px;font:500 13.5px/1 var(--body);color:var(--dim);margin:0 0 26px}
 .status i{width:8px;height:8px;border-radius:50%;background:var(--dim-2);box-shadow:0 0 0 4px rgba(255,255,255,.06)}
 .status.open i{background:var(--ok);box-shadow:0 0 0 4px rgba(61,220,132,.16)}
 .status.closed i{background:var(--no);box-shadow:0 0 0 4px rgba(255,77,77,.14)}
@@ -96,23 +97,23 @@ section{position:relative}
 .hero-proof{display:flex;align-items:center;gap:18px;margin:34px 0 0;flex-wrap:wrap}
 .stars{display:inline-flex;gap:2px;color:var(--o)}
 .stars svg{width:18px;height:18px}
-.hero-proof b{font:800 30px/1 var(--display);font-stretch:110%;font-variant-numeric:tabular-nums}
+.hero-proof b{font:800 30px/1 var(--body);font-stretch:110%;font-variant-numeric:tabular-nums}
 .hero-proof .hp{display:flex;flex-direction:column;gap:6px}
 .hero-proof .hp>span{color:var(--dim);font-size:14px;line-height:1.35}
 .hero-proof .hp>.stars{color:var(--o)}
 .hero-proof .hp>strong{font-weight:600;font-size:15px}
 .hero-proof .sep{width:1px;height:38px;background:var(--line-2)}
-.scroll-cue{display:inline-flex;align-items:center;gap:10px;margin-top:40px;font:500 12px/1 var(--display);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);text-decoration:none}
+.scroll-cue{display:inline-flex;align-items:center;gap:10px;margin-top:40px;font:500 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);text-decoration:none}
 .scroll-cue i{width:1px;height:34px;background:linear-gradient(var(--o),transparent);animation:cue 2.2s ease-in-out infinite}
 @keyframes cue{0%,100%{transform:scaleY(.4);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
 
 /* estimate card (first step lives in the hero) */
 .est{background:rgba(18,18,20,.72);border:1px solid var(--line-2);border-radius:22px;padding:26px;backdrop-filter:blur(22px) saturate(1.3);box-shadow:0 30px 80px -20px rgba(0,0,0,.7);position:relative}
 .est::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(140deg,rgba(255,106,19,.7),transparent 35%,transparent 70%,rgba(255,106,19,.35));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
-.est h3{font:800 22px/1.15 var(--display);font-stretch:108%}
+.est h3{font:800 22px/1.15 var(--body);font-stretch:108%}
 .est p{margin:6px 0 18px;color:var(--dim);font-size:14.5px}
 .chips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.chip{display:flex;align-items:center;gap:10px;min-height:52px;padding:10px 14px;border-radius:12px;border:1px solid var(--line-2);background:rgba(255,255,255,.035);font:500 16px/1.2 var(--display);text-align:left;transition:border-color .2s,background .2s,transform .15s}
+.chip{display:flex;align-items:center;gap:10px;min-height:52px;padding:10px 14px;border-radius:12px;border:1px solid var(--line-2);background:rgba(255,255,255,.035);font:500 16px/1.2 var(--body);text-align:left;transition:border-color .2s,background .2s,transform .15s}
 .chip:hover{border-color:rgba(255,106,19,.6);background:rgba(255,106,19,.07)}
 .chip:active{transform:scale(.98)}
 .chip[aria-pressed=true]{border-color:var(--o);background:rgba(255,106,19,.14);box-shadow:inset 0 0 0 1px var(--o)}
@@ -129,13 +130,13 @@ section{position:relative}
 .proof .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .proof div{padding:34px 0 30px;display:flex;flex-direction:column;gap:10px;border-left:1px solid var(--line);padding-left:clamp(16px,2.4vw,34px)}
 .proof div:first-child{border-left:0;padding-left:0}
-.proof b{font:800 clamp(2rem,3.6vw,3.2rem)/1 var(--display);font-stretch:115%;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.proof b{font:800 clamp(2rem,3.6vw,3.2rem)/1 var(--body);font-stretch:115%;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .proof b small{font-size:.5em;color:var(--o);margin-left:4px}
-.proof span{font:600 11.5px/1.3 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.proof span{font:600 11.5px/1.3 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
 
 /* certifications */
 .certs{display:flex;flex-wrap:wrap;gap:10px 12px;margin-top:34px}
-.cert{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--line-2);border-radius:999px;font:600 14px/1 var(--display);letter-spacing:.02em;background:rgba(255,255,255,.025)}
+.cert{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--line-2);border-radius:999px;font:600 14px/1 var(--body);letter-spacing:.02em;background:rgba(255,255,255,.025)}
 .cert svg{width:16px;height:16px;color:var(--o)}
 
 /* before / after */
@@ -144,7 +145,7 @@ section{position:relative}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:relative}
 .pair figure{margin:0;position:relative;border-radius:var(--r);overflow:hidden;background:var(--ink-3)}
 .pair img{width:100%;height:auto}
-.pair figcaption{position:absolute;left:14px;top:14px;font:700 11px/1 var(--display);letter-spacing:.22em;text-transform:uppercase;padding:9px 12px;border-radius:999px;background:rgba(12,12,13,.72);backdrop-filter:blur(8px)}
+.pair figcaption{position:absolute;left:14px;top:14px;font:700 11px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;padding:9px 12px;border-radius:999px;background:rgba(12,12,13,.72);backdrop-filter:blur(8px)}
 .pair .after figcaption{background:var(--o);color:#140800}
 .pair-meta{display:flex;justify-content:space-between;gap:16px;margin-top:16px;color:var(--dim);font-size:14.5px;flex-wrap:wrap}
 .pair-meta b{color:var(--fg);font-weight:600}
@@ -157,8 +158,8 @@ section{position:relative}
 .band-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--ink) 0%,rgba(12,12,13,0) 12%),linear-gradient(180deg,var(--ink) 0%,rgba(12,12,13,0) 12%)}
 .band-txt{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;padding-block:10px 20px}
 .band-txt .kick{position:absolute;top:-34px}
-.band-h{margin:0;font:900 clamp(2.4rem,6vw,5.6rem)/.92 var(--display);font-stretch:118%;letter-spacing:-.03em;text-transform:uppercase;max-width:9.5em}
-.band-sub{margin:0;font:400 clamp(1rem,1.4vw,1.2rem)/1.5 var(--display);font-stretch:100%;letter-spacing:0;text-transform:none;color:rgba(243,240,234,.8);max-width:30ch}
+.band-h{margin:0;font:900 clamp(2.4rem,6vw,5.6rem)/.92 var(--body);font-stretch:118%;letter-spacing:-.03em;text-transform:uppercase;max-width:9.5em}
+.band-sub{margin:0;font:400 clamp(1rem,1.4vw,1.2rem)/1.5 var(--body);font-stretch:100%;letter-spacing:0;text-transform:none;color:rgba(243,240,234,.8);max-width:30ch}
 /* repairs */
 .rep{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,90px);align-items:start}
 .rep-photos{display:grid;gap:12px;position:sticky;top:96px}
@@ -168,23 +169,23 @@ section{position:relative}
 .list{list-style:none;margin:40px 0 0;padding:0;counter-reset:n}
 .list li{counter-increment:n;display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 10px;padding:22px 0;border-top:1px solid var(--line)}
 .list li:last-child{border-bottom:1px solid var(--line)}
-.list li::before{content:counter(n,decimal-leading-zero);font:600 13px/1.9 var(--display);color:var(--o);letter-spacing:.08em;grid-row:span 2}
-.list b{font:700 clamp(1.15rem,1.7vw,1.4rem)/1.25 var(--display);font-stretch:106%}
+.list li::before{content:counter(n,decimal-leading-zero);font:600 13px/1.9 var(--body);color:var(--o);letter-spacing:.08em;grid-row:span 2}
+.list b{font:700 clamp(1.15rem,1.7vw,1.4rem)/1.25 var(--body);font-stretch:106%}
 .list span{color:var(--dim);font-size:15.5px}
 
 /* claim steps */
 .claim{background:var(--ink-2);border-block:1px solid var(--line)}
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:54px}
 .step{border:1px solid var(--line);border-radius:18px;padding:26px 22px 28px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));position:relative;overflow:hidden}
-.step em{font:900 64px/1 var(--display);font-stretch:125%;font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(255,106,19,.55);display:block;margin-bottom:26px}
-.step b{display:block;font:700 19px/1.25 var(--display);margin-bottom:8px}
+.step em{font:900 64px/1 var(--body);font-stretch:125%;font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(255,106,19,.55);display:block;margin-bottom:26px}
+.step b{display:block;font:700 19px/1.25 var(--body);margin-bottom:8px}
 .step span{color:var(--dim);font-size:15px}
 .claim-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px}
 
 /* reviews */
 .rv-top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(30px,6vw,90px);align-items:end}
 .big-r{display:flex;align-items:flex-end;gap:18px}
-.big-r b{font:900 clamp(6rem,14vw,11rem)/.8 var(--display);font-stretch:118%;letter-spacing:-.05em;background:linear-gradient(180deg,#fff 30%,#bdb7ad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.big-r b{font:900 clamp(6rem,14vw,11rem)/.8 var(--body);font-stretch:118%;letter-spacing:-.05em;background:linear-gradient(180deg,#fff 30%,#bdb7ad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .big-r div{padding-bottom:10px}
 .big-r .stars svg{width:24px;height:24px}
 .big-r span{display:block;margin-top:10px;color:var(--dim);font-size:15px}
@@ -194,11 +195,11 @@ section{position:relative}
 .marquee:hover .track{animation-play-state:paused}
 @keyframes slide{to{transform:translateX(-50%)}}
 .rv{width:min(480px,82vw);flex:none;border:1px solid var(--line);border-radius:20px;padding:30px;background:var(--ink-2);display:flex;flex-direction:column;gap:22px}
-.rv p{margin:0;font:400 clamp(1.08rem,1.5vw,1.25rem)/1.5 var(--display);color:rgba(243,240,234,.92)}
+.rv p{margin:0;font:400 clamp(1.08rem,1.5vw,1.25rem)/1.5 var(--body);color:rgba(243,240,234,.92)}
 .rv p::before{content:"“";color:var(--o);font-weight:800;margin-right:2px}
 .rv footer{display:flex;align-items:center;gap:12px;margin-top:auto;font-size:14px;color:var(--dim)}
 .rv footer .st{color:var(--o)}
-.rv footer i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(255,106,19,.14);color:var(--o);font:700 14px/1 var(--display);font-style:normal}
+.rv footer i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(255,106,19,.14);color:var(--o);font:700 14px/1 var(--body);font-style:normal}
 .rv footer b{color:var(--fg);font-weight:600;display:block}
 
 /* gallery: justified rows, every photo at its own ratio, rows always full */
@@ -211,13 +212,13 @@ section{position:relative}
 .visit{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(36px,6vw,80px);align-items:center}
 .visit figure{margin:0;border-radius:var(--r);overflow:hidden}
 .visit figure img{width:100%;height:auto}
-.addr{font:700 clamp(1.4rem,2.4vw,2rem)/1.2 var(--display);font-stretch:108%;margin:26px 0 6px}
+.addr{font:700 clamp(1.4rem,2.4vw,2rem)/1.2 var(--body);font-stretch:108%;margin:26px 0 6px}
 .near{color:var(--dim);margin:0 0 26px}
 .hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin:0 0 30px}
 .hours td{padding:11px 0;border-top:1px solid var(--line);font-size:15.5px}
 .hours td:last-child{text-align:right;color:var(--dim)}
 .hours tr.today td{color:var(--fg);font-weight:700}
-.hours tr.today td:first-child::after{content:"Today";margin-left:10px;font:700 10px/1 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--o)}
+.hours tr.today td:first-child::after{content:"Today";margin-left:10px;font:700 10px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--o)}
 .visit-cta{display:flex;gap:12px;flex-wrap:wrap}
 
 footer.site{border-top:1px solid var(--line);padding-block:48px calc(48px + env(safe-area-inset-bottom,0px));color:var(--dim);font-size:14px}
@@ -243,11 +244,11 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .prog i.on::after{content:"";position:absolute;inset:0;background:var(--o)}
 .f-step{display:none}.f-step.on{display:block;animation:fin .35s ease}
 @keyframes fin{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
-.f-step h3{font:800 clamp(1.5rem,3vw,1.9rem)/1.1 var(--display);font-stretch:108%;margin-bottom:6px}
+.f-step h3{font:800 clamp(1.5rem,3vw,1.9rem)/1.1 var(--body);font-stretch:108%;margin-bottom:6px}
 .f-step .q{color:var(--dim);margin:0 0 20px;font-size:15px}
 .fld{display:grid;gap:7px;margin-bottom:14px}
-.fld label{font:600 13px/1 var(--display);letter-spacing:.06em;color:var(--dim)}
-.fld input,.fld select{width:100%;min-height:52px;padding:0 16px;border-radius:12px;border:1px solid var(--line-2);background:var(--ink);color:var(--fg);font:500 16px/1 var(--display)}
+.fld label{font:600 13px/1 var(--body);letter-spacing:.06em;color:var(--dim)}
+.fld input,.fld select{width:100%;min-height:52px;padding:0 16px;border-radius:12px;border:1px solid var(--line-2);background:var(--ink);color:var(--fg);font:500 16px/1 var(--body)}
 .fld input:focus,.fld select:focus{outline:none;border-color:var(--o);box-shadow:0 0 0 3px rgba(255,106,19,.18)}
 .f-nav{display:flex;gap:10px;margin-top:22px}
 .f-nav .btn{flex:1}
@@ -265,7 +266,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .pop-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 65%}
 .pop-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--ink-2),rgba(18,18,20,0) 70%)}
 .pop .f-body{padding-top:6px}
-.pop h3{font:800 30px/1.05 var(--display);font-stretch:110%;margin:0 0 8px}
+.pop h3{font:800 30px/1.05 var(--body);font-stretch:110%;margin:0 0 8px}
 .pop p{margin:0 0 18px;color:var(--dim)}
 .ring-opts{position:relative;border-radius:16px;padding:1.5px;overflow:hidden}
 .ring-opts::before{content:"";position:absolute;inset:-60%;background:conic-gradient(from 0deg,transparent 0 70%,var(--o) 85%,#ffd2a8 90%,transparent 100%);animation:spin 3.2s linear infinite}
@@ -277,7 +278,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .notnow{display:block;margin:14px auto 0;background:none;border:0;color:var(--dim);font-size:14px;text-decoration:underline;text-underline-offset:3px}
 
 /* assistant */
-.ask-b{position:fixed;right:22px;bottom:22px;z-index:60;transition:opacity .3s,transform .3s;display:flex;align-items:center;gap:10px;height:54px;padding:0 20px 0 16px;border-radius:999px;border:1px solid var(--line-2);background:rgba(18,18,20,.86);backdrop-filter:blur(14px);font:600 15px/1 var(--display);box-shadow:0 14px 40px -10px #000}
+.ask-b{position:fixed;right:22px;bottom:22px;z-index:60;transition:opacity .3s,transform .3s;display:flex;align-items:center;gap:10px;height:54px;padding:0 20px 0 16px;border-radius:999px;border:1px solid var(--line-2);background:rgba(18,18,20,.86);backdrop-filter:blur(14px);font:600 15px/1 var(--body);box-shadow:0 14px 40px -10px #000}
 .ask-b.hide{opacity:0;transform:translateY(12px);pointer-events:none}
 .ask-b i{width:26px;height:26px;border-radius:50%;background:var(--o);display:grid;place-items:center;color:#140800}
 .ask-b i svg{width:14px;height:14px}
@@ -293,14 +294,14 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .sugs{display:flex;flex-wrap:wrap;gap:6px;padding:0 18px 12px}
 .sugs button{border:1px solid var(--line-2);background:none;border-radius:999px;padding:8px 12px;font-size:13.5px;color:var(--fg)}
 .chat form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
-.chat input{flex:1;min-height:46px;border-radius:999px;border:1px solid var(--line-2);background:var(--ink);color:var(--fg);padding:0 16px;font:500 16px/1 var(--display)}
+.chat input{flex:1;min-height:46px;border-radius:999px;border:1px solid var(--line-2);background:var(--ink);color:var(--fg);padding:0 16px;font:500 16px/1 var(--body)}
 .chat form button{width:46px;height:46px;border-radius:50%;border:0;background:var(--o);color:#140800;display:grid;place-items:center}
 .chat form button svg{width:18px;height:18px}
 
 /* menu sheet (phone) */
 .mnav{position:fixed;inset:0;z-index:75;background:rgba(12,12,13,.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:center;padding:90px var(--gut) 40px;opacity:0;pointer-events:none;transition:opacity .3s}
 .mnav.open{opacity:1;pointer-events:auto}
-.mnav a{font:800 34px/1.25 var(--display);font-stretch:112%;text-decoration:none;padding:6px 0;border-bottom:1px solid var(--line)}
+.mnav a{font:800 34px/1.25 var(--body);font-stretch:112%;text-decoration:none;padding:6px 0;border-bottom:1px solid var(--line)}
 .mnav .x{top:calc(18px + env(safe-area-inset-top,0px));right:var(--gut)}
 
 @media (max-width:1080px){
@@ -364,7 +365,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .hero-copy{max-width:860px}
 .dock{margin-top:42px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:22px;padding:14px 14px 14px 26px;border-radius:999px;background:rgba(14,14,16,.62);border:1px solid var(--line-2);backdrop-filter:blur(24px) saturate(1.3);box-shadow:0 24px 70px -20px rgba(0,0,0,.8)}
 .dock-t{display:flex;flex-direction:column;gap:4px;white-space:nowrap}
-.dock-t b{font:800 17px/1 var(--display);font-stretch:108%}
+.dock-t b{font:800 17px/1 var(--body);font-stretch:108%}
 .dock-t span{font-size:13px;color:var(--dim)}
 .dock .chips{display:flex;flex-wrap:wrap;gap:8px}
 .dock .chip{min-height:42px;padding:8px 16px 8px 12px;border-radius:999px;font-size:14.5px;gap:8px}
@@ -383,7 +384,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .cmp-h{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 18px rgba(0,0,0,.5);pointer-events:none}
 .cmp-h i{position:absolute;top:50%;left:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:var(--o);display:grid;place-items:center;box-shadow:0 8px 30px -6px var(--o-glow),0 0 0 6px rgba(255,106,19,.18)}
 .cmp-h i svg{width:24px;height:24px;color:#140800}
-.cmp .tag{position:absolute;top:16px;font:700 11px/1 var(--display);letter-spacing:.22em;text-transform:uppercase;padding:9px 12px;border-radius:999px;pointer-events:none}
+.cmp .tag{position:absolute;top:16px;font:700 11px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;padding:9px 12px;border-radius:999px;pointer-events:none}
 .cmp .tag.b{left:16px;background:rgba(12,12,13,.72);backdrop-filter:blur(8px)}
 .cmp .tag.a{right:16px;background:var(--o);color:#140800}
 .cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
@@ -394,11 +395,11 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .spot{position:relative;margin-top:56px;min-height:300px;display:grid}
 .spot .q{grid-area:1/1;margin:0;opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1);pointer-events:none;max-width:980px}
 .spot .q.on{opacity:1;transform:none;pointer-events:auto}
-.spot .q p{margin:0;font:400 clamp(1.45rem,2.9vw,2.35rem)/1.35 var(--display);letter-spacing:-.01em;color:var(--fg);text-wrap:pretty}
+.spot .q p{margin:0;font:400 clamp(1.45rem,2.9vw,2.35rem)/1.35 var(--body);letter-spacing:-.01em;color:var(--fg);text-wrap:pretty}
 .spot .q p::before{content:"“";color:var(--o);font-weight:800}
 .spot .q p::after{content:"”";color:var(--o);font-weight:800}
 .spot .who{display:flex;align-items:center;gap:14px;margin-top:28px;color:var(--dim);font-size:15px}
-.spot .who i{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(255,106,19,.14);color:var(--o);font:700 16px/1 var(--display);font-style:normal}
+.spot .who i{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(255,106,19,.14);color:var(--o);font:700 16px/1 var(--body);font-style:normal}
 .spot .who b{color:var(--fg);display:block;font-weight:600}
 .spot .who .st{color:var(--o);letter-spacing:2px}
 .dots{display:flex;gap:8px;margin-top:34px}
@@ -440,6 +441,108 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   .cmp-h i{width:46px;height:46px;margin:-23px 0 0 -23px}
 }
 @media (prefers-reduced-motion:reduce){.spot .q{transition:none}.dots button.on::after{animation:none;transform:none}}
+
+/* ===== v3 ===== */
+h1,h2,.hero h1,.brand b,.proof b,.big-r b,.step em,.band-h,.hero-proof b,.list b,.addr,.f-step h3,.pop h3,.est h3,.svc b,.praise h2,.strip-car b{font-family:var(--display)}
+body{font-family:var(--body)}
+/* header nav: a solid pill group */
+.nav{gap:4px;padding:5px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line-2);backdrop-filter:blur(12px)}
+.nav a{font:600 14.5px/1 var(--body);color:var(--fg);padding:11px 16px;border-radius:999px;transition:background .2s,color .2s}
+.nav a::after{display:none}
+.nav a:hover{background:var(--o);color:#140800}
+/* hero: one clear action */
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:34px}
+.btn-xl{min-height:64px;padding:0 34px;font-size:17px}
+.btn-xl svg{width:20px;height:20px}
+.cta-note{display:block;width:100%;font-size:13.5px;color:var(--dim);margin-top:2px}
+.tow{display:flex;width:fit-content;align-items:center;gap:10px;margin:0 0 18px;padding:9px 16px 9px 10px;border-radius:999px;background:rgba(255,106,19,.16);border:1px solid rgba(255,106,19,.55);font:700 14px/1 var(--body);color:#ffd2b3}
+.tow i{width:30px;height:30px;border-radius:50%;background:var(--o);display:grid;place-items:center;color:#140800}
+.tow i svg{width:17px;height:17px}
+.tow a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.hero-rv{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:30px;padding:13px 18px;border-radius:14px;border:1px solid var(--line-2);background:rgba(12,12,13,.5);backdrop-filter:blur(10px);text-decoration:none;max-width:560px}
+.hero-rv .stars{color:var(--o)}
+.hero-rv .stars svg{width:16px;height:16px}
+.hero-rv q{font:italic 400 15.5px/1.4 var(--body);color:var(--fg);quotes:"“" "”"}
+.hero-rv small{font-size:13px;color:var(--dim)}
+/* proof banner: bigger, louder */
+.proof{background:linear-gradient(90deg,rgba(255,106,19,.10),rgba(255,106,19,0) 60%),var(--ink-2);border-top:1px solid rgba(255,106,19,.35)}
+.proof b{font-size:clamp(3rem,5.6vw,5rem)}
+.proof span{color:var(--fg);opacity:.75;font-size:12.5px}
+.proof .hot b{color:var(--o)}
+/* reviews, Greg's structure */
+.praise{position:relative;text-align:center;overflow:hidden;padding-block:clamp(90px,11vw,150px);background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(255,106,19,.12),rgba(255,106,19,0) 70%),var(--ink-2);border-bottom:1px solid var(--line)}
+.stars-big{display:flex;justify-content:center;gap:clamp(8px,1.4vw,16px);color:var(--o);margin-bottom:22px}
+.stars-big svg{width:clamp(26px,3vw,38px);height:clamp(26px,3vw,38px);opacity:0;transform:translateY(8px) scale(.6);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.stars-big.on svg{opacity:1;transform:none}
+.stars-big svg:nth-child(2){transition-delay:.12s}.stars-big svg:nth-child(3){transition-delay:.24s}.stars-big svg:nth-child(4){transition-delay:.36s}.stars-big svg:nth-child(5){transition-delay:.48s}
+.praise .label{font:700 12px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+.praise .label b{color:var(--fg)}
+.praise h2{margin:22px auto 0;max-width:18ch;font-size:clamp(2.2rem,5vw,4.6rem);line-height:1.02}
+.praise h2 em{font-style:normal;color:var(--o)}
+.praise-src{margin:22px auto 0;font:700 12px/1.5 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--o)}
+.rail{margin-top:clamp(50px,6vw,80px);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.rail-track{display:flex;width:max-content;animation:rail 80s linear infinite}
+.rail:hover .rail-track{animation-play-state:paused}
+.rail-set{display:flex;gap:18px;padding-right:18px}
+@keyframes rail{to{transform:translateX(-50%)}}
+.rcard{flex:0 0 auto;width:min(420px,82vw);margin:0;padding:30px 28px;border-radius:18px;border:1px solid var(--line);background:var(--ink-3);text-align:left;display:flex;flex-direction:column}
+.rcard .stars{color:var(--o);letter-spacing:.25em;font-size:14px}
+.rcard blockquote{flex:1;margin:14px 0 0;font:400 1.16rem/1.5 var(--body);color:var(--fg)}
+.rcard figcaption{margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px;color:var(--dim)}
+.rcard figcaption b{display:block;font:700 12px/1.5 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--o)}
+/* portfolio filmstrip */
+.strip{margin-top:46px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.strip-track{display:flex;width:max-content;animation:rail 70s linear infinite}
+.strip:hover .strip-track{animation-play-state:paused}
+.strip-set{display:flex;gap:14px;padding-right:14px}
+.strip-car{position:relative;margin:0;height:clamp(240px,30vw,380px);border-radius:16px;overflow:hidden;background:var(--ink-3);flex:none}
+.strip-car img{height:100%;width:auto;display:block}
+.strip-car figcaption{position:absolute;left:12px;bottom:12px;padding:8px 13px;border-radius:999px;background:rgba(12,12,13,.72);backdrop-filter:blur(8px);font:600 13px/1 var(--body)}
+.strip-car figcaption b{font-size:13px;font-weight:800}
+/* services as tappable cards */
+.svcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:44px}
+.svc{position:relative;display:flex;flex-direction:column;gap:10px;min-height:190px;padding:24px;border-radius:18px;border:1px solid var(--line-2);background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01));text-align:left;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),border-color .25s,box-shadow .25s}
+.svc:hover{transform:translateY(-4px);border-color:rgba(255,106,19,.6);box-shadow:0 22px 50px -24px var(--o-glow)}
+.svc i{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(255,106,19,.14);color:var(--o)}
+.svc i svg{width:22px;height:22px}
+.svc b{font-size:19px;line-height:1.2;font-weight:800;font-stretch:105%}
+.svc span{color:var(--dim);font-size:14.5px;line-height:1.5;flex:1}
+.svc em{font-style:normal;font:700 13.5px/1 var(--body);color:var(--o);display:inline-flex;align-items:center;gap:6px}
+.svc em svg{width:15px;height:15px}
+.svc-photos{display:flex;gap:12px;margin-top:12px}
+.svc-photos figure{margin:0;border-radius:16px;overflow:hidden;position:relative}
+.svc-photos img{width:100%;height:auto}
+.svc-photos figcaption{position:absolute;left:0;right:0;bottom:0;padding:50px 16px 14px;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent);font-size:13px}
+/* how it works: solid orange */
+.claim.orange{background:var(--o);color:#140800;border:0}
+.claim.orange .kick,.claim.orange .kick i{color:#140800}.claim.orange .kick::before{background:#140800}
+.claim.orange h2 em{color:#fff}
+.claim.orange .lede{color:rgba(20,8,0,.78)}
+.claim.orange .step{background:rgba(20,8,0,.08);border-color:rgba(20,8,0,.22)}
+.claim.orange .step em{-webkit-text-stroke:1.5px #140800;color:transparent}
+.claim.orange .step span{color:rgba(20,8,0,.75)}
+.claim.orange .btn-o{background:#140800;color:#fff;box-shadow:0 14px 40px -12px rgba(20,8,0,.6)}
+.claim.orange .btn-g{background:rgba(255,255,255,.25);border-color:rgba(20,8,0,.3);color:#140800}
+/* pop-up: the before/after plays itself */
+.pop-photo.auto .cmp-a{position:absolute;inset:0;clip-path:inset(0 0 0 var(--x,100%))}
+.pop-photo.auto .cmp-a img{width:100%;height:100%;object-fit:cover}
+.pop-photo.auto .cmp-h{position:absolute;top:0;bottom:0;left:var(--x,100%);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 16px rgba(0,0,0,.6)}
+.pop-photo.auto .tag{position:absolute;bottom:14px;z-index:2;font:700 10.5px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;padding:7px 10px;border-radius:999px}
+.pop-photo.auto .tag.b{left:12px;background:rgba(12,12,13,.75)}
+.pop-photo.auto .tag.a{right:12px;background:var(--o);color:#140800}
+.pop-photo.auto::after{z-index:1;background:linear-gradient(0deg,rgba(18,18,20,.55),rgba(18,18,20,0) 45%)}
+@media (max-width:1080px){.svcs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .svcs{grid-template-columns:minmax(0,1fr);gap:10px}
+  .svc{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;padding:18px}
+  .svc span{flex-basis:100%}
+  .svc-photos{flex-direction:column}.svc-photos figure{flex:none!important}
+  .btn-xl{width:100%}
+  .hero-cta .btn-g{width:100%}
+  .proof b{font-size:3rem}
+  .strip-car{height:230px}
+}
+@media (prefers-reduced-motion:reduce){.stars-big svg{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -454,6 +557,13 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   <symbol id="spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z"/></symbol>
   <symbol id="swap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></symbol>
   <symbol id="truck" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 16V6h11v10M13 9h4l4 4v3h-8M6.5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM17.5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM8.5 17h6.5"/></symbol>
+  <symbol id="paint" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 11h1a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1M12 11v4M10 15h4v7h-4z"/></symbol>
+  <symbol id="car" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 17H3v-5l2-5h14l2 5v5h-2M7 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm6 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0M5 12h14"/></symbol>
+  <symbol id="wrench" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-8 8-2.3-2.3a4 4 0 0 0-5-5L2 10l8-8 2.3 2.3a4 4 0 0 0 2.4 2z"/></symbol>
+  <symbol id="glass" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 18l3-12h12l3 12zM9 9l-2 6M14 9l-1 3"/></symbol>
+  <symbol id="sparkle" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l1.9 5.6L19.5 10l-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.4zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+  <symbol id="align" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2v20M5 7l-3 5 3 5M19 7l3 5-3 5"/></symbol>
+  <symbol id="key" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 7a4 4 0 1 1-4 4L3 19v2h3l1-1h2v-2h2l1.5-1.5A4 4 0 0 1 15 7z"/></symbol>
   <symbol id="send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15M13 6l6 6-6 6"/></symbol>
 </svg>
 
@@ -478,39 +588,35 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   <div class="streak" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-copy">
+      <p class="tow"><i><svg><use href="#truck"/></svg></i>24-hour towing · <a href="tel:+17813216080">(781) 321-6080</a></p>
       <p class="status" id="status"><i></i><span>375 Washington St, Malden</span></p>
       <h1>Back to <span class="o">factory.</span><span class="thin">Collision repair in Malden, certified by Tesla, Rivian, Ford and Jaguar Land Rover.</span></h1>
-      <p class="hero-sub">We work with your insurance company, help you with a rental and tow it in when it can&#39;t be driven. Start your estimate here in about a minute.</p>
-      <div class="hero-proof">
-        <b>4.9</b>
-        <div class="hp"><span class="stars" aria-label="4.9 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><span>706 Google reviews</span></div>
-        <i class="sep" aria-hidden="true"></i>
-        <div class="hp"><strong>24-hour towing</strong><span>(781) 321-6080</span></div>
+      <p class="hero-sub">We work with your insurance company, help you with a rental and tow it in when it can&#39;t be driven.</p>
+      <div class="hero-cta">
+        <button class="btn btn-o btn-xl" data-est type="button">Get an estimate <svg><use href="#arrow"/></svg></button>
+        <a class="btn btn-g btn-xl" href="tel:+17813216080"><svg><use href="#phone"/></svg>(781) 321-6080</a>
+        <span class="cta-note">Takes about a minute. We call you back.</span>
       </div>
+      <a class="hero-rv" href="#reviews"><span class="stars" aria-label="5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><q>Matt worked with me and the car came out beautiful.</q><small>Mark K. · Google review</small></a>
     </div>
-    <form class="dock" id="heroEst" aria-labelledby="estT">
-      <div class="dock-t"><b id="estT">Start your estimate</b><span>What happened? Pick any.</span></div>
-      <div class="chips" data-group="what"><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Accident</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Dent or scratch</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Paint</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Glass</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Alignment</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Not sure</button></div>
-      <button class="btn btn-o" type="submit">Continue <svg><use href="#arrow"/></svg></button>
-    </form>
   </div>
 </section>
 
-<div class="proof"><div class="wrap" style="--cols:4"><div><b>4.9<small>★</small></b><span>Google rating</span></div><div><b>706</b><span>Google reviews</span></div><div><b>24<small>hr</small></b><span>Towing</span></div><div><b>5</b><span>Certifications</span></div></div></div>
+<div class="proof"><div class="wrap" style="--cols:3"><div><b>4.9<small>★</small></b><span>Google rating</span></div><div><b>706</b><span>Google reviews</span></div><div class="hot"><b>24<small>hr</small></b><span>Towing</span></div></div></div>
 
-<section class="sec" id="reviews" style="padding-bottom:clamp(40px,6vw,80px)">
+<section class="praise" id="reviews" aria-labelledby="reviews-title">
   <div class="wrap">
-    <div class="rv-top rv-in">
-      <div class="big-r"><b>4.9</b><div><span class="stars" aria-label="4.9 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><span><strong>706</strong> reviews on Google</span></div></div>
-      <div><p class="kick">Reviews <i>01</i></p><h2>Don't take<br><em>our word for it.</em></h2></div>
-    </div>
+    <div class="stars-big" id="starsBig" aria-hidden="true"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+    <span class="label"><b>4.9</b> from <b>706</b> Google reviews</span>
+    <h2 id="reviews-title">“Matt worked with me and the car came out beautiful.”</h2>
+    <p class="praise-src">Mark K. · Google review</p>
   </div>
-  <div class="wrap"><div class="spot" id="spot" aria-live="polite"></div><div class="dots" id="dots"></div></div>
+  <div class="rail" role="region" aria-label="Customer reviews from Google"><div class="rail-track" id="railTrack"></div></div>
 </section>
 
 <section class="sec" id="work">
   <div class="wrap">
-    <div class="ba-head rv-in"><div><p class="kick">Before &amp; after <i>02</i></p><h2>Same car.<br><em>Same shop.</em></h2></div><p class="lede" style="margin:0">Real cars from this shop, photographed here in Malden.</p></div>
+    <div class="ba-head rv-in"><div><p class="kick">Before &amp; after <i>01</i></p><h2>Same car.<br><em>Same shop.</em></h2></div><p class="lede" style="margin:0">Real cars from this shop, photographed here in Malden.</p></div>
     <div class="ba">
       <div class="rv-in"><div class="cmp" style="aspect-ratio:1968/1476">
         <img src="img/b1-1200.webp" srcset="img/b1-1200.webp 1200w, img/b1.webp 1968w" sizes="(max-width:1240px) 100vw, 1240px" width="1968" height="1476" loading="lazy" alt="Blue BMW 4 Series with a crushed hood and front end, before repair">
@@ -531,24 +637,21 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   </div>
 </section>
 
-<section class="band" aria-label="Tesla Certified">
-  <div class="band-ph"><img src="img/g1-1200.webp" srcset="img/g1-1200.webp 1200w, img/g1.webp 2400w" sizes="100vw" width="2400" height="1800" loading="lazy" alt="A red Tesla Model 3, repaired and ready for pickup"></div>
-  <div class="band-txt wrap rv-in"><p class="kick">Certified</p><p class="band-h">Tesla Certified.</p><p class="band-sub">Also Rivian Certified, Ford Certified, Jaguar &amp; Land Rover Certified and I-CAR Gold.</p></div>
+<section class="sec" id="cars" style="padding-bottom:0">
+  <div class="wrap"><div class="rv-in"><p class="kick">Our work <i>02</i></p><h2>Every make.<br><em>Every model.</em></h2><p class="lede">A few of the cars that have come through our shop, finished and ready to go home.</p></div></div>
+  <div class="strip" aria-label="Cars we've repaired"><div class="strip-track"><div class="strip-set"><figure class="strip-car" style="aspect-ratio:2400/1350"><img src="img/a2-1200.webp" width="2400" height="1350" loading="lazy" alt="BMW M4, finished at Today&#39;s Collision Malden"><figcaption><b>BMW M4</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:2400/1800"><img src="img/p1-1200.webp" width="2400" height="1800" loading="lazy" alt="Jaguar F-Type, finished at Today&#39;s Collision Malden"><figcaption><b>Jaguar F-Type</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:2400/1800"><img src="img/g1-1200.webp" width="2400" height="1800" loading="lazy" alt="Tesla Model 3, finished at Today&#39;s Collision Malden"><figcaption><b>Tesla Model 3</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:2400/1800"><img src="img/p2-1200.webp" width="2400" height="1800" loading="lazy" alt="Dodge Challenger, finished at Today&#39;s Collision Malden"><figcaption><b>Dodge Challenger</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:1968/1476"><img src="img/a1-1200.webp" width="1968" height="1476" loading="lazy" alt="BMW 4 Series, finished at Today&#39;s Collision Malden"><figcaption><b>BMW 4 Series</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:2400/1350"><img src="img/p3-1200.webp" width="2400" height="1350" loading="lazy" alt="BMW 3 Series, finished at Today&#39;s Collision Malden"><figcaption><b>BMW 3 Series</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:1086/1448"><img src="img/g3-1200.webp" width="1086" height="1448" loading="lazy" alt="Tesla Model Y, finished at Today&#39;s Collision Malden"><figcaption><b>Tesla Model Y</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:1800/2400"><img src="img/p5-1200.webp" width="1800" height="2400" loading="lazy" alt="Tesla Model Y, finished at Today&#39;s Collision Malden"><figcaption><b>Tesla Model Y</b></figcaption></figure></div><div class="strip-set" aria-hidden="true"><figure class="strip-car" style="aspect-ratio:2400/1350"><img src="img/a2-1200.webp" width="2400" height="1350" loading="lazy" alt=""><figcaption><b>BMW M4</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:2400/1800"><img src="img/p1-1200.webp" width="2400" height="1800" loading="lazy" alt=""><figcaption><b>Jaguar F-Type</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:2400/1800"><img src="img/g1-1200.webp" width="2400" height="1800" loading="lazy" alt=""><figcaption><b>Tesla Model 3</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:2400/1800"><img src="img/p2-1200.webp" width="2400" height="1800" loading="lazy" alt=""><figcaption><b>Dodge Challenger</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:1968/1476"><img src="img/a1-1200.webp" width="1968" height="1476" loading="lazy" alt=""><figcaption><b>BMW 4 Series</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:2400/1350"><img src="img/p3-1200.webp" width="2400" height="1350" loading="lazy" alt=""><figcaption><b>BMW 3 Series</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:1086/1448"><img src="img/g3-1200.webp" width="1086" height="1448" loading="lazy" alt=""><figcaption><b>Tesla Model Y</b></figcaption></figure><figure class="strip-car" style="aspect-ratio:1800/2400"><img src="img/p5-1200.webp" width="1800" height="2400" loading="lazy" alt=""><figcaption><b>Tesla Model Y</b></figcaption></figure></div></div></div>
 </section>
 
 <section class="sec" id="repairs">
-  <div class="wrap rep">
-    <div class="rep-photos"><figure class="rep-photo rv-in"><img src="img/g5-1200.webp" srcset="img/g5-1200.webp 1200w, img/g5.webp 2048w" sizes="(max-width:1080px) 100vw, 50vw" width="2048" height="1536" loading="lazy" alt="A Tesla on the frame bench inside the shop"></figure><figure class="rep-photo rv-in"><img src="img/g4-1200.webp" srcset="img/g4-1200.webp 1200w, img/g4.webp 2400w" sizes="(max-width:1080px) 100vw, 50vw" width="2400" height="1350" loading="lazy" alt="A Jaguar F-Type mid-repair"></figure></div>
-    <div class="rv-in">
-      <p class="kick">What we fix <i>03</i></p>
-      <h2>Every repair,<br><em>under one roof.</em></h2>
-      <ul class="list"><li><b>Collision repair</b><span>From a door ding to major front and rear damage.</span></li><li><b>Paint and refinish</b><span>Color matched to your car's factory finish.</span></li><li><b>Dent and scratch repair</b><span>Small damage fixed so you can't tell it happened.</span></li><li><b>Frame and structural repair</b><span>Measured and straightened back to spec.</span></li><li><b>Aluminum repair</b><span>The tools and training aluminum bodies need.</span></li><li><b>Auto glass</b><span>Windshields and windows.</span></li><li><b>Alignment</b><span>Back to straight after the repair.</span></li><li><b>Towing</b><span>We can bring the car to us.</span></li><li><b>Rental cars</b><span>Help getting you a car while yours is here.</span></li><li><b>Detailing</b><span>Your car cleaned up before you get it back.</span></li></ul>
-      <div class="certs" aria-label="Certifications"><span class="cert"><svg><use href="#shield"/></svg>Tesla Certified</span><span class="cert"><svg><use href="#shield"/></svg>Rivian Certified</span><span class="cert"><svg><use href="#shield"/></svg>Ford Certified</span><span class="cert"><svg><use href="#shield"/></svg>Jaguar &amp; Land Rover Certified</span><span class="cert"><svg><use href="#shield"/></svg>I-CAR Gold</span></div>
-    </div>
+  <div class="wrap">
+    <div class="rv-in"><p class="kick">What we fix <i>03</i></p><h2>Every repair,<br><em>under one roof.</em></h2><p class="lede">Tap what you need and we'll start your estimate.</p></div>
+    <div class="svcs"><button type="button" class="svc rv-in" data-svc="Accident"><i><svg><use href="#car"/></svg></i><b>Collision repair</b><span>From a door ding to major front and rear damage.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Paint"><i><svg><use href="#paint"/></svg></i><b>Paint and refinish</b><span>Color matched to your car's factory finish.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Dent or scratch"><i><svg><use href="#wrench"/></svg></i><b>Dent and scratch repair</b><span>Small damage fixed so you can't tell it happened.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Accident"><i><svg><use href="#align"/></svg></i><b>Frame and structural</b><span>Measured and straightened back to spec.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Accident"><i><svg><use href="#wrench"/></svg></i><b>Aluminum repair</b><span>The tools and training aluminum bodies need.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Glass"><i><svg><use href="#glass"/></svg></i><b>Auto glass</b><span>Windshields and windows.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Alignment"><i><svg><use href="#align"/></svg></i><b>Alignment</b><span>Back to straight after the repair.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc=""><i><svg><use href="#truck"/></svg></i><b>24-hour towing</b><span>We can bring the car to us, day or night.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc=""><i><svg><use href="#key"/></svg></i><b>Rental cars</b><span>Help getting you a car while yours is here.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button></div>
+    <div class="certs rv-in" aria-label="Certifications"><span class="cert"><svg><use href="#shield"/></svg>Tesla Certified</span><span class="cert"><svg><use href="#shield"/></svg>Rivian Certified</span><span class="cert"><svg><use href="#shield"/></svg>Ford Certified</span><span class="cert"><svg><use href="#shield"/></svg>Jaguar &amp; Land Rover Certified</span><span class="cert"><svg><use href="#shield"/></svg>I-CAR Gold</span></div>
+    <div class="svc-photos"><figure class="rv-in" style="flex:1.3333 1 0"><img src="img/g5-1200.webp" srcset="img/g5-1200.webp 1200w, img/g5.webp 2048w" sizes="(max-width:760px) 100vw, 50vw" width="2048" height="1536" loading="lazy" alt="A Tesla on the frame bench inside the shop"><figcaption>Structural repair on the bench, inside the Malden shop.</figcaption></figure><figure class="rv-in" style="flex:1.7778 1 0"><img src="img/g4-1200.webp" srcset="img/g4-1200.webp 1200w, img/g4.webp 2400w" sizes="(max-width:760px) 100vw, 50vw" width="2400" height="1350" loading="lazy" alt="A Jaguar F-Type mid-repair"><figcaption>A Jaguar F-Type mid-repair.</figcaption></figure></div>
   </div>
 </section>
 
-<section class="sec claim" id="claim">
+<section class="sec claim orange" id="claim">
   <div class="wrap">
     <div class="rv-in"><p class="kick">How it works <i>04</i></p><h2>Wrecked car,<br><em>easy fix.</em></h2><p class="lede">First accident? Most people don't know how this works. Here's how it goes.</p></div>
     <div class="steps">
@@ -586,9 +689,9 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <footer class="site"><div class="wrap"><span>Today&#39;s Collision Malden · 375 Washington St, Malden, MA 02148 · (781) 321-6080</span><span>4.9★ from 706 Google reviews</span></div></footer>
 <div class="pbar"><a class="btn btn-g" href="tel:+17813216080"><svg><use href="#phone"/></svg>Call</a><button class="btn btn-o" data-est type="button">Get an estimate</button></div>
 
-<button class="ask-b hide" id="askB" type="button" aria-expanded="false" aria-controls="chat"><i><svg><use href="#spark"/></svg></i>Ask us</button>
+<button class="ask-b hide" id="askB" type="button" aria-expanded="false" aria-controls="chat"><i><svg><use href="#spark"/></svg></i>Today&#39;s AI</button>
 <div class="chat" id="chat" role="dialog" aria-label="Ask Today&#39;s Collision Malden">
-  <div class="chat-h"><div><b>Today&#39;s Collision Malden</b><small>Answers about the Malden shop</small></div><button class="x" type="button" id="chatX" aria-label="Close chat"><svg><use href="#close"/></svg></button></div>
+  <div class="chat-h"><div><b>Today&#39;s AI</b><small>Answers about the Malden shop, day or night</small></div><button class="x" type="button" id="chatX" aria-label="Close chat"><svg><use href="#close"/></svg></button></div>
   <div class="msgs" id="msgs" aria-live="polite"></div>
   <div class="sugs" id="sugs"><button type="button">Are you open now?</button><button type="button">Where are you?</button><button type="button">Can you work with my insurance?</button><button type="button">How much will it cost?</button></div>
   <form id="chatF"><input id="chatI" placeholder="Ask about hours, services, location…" autocomplete="off" aria-label="Your question"><button type="submit" aria-label="Send"><svg><use href="#send"/></svg></button></form>
@@ -601,7 +704,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
       <div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       <div class="f-step" data-s="0">
         <h3 id="funT">What happened?</h3><p class="q">Pick all that apply.</p>
-        <div class="chips" data-group="what" id="funWhat"></div>
+        <div class="chips" data-group="what" id="funWhat"><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Accident</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Dent or scratch</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Paint</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Glass</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Alignment</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Not sure</button></div>
       </div>
       <div class="f-step" data-s="1">
         <h3>What are you driving?</h3><p class="q">Pick the make.</p>
@@ -652,7 +755,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <div class="dlg pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="popT">
   <div class="sheet">
     <button class="x" type="button" data-close aria-label="Close"><svg><use href="#close"/></svg></button>
-    <div class="pop-photo"><img style="object-position:50% 62%" src="img/g1-1200.webp" width="1200" height="900" alt=""></div>
+    <div class="pop-photo auto" id="popAB"><img src="img/b2-1200.webp" alt="" style="object-position:50% 60%"><div class="cmp-a"><img src="img/a2-1200.webp" alt="" style="object-position:50% 60%"></div><div class="cmp-h" aria-hidden="true"></div><span class="tag b">Before</span><span class="tag a">After</span></div>
     <div class="f-body">
       <h3 id="popT">Been in an accident?</h3>
       <p>Tell us what happened. We'll take it from there.</p>
@@ -682,12 +785,11 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   st.querySelector('span').textContent = (isOpen ? 'Open until ' + fmt(span[1]) : next || 'Closed today') + ' · ' + BIZ.street + ', ' + BIZ.town;
 
   const escH = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  // reviews: one at a time, rotating
-  $('#spot').innerHTML = BIZ.quotes.map((q, i) => '<blockquote class="q' + (i ? '' : ' on') + '"><p>' + escH(q.t) + '</p><div class="who"><i>' + escH(q.a[0] || '★') + '</i><span><b>' + escH(q.a) + '</b>Google review · <span class="st">★★★★★</span></span></div></blockquote>').join('');
-  $('#dots').innerHTML = BIZ.quotes.length > 1 ? BIZ.quotes.map((q, i) => '<button type="button" aria-label="Review ' + (i + 1) + '"' + (i ? '' : ' class="on"') + '></button>').join('') : '';
-  let qi = 0, qt; const qs = $$('#spot .q'), ds = $$('#dots button');
-  const showQ = i => { qi = (i + qs.length) % qs.length; qs.forEach((q, k) => q.classList.toggle('on', k === qi)); ds.forEach((d, k) => { d.classList.remove('on'); if (k === qi) { void d.offsetWidth; d.classList.add('on'); } }); clearTimeout(qt); if (!reduce && qs.length > 1) qt = setTimeout(() => showQ(qi + 1), 6500); };
-  ds.forEach((d, k) => d.addEventListener('click', () => showQ(k))); showQ(0);
+  // reviews: Greg-style rail that drifts sideways; two identical sets make the loop seamless
+  const card = (q, hide) => '<figure class="rcard"><span class="stars"' + (hide ? '' : ' aria-hidden="true"') + '>★★★★★</span><blockquote>' + escH(q.t) + '</blockquote><figcaption><b>' + escH(q.a) + '</b>Google review</figcaption></figure>';
+  const qs = BIZ.quotes.length < 4 ? BIZ.quotes.concat(BIZ.quotes) : BIZ.quotes;
+  $('#railTrack').innerHTML = '<div class="rail-set">' + qs.map(q => card(q)).join('') + '</div><div class="rail-set" aria-hidden="true">' + qs.map(q => card(q, 1)).join('') + '</div>';
+  $('#railTrack').style.animationDuration = (qs.length * 13) + 's';
   // before/after: drag to compare
   $$('.cmp').forEach(c => { const r = $('input', c); const set = v => c.style.setProperty('--x', v + '%'); r.addEventListener('input', () => set(r.value)); set(50); });
 
@@ -697,14 +799,13 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   const hdr = $('#hdr'); const onS = () => { hdr.classList.toggle('solid', scrollY > 40); askB.classList.toggle('hide', scrollY < innerHeight * .8 && !chat.classList.contains('open')); };
   addEventListener('scroll', onS, { passive: true }); onS();
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
-  $$('.rv-in').forEach(n => io.observe(n));
+  $$('.rv-in, #starsBig').forEach(n => io.observe(n));
 
   document.addEventListener('click', e => {
     const c = e.target.closest('.chip'); if (!c || !c.hasAttribute('aria-pressed')) return; const g = c.closest('.chips');
     if (g.hasAttribute('data-single')) $$('.chip', g).forEach(x => x.setAttribute('aria-pressed', x === c ? 'true' : 'false'));
     else c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
   });
-  $('#funWhat').innerHTML = $('#heroEst .chips').innerHTML;
 
   let lastFocus = null; const anyOpen = () => $$('.dlg.open').length || chat.classList.contains('open') || $('#mnav').classList.contains('open');
   const open = d => { lastFocus = document.activeElement; d.classList.add('open'); document.body.style.overflow = 'hidden'; setTimeout(() => { const sh = $('.sheet', d) || d; sh.setAttribute('tabindex', '-1'); sh.focus({ preventScroll: true }); }, 60); };
@@ -717,7 +818,8 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   const picked = g => $$('.chip[aria-pressed=true]', $('[data-group="' + g + '"]', fun)).map(c => c.textContent.trim());
   const openFun = (from = 0) => { show(from); open(fun); };
   $$('[data-est]').forEach(b => b.addEventListener('click', () => { closeMenu(); openFun(0); }));
-  $('#heroEst').addEventListener('submit', e => { e.preventDefault(); const sel = $$('#heroEst .chip').map(c => c.getAttribute('aria-pressed')); $$('#funWhat .chip').forEach((c, i) => c.setAttribute('aria-pressed', sel[i])); openFun(sel.includes('true') ? 1 : 0); });
+  // a service card opens the estimate with that repair already picked
+  $$('.svc').forEach(c => c.addEventListener('click', () => { const pk = c.dataset.svc; let hit = false; $$('#funWhat .chip').forEach(x => { const on = !!pk && x.textContent.trim() === pk; x.setAttribute('aria-pressed', on ? 'true' : 'false'); hit = hit || on; }); openFun(hit ? 1 : 0); }));
   $('#fBack').addEventListener('click', () => show(Math.max(0, s - 1)));
   $('#pics').addEventListener('change', e => { const n = e.target.files.length; $('#picsN').textContent = n ? n + ' photo' + (n > 1 ? 's' : '') + ' added' : 'From your camera or library'; });
   const nudge = el => el.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-6px)' }, { transform: 'translateX(6px)' }, { transform: 'translateX(0)' }], { duration: 260 });
@@ -734,6 +836,9 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   const pop = $('#pop'); let popped = false; try { popped = sessionStorage.getItem('auto-pop') === '1'; } catch (e) {}
   const tryPop = () => { if (popped || anyOpen()) return; popped = true; try { sessionStorage.setItem('auto-pop', '1'); } catch (e) {} open(pop); };
   setTimeout(tryPop, 2500);
+  // the pop-up's before/after wipes slowly on its own: wreck, then the finished car
+  const ab = $('#popAB'); let abT = 0;
+  if (ab) { const step = t => { if (!pop.classList.contains('open')) { abT = 0; requestAnimationFrame(step); return; } abT = abT || t; const k = ((t - abT) % 9000) / 9000; const x = k < .15 ? 100 : k < .7 ? 100 - (k - .15) / .55 * 100 : 0; const e = x === 0 || x === 100 ? x : 100 * (1 - (1 - Math.cos(Math.PI * (1 - x / 100))) / 2); ab.style.setProperty('--x', (reduce ? 50 : e) + '%'); requestAnimationFrame(step); }; requestAnimationFrame(step); }
   addEventListener('scroll', () => { if (scrollY > (document.body.scrollHeight - innerHeight) * .3) tryPop(); }, { passive: true });
   $('#popGo').addEventListener('click', () => { const sel = $$('#popChips .chip[aria-pressed=true]').map(c => c.dataset.pick); $$('#funWhat .chip').forEach(c => c.setAttribute('aria-pressed', sel.includes(c.textContent.trim()) ? 'true' : 'false')); pop.classList.remove('open'); openFun(sel.length ? 1 : 0); });
 
