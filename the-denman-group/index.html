@@ -627,7 +627,34 @@ em{font-style:italic;color:var(--sand)}
 }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-</head>
+<style id="t3d-css">
+.t3d{position:relative;height:100svh;background:#0c1117;overflow:hidden;isolation:isolate}
+.t3d iframe{position:absolute;left:0;right:0;bottom:0;top:var(--hdr,70px);width:100%;height:calc(100% - var(--hdr,70px));border:0;pointer-events:none}
+.t3d.live iframe{pointer-events:auto}
+.t3d-cover{position:absolute;inset:0;z-index:2;display:grid;place-items:center;background-size:cover;background-position:50% 50%;transition:opacity .6s ease,visibility 0s .6s}
+.t3d-cover::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(12,17,23,.35),rgba(12,17,23,.85))}
+.t3d.live .t3d-cover{opacity:0;visibility:hidden}
+.t3d-in{position:relative;text-align:center;padding:0 var(--gutter);display:grid;justify-items:center;gap:16px}
+.t3d-k{font:500 .74rem/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--sand)}
+.t3d-h{font-family:var(--display,Georgia,serif);font-weight:400;font-size:clamp(2.6rem,6.4vw,5.6rem);line-height:.95;color:#fff;letter-spacing:-.01em}
+.t3d-h em{color:var(--sand)}
+.t3d-f{color:rgba(255,255,255,.78);font-size:clamp(.95rem,1.3vw,1.1rem)}
+.t3d-go{position:relative;margin-top:14px;display:inline-flex;align-items:center;gap:14px;min-height:64px;padding:0 34px 0 24px;border:1px solid rgba(217,196,155,.7);background:rgba(12,17,23,.5);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;font:600 .82rem/1 var(--body);letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:background .3s,border-color .3s}
+.t3d-go:hover{background:var(--sand);color:#0c1117;border-color:var(--sand)}
+.t3d-ring{width:14px;height:14px;border-radius:50%;background:var(--sand);box-shadow:0 0 0 0 rgba(217,196,155,.6);animation:ring 2s ease-out infinite}
+@keyframes ring{70%,100%{box-shadow:0 0 0 14px rgba(217,196,155,0)}}
+.t3d-help{font-size:.82rem;color:rgba(255,255,255,.6)}
+.t3d-skip{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font:500 .72rem/1 var(--body);letter-spacing:.2em;text-transform:uppercase;text-decoration:none}.t3d-skip svg{width:16px;height:16px}
+.t3d-bar{position:absolute;top:calc(var(--hdr,70px) + 14px);left:var(--gutter);right:var(--gutter);z-index:3;display:flex;align-items:center;gap:14px;pointer-events:none}
+.t3d-x{pointer-events:auto;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px 0 16px;border:1px solid rgba(255,255,255,.35);background:rgba(12,17,23,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;font:600 .74rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;cursor:pointer}.t3d-x svg{width:16px;height:16px}
+.t3d-x:hover{border-color:var(--sand)}
+.t3d-where{padding:10px 14px;background:rgba(12,17,23,.6);color:rgba(255,255,255,.85);font-size:.82rem}
+.t3d-down{position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:3;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border:0;background:var(--sand);color:#0c1117;font:600 .74rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;cursor:pointer;box-shadow:0 14px 40px -12px rgba(0,0,0,.7)}.t3d-down svg{width:16px;height:16px}
+.t3d-credit{position:absolute;right:var(--gutter);bottom:6px;z-index:1;font-size:.62rem;color:rgba(255,255,255,.4)}
+@media (min-width:761px){.t3d-short{display:none}}
+@media (max-width:760px){.t3d-long{display:none}.t3d-down,.t3d-skip{white-space:nowrap}.t3d-where{display:none}.t3d-bar{top:calc(var(--hdr,64px) + 10px)}.t3d-down{bottom:calc(84px + env(safe-area-inset-bottom,0px))}.t3d-skip{bottom:96px}}
+@media (prefers-reduced-motion:reduce){.t3d-ring{animation:none}}
+</style></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="glow" aria-hidden="true"></div>
@@ -646,6 +673,25 @@ em{font-style:italic;color:var(--sand)}
 </header>
 
 <main id="main">
+<section class="t3d" id="tour" aria-label="3D tour of 11 Mt. Auburn Street, Unit 11">
+  <iframe id="t3dF" title="3D tour of 11 Mt. Auburn Street, Unit 11, Cambridge" data-src="https://my.matterport.com/show/?m=7mJjBr6DXi3&amp;play=1&amp;qs=1&amp;brand=0&amp;title=0&amp;help=0&amp;mls=1&amp;hr=0&amp;dh=1" allow="xr-spatial-tracking; fullscreen; gyroscope; accelerometer" allowfullscreen loading="eager"></iframe>
+  <div class="t3d-cover" id="t3dCover" style="background-image:url('https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73552985&n=0')">
+    <div class="t3d-in">
+      <p class="t3d-k">For sale in Cambridge · 3D tour</p>
+      <h2 class="t3d-h">Walk through<br><em>11 Mt. Auburn Street, Unit 11</em></h2>
+      <p class="t3d-f">$2,799,900 · 4 beds · 4 full + 1 half baths · 2,870 sq ft</p>
+      <button class="t3d-go" type="button" id="t3dGo"><span class="t3d-ring" aria-hidden="true"></span>Step inside</button>
+      <p class="t3d-help">Click to move room to room · drag to look around</p>
+    </div>
+    <a class="t3d-skip" href="#top">Skip<span class="t3d-long"> to The Denman Group's site</span><span class="t3d-short"> the tour</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+  </div>
+  <div class="t3d-bar" id="t3dBar" hidden>
+    <button type="button" id="t3dX" class="t3d-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>Exit tour</button>
+    <span class="t3d-where">11 Mt. Auburn Street, Unit 11, Cambridge · $2,799,900</span>
+  </div>
+  <button type="button" class="t3d-down" id="t3dDown" hidden>Continue<span class="t3d-long"> to The Denman Group's site</span><span class="t3d-short"> to site</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+  <p class="t3d-credit">11 Mt. Auburn Street, Unit 11, Cambridge · Listed by EXp Realty LLC · Tour and photo: MLS PIN</p>
+</section>
 <section class="hero" id="top" aria-labelledby="hero-title">
   <div class="hero-img"><img src="../re-img/re-hero.webp" srcset="../re-img/re-hero-1000.webp 1000w, ../re-img/re-hero.webp 1920w" sizes="100vw" alt="" fetchpriority="high"></div>
   <div class="hero-in">
@@ -1223,5 +1269,11 @@ em{font-style:italic;color:var(--sand)}
   $('year').textContent = new Date().getFullYear();
 })();
 </script>
-</body>
+<script>(()=>{const S=document.getElementById('tour');if(!S)return;const F=document.getElementById('t3dF'),bar=document.getElementById('t3dBar'),down=document.getElementById('t3dDown'),go=document.getElementById('t3dGo');
+const hd=document.querySelector('header');if(hd)S.style.setProperty('--hdr',hd.offsetHeight+'px');const load=()=>{if(!F.src)F.src=F.dataset.src};setTimeout(load,600);
+const enter=()=>{load();S.classList.add('live');bar.hidden=false;down.hidden=false;S.scrollIntoView({behavior:'smooth'});setTimeout(()=>F.focus(),400)};
+const leave=(scroll)=>{S.classList.remove('live');bar.hidden=true;down.hidden=true;if(scroll)document.getElementById('top').scrollIntoView({behavior:'smooth'})};
+go.addEventListener('click',enter);document.getElementById('t3dX').addEventListener('click',()=>leave(true));down.addEventListener('click',()=>leave(true));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&S.classList.contains('live'))leave(true)});
+new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting&&S.classList.contains('live'))leave(false)}),{threshold:.15}).observe(S);})()</script></body>
 </html>
