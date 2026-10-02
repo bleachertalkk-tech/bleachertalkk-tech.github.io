@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Today's Collision Malden · Auto Body Repair on Washington St</title>
-<meta name="description" content="Collision repair in Malden, MA. Tesla, Rivian, Ford and Jaguar Land Rover certified. 4.9 stars from 706 Google reviews. 375 Washington St · (781) 321-6080.">
+<title>Today&#39;s Collision Malden · Auto Body Repair in Malden, MA</title>
+<meta name="description" content="Auto body and collision repair in Malden, MA. 4.9 stars from 706 Google reviews. 375 Washington St · (781) 321-6080.">
+<meta name="robots" content="noindex">
 <meta name="theme-color" content="#0c0c0d">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
-<link rel="preload" as="image" href="img/hero-1200.webp" imagesrcset="img/hero-1200.webp 1200w, img/hero.webp 1800w" imagesizes="100vw">
+<link rel="preload" as="image" href="img/hero-1200.webp">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoBodyShop","name":"Today's Collision Malden","telephone":"+17813216080","address":{"@type":"PostalAddress","streetAddress":"375 Washington St","addressLocality":"Malden","addressRegion":"MA","postalCode":"02148"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"706"}}</script>
 <style>
 :root{
@@ -355,6 +356,80 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   .rv-in{opacity:1;transform:none}
   .streak{opacity:.5;transform:rotate(-7deg)}
 }
+
+.proof .wrap{grid-template-columns:repeat(var(--cols,4),minmax(0,1fr))}
+@media (max-width:760px){.proof .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.proof div:last-child:nth-child(odd){grid-column:1/-1;border-left:0;padding-left:0;border-top:1px solid var(--line)}}
+/* ===== v2: estimate dock, slider, condensed numbers, rotating reviews, clean pop-up ===== */
+.hero .wrap{grid-template-columns:minmax(0,1fr);padding-block:150px 40px}
+.hero-copy{max-width:860px}
+.dock{margin-top:42px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:22px;padding:14px 14px 14px 26px;border-radius:999px;background:rgba(14,14,16,.62);border:1px solid var(--line-2);backdrop-filter:blur(24px) saturate(1.3);box-shadow:0 24px 70px -20px rgba(0,0,0,.8)}
+.dock-t{display:flex;flex-direction:column;gap:4px;white-space:nowrap}
+.dock-t b{font:800 17px/1 var(--display);font-stretch:108%}
+.dock-t span{font-size:13px;color:var(--dim)}
+.dock .chips{display:flex;flex-wrap:wrap;gap:8px}
+.dock .chip{min-height:42px;padding:8px 16px 8px 12px;border-radius:999px;font-size:14.5px;gap:8px}
+.dock .chip .tick{width:16px;height:16px;border-radius:50%}
+.dock .btn{min-height:54px;padding:0 28px;white-space:nowrap}
+.proof b{font-stretch:62%;font-weight:600;font-size:clamp(2.6rem,4.6vw,4.2rem);letter-spacing:-.01em;line-height:.9}
+.proof b small{font-size:.42em;font-stretch:100%;font-weight:700;margin-left:6px;vertical-align:.5em}
+.hero-proof b{font-stretch:62%;font-weight:600;font-size:44px}
+.big-r b{font-stretch:62%;font-weight:600}
+.big-r .stars{color:var(--o)}
+/* before/after drag slider */
+.cmp{position:relative;border-radius:var(--r);overflow:hidden;background:var(--ink-3);user-select:none;-webkit-user-select:none;touch-action:pan-y;cursor:ew-resize;max-width:100%}
+.cmp img{width:100%;height:auto;display:block;pointer-events:none}
+.cmp .cmp-a{position:absolute;inset:0;clip-path:inset(0 0 0 var(--x,50%))}
+.cmp .cmp-a img{position:absolute;inset:0;width:100%;height:100%}
+.cmp-h{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 18px rgba(0,0,0,.5);pointer-events:none}
+.cmp-h i{position:absolute;top:50%;left:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:var(--o);display:grid;place-items:center;box-shadow:0 8px 30px -6px var(--o-glow),0 0 0 6px rgba(255,106,19,.18)}
+.cmp-h i svg{width:24px;height:24px;color:#140800}
+.cmp .tag{position:absolute;top:16px;font:700 11px/1 var(--display);letter-spacing:.22em;text-transform:uppercase;padding:9px 12px;border-radius:999px;pointer-events:none}
+.cmp .tag.b{left:16px;background:rgba(12,12,13,.72);backdrop-filter:blur(8px)}
+.cmp .tag.a{right:16px;background:var(--o);color:#140800}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.cmp:focus-within{outline:2px solid var(--o);outline-offset:3px}
+.ba{display:grid;gap:clamp(40px,6vw,72px)}
+.ba-hint{display:inline-flex;align-items:center;gap:8px;color:var(--dim);font-size:13.5px;margin-top:14px}
+/* rotating reviews */
+.spot{position:relative;margin-top:56px;min-height:300px;display:grid}
+.spot .q{grid-area:1/1;margin:0;opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1);pointer-events:none;max-width:980px}
+.spot .q.on{opacity:1;transform:none;pointer-events:auto}
+.spot .q p{margin:0;font:400 clamp(1.45rem,2.9vw,2.35rem)/1.35 var(--display);letter-spacing:-.01em;color:var(--fg);text-wrap:pretty}
+.spot .q p::before{content:"“";color:var(--o);font-weight:800}
+.spot .q p::after{content:"”";color:var(--o);font-weight:800}
+.spot .who{display:flex;align-items:center;gap:14px;margin-top:28px;color:var(--dim);font-size:15px}
+.spot .who i{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(255,106,19,.14);color:var(--o);font:700 16px/1 var(--display);font-style:normal}
+.spot .who b{color:var(--fg);display:block;font-weight:600}
+.spot .who .st{color:var(--o);letter-spacing:2px}
+.dots{display:flex;gap:8px;margin-top:34px}
+.dots button{width:34px;height:4px;border-radius:4px;border:0;padding:0;background:var(--line-2);position:relative;overflow:hidden}
+.dots button.on::after{content:"";position:absolute;inset:0;background:var(--o);transform-origin:left;animation:fill 6.5s linear forwards}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+/* clean pop-up */
+.pop .sheet{width:min(420px,100%)}
+.pop-photo{aspect-ratio:16/8}
+.pop h3{font-size:28px;margin-bottom:6px}
+.pop p{margin-bottom:20px}
+.pop .chips{gap:8px}
+.pop .chip{min-height:48px}
+.ring-opts{padding:0}.ring-opts::before{display:none}.ring-opts .chips{padding:0;background:none}
+.pop .tiles{display:none}
+.pop-call{display:block;text-align:center;margin-top:14px;font-size:14px;color:var(--dim);text-decoration:none}
+.pop-call b{color:var(--fg)}
+@media (max-width:1080px){
+  .dock{grid-template-columns:minmax(0,1fr);border-radius:22px;padding:20px;gap:16px}
+  .dock .btn{width:100%}
+}
+@media (max-width:760px){
+  .hero .wrap{padding-block:47svh 30px}
+  .dock{margin-top:26px}
+  .dock .chips{display:grid;grid-template-columns:1fr 1fr}
+  .dock .chip{border-radius:12px;min-height:48px}
+  .proof b{font-size:2.6rem}
+  .spot{min-height:340px;margin-top:40px}
+  .cmp-h i{width:46px;height:46px;margin:-23px 0 0 -23px}
+}
+@media (prefers-reduced-motion:reduce){.spot .q{transition:none}.dots button.on::after{animation:none;transform:none}}
 </style>
 </head>
 <body>
@@ -367,149 +442,101 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   <symbol id="shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
   <symbol id="close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z"/></symbol>
+  <symbol id="swap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></symbol>
   <symbol id="send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15M13 6l6 6-6 6"/></symbol>
 </svg>
 
 <header class="hdr" id="hdr">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Today's Collision Malden, home"><b>Today's<span>.</span></b><small>Collision · Malden</small></a>
-    <nav class="nav" aria-label="Main">
-      <a href="#work">Before &amp; after</a><a href="#repairs">Repairs</a><a href="#claim">Insurance</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a>
-    </nav>
+    <a class="brand" href="#top" aria-label="Today&#39;s Collision Malden, home"><b>Today&#39;s<span>.</span></b><small>Collision · Malden</small></a>
+    <nav class="nav" aria-label="Main"><a href="#work">Before &amp; after</a><a href="#repairs">Repairs</a><a href="#claim">How it works</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav>
     <a class="hphone" href="tel:+17813216080"><svg><use href="#phone"/></svg>(781) 321-6080</a>
     <button class="btn btn-o" data-est type="button">Get an estimate</button>
     <button class="menu-b" id="menuB" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
   </div>
 </header>
-
 <div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
   <button class="x" type="button" data-close-menu aria-label="Close menu"><svg><use href="#close"/></svg></button>
-  <a href="#work">Before &amp; after</a><a href="#repairs">Repairs</a><a href="#claim">Insurance</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a>
+  <a href="#work">Before &amp; after</a><a href="#repairs">Repairs</a><a href="#claim">How it works</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a>
   <div style="display:grid;gap:10px;margin-top:30px"><button class="btn btn-o" data-est type="button">Get an estimate</button><a class="btn btn-g" href="tel:+17813216080"><svg><use href="#phone"/></svg>(781) 321-6080</a></div>
 </div>
 
 <main id="main">
 <section class="hero" id="top">
-  <div class="hero-bg"><img src="img/hero-1200.webp" srcset="img/hero-1200.webp 1200w, img/hero.webp 1800w" sizes="100vw" width="1800" height="2400" alt="A red Tesla finished at Today's Collision, paint and wheel close up" fetchpriority="high"></div>
+  <div class="hero-bg"><img src="img/hero-1200.webp" srcset="img/hero-1200.webp 1200w, img/hero.webp 1800w" sizes="100vw" width="1800" height="2400" alt="A red Tesla finished at Today&#39;s Collision, paint and wheel close up" fetchpriority="high" style="object-position:58% 72%"></div>
   <div class="streak" aria-hidden="true"></div>
   <div class="wrap">
-    <div>
+    <div class="hero-copy">
       <p class="status" id="status"><i></i><span>375 Washington St, Malden</span></p>
       <h1>Back to <span class="o">factory.</span><span class="thin">Collision repair in Malden, certified by Tesla, Rivian, Ford and Jaguar Land Rover.</span></h1>
-      <p class="hero-sub">A 23,000 sq ft shop by Oak Grove station. We handle the insurance claim, set you up with a rental on site, and detail your car free before you pick it up.</p>
+      <p class="hero-sub">We work with your insurance company, help you with a rental and tow it in when it can&#39;t be driven. Start your estimate here in about a minute.</p>
       <div class="hero-proof">
         <b>4.9</b>
         <div class="hp"><span class="stars" aria-label="4.9 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><span>706 Google reviews</span></div>
         <i class="sep" aria-hidden="true"></i>
-        <div class="hp"><strong>24-hour towing</strong><span>Call (781) 321-6080</span></div>
+        <div class="hp"><strong>24-hour towing</strong><span>(781) 321-6080</span></div>
       </div>
-      <a class="scroll-cue" href="#work"><i></i>See the work</a>
     </div>
-    <form class="est" id="heroEst" aria-labelledby="estT">
-      <h3 id="estT">Start your estimate</h3>
-      <p>What happened? Pick all that apply.</p>
-      <div class="chips" data-group="what">
-        <button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Accident</button>
-        <button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Dent or scratch</button>
-        <button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Paint</button>
-        <button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Glass</button>
-        <button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Alignment</button>
-        <button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Not sure</button>
-      </div>
+    <form class="dock" id="heroEst" aria-labelledby="estT">
+      <div class="dock-t"><b id="estT">Start your estimate</b><span>What happened? Pick any.</span></div>
+      <div class="chips" data-group="what"><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Accident</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Dent or scratch</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Paint</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Glass</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Alignment</button><button type="button" class="chip" aria-pressed="false"><span class="tick"><svg><use href="#check"/></svg></span>Not sure</button></div>
       <button class="btn btn-o" type="submit">Continue <svg><use href="#arrow"/></svg></button>
-      <div class="est-foot"><span>Takes about a minute</span><a href="tel:+17813216080">Or call us</a></div>
     </form>
   </div>
 </section>
 
-<div class="proof">
-  <div class="wrap">
-    <div><b>4.9<small>★</small></b><span>Google rating</span></div>
-    <div><b>706</b><span>Google reviews</span></div>
-    <div><b>23,000</b><span>Sq ft shop</span></div>
-    <div><b>24<small>hr</small></b><span>Towing</span></div>
-  </div>
-</div>
+<div class="proof"><div class="wrap" style="--cols:4"><div><b>4.9<small>★</small></b><span>Google rating</span></div><div><b>706</b><span>Google reviews</span></div><div><b>24<small>hr</small></b><span>Towing</span></div><div><b>5</b><span>Certifications</span></div></div></div>
 
 <section class="sec" id="work">
   <div class="wrap">
-    <div class="ba-head rv-in">
-      <div>
-        <p class="kick">Before &amp; after <i>01</i></p>
-        <h2>Same car.<br><em>Same shop.</em></h2>
-      </div>
-      <p class="lede" style="margin:0">Two cars that came in on a truck and left looking like this. Photos taken here in Malden.</p>
-    </div>
+    <div class="ba-head rv-in"><div><p class="kick">Before &amp; after <i>01</i></p><h2>Same car.<br><em>Same shop.</em></h2></div><p class="lede" style="margin:0">Real cars from this shop, photographed here in Malden.</p></div>
     <div class="ba">
-      <div class="rv-in">
-        <div class="pair">
-          <figure><img src="img/b1-1200.webp" srcset="img/b1-1200.webp 1200w, img/b1.webp 2400w" sizes="(max-width:760px) 100vw, 50vw" width="2400" height="1800" loading="lazy" alt="Blue BMW 4 Series with a crushed hood and front end, before repair"><figcaption>Before</figcaption></figure>
-          <figure class="after"><img src="img/a1-1200.webp" srcset="img/a1-1200.webp 1200w, img/a1.webp 2400w" sizes="(max-width:760px) 100vw, 50vw" width="2400" height="1800" loading="lazy" alt="The same blue BMW 4 Series after repair, hood and front end restored"><figcaption>After</figcaption></figure>
-        </div>
-        <div class="pair-meta"><span><b>BMW 4 Series</b> · front-end collision</span><span>Hood, bumper, headlight and lip</span></div>
-      </div>
-      <div class="rv-in">
-        <div class="pair">
-          <figure><img src="img/b2-1200.webp" srcset="img/b2-1200.webp 1200w, img/b2.webp 2400w" sizes="(max-width:760px) 100vw, 50vw" width="2400" height="1350" loading="lazy" alt="Blue BMW M4 with a smashed front bumper, before repair"><figcaption>Before</figcaption></figure>
-          <figure class="after"><img src="img/a2-1200.webp" srcset="img/a2-1200.webp 1200w, img/a2.webp 2400w" sizes="(max-width:760px) 100vw, 50vw" width="2400" height="1350" loading="lazy" alt="The same BMW M4 after repair, new front bumper fitted and painted"><figcaption>After</figcaption></figure>
-        </div>
-        <div class="pair-meta"><span><b>BMW M4</b> · front-end collision</span><span>Bumper, grilles and paint match</span></div>
-      </div>
+      <div class="rv-in"><div class="cmp" style="aspect-ratio:2400/1800">
+        <img src="img/b1-1200.webp" srcset="img/b1-1200.webp 1200w, img/b1.webp 2400w" sizes="(max-width:1240px) 100vw, 1240px" width="2400" height="1800" loading="lazy" alt="Blue BMW 4 Series with a crushed hood and front end, before repair">
+        <div class="cmp-a"><img src="img/a1-1200.webp" srcset="img/a1-1200.webp 1200w, img/a1.webp 2400w" sizes="(max-width:1240px) 100vw, 1240px" width="2400" height="1800" loading="lazy" alt="The same blue BMW 4 Series after repair"></div>
+        <span class="tag b">Before</span><span class="tag a">After</span>
+        <div class="cmp-h" aria-hidden="true"><i><svg><use href="#swap"/></svg></i></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
+      </div><div class="pair-meta"><span><b>BMW 4 Series · front-end collision</b></span><span>Hood, bumper, headlight and lip</span></div></div>
+      <div class="rv-in"><div class="cmp" style="aspect-ratio:2400/1350">
+        <img src="img/b2-1200.webp" srcset="img/b2-1200.webp 1200w, img/b2.webp 2400w" sizes="(max-width:1240px) 100vw, 1240px" width="2400" height="1350" loading="lazy" alt="Blue BMW M4 with a smashed front bumper, before repair">
+        <div class="cmp-a"><img src="img/a2-1200.webp" srcset="img/a2-1200.webp 1200w, img/a2.webp 2400w" sizes="(max-width:1240px) 100vw, 1240px" width="2400" height="1350" loading="lazy" alt="The same BMW M4 after repair"></div>
+        <span class="tag b">Before</span><span class="tag a">After</span>
+        <div class="cmp-h" aria-hidden="true"><i><svg><use href="#swap"/></svg></i></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
+      </div><div class="pair-meta"><span><b>BMW M4 · front-end collision</b></span><span>Bumper, grilles and paint match</span></div></div>
     </div>
+    <p class="ba-hint"><svg width="16" height="16"><use href="#swap"/></svg>Drag the handle to compare</p>
   </div>
 </section>
 
 <section class="band" aria-label="Tesla Certified">
   <div class="band-ph"><img src="img/g1-1200.webp" srcset="img/g1-1200.webp 1200w, img/g1.webp 2400w" sizes="100vw" width="2400" height="1800" loading="lazy" alt="A red Tesla Model 3, repaired and ready for pickup"></div>
-  <div class="band-txt wrap rv-in">
-    <p class="kick">Certified</p>
-    <p class="band-h">Tesla Certified.</p><p class="band-sub">Every Tesla is repaired here in Malden or at our Danvers shop.</p>
-  </div>
+  <div class="band-txt wrap rv-in"><p class="kick">Certified</p><p class="band-h">Tesla Certified.</p><p class="band-sub">Also Rivian Certified, Ford Certified, Jaguar &amp; Land Rover Certified and I-CAR Gold.</p></div>
 </section>
 
 <section class="sec" id="repairs">
   <div class="wrap rep">
-    <div class="rep-photos">
-      <figure class="rep-photo rv-in"><img src="img/g5-1200.webp" srcset="img/g5-1200.webp 1200w, img/g5.webp 2048w" sizes="(max-width:1080px) 100vw, 50vw" width="2048" height="1536" loading="lazy" alt="A Tesla stripped down on the frame bench inside the Malden shop"><figcaption>Structural repair on the bench, inside our Malden shop.</figcaption></figure>
-      <figure class="rep-photo rv-in"><img src="img/g4-1200.webp" srcset="img/g4-1200.webp 1200w, img/g4.webp 2400w" sizes="(max-width:1080px) 100vw, 50vw" width="2400" height="1350" loading="lazy" alt="A Jaguar F-Type with its front end apart, mid-repair"><figcaption>A Jaguar F-Type mid-repair. Jaguar and Land Rover certified.</figcaption></figure>
-    </div>
+    <div class="rep-photos"><figure class="rep-photo rv-in"><img src="img/g5-1200.webp" srcset="img/g5-1200.webp 1200w, img/g5.webp 2048w" sizes="(max-width:1080px) 100vw, 50vw" width="2048" height="1536" loading="lazy" alt="A Tesla on the frame bench inside the shop"></figure><figure class="rep-photo rv-in"><img src="img/g4-1200.webp" srcset="img/g4-1200.webp 1200w, img/g4.webp 2400w" sizes="(max-width:1080px) 100vw, 50vw" width="2400" height="1350" loading="lazy" alt="A Jaguar F-Type mid-repair"></figure></div>
     <div class="rv-in">
       <p class="kick">What we fix <i>02</i></p>
-      <h2>Every repair, <em>under one roof.</em></h2>
-      <p class="lede">All makes and models. A lot of high-end and luxury cars.</p>
-      <ul class="list">
-        <li><b>Collision repair</b><span>Frame, body and panels, from a door ding to a car that was almost totaled.</span></li>
-        <li><b>Aluminum repair</b><span>A separate 3,000 sq ft room just for aluminum bodies.</span></li>
-        <li><b>Paint and refinish</b><span>Color matched to the factory finish.</span></li>
-        <li><b>Auto glass</b><span>Windshields and windows, done in-house.</span></li>
-        <li><b>Suspension and alignment</b><span>Full service on Hunter Engineering equipment.</span></li>
-        <li><b>Towing and rental</b><span>Towing around the clock, rental car right here at the shop, pick-up and delivery.</span></li>
-      </ul>
-      <div class="certs" aria-label="Certifications">
-        <span class="cert"><svg><use href="#shield"/></svg>Tesla Certified</span>
-        <span class="cert"><svg><use href="#shield"/></svg>Rivian Certified</span>
-        <span class="cert"><svg><use href="#shield"/></svg>Ford Certified</span>
-        <span class="cert"><svg><use href="#shield"/></svg>Jaguar &amp; Land Rover</span>
-        <span class="cert"><svg><use href="#shield"/></svg>I-CAR Gold</span>
-      </div>
+      <h2>Every repair,<br><em>under one roof.</em></h2>
+      <ul class="list"><li><b>Collision repair</b><span>From a door ding to major front and rear damage.</span></li><li><b>Paint and refinish</b><span>Color matched to your car's factory finish.</span></li><li><b>Dent and scratch repair</b><span>Small damage fixed so you can't tell it happened.</span></li><li><b>Frame and structural repair</b><span>Measured and straightened back to spec.</span></li><li><b>Aluminum repair</b><span>The tools and training aluminum bodies need.</span></li><li><b>Auto glass</b><span>Windshields and windows.</span></li><li><b>Alignment</b><span>Back to straight after the repair.</span></li><li><b>Towing</b><span>We can bring the car to us.</span></li><li><b>Rental cars</b><span>Help getting you a car while yours is here.</span></li><li><b>Detailing</b><span>Your car cleaned up before you get it back.</span></li></ul>
+      <div class="certs" aria-label="Certifications"><span class="cert"><svg><use href="#shield"/></svg>Tesla Certified</span><span class="cert"><svg><use href="#shield"/></svg>Rivian Certified</span><span class="cert"><svg><use href="#shield"/></svg>Ford Certified</span><span class="cert"><svg><use href="#shield"/></svg>Jaguar &amp; Land Rover Certified</span><span class="cert"><svg><use href="#shield"/></svg>I-CAR Gold</span></div>
     </div>
   </div>
 </section>
 
 <section class="sec claim" id="claim">
   <div class="wrap">
-    <div class="rv-in">
-      <p class="kick">Insurance <i>03</i></p>
-      <h2>Your claim,<br><em>handled.</em></h2>
-      <p class="lede">First accident? Most people don't know how this works. Here's how it goes.</p>
-    </div>
+    <div class="rv-in"><p class="kick">How it works <i>03</i></p><h2>Wrecked car,<br><em>easy fix.</em></h2><p class="lede">First accident? Most people don't know how this works. Here's how it goes.</p></div>
     <div class="steps">
-      <div class="step rv-in"><em>1</em><b>Get it here</b><span>Drive it in, or we tow it. Towing runs 24 hours a day.</span></div>
-      <div class="step rv-in"><em>2</em><b>We deal with insurance</b><span>We handle the claim with your insurer and walk you through the appraisal.</span></div>
-      <div class="step rv-in"><em>3</em><b>Keep driving</b><span>Pick up a rental right here at the shop while we work.</span></div>
-      <div class="step rv-in"><em>4</em><b>Pick it up clean</b><span>Every repair comes with a free detail. Or we deliver it to you.</span></div>
+      <div class="step rv-in"><em>1</em><b>Tell us what happened</b><span>Start an estimate on this page or call (781) 321-6080.</span></div>
+      <div class="step rv-in"><em>2</em><b>Bring it in</b><span>Drive it in, or we tow it if it can't be driven.</span></div>
+      <div class="step rv-in"><em>3</em><b>We work with insurance</b><span>We deal with the insurance company so you don't have to.</span></div>
+      <div class="step rv-in"><em>4</em><b>Pick it up fixed</b><span>Drive a rental while we work, then pick up your car.</span></div>
     </div>
-    <div class="claim-cta rv-in"><button class="btn btn-o" data-est type="button">Start an estimate <svg><use href="#arrow"/></svg></button><a class="btn btn-g" href="tel:+17813216080"><svg><use href="#phone"/></svg>Ask about your claim</a></div>
+    <div class="claim-cta rv-in"><button class="btn btn-o" data-est type="button">Start an estimate <svg><use href="#arrow"/></svg></button><a class="btn btn-g" href="tel:+17813216080"><svg><use href="#phone"/></svg>Call the shop</a></div>
   </div>
 </section>
 
@@ -517,12 +544,10 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   <div class="wrap">
     <div class="rv-top rv-in">
       <div class="big-r"><b>4.9</b><div><span class="stars" aria-label="4.9 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><span><strong>706</strong> reviews on Google</span></div></div>
-      <div><p class="kick">Reviews <i>04</i></p><h2>Ask for <em>Matt.</em><br>Ask for Robbie.</h2></div>
+      <div><p class="kick">Reviews <i>04</i></p><h2>Don't take<br><em>our word for it.</em></h2></div>
     </div>
   </div>
-  <div class="marquee" aria-label="Customer reviews from Google">
-    <div class="track" id="track"></div>
-  </div>
+  <div class="wrap"><div class="spot" id="spot" aria-live="polite"></div><div class="dots" id="dots"></div></div>
 </section>
 
 <section class="sec" id="shop" style="padding-top:0">
@@ -534,31 +559,28 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 
 <section class="sec claim" id="visit">
   <div class="wrap visit">
-    <figure class="rv-in"><img src="img/shop-1200.webp" srcset="img/shop-1200.webp 1200w, img/shop.webp 1800w" sizes="(max-width:760px) 100vw, 55vw" width="1800" height="1190" loading="lazy" alt="The Today's Collision building at 375 Washington St, Malden"></figure>
+    <figure class="rv-in"><img src="img/shop-1200.webp" srcset="img/shop-1200.webp 1200w, img/shop.webp 1800w" sizes="(max-width:760px) 100vw, 55vw" width="1800" height="1190" loading="lazy" alt="The Today&#39;s Collision building on Washington St"></figure>
     <div class="rv-in">
       <p class="kick">Visit <i>06</i></p>
       <h2>Come <em>see us.</em></h2>
       <p class="addr">375 Washington St<br>Malden, MA 02148</p>
-      <p class="near">Walking distance from Oak Grove on the Orange Line. Close to Routes 1 and 93.</p>
       <table class="hours" id="hours"><tbody></tbody></table>
-      <div class="visit-cta"><a class="btn btn-o" href="https://www.google.com/maps/dir/?api=1&amp;destination=375+Washington+St,+Malden,+MA+02148" target="_blank" rel="noopener">Directions <svg><use href="#arrow"/></svg></a><a class="btn btn-g" href="tel:+17813216080"><svg><use href="#phone"/></svg>(781) 321-6080</a></div>
+      <div class="visit-cta"><a class="btn btn-o" href="https://www.google.com/maps/dir/?api=1&amp;destination=375+Washington+St%2C+Malden%2C+MA+02148" target="_blank" rel="noopener">Directions <svg><use href="#arrow"/></svg></a><a class="btn btn-g" href="tel:+17813216080"><svg><use href="#phone"/></svg>(781) 321-6080</a></div>
     </div>
   </div>
 </section>
 </main>
 
-<footer class="site"><div class="wrap"><span>Today's Collision Malden · 375 Washington St, Malden, MA 02148 · (781) 321-6080</span><span>Open Mon–Fri. Saturday by appointment.</span></div></footer>
-
+<footer class="site"><div class="wrap"><span>Today&#39;s Collision Malden · 375 Washington St, Malden, MA 02148 · (781) 321-6080</span><span>4.9★ from 706 Google reviews</span></div></footer>
 <div class="pbar"><a class="btn btn-g" href="tel:+17813216080"><svg><use href="#phone"/></svg>Call</a><button class="btn btn-o" data-est type="button">Get an estimate</button></div>
 
 <button class="ask-b hide" id="askB" type="button" aria-expanded="false" aria-controls="chat"><i><svg><use href="#spark"/></svg></i>Ask us</button>
-<div class="chat" id="chat" role="dialog" aria-label="Ask Today's Collision">
-  <div class="chat-h"><div><b>Today's Collision</b><small>Answers about the Malden shop</small></div><button class="x" type="button" id="chatX" aria-label="Close chat"><svg><use href="#close"/></svg></button></div>
+<div class="chat" id="chat" role="dialog" aria-label="Ask Today&#39;s Collision Malden">
+  <div class="chat-h"><div><b>Today&#39;s Collision Malden</b><small>Answers about the Malden shop</small></div><button class="x" type="button" id="chatX" aria-label="Close chat"><svg><use href="#close"/></svg></button></div>
   <div class="msgs" id="msgs" aria-live="polite"></div>
-  <div class="sugs" id="sugs"><button type="button">Are you open now?</button><button type="button">Do you fix Teslas?</button><button type="button">Can you deal with my insurance?</button><button type="button">Do you tow?</button></div>
-  <form id="chatF"><input id="chatI" placeholder="Ask about hours, towing, insurance…" autocomplete="off" aria-label="Your question"><button type="submit" aria-label="Send"><svg><use href="#send"/></svg></button></form>
+  <div class="sugs" id="sugs"><button type="button">Are you open now?</button><button type="button">Where are you?</button><button type="button">Can you work with my insurance?</button><button type="button">How much will it cost?</button></div>
+  <form id="chatF"><input id="chatI" placeholder="Ask about hours, services, location…" autocomplete="off" aria-label="Your question"><button type="submit" aria-label="Send"><svg><use href="#send"/></svg></button></form>
 </div>
-
 <!-- estimate funnel -->
 <div class="dlg" id="fun" role="dialog" aria-modal="true" aria-labelledby="funT">
   <div class="sheet">
@@ -614,7 +636,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   </div>
 </div>
 
-<!-- pop-up -->
+
 <div class="dlg pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="popT">
   <div class="sheet">
     <button class="x" type="button" data-close aria-label="Close"><svg><use href="#close"/></svg></button>
@@ -622,139 +644,120 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
     <div class="f-body">
       <h3 id="popT">Been in an accident?</h3>
       <p>Tell us what happened. We'll take it from there.</p>
-      <div class="ring-opts"><div class="chips" id="popChips">
-        <button type="button" class="chip" aria-pressed="false" data-pick="Accident"><span class="tick"><svg><use href="#check"/></svg></span>Accident</button>
-        <button type="button" class="chip" aria-pressed="false" data-pick="Dent or scratch"><span class="tick"><svg><use href="#check"/></svg></span>Dent or scratch</button>
-        <button type="button" class="chip" aria-pressed="false" data-pick="Paint"><span class="tick"><svg><use href="#check"/></svg></span>Paint</button>
-        <button type="button" class="chip" aria-pressed="false" data-pick="Glass"><span class="tick"><svg><use href="#check"/></svg></span>Glass</button>
-      </div></div>
+      <div class="ring-opts"><div class="chips" id="popChips"><button type="button" class="chip" aria-pressed="false" data-pick="Accident"><span class="tick"><svg><use href="#check"/></svg></span>Accident</button><button type="button" class="chip" aria-pressed="false" data-pick="Dent or scratch"><span class="tick"><svg><use href="#check"/></svg></span>Dent or scratch</button><button type="button" class="chip" aria-pressed="false" data-pick="Paint"><span class="tick"><svg><use href="#check"/></svg></span>Paint</button><button type="button" class="chip" aria-pressed="false" data-pick="Not sure"><span class="tick"><svg><use href="#check"/></svg></span>Not sure</button></div></div>
       <button class="btn btn-o" type="button" id="popGo" style="width:100%;margin-top:14px">Start my estimate <svg><use href="#arrow"/></svg></button>
-      <div class="tiles"><a class="tile" href="tel:+17813216080"><b>Need a tow?</b>24 hours a day</a><a class="tile" href="#claim" data-close><b>Insurance help</b>We handle the claim</a></div>
+      <a class="pop-call" href="tel:+17813216080">Rather talk? <b>(781) 321-6080</b></a>
       <button class="notnow" type="button" data-close>Not now</button>
     </div>
   </div>
 </div>
-
-<script>
-(() => {
-  const BIZ = {
-    name: "Today's Collision Malden", phone: '(781)\u00a0321\u20116080', tel: '+17813216080', address: '375 Washington St, Malden, MA 02148',
-    hours: [['Monday','8 AM–5 PM'],['Tuesday','8 AM–5 PM'],['Wednesday','8 AM–5 PM'],['Thursday','8 AM–5 PM'],['Friday','8 AM–12 PM'],['Saturday','Closed'],['Sunday','Closed']],
-    quotes: [
-      {a:'Eric B.', t:"I was rear-ended, and they were quick to fix it with OEM parts as a Tesla Certified repair center. Robbie and his father were very kind and supportive of all my anxiety throughout this process. Today’s Collision Malden is the first place I would recommend to any of my friends or family members to trust with their car."},
-      {a:'Mark K.', t:"My 2022 Tesla Model X was rear ended, almost totalled. I decided to keep the car and fix it. Matt worked with me and the car came out beautiful. This is the place to go if you need your vehicle fixed like brand new. Great job guys!"},
-      {a:'JC', t:"I came in because of a door ding on my car and Matt was incredibly professional and knowledgeable throughout the entire process. The repair was completed perfectly, and my car looks great. Excellent customer service from start to finish."}
-    ],
-    gallery: [[['g7',2400,1800,'BMW 4 Series halfway through its front-end repair'],['g8',2400,1800,'Gray Tesla Model 3 with a damaged front fender, before repair']],[['g3',1086,1448,'Black Tesla Model Y, finished'],['g2',2400,1800,'Red Tesla Model X in the shop'],['g1',2400,1800,'Red Tesla Model 3, finished and ready for pickup']]]
-  };
-  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+<script>window.BIZ={"name":"Today's Collision Malden","phone":"(781) 321-6080","town":"Malden","street":"375 Washington St","detail":false,"certs":["Tesla Certified","Rivian Certified","Ford Certified","Jaguar & Land Rover Certified","I-CAR Gold"],"services":["insurance","rental","towing","glass","alignment","aluminum","detailing","frame"],"hours":[["Monday","8 AM–5 PM"],["Tuesday","8 AM–5 PM"],["Wednesday","8 AM–5 PM"],["Thursday","8 AM–5 PM"],["Friday","8 AM–12 PM"],["Saturday","Closed"],["Sunday","Closed"]],"quotes":[{"a":"Eric B.","t":"I can’t thank Robbie and his father enough for the incredible work and customer service. I felt supported throughout every step of the process. This was my first time ever in an accident."},{"a":"Mark K.","t":"My 2022 Tesla Model X was rear ended, almost totalled. I decided to keep the car and fix it. Matt worked with me and the car came out beautiful. This is the place to go if you need your vehicle fixed like brand new. Great job guys!"},{"a":"JC","t":"I had a great experience working with Matt Everson at today’s. I came in because of a door ding on my car and Matt was incredibly professional and knowledgeable throughout the entire process."}],"gallery":[[["g7",2400,1800,"BMW 4 Series halfway through its front-end repair"],["g8",2400,1800,"Gray Tesla Model 3 with a damaged front fender"]],[["g3",1086,1448,"Black Tesla Model Y, finished"],["g2",2400,1800,"Red Tesla Model X in the shop"]]]};</script>
+<script>(() => {
+  const BIZ = window.BIZ, $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // ---- hours + live open status (Boston time)
   const D3 = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  const parse = s => { if (/closed/i.test(s)) return null; const m = s.match(/(\d+)(?::(\d+))?\s*(AM|PM)\s*[–-]\s*(\d+)(?::(\d+))?\s*(AM|PM)/i); if (!m) return null; const h = (x, mm, ap) => (+x % 12 + (/pm/i.test(ap) ? 12 : 0)) + (+mm || 0) / 60; return [h(m[1], m[2], m[3]), h(m[4], m[5], m[6])]; };
+  const parse = s => { if (!s || /closed/i.test(s)) return null; if (/24 hours/i.test(s)) return [0, 24]; const m = s.match(/(\d+)(?::(\d+))?\s*(AM|PM)?\s*[–-]\s*(\d+)(?::(\d+))?\s*(AM|PM)/i); if (!m) return null; const h = (x, mm, ap) => (+x % 12 + (/pm/i.test(ap) ? 12 : 0)) + (+mm || 0) / 60; return [h(m[1], m[2], m[3] || m[6]), h(m[4], m[5], m[6])]; };
   const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })), today = D3[now.getDay()], hr = now.getHours() + now.getMinutes() / 60;
-  $('#hours tbody').innerHTML = BIZ.hours.map(([d, h]) => `<tr${d === today ? ' class="today"' : ''}><td>${d}</td><td>${d === 'Saturday' && /closed/i.test(h) ? 'By appointment' : h.replace('–', ' – ')}</td></tr>`).join('');
-  const span = parse((BIZ.hours.find(x => x[0] === today) || [])[1] || 'Closed');
-  const isOpen = span && hr >= span[0] && hr < span[1];
-  const fmt = x => { const h = Math.floor(x), m = Math.round((x - h) * 60); return (h % 12 || 12) + (m ? ':' + String(m).padStart(2, '0') : '') + (h >= 12 ? ' pm' : ' am'); };
-  let next = ''; if (!isOpen) for (let k = 0; k < 7; k++) { const d = D3[(now.getDay() + k) % 7], s = parse((BIZ.hours.find(x => x[0] === d) || [])[1] || 'Closed'); if (s && (k > 0 || hr < s[0])) { next = `Opens ${k === 0 ? 'today' : k === 1 ? 'tomorrow' : d} ${fmt(s[0])}`; break; } }
+  const hoursOf = d => (BIZ.hours.find(x => x[0] === d) || [])[1] || 'Closed';
+  $('#hours tbody').innerHTML = BIZ.hours.map(([d, h]) => '<tr' + (d === today ? ' class="today"' : '') + '><td>' + d + '</td><td>' + h.replace(/–/g, ' – ') + '</td></tr>').join('');
+  const span = parse(hoursOf(today)), isOpen = !!span && hr >= span[0] && hr < span[1];
+  const fmt = x => { const h = Math.floor(x) % 24, m = Math.round((x - Math.floor(x)) * 60); return (h % 12 || 12) + (m ? ':' + String(m).padStart(2, '0') : '') + (h >= 12 ? ' pm' : ' am'); };
+  let next = ''; if (!isOpen) for (let k = 0; k < 8; k++) { const d = D3[(now.getDay() + k) % 7], s = parse(hoursOf(d)); if (s && (k > 0 || hr < s[0])) { next = 'Opens ' + (k === 0 ? 'today' : k === 1 ? 'tomorrow' : d) + ' ' + fmt(s[0]); break; } }
   const st = $('#status'); st.classList.add(isOpen ? 'open' : 'closed');
-  st.querySelector('span').textContent = (isOpen ? `Open until ${fmt(span[1])}` : next) + ' · 375 Washington St, Malden';
+  st.querySelector('span').textContent = (isOpen ? 'Open until ' + fmt(span[1]) : next || 'Closed today') + ' · ' + BIZ.street + ', ' + BIZ.town;
 
-  // ---- reviews marquee (doubled for a seamless loop)
-  const card = q => `<article class="rv"><p>${q.t}</p><footer><i>${q.a[0]}</i><span><b>${q.a}</b>Google review · <span class="st">★★★★★</span></span></footer></article>`;
-  const set = BIZ.quotes.map(card).join(''); $('#track').innerHTML = set + set + set + set;
-  $$('#track .rv').slice(BIZ.quotes.length).forEach(n => n.setAttribute('aria-hidden', 'true'));
+  const escH = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  // reviews: one at a time, rotating
+  $('#spot').innerHTML = BIZ.quotes.map((q, i) => '<blockquote class="q' + (i ? '' : ' on') + '"><p>' + escH(q.t) + '</p><div class="who"><i>' + escH(q.a[0] || '★') + '</i><span><b>' + escH(q.a) + '</b>Google review · <span class="st">★★★★★</span></span></div></blockquote>').join('');
+  $('#dots').innerHTML = BIZ.quotes.length > 1 ? BIZ.quotes.map((q, i) => '<button type="button" aria-label="Review ' + (i + 1) + '"' + (i ? '' : ' class="on"') + '></button>').join('') : '';
+  let qi = 0, qt; const qs = $$('#spot .q'), ds = $$('#dots button');
+  const showQ = i => { qi = (i + qs.length) % qs.length; qs.forEach((q, k) => q.classList.toggle('on', k === qi)); ds.forEach((d, k) => { d.classList.remove('on'); if (k === qi) { void d.offsetWidth; d.classList.add('on'); } }); clearTimeout(qt); if (!reduce && qs.length > 1) qt = setTimeout(() => showQ(qi + 1), 6500); };
+  ds.forEach((d, k) => d.addEventListener('click', () => showQ(k))); showQ(0);
+  // before/after: drag to compare
+  $$('.cmp').forEach(c => { const r = $('input', c); const set = v => c.style.setProperty('--x', v + '%'); r.addEventListener('input', () => set(r.value)); set(50); });
 
-  // ---- gallery: each row's photos share one height, so every photo keeps its own shape and rows end flush
-  $('#gal').innerHTML = BIZ.gallery.map(row => `<div class="row rv-in">${row.map(([f, w, h, alt]) => `<figure style="flex:${(w / h).toFixed(4)} 1 0"><img src="img/${f}-1200.webp" srcset="img/${f}-1200.webp 1200w, img/${f}.webp ${w}w" sizes="(max-width:760px) 100vw, 50vw" width="${w}" height="${h}" loading="lazy" alt="${alt}"></figure>`).join('')}</div>`).join('');
+  if ($('#gal')) $('#gal').innerHTML = BIZ.gallery.map(row => '<div class="row rv-in">' + row.map(([f, w, h, alt]) => '<figure style="flex:' + (w / h).toFixed(4) + ' 1 0"><img src="img/' + f + '-1200.webp" srcset="img/' + f + '-1200.webp 1200w, img/' + f + '.webp ' + w + 'w" sizes="(max-width:760px) 100vw, 50vw" width="' + w + '" height="' + h + '" loading="lazy" alt="' + escH(alt) + '"></figure>').join('') + '</div>').join('');
 
   const chat = $('#chat'), askB = $('#askB'), msgs = $('#msgs');
-  // ---- header + reveal
-  const hdr = $('#hdr'); const onS = () => { hdr.classList.toggle('solid', scrollY > 40); askB.classList.toggle('hide', scrollY < innerHeight * .8 && !chat.classList.contains('open')); }; addEventListener('scroll', onS, { passive: true }); onS();
+  const hdr = $('#hdr'); const onS = () => { hdr.classList.toggle('solid', scrollY > 40); askB.classList.toggle('hide', scrollY < innerHeight * .8 && !chat.classList.contains('open')); };
+  addEventListener('scroll', onS, { passive: true }); onS();
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
   $$('.rv-in').forEach(n => io.observe(n));
 
-  // ---- chips
-  const wireChips = root => root.addEventListener('click', e => {
+  document.addEventListener('click', e => {
     const c = e.target.closest('.chip'); if (!c || !c.hasAttribute('aria-pressed')) return; const g = c.closest('.chips');
     if (g.hasAttribute('data-single')) $$('.chip', g).forEach(x => x.setAttribute('aria-pressed', x === c ? 'true' : 'false'));
     else c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
   });
-  wireChips(document);
   $('#funWhat').innerHTML = $('#heroEst .chips').innerHTML;
 
-  // ---- dialogs
-  let lastFocus = null; const anyOpen = () => $$('.dlg.open').length || $('#chat').classList.contains('open') || $('#mnav').classList.contains('open');
+  let lastFocus = null; const anyOpen = () => $$('.dlg.open').length || chat.classList.contains('open') || $('#mnav').classList.contains('open');
   const open = d => { lastFocus = document.activeElement; d.classList.add('open'); document.body.style.overflow = 'hidden'; setTimeout(() => ($('.chip, input, .btn', d) || d).focus({ preventScroll: true }), 60); };
   const close = d => { d.classList.remove('open'); if (!anyOpen()) document.body.style.overflow = ''; lastFocus && lastFocus.focus && lastFocus.focus({ preventScroll: true }); };
-  $$('.dlg').forEach(d => { d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) close(d); }); });
+  $$('.dlg').forEach(d => d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) close(d); }));
   addEventListener('keydown', e => { if (e.key === 'Escape') { $$('.dlg.open').forEach(close); closeMenu(); closeChat(); } });
 
-  // ---- estimate funnel
   const fun = $('#fun'), steps = $$('.f-step', fun), bars = $$('.prog i', fun); let s = 0;
-  const show = n => { s = n; steps.forEach((x, i) => x.classList.toggle('on', i === n)); bars.forEach((b, i) => b.classList.toggle('on', i <= n)); $('#fNav').style.display = n === 5 ? 'none' : 'flex'; $('#fBack').style.visibility = n === 0 ? 'hidden' : 'visible'; $('#fNext').innerHTML = n === 4 ? 'Send' : n === 3 ? 'Continue <svg><use href="#arrow"/></svg>' : 'Continue <svg><use href="#arrow"/></svg>'; };
-  const picked = g => $$(`.chip[aria-pressed=true]`, $(`[data-group="${g}"]`, fun)).map(c => c.textContent.trim());
+  const show = n => { s = n; steps.forEach((x, i) => x.classList.toggle('on', i === n)); bars.forEach((b, i) => b.classList.toggle('on', i <= n)); $('#fNav').style.display = n === 5 ? 'none' : 'flex'; $('#fBack').style.visibility = n === 0 ? 'hidden' : 'visible'; $('#fNext').innerHTML = n === 4 ? 'Send' : 'Continue <svg><use href="#arrow"/></svg>'; };
+  const picked = g => $$('.chip[aria-pressed=true]', $('[data-group="' + g + '"]', fun)).map(c => c.textContent.trim());
   const openFun = (from = 0) => { show(from); open(fun); };
   $$('[data-est]').forEach(b => b.addEventListener('click', () => { closeMenu(); openFun(0); }));
   $('#heroEst').addEventListener('submit', e => { e.preventDefault(); const sel = $$('#heroEst .chip').map(c => c.getAttribute('aria-pressed')); $$('#funWhat .chip').forEach((c, i) => c.setAttribute('aria-pressed', sel[i])); openFun(sel.includes('true') ? 1 : 0); });
   $('#fBack').addEventListener('click', () => show(Math.max(0, s - 1)));
-  $('#pics').addEventListener('change', e => { const n = e.target.files.length; $('#picsN').textContent = n ? `${n} photo${n > 1 ? 's' : ''} added` : 'From your camera or library'; });
+  $('#pics').addEventListener('change', e => { const n = e.target.files.length; $('#picsN').textContent = n ? n + ' photo' + (n > 1 ? 's' : '') + ' added' : 'From your camera or library'; });
+  const nudge = el => el.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-6px)' }, { transform: 'translateX(6px)' }, { transform: 'translateX(0)' }], { duration: 260 });
   $('#funF').addEventListener('submit', e => {
     e.preventDefault();
     if (s === 0 && !picked('what').length) return nudge($('[data-group="what"]', fun));
     if (s === 1 && !picked('make').length) return nudge($('[data-group="make"]', fun));
     if (s === 2 && !picked('drive').length) return nudge($('[data-group="drive"]', fun));
     if (s === 4) { const n = $('#fn'), p = $('#fp'); if (!n.value.trim()) return n.focus(); if (p.value.replace(/\D/g, '').length < 10) { p.focus(); p.style.borderColor = 'var(--no)'; return; }
-      $('#doneT').textContent = `Thanks, ${n.value.trim().split(' ')[0]}. We'll call ${p.value} during shop hours.${picked('drive')[0] === 'No, I need a tow' ? ' Need the tow right now? Call (781)\u00a0321\u20116080. Towing runs 24 hours.' : ' Need us sooner? Call (781)\u00a0321\u20116080.'}`; }
+      $('#doneT').textContent = 'Thanks, ' + n.value.trim().split(' ')[0] + '. We\'ll call ' + p.value + ' during shop hours. Need us sooner? Call ' + BIZ.phone + '.'; }
     show(s + 1);
   });
-  const nudge = el => { el.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-6px)' }, { transform: 'translateX(6px)' }, { transform: 'translateX(0)' }], { duration: 260 }); };
 
-  // ---- pop-up: 2.5 s or 30% scroll, once per visit, never over another dialog or the estimate card
-  const pop = $('#pop'); let popped = false; try { popped = sessionStorage.getItem('tc-pop') === '1'; } catch {}
-  const tryPop = () => { if (popped || anyOpen()) return; popped = true; try { sessionStorage.setItem('tc-pop', '1'); } catch {} open(pop); };
+  const pop = $('#pop'); let popped = false; try { popped = sessionStorage.getItem('auto-pop') === '1'; } catch (e) {}
+  const tryPop = () => { if (popped || anyOpen()) return; popped = true; try { sessionStorage.setItem('auto-pop', '1'); } catch (e) {} open(pop); };
   setTimeout(tryPop, 2500);
   addEventListener('scroll', () => { if (scrollY > (document.body.scrollHeight - innerHeight) * .3) tryPop(); }, { passive: true });
   $('#popGo').addEventListener('click', () => { const sel = $$('#popChips .chip[aria-pressed=true]').map(c => c.dataset.pick); $$('#funWhat .chip').forEach(c => c.setAttribute('aria-pressed', sel.includes(c.textContent.trim()) ? 'true' : 'false')); pop.classList.remove('open'); openFun(sel.length ? 1 : 0); });
 
-  // ---- phone menu
   const mnav = $('#mnav'), mb = $('#menuB');
   mb.addEventListener('click', () => { mnav.classList.add('open'); mb.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; });
   function closeMenu() { if (!mnav.classList.contains('open')) return; mnav.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); if (!anyOpen()) document.body.style.overflow = ''; }
   $$('a, [data-close-menu]', mnav).forEach(a => a.addEventListener('click', closeMenu));
 
-  // ---- assistant: answers only from this shop's real details
+  // assistant: answers only from this shop's real details; anything else -> call the shop
+  const has = k => BIZ.services.includes(k);
   const say = (t, who = 'bot') => { const m = document.createElement('div'); m.className = 'm ' + who; m.textContent = t; msgs.appendChild(m); msgs.scrollTop = msgs.scrollHeight; };
-  const hoursTxt = () => 'Monday to Thursday 8 am to 5 pm, Friday 8 am to noon. Saturday by appointment, closed Sunday.';
+  const hoursTxt = () => BIZ.hours.map(([d, h]) => d.slice(0, 3) + ' ' + h).join(', ') + '.';
+  const call = ' Call us at ' + BIZ.phone + '.';
   const answer = q => {
     q = q.toLowerCase();
-    if (/open|hour|close|today|saturday|sunday|weekend|time/.test(q)) return (isOpen ? `Yes, we're open until ${fmt(span[1])} today. ` : `We're closed right now. ${next}. `) + 'Hours: ' + hoursTxt();
-    if (/tesla|rivian|ford|jaguar|land rover|certif|i-car|icar|ev|electric/.test(q)) return "Yes. We're Tesla, Rivian, Ford and Jaguar Land Rover certified, and I-CAR Gold. All Teslas are repaired here in Malden or at our Danvers shop.";
-    if (/insur|claim|adjuster|appraisal|geico|progressive|state farm|allstate|liberty|plymouth|arbella|safety/.test(q)) return 'Yes. We handle the claim with your insurance company and walk you through the appraisal. Call (781)\u00a0321\u20116080 and we can start it today.';
-    if (/tow|stuck|won.t start|accident now|broke down/.test(q)) return 'Yes, we tow 24 hours a day. Call (781)\u00a0321\u20116080.';
-    if (/rent|loaner|car while/.test(q)) return 'Yes. You can pick up a rental right here at the shop while we work on your car.';
-    if (/glass|windshield|window/.test(q)) return 'Yes, we do auto glass in-house.';
-    if (/align|suspension/.test(q)) return 'Yes. Full suspension and alignment service on Hunter Engineering equipment.';
-    if (/aluminum|alu/.test(q)) return 'Yes. We have a separate 3,000 sq ft room just for aluminum repair.';
-    if (/paint|scratch|dent|ding|bumper/.test(q)) return "Yes, we fix dents, scratches and paint on all makes and models. Start an estimate on this page and we'll call you back.";
-    if (/detail|clean|wash/.test(q)) return 'Every repair comes with a free detail.';
-    if (/where|address|direction|park|t station|orange line|located/.test(q)) return "We're at 375 Washington St in Malden, walking distance from Oak Grove on the Orange Line, near Routes 1 and 93.";
-    if (/pick ?up|deliver/.test(q)) return 'Yes, pick-up and delivery are available.';
-    if (/cost|price|how much|quote|estimate/.test(q)) return "Every repair is different, so we price it after we see the car. Start an estimate here, or call (781)\u00a0321\u20116080.";
-    if (/how long|turnaround|days|when.*ready/.test(q)) return "It depends on the damage and parts. Call (781)\u00a0321\u20116080 and we'll give you a real answer for your car.";
-    if (/phone|call|number|contact|email/.test(q)) return 'Call us at (781)\u00a0321\u20116080.';
-    return "I'm not sure about that one. Call us at (781)\u00a0321\u20116080 and we'll help.";
+    if (/open|hour|close|today|saturday|sunday|weekend|time/.test(q)) return (isOpen ? 'Yes, we\'re open until ' + fmt(span[1]) + ' today. ' : 'We\'re closed right now. ' + (next ? next + '. ' : '')) + 'Hours: ' + hoursTxt();
+    if (/where|address|direction|park|located|location/.test(q)) return 'We\'re at ' + BIZ.street + ' in ' + BIZ.town + '.';
+    if (/certif|tesla|i-car|icar|ase|oem/.test(q)) return BIZ.certs.length ? 'We\'re ' + BIZ.certs.join(', ') + '.' : 'Call us and ask about your make and model.' + call;
+    if (/insur|claim|adjuster|appraisal|geico|progressive|state farm|allstate|liberty|plymouth|arbella|safety/.test(q)) return has('insurance') ? 'Yes, we work with your insurance company on the claim.' + call : 'Call us and we\'ll talk through your claim.' + call;
+    if (/tow|stuck|won.t start|can.t drive/.test(q)) return has('towing') ? 'Yes, we can tow it in.' + call : 'Call us and we\'ll help you figure out the best way to get it here.' + call;
+    if (/rent|loaner|car while/.test(q)) return has('rental') ? 'Yes, we can help you get a rental while yours is here.' + call : 'Call us and ask about getting a car while yours is here.' + call;
+    if (/ceramic|coating/.test(q)) return has('ceramic') ? 'Yes, we do ceramic coating.' + call : 'Call us and ask.' + call;
+    if (/ppf|film|clear bra/.test(q)) return has('ppf') ? 'Yes, we install paint protection film.' + call : 'Call us and ask.' + call;
+    if (/tint/.test(q)) return has('tint') ? 'Yes, we do window tint.' + call : 'Call us and ask.' + call;
+    if (/full detail|include|interior|exterior|detail/.test(q)) return BIZ.detail ? 'We do interior and exterior detailing. Pick what you need in the booking form and we\'ll confirm the details when we call.' : (has('detailing') ? 'Yes, we can detail your car too.' + call : 'Call us and ask.' + call);
+    if (/glass|windshield|window/.test(q)) return has('glass') ? 'Yes, we do auto glass.' + call : 'Call us and ask.' + call;
+    if (/paint|scratch|dent|ding|bumper|collision|accident|fender/.test(q)) return 'Yes, we fix that. Start an estimate on this page and we\'ll call you back, or call ' + BIZ.phone + '.';
+    if (/cost|price|how much|quote|estimate/.test(q)) return 'Every car is different, so we price it after we see it. Start an estimate here and we\'ll call you back.';
+    if (/how long|turnaround|days|when.*ready/.test(q)) return 'It depends on the work and the parts.' + call;
+    if (/phone|call|number|contact|email/.test(q)) return 'Call us at ' + BIZ.phone + '.';
+    return 'I\'m not sure about that one.' + call;
   };
-  const openChat = () => { chat.classList.add('open'); askB.setAttribute('aria-expanded', 'true'); if (!msgs.children.length) say("Hi! Ask me about hours, towing, insurance or what we fix."); setTimeout(() => $('#chatI').focus({ preventScroll: true }), 80); };
+  const openChat = () => { chat.classList.add('open'); askB.setAttribute('aria-expanded', 'true'); if (!msgs.children.length) say('Hi! Ask me about hours, location or what we do.'); setTimeout(() => $('#chatI').focus({ preventScroll: true }), 80); };
   function closeChat() { chat.classList.remove('open'); askB.setAttribute('aria-expanded', 'false'); }
   askB.addEventListener('click', () => chat.classList.contains('open') ? closeChat() : openChat());
   $('#chatX').addEventListener('click', closeChat);
   const ask = t => { if (!t.trim()) return; say(t, 'me'); setTimeout(() => say(answer(t)), reduce ? 0 : 420); };
   $('#chatF').addEventListener('submit', e => { e.preventDefault(); ask($('#chatI').value); $('#chatI').value = ''; });
   $('#sugs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) ask(b.textContent); });
-})();
-</script>
+})();</script>
 </body>
 </html>
