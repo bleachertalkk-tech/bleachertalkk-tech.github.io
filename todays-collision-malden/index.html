@@ -460,7 +460,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <header class="hdr" id="hdr">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Today&#39;s Collision Malden, home"><b>Today&#39;s<span>.</span></b><small>Collision · Malden</small></a>
-    <nav class="nav" aria-label="Main"><a href="#work">Before &amp; after</a><a href="#repairs">Repairs</a><a href="#claim">How it works</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav>
+    <nav class="nav" aria-label="Main"><a href="#reviews">Reviews</a><a href="#work">Before &amp; after</a><a href="#repairs">Repairs</a><a href="#claim">How it works</a><a href="#visit">Visit</a></nav>
     <a class="hphone" href="tel:+17813216080"><svg><use href="#phone"/></svg>(781) 321-6080</a>
     <button class="btn btn-o" data-est type="button">Get an estimate</button>
     <button class="menu-b" id="menuB" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
@@ -468,7 +468,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 </header>
 <div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
   <button class="x" type="button" data-close-menu aria-label="Close menu"><svg><use href="#close"/></svg></button>
-  <a href="#work">Before &amp; after</a><a href="#repairs">Repairs</a><a href="#claim">How it works</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a>
+  <a href="#reviews">Reviews</a><a href="#work">Before &amp; after</a><a href="#repairs">Repairs</a><a href="#claim">How it works</a><a href="#visit">Visit</a>
   <div style="display:grid;gap:10px;margin-top:30px"><button class="btn btn-o" data-est type="button">Get an estimate</button><a class="btn btn-g" href="tel:+17813216080"><svg><use href="#phone"/></svg>(781) 321-6080</a></div>
 </div>
 
@@ -498,13 +498,23 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 
 <div class="proof"><div class="wrap" style="--cols:4"><div><b>4.9<small>★</small></b><span>Google rating</span></div><div><b>706</b><span>Google reviews</span></div><div><b>24<small>hr</small></b><span>Towing</span></div><div><b>5</b><span>Certifications</span></div></div></div>
 
+<section class="sec" id="reviews" style="padding-bottom:clamp(40px,6vw,80px)">
+  <div class="wrap">
+    <div class="rv-top rv-in">
+      <div class="big-r"><b>4.9</b><div><span class="stars" aria-label="4.9 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><span><strong>706</strong> reviews on Google</span></div></div>
+      <div><p class="kick">Reviews <i>01</i></p><h2>Don't take<br><em>our word for it.</em></h2></div>
+    </div>
+  </div>
+  <div class="wrap"><div class="spot" id="spot" aria-live="polite"></div><div class="dots" id="dots"></div></div>
+</section>
+
 <section class="sec" id="work">
   <div class="wrap">
-    <div class="ba-head rv-in"><div><p class="kick">Before &amp; after <i>01</i></p><h2>Same car.<br><em>Same shop.</em></h2></div><p class="lede" style="margin:0">Real cars from this shop, photographed here in Malden.</p></div>
+    <div class="ba-head rv-in"><div><p class="kick">Before &amp; after <i>02</i></p><h2>Same car.<br><em>Same shop.</em></h2></div><p class="lede" style="margin:0">Real cars from this shop, photographed here in Malden.</p></div>
     <div class="ba">
-      <div class="rv-in"><div class="cmp" style="aspect-ratio:2400/1800">
-        <img src="img/b1-1200.webp" srcset="img/b1-1200.webp 1200w, img/b1.webp 2400w" sizes="(max-width:1240px) 100vw, 1240px" width="2400" height="1800" loading="lazy" alt="Blue BMW 4 Series with a crushed hood and front end, before repair">
-        <div class="cmp-a"><img src="img/a1-1200.webp" srcset="img/a1-1200.webp 1200w, img/a1.webp 2400w" sizes="(max-width:1240px) 100vw, 1240px" width="2400" height="1800" loading="lazy" alt="The same blue BMW 4 Series after repair"></div>
+      <div class="rv-in"><div class="cmp" style="aspect-ratio:1968/1476">
+        <img src="img/b1-1200.webp" srcset="img/b1-1200.webp 1200w, img/b1.webp 1968w" sizes="(max-width:1240px) 100vw, 1240px" width="1968" height="1476" loading="lazy" alt="Blue BMW 4 Series with a crushed hood and front end, before repair">
+        <div class="cmp-a"><img src="img/a1-1200.webp" srcset="img/a1-1200.webp 1200w, img/a1.webp 1968w" sizes="(max-width:1240px) 100vw, 1240px" width="1968" height="1476" loading="lazy" alt="The same blue BMW 4 Series after repair"></div>
         <span class="tag b">Before</span><span class="tag a">After</span>
         <div class="cmp-h" aria-hidden="true"><i><svg><use href="#swap"/></svg></i></div>
         <input type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
@@ -530,7 +540,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   <div class="wrap rep">
     <div class="rep-photos"><figure class="rep-photo rv-in"><img src="img/g5-1200.webp" srcset="img/g5-1200.webp 1200w, img/g5.webp 2048w" sizes="(max-width:1080px) 100vw, 50vw" width="2048" height="1536" loading="lazy" alt="A Tesla on the frame bench inside the shop"></figure><figure class="rep-photo rv-in"><img src="img/g4-1200.webp" srcset="img/g4-1200.webp 1200w, img/g4.webp 2400w" sizes="(max-width:1080px) 100vw, 50vw" width="2400" height="1350" loading="lazy" alt="A Jaguar F-Type mid-repair"></figure></div>
     <div class="rv-in">
-      <p class="kick">What we fix <i>02</i></p>
+      <p class="kick">What we fix <i>03</i></p>
       <h2>Every repair,<br><em>under one roof.</em></h2>
       <ul class="list"><li><b>Collision repair</b><span>From a door ding to major front and rear damage.</span></li><li><b>Paint and refinish</b><span>Color matched to your car's factory finish.</span></li><li><b>Dent and scratch repair</b><span>Small damage fixed so you can't tell it happened.</span></li><li><b>Frame and structural repair</b><span>Measured and straightened back to spec.</span></li><li><b>Aluminum repair</b><span>The tools and training aluminum bodies need.</span></li><li><b>Auto glass</b><span>Windshields and windows.</span></li><li><b>Alignment</b><span>Back to straight after the repair.</span></li><li><b>Towing</b><span>We can bring the car to us.</span></li><li><b>Rental cars</b><span>Help getting you a car while yours is here.</span></li><li><b>Detailing</b><span>Your car cleaned up before you get it back.</span></li></ul>
       <div class="certs" aria-label="Certifications"><span class="cert"><svg><use href="#shield"/></svg>Tesla Certified</span><span class="cert"><svg><use href="#shield"/></svg>Rivian Certified</span><span class="cert"><svg><use href="#shield"/></svg>Ford Certified</span><span class="cert"><svg><use href="#shield"/></svg>Jaguar &amp; Land Rover Certified</span><span class="cert"><svg><use href="#shield"/></svg>I-CAR Gold</span></div>
@@ -540,7 +550,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 
 <section class="sec claim" id="claim">
   <div class="wrap">
-    <div class="rv-in"><p class="kick">How it works <i>03</i></p><h2>Wrecked car,<br><em>easy fix.</em></h2><p class="lede">First accident? Most people don't know how this works. Here's how it goes.</p></div>
+    <div class="rv-in"><p class="kick">How it works <i>04</i></p><h2>Wrecked car,<br><em>easy fix.</em></h2><p class="lede">First accident? Most people don't know how this works. Here's how it goes.</p></div>
     <div class="steps">
       <div class="step rv-in"><em>1</em><b>Tell us what happened</b><span>Start an estimate on this page or call (781) 321-6080.</span></div>
       <div class="step rv-in"><em>2</em><b>Bring it in</b><span>Drive it in, or we tow it if it can't be driven.</span></div>
@@ -551,15 +561,6 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   </div>
 </section>
 
-<section class="sec" id="reviews">
-  <div class="wrap">
-    <div class="rv-top rv-in">
-      <div class="big-r"><b>4.9</b><div><span class="stars" aria-label="4.9 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><span><strong>706</strong> reviews on Google</span></div></div>
-      <div><p class="kick">Reviews <i>04</i></p><h2>Don't take<br><em>our word for it.</em></h2></div>
-    </div>
-  </div>
-  <div class="wrap"><div class="spot" id="spot" aria-live="polite"></div><div class="dots" id="dots"></div></div>
-</section>
 
 <section class="sec" id="shop" style="padding-top:0">
   <div class="wrap">
