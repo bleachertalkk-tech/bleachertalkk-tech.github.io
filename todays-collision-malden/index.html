@@ -543,6 +543,60 @@ body{font-family:var(--body)}
   .strip-car{height:230px}
 }
 @media (prefers-reduced-motion:reduce){.stars-big svg{opacity:1;transform:none}}
+
+/* ===== v4 ===== */
+.hdr .btn{min-height:52px;padding:0 26px;font-size:15.5px}
+/* hero: copy left, big estimate panel right */
+.hero .wrap.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(30px,5vw,70px);align-items:end;padding-block:140px 56px}
+.est-panel{position:relative;padding:30px;border-radius:26px;background:rgba(16,16,18,.74);border:1px solid var(--line-2);backdrop-filter:blur(24px) saturate(1.3);box-shadow:0 40px 100px -30px rgba(0,0,0,.85)}
+.est-panel::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;background:linear-gradient(150deg,var(--o),rgba(255,106,19,0) 40%,rgba(255,106,19,0) 70%,rgba(255,106,19,.6));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.est-panel h3{font:900 clamp(1.7rem,2.4vw,2.2rem)/1.05 var(--display);font-stretch:112%;margin:0;letter-spacing:-.01em}
+.est-panel p{margin:10px 0 22px;color:var(--dim);font-size:15.5px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;min-height:64px;padding:12px 16px;border-radius:16px;border:1px solid var(--line-2);background:rgba(255,255,255,.04);font:600 17px/1.2 var(--body);text-align:left;transition:border-color .2s,background .2s,transform .15s}
+.opt:hover{border-color:var(--o);background:rgba(255,106,19,.1)}
+.opt:active{transform:scale(.985)}
+.opt i{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(255,106,19,.15);color:var(--o);flex:none}
+.opt i svg{width:20px;height:20px}
+.opt>svg{margin-left:auto;width:18px;height:18px;color:var(--dim)}
+.est-go{width:100%;min-height:72px;margin-top:16px;font-size:19px;border-radius:18px}
+.est-go svg{width:22px;height:22px}
+.est-note{display:flex;justify-content:space-between;gap:10px;margin-top:14px;font-size:13.5px;color:var(--dim)}
+.est-note a{color:var(--fg);font-weight:700;text-decoration:none}
+/* proof banner: three equal, centered columns */
+.proof .wrap{grid-template-columns:repeat(var(--cols,3),minmax(0,1fr))!important}
+.proof div{align-items:center;text-align:center;padding:38px 10px 34px!important;border-left:1px solid var(--line)!important;border-top:0!important}
+.proof div:first-child{border-left:0!important}
+.proof div:last-child:nth-child(odd){grid-column:auto!important}
+/* repairs: one simple row of big tappable names */
+.pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.pill{display:inline-flex;align-items:center;gap:12px;min-height:64px;padding:0 26px 0 14px;border-radius:999px;border:1px solid var(--line-2);background:rgba(255,255,255,.04);font:700 18px/1 var(--body);transition:border-color .2s,background .2s,transform .15s}
+.pill:hover{border-color:var(--o);background:rgba(255,106,19,.12);transform:translateY(-2px)}
+.pill i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,106,19,.15);color:var(--o)}
+.pill i svg{width:19px;height:19px}
+.cert-line{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;color:var(--dim);font-size:14px}
+.cert-line b{color:var(--fg);font-weight:700}
+.cert-line span{display:inline-flex;align-items:center;gap:7px}
+.cert-line svg{width:15px;height:15px;color:var(--o)}
+.pill.svc{flex-direction:row;min-height:64px;padding:0 26px 0 12px;gap:12px;border-radius:999px;text-align:left}
+.pill.svc i{width:40px;height:40px;border-radius:50%}
+.pill.svc:hover{transform:translateY(-2px);box-shadow:none}
+@media (max-width:760px){.pill.svc{min-height:56px;padding-right:20px;flex-wrap:nowrap}}
+/* reviews: two rails, opposite directions */
+.rail+.rail{margin-top:18px}
+.rail.rev .rail-track{animation-direction:reverse}
+/* orange section: deeper, richer */
+.claim.orange{background:linear-gradient(135deg,#ff7a1a 0%,#f25a0b 55%,#e04a06 100%)}
+#shop{padding-top:clamp(84px,11vw,150px)!important}
+@media (max-width:1080px){.hero .wrap.hero-grid{grid-template-columns:minmax(0,1fr)}.est-panel{max-width:560px}}
+@media (max-width:760px){
+  .hero .wrap.hero-grid{padding-block:47svh 30px}
+  .est-panel{padding:22px}
+  .proof div{padding:26px 6px 22px!important}
+  .proof b{font-size:2.5rem!important}
+  .proof span{font-size:10.5px;letter-spacing:.1em}
+  .pill{min-height:56px;font-size:16px;padding-right:20px}
+}
 </style>
 </head>
 <body>
@@ -586,18 +640,20 @@ body{font-family:var(--body)}
 <section class="hero" id="top">
   <div class="hero-bg"><img src="img/hero-1200.webp" srcset="img/hero-1200.webp 1200w, img/hero.webp 1800w" sizes="100vw" width="1800" height="2400" alt="A red Tesla finished at Today&#39;s Collision, paint and wheel close up" fetchpriority="high" style="object-position:58% 72%"></div>
   <div class="streak" aria-hidden="true"></div>
-  <div class="wrap">
+  <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="tow"><i><svg><use href="#truck"/></svg></i>24-hour towing · <a href="tel:+17813216080">(781) 321-6080</a></p>
       <p class="status" id="status"><i></i><span>375 Washington St, Malden</span></p>
       <h1>Back to <span class="o">factory.</span><span class="thin">Collision repair in Malden, certified by Tesla, Rivian, Ford and Jaguar Land Rover.</span></h1>
       <p class="hero-sub">We work with your insurance company, help you with a rental and tow it in when it can&#39;t be driven.</p>
-      <div class="hero-cta">
-        <button class="btn btn-o btn-xl" data-est type="button">Get an estimate <svg><use href="#arrow"/></svg></button>
-        <a class="btn btn-g btn-xl" href="tel:+17813216080"><svg><use href="#phone"/></svg>(781) 321-6080</a>
-        <span class="cta-note">Takes about a minute. We call you back.</span>
-      </div>
-      <a class="hero-rv" href="#reviews"><span class="stars" aria-label="5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><q>Matt worked with me and the car came out beautiful.</q><small>Mark K. · Google review</small></a>
+      <a class="hero-rv" href="#reviews"><span class="stars" aria-label="5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><q>Matt worked with me and the car came out beautiful.</q><small>Mark K. · 4.9★ from 706 Google reviews</small></a>
+    </div>
+    <div class="est-panel" id="estPanel">
+      <h3>Get your estimate</h3>
+      <p>Tell us what happened. We call you back with next steps.</p>
+      <div class="opts"><button type="button" class="opt" data-pick="Accident"><i><svg><use href="#car"/></svg></i>Accident<svg><use href="#arrow"/></svg></button><button type="button" class="opt" data-pick="Dent or scratch"><i><svg><use href="#wrench"/></svg></i>Dent or scratch<svg><use href="#arrow"/></svg></button><button type="button" class="opt" data-pick="Not sure"><i><svg><use href="#spark"/></svg></i>Not sure yet<svg><use href="#arrow"/></svg></button></div>
+      <button class="btn btn-o est-go" data-est type="button">Start my estimate <svg><use href="#arrow"/></svg></button>
+      <div class="est-note"><span>Takes about a minute</span><a href="tel:+17813216080">Or call (781) 321-6080</a></div>
     </div>
   </div>
 </section>
@@ -612,6 +668,7 @@ body{font-family:var(--body)}
     <p class="praise-src">Mark K. · Google review</p>
   </div>
   <div class="rail" role="region" aria-label="Customer reviews from Google"><div class="rail-track" id="railTrack"></div></div>
+  <div class="rail rev" aria-hidden="true"><div class="rail-track" id="railTrack2"></div></div>
 </section>
 
 <section class="sec" id="work">
@@ -644,10 +701,10 @@ body{font-family:var(--body)}
 
 <section class="sec" id="repairs">
   <div class="wrap">
-    <div class="rv-in"><p class="kick">What we fix <i>03</i></p><h2>Every repair,<br><em>under one roof.</em></h2><p class="lede">Tap what you need and we'll start your estimate.</p></div>
-    <div class="svcs"><button type="button" class="svc rv-in" data-svc="Accident"><i><svg><use href="#car"/></svg></i><b>Collision repair</b><span>From a door ding to major front and rear damage.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Paint"><i><svg><use href="#paint"/></svg></i><b>Paint and refinish</b><span>Color matched to your car's factory finish.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Dent or scratch"><i><svg><use href="#wrench"/></svg></i><b>Dent and scratch repair</b><span>Small damage fixed so you can't tell it happened.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Accident"><i><svg><use href="#align"/></svg></i><b>Frame and structural</b><span>Measured and straightened back to spec.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Accident"><i><svg><use href="#wrench"/></svg></i><b>Aluminum repair</b><span>The tools and training aluminum bodies need.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Glass"><i><svg><use href="#glass"/></svg></i><b>Auto glass</b><span>Windshields and windows.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc="Alignment"><i><svg><use href="#align"/></svg></i><b>Alignment</b><span>Back to straight after the repair.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc=""><i><svg><use href="#truck"/></svg></i><b>24-hour towing</b><span>We can bring the car to us, day or night.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button><button type="button" class="svc rv-in" data-svc=""><i><svg><use href="#key"/></svg></i><b>Rental cars</b><span>Help getting you a car while yours is here.</span><em>Get an estimate <svg><use href="#arrow"/></svg></em></button></div>
-    <div class="certs rv-in" aria-label="Certifications"><span class="cert"><svg><use href="#shield"/></svg>Tesla Certified</span><span class="cert"><svg><use href="#shield"/></svg>Rivian Certified</span><span class="cert"><svg><use href="#shield"/></svg>Ford Certified</span><span class="cert"><svg><use href="#shield"/></svg>Jaguar &amp; Land Rover Certified</span><span class="cert"><svg><use href="#shield"/></svg>I-CAR Gold</span></div>
-    <div class="svc-photos"><figure class="rv-in" style="flex:1.3333 1 0"><img src="img/g5-1200.webp" srcset="img/g5-1200.webp 1200w, img/g5.webp 2048w" sizes="(max-width:760px) 100vw, 50vw" width="2048" height="1536" loading="lazy" alt="A Tesla on the frame bench inside the shop"><figcaption>Structural repair on the bench, inside the Malden shop.</figcaption></figure><figure class="rv-in" style="flex:1.7778 1 0"><img src="img/g4-1200.webp" srcset="img/g4-1200.webp 1200w, img/g4.webp 2400w" sizes="(max-width:760px) 100vw, 50vw" width="2400" height="1350" loading="lazy" alt="A Jaguar F-Type mid-repair"><figcaption>A Jaguar F-Type mid-repair.</figcaption></figure></div>
+    <div class="rv-in"><p class="kick">What we fix <i>03</i></p><h2>Every repair,<br><em>under one roof.</em></h2><p class="lede">Tap a repair to start your estimate.</p></div>
+    <div class="pills"><button type="button" class="pill svc rv-in" data-svc="Accident"><i><svg><use href="#car"/></svg></i>Collision repair</button><button type="button" class="pill svc rv-in" data-svc="Paint"><i><svg><use href="#paint"/></svg></i>Paint</button><button type="button" class="pill svc rv-in" data-svc="Dent or scratch"><i><svg><use href="#wrench"/></svg></i>Dents and scratches</button><button type="button" class="pill svc rv-in" data-svc="Accident"><i><svg><use href="#align"/></svg></i>Frame</button><button type="button" class="pill svc rv-in" data-svc="Accident"><i><svg><use href="#wrench"/></svg></i>Aluminum</button><button type="button" class="pill svc rv-in" data-svc="Glass"><i><svg><use href="#glass"/></svg></i>Auto glass</button><button type="button" class="pill svc rv-in" data-svc="Alignment"><i><svg><use href="#align"/></svg></i>Alignment</button><button type="button" class="pill svc rv-in" data-svc=""><i><svg><use href="#truck"/></svg></i>24-hour towing</button><button type="button" class="pill svc rv-in" data-svc=""><i><svg><use href="#key"/></svg></i>Rental cars</button><button type="button" class="pill svc rv-in" data-svc=""><i><svg><use href="#sparkle"/></svg></i>Free detail</button></div>
+    <p class="cert-line rv-in"><b>Certified:</b><span><svg><use href="#shield"/></svg>Tesla</span><span><svg><use href="#shield"/></svg>Rivian</span><span><svg><use href="#shield"/></svg>Ford</span><span><svg><use href="#shield"/></svg>Jaguar &amp; Land Rover</span><span><svg><use href="#shield"/></svg>I-CAR Gold</span></p>
+    
   </div>
 </section>
 
@@ -790,6 +847,10 @@ body{font-family:var(--body)}
   const qs = BIZ.quotes.length < 4 ? BIZ.quotes.concat(BIZ.quotes) : BIZ.quotes;
   $('#railTrack').innerHTML = '<div class="rail-set">' + qs.map(q => card(q)).join('') + '</div><div class="rail-set" aria-hidden="true">' + qs.map(q => card(q, 1)).join('') + '</div>';
   $('#railTrack').style.animationDuration = (qs.length * 13) + 's';
+  // second rail: the same reviews in a different order, drifting the other way
+  const qs2 = qs.slice(Math.ceil(qs.length / 2)).concat(qs.slice(0, Math.ceil(qs.length / 2))).reverse();
+  $('#railTrack2').innerHTML = '<div class="rail-set">' + qs2.map(q => card(q, 1)).join('') + '</div><div class="rail-set">' + qs2.map(q => card(q, 1)).join('') + '</div>';
+  $('#railTrack2').style.animationDuration = (qs2.length * 15) + 's';
   // before/after: drag to compare
   $$('.cmp').forEach(c => { const r = $('input', c); const set = v => c.style.setProperty('--x', v + '%'); r.addEventListener('input', () => set(r.value)); set(50); });
 
@@ -818,6 +879,7 @@ body{font-family:var(--body)}
   const picked = g => $$('.chip[aria-pressed=true]', $('[data-group="' + g + '"]', fun)).map(c => c.textContent.trim());
   const openFun = (from = 0) => { show(from); open(fun); };
   $$('[data-est]').forEach(b => b.addEventListener('click', () => { closeMenu(); openFun(0); }));
+  $$('#estPanel .opt').forEach(o => o.addEventListener('click', () => { const pk = o.dataset.pick; let hit = false; $$('#funWhat .chip').forEach(x => { const on = x.textContent.trim() === pk; x.setAttribute('aria-pressed', on ? 'true' : 'false'); hit = hit || on; }); openFun(hit ? 1 : 0); }));
   // a service card opens the estimate with that repair already picked
   $$('.svc').forEach(c => c.addEventListener('click', () => { const pk = c.dataset.svc; let hit = false; $$('#funWhat .chip').forEach(x => { const on = !!pk && x.textContent.trim() === pk; x.setAttribute('aria-pressed', on ? 'true' : 'false'); hit = hit || on; }); openFun(hit ? 1 : 0); }));
   $('#fBack').addEventListener('click', () => show(Math.max(0, s - 1)));
