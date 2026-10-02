@@ -408,6 +408,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 /* clean pop-up */
 .pop .sheet{width:min(420px,100%)}
 .pop-photo{aspect-ratio:16/8}
+@media (max-width:760px){.pop .pop-photo{aspect-ratio:16/7}}
 .pop h3{font-size:28px;margin-bottom:6px}
 .pop p{margin-bottom:20px}
 .pop .chips{gap:8px}
@@ -416,6 +417,15 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .pop .tiles{display:none}
 .pop-call{display:block;text-align:center;margin-top:14px;font-size:14px;color:var(--dim);text-decoration:none}
 .pop-call b{color:var(--fg)}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.act{display:flex;align-items:center;gap:11px;padding:12px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));text-decoration:none;font-size:12.5px;line-height:1.35;color:var(--dim);transition:border-color .2s,background .2s,transform .15s}
+.act:hover{border-color:rgba(255,106,19,.5);background:rgba(255,106,19,.06)}
+.act:active{transform:scale(.98)}
+.act i{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(255,106,19,.13);color:var(--o)}
+.act i svg{width:18px;height:18px}
+.act b{display:block;color:var(--fg);font-size:14.5px;font-weight:700}
+.pop .notnow{margin-top:12px}
+.sheet:focus{outline:none}
 @media (max-width:1080px){
   .dock{grid-template-columns:minmax(0,1fr);border-radius:22px;padding:20px;gap:16px}
   .dock .btn{width:100%}
@@ -443,6 +453,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   <symbol id="close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z"/></symbol>
   <symbol id="swap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></symbol>
+  <symbol id="truck" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 16V6h11v10M13 9h4l4 4v3h-8M6.5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM17.5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM8.5 17h6.5"/></symbol>
   <symbol id="send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15M13 6l6 6-6 6"/></symbol>
 </svg>
 
@@ -640,13 +651,16 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <div class="dlg pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="popT">
   <div class="sheet">
     <button class="x" type="button" data-close aria-label="Close"><svg><use href="#close"/></svg></button>
-    <div class="pop-photo"><img src="img/a1-1200.webp" width="1200" height="900" alt=""></div>
+    <div class="pop-photo"><img style="object-position:50% 62%" src="img/g1-1200.webp" width="1200" height="900" alt=""></div>
     <div class="f-body">
       <h3 id="popT">Been in an accident?</h3>
       <p>Tell us what happened. We'll take it from there.</p>
       <div class="ring-opts"><div class="chips" id="popChips"><button type="button" class="chip" aria-pressed="false" data-pick="Accident"><span class="tick"><svg><use href="#check"/></svg></span>Accident</button><button type="button" class="chip" aria-pressed="false" data-pick="Dent or scratch"><span class="tick"><svg><use href="#check"/></svg></span>Dent or scratch</button><button type="button" class="chip" aria-pressed="false" data-pick="Paint"><span class="tick"><svg><use href="#check"/></svg></span>Paint</button><button type="button" class="chip" aria-pressed="false" data-pick="Not sure"><span class="tick"><svg><use href="#check"/></svg></span>Not sure</button></div></div>
       <button class="btn btn-o" type="button" id="popGo" style="width:100%;margin-top:14px">Start my estimate <svg><use href="#arrow"/></svg></button>
-      <a class="pop-call" href="tel:+17813216080">Rather talk? <b>(781) 321-6080</b></a>
+      <div class="acts">
+        <a class="act" href="tel:+17813216080"><i><svg><use href="#truck"/></svg></i><span><b>Need a tow?</b>24 hours a day</span></a>
+        <a class="act" href="#claim" data-close><i><svg><use href="#shield"/></svg></i><span><b>Insurance help</b>We handle the claim</span></a>
+      </div>
       <button class="notnow" type="button" data-close>Not now</button>
     </div>
   </div>
@@ -692,7 +706,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   $('#funWhat').innerHTML = $('#heroEst .chips').innerHTML;
 
   let lastFocus = null; const anyOpen = () => $$('.dlg.open').length || chat.classList.contains('open') || $('#mnav').classList.contains('open');
-  const open = d => { lastFocus = document.activeElement; d.classList.add('open'); document.body.style.overflow = 'hidden'; setTimeout(() => ($('.chip, input, .btn', d) || d).focus({ preventScroll: true }), 60); };
+  const open = d => { lastFocus = document.activeElement; d.classList.add('open'); document.body.style.overflow = 'hidden'; setTimeout(() => { const sh = $('.sheet', d) || d; sh.setAttribute('tabindex', '-1'); sh.focus({ preventScroll: true }); }, 60); };
   const close = d => { d.classList.remove('open'); if (!anyOpen()) document.body.style.overflow = ''; lastFocus && lastFocus.focus && lastFocus.focus({ preventScroll: true }); };
   $$('.dlg').forEach(d => d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) close(d); }));
   addEventListener('keydown', e => { if (e.key === 'Escape') { $$('.dlg.open').forEach(close); closeMenu(); closeChat(); } });
