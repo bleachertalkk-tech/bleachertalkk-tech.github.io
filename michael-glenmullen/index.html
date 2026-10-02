@@ -627,7 +627,26 @@ em{font-style:italic;color:var(--sand)}
 }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-</head>
+<style id="walk-css">
+.walk{position:relative;height:calc(100svh + var(--n) * 75svh)}
+.walk .hero{position:sticky;top:0;height:100svh;min-height:0}
+.walk-frames img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;opacity:0;animation:none!important;will-change:opacity,transform;transform:scale(1.04)}
+.walk-frames img:first-child{opacity:1}
+.walk .hero::before{transition:opacity .2s linear;opacity:var(--shade,1)}
+.walk .hero-in{will-change:opacity,transform}
+.walk-hint{position:absolute;right:max(var(--gutter),calc((100vw - var(--max)) / 2));bottom:44px;display:grid;justify-items:center;gap:10px;font:500 .72rem/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.75);pointer-events:none}
+.walk-hint i{width:1px;height:38px;background:linear-gradient(rgba(255,255,255,.8),transparent);animation:hint 1.8s ease-in-out infinite}
+@keyframes hint{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.walk-hud{position:absolute;right:max(var(--gutter),calc((100vw - var(--max)) / 2));bottom:clamp(30px,6vh,64px);width:min(380px,calc(100vw - var(--gutter) * 2));padding:22px 24px;background:rgba(12,17,23,.62);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(217,196,155,.28);opacity:0;transform:translateY(16px);transition:opacity .4s,transform .5s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.walk.on .walk-hud{opacity:1;transform:none;pointer-events:auto}
+.walk-k{font:500 .72rem/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--sand)}
+.walk-room{margin-top:12px;font-family:var(--display,inherit);font-size:clamp(1.9rem,3vw,2.6rem);line-height:1;color:#fff}
+.walk-bar{margin-top:18px;height:2px;background:rgba(255,255,255,.18)}.walk-bar i{display:block;height:100%;width:0;background:var(--sand)}
+.walk-addr{margin-top:16px;display:grid;gap:4px;font-size:.92rem;color:rgba(255,255,255,.72)}.walk-addr b{color:#fff;font-weight:600}
+.walk-go{margin-top:16px;display:inline-flex;align-items:center;gap:10px;font:600 .78rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--sand);text-decoration:none}.walk-go svg{width:16px;height:16px}
+@media (max-width:760px){.walk-hint{display:none}.walk-hud{left:var(--gutter);right:var(--gutter);width:auto;bottom:calc(84px + env(safe-area-inset-bottom,0px));padding:16px 18px}.walk-room{font-size:1.7rem}.walk-addr span{font-size:.82rem}}
+@media (prefers-reduced-motion:reduce){.walk{height:auto}.walk .hero{position:relative;height:auto;min-height:100svh}.walk-hint,.walk-hud{display:none}}
+</style></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="glow" aria-hidden="true"></div>
@@ -646,8 +665,8 @@ em{font-style:italic;color:var(--sand)}
 </header>
 
 <main id="main">
-<section class="hero" id="top" aria-labelledby="hero-title">
-  <div class="hero-img"><img src="../re-img/re-hero.webp" srcset="../re-img/re-hero-1000.webp 1000w, ../re-img/re-hero.webp 1920w" sizes="100vw" alt="" fetchpriority="high"></div>
+<div class="walk" id="walk" style="--n:9"><section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="hero-img walk-frames" aria-hidden="false"><img src="https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=0" srcset="https://media.mlspin.com/photo.aspx?w=900&h=675&mls=73579095&n=0 900w, https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=0 1600w" sizes="100vw" alt="The front at 68 Sparks Street" fetchpriority="high"><img data-src="https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=2" data-srcset="https://media.mlspin.com/photo.aspx?w=900&h=675&mls=73579095&n=2 900w, https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=2 1600w" sizes="100vw" alt="Front porch at 68 Sparks Street"><img data-src="https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=18" data-srcset="https://media.mlspin.com/photo.aspx?w=900&h=675&mls=73579095&n=18 900w, https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=18 1600w" sizes="100vw" alt="Foyer at 68 Sparks Street"><img data-src="https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=4" data-srcset="https://media.mlspin.com/photo.aspx?w=900&h=675&mls=73579095&n=4 900w, https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=4 1600w" sizes="100vw" alt="Living room at 68 Sparks Street"><img data-src="https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=13" data-srcset="https://media.mlspin.com/photo.aspx?w=900&h=675&mls=73579095&n=13 900w, https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=13 1600w" sizes="100vw" alt="Kitchen at 68 Sparks Street"><img data-src="https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=17" data-srcset="https://media.mlspin.com/photo.aspx?w=900&h=675&mls=73579095&n=17 900w, https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=17 1600w" sizes="100vw" alt="Family room at 68 Sparks Street"><img data-src="https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=21" data-srcset="https://media.mlspin.com/photo.aspx?w=900&h=675&mls=73579095&n=21 900w, https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=21 1600w" sizes="100vw" alt="Primary bedroom at 68 Sparks Street"><img data-src="https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=33" data-srcset="https://media.mlspin.com/photo.aspx?w=900&h=675&mls=73579095&n=33 900w, https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=33 1600w" sizes="100vw" alt="Back patio at 68 Sparks Street"><img data-src="https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=38" data-srcset="https://media.mlspin.com/photo.aspx?w=900&h=675&mls=73579095&n=38 900w, https://media.mlspin.com/photo.aspx?w=1600&h=1200&mls=73579095&n=38 1600w" sizes="100vw" alt="From above at 68 Sparks Street"></div>
   <div class="hero-in">
     <span class="label">Cambridge · Greater Boston</span>
     <h1 id="hero-title">Find your place <em>in Cambridge.</em></h1>
@@ -658,8 +677,17 @@ em{font-style:italic;color:var(--sand)}
       <a class="btn btn-ghost" href="#homes">See homes for sale<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
-  <span class="credit">Middlesex Fells, looking toward Boston</span>
-</section>
+  
+  <div class="walk-hint" aria-hidden="true"><span>Scroll to walk through</span><i></i></div>
+  <div class="walk-hud" aria-live="polite">
+    <p class="walk-k"><span id="walkN">01</span> / 09 · Michael's listing</p>
+    <p class="walk-room" id="walkRoom">The front</p>
+    <div class="walk-bar"><i id="walkBar"></i></div>
+    <p class="walk-addr"><b>68 Sparks Street, Cambridge</b><span>$12,500,000 · 8 beds · 9 full + 2 half baths · 7,893 sq ft</span></p>
+    <a class="walk-go" href="#contact" data-go>Book a tour<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <span class="credit">68 Sparks Street, Cambridge · Listed by Coldwell Banker Realty - Cambridge · Photos: MLS PIN</span>
+</section></div>
 
 <section class="proof" aria-label="At a glance">
   <ul class="wrap proof-in">
@@ -1229,5 +1257,16 @@ em{font-style:italic;color:var(--sand)}
   $('year').textContent = new Date().getFullYear();
 })();
 </script>
-</body>
+<script>(()=>{const W=document.getElementById('walk');if(!W||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const F=[...W.querySelectorAll('.walk-frames img')],N=F.length,L=["The front","Front porch","Foyer","Living room","Kitchen","Family room","Primary bedroom","Back patio","From above"],inn=W.querySelector('.hero-in'),hero=W.querySelector('.hero'),hint=W.querySelector('.walk-hint'),room=document.getElementById('walkRoom'),num=document.getElementById('walkN'),bar=document.getElementById('walkBar');
+const load=()=>F.forEach(i=>{if(i.dataset.src){i.srcset=i.dataset.srcset;i.src=i.dataset.src;delete i.dataset.src}});(F[0].complete?setTimeout(load,300):F[0].addEventListener('load',()=>setTimeout(load,300)));
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),ease=x=>x*x*(3-2*x);let last=-1,q=0;
+const draw=()=>{q=0;const r=W.getBoundingClientRect(),tot=W.offsetHeight-innerHeight,p=cl(-r.top/tot);
+ const intro=cl(p/.1);inn.style.opacity=1-ease(cl((intro-.15)/.7));inn.style.transform='translateY('+(-40*ease(intro))+'px)';hero.style.setProperty('--shade',1-.55*ease(intro));hint.style.opacity=1-cl(p/.03);
+ W.classList.toggle('on',p>.06);
+ const t=cl((p-.08)/.92)*(N-1),i=Math.min(N-1,Math.floor(t)),f=t-i,k=ease(cl((f-.55)/.45));
+ F.forEach((im,j)=>{let o=0,loc=0;if(j===i){o=1;loc=f}else if(j===i+1){o=k;loc=0}else if(j<i){o=0;loc=1}
+  const dir=j%2?-1:1;im.style.opacity=o;im.style.transform='scale('+(1.04+.12*loc)+') translateX('+(dir*1.6*loc)+'%)';});
+ const cur=k>.5&&i<N-1?i+1:i;if(cur!==last){last=cur;room.textContent=L[cur];num.textContent=String(cur+1).padStart(2,'0')}bar.style.width=(100*cl((p-.08)/.92))+'%';};
+addEventListener('scroll',()=>{if(!q){q=1;requestAnimationFrame(draw)}},{passive:true});addEventListener('resize',draw);draw();})()</script></body>
 </html>
