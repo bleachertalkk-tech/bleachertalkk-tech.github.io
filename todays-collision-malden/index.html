@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%3Crect%20width%3D'64'%20height%3D'64'%20rx%3D'14'%20fill%3D'%230c0c0d'%2F%3E%3Ctext%20x%3D'32'%20y%3D'45'%20font-family%3D'Arial%20Black%2CArial'%20font-weight%3D'900'%20font-size%3D'36'%20text-anchor%3D'middle'%20fill%3D'%23fff'%3ET%3C%2Ftext%3E%3Ccircle%20cx%3D'50'%20cy%3D'44'%20r%3D'5'%20fill%3D'%23ff6a13'%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Geist:wght@300..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap">
 <link rel="preload" as="image" href="img/hero-1200.webp">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoBodyShop","name":"Today's Collision Malden","telephone":"+17813216080","address":{"@type":"PostalAddress","streetAddress":"375 Washington St","addressLocality":"Malden","addressRegion":"MA","postalCode":"02148"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"706"}}</script>
 <style>
@@ -636,6 +636,85 @@ body{font-family:var(--body)}
 .mnav{visibility:hidden;transition:opacity .3s,visibility 0s .3s}.mnav.open{visibility:visible;transition:opacity .3s}
 @media (min-width:1081px){.hero .wrap.hero-grid{grid-template-columns:minmax(0,1fr) 390px;gap:clamp(48px,7vw,120px)}.est-panel{justify-self:end;width:100%}.est-panel h3{font-size:clamp(1.6rem,2.1vw,1.95rem)}}
 .tow{display:flex}
+
+/* v6 "Precision": square corners, uppercase tracked labels, hairlines, no glow (Porsche / Lucid / Polestar) */
+:root{--r:4px;--mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,monospace}
+.btn{border-radius:3px;min-height:52px;padding:0 24px;font:600 13px/1 var(--body);letter-spacing:.13em;text-transform:uppercase;box-shadow:none!important;backdrop-filter:none}
+.btn svg{width:16px;height:16px}
+.btn-o{background:var(--o);color:#120700}.btn-o:hover{background:#ff7d33}
+.btn-g{background:transparent;border:1px solid rgba(255,255,255,.38);color:#fff}.btn-g:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.hdr .btn{min-height:46px;padding:0 22px;font-size:12.5px}
+.nav{border-radius:3px}.nav a{border-radius:2px;font-size:14px}
+/* hero */
+.hero h1{text-transform:none!important;letter-spacing:-.025em}
+.tow{display:flex!important;align-items:center;gap:14px;width:fit-content;margin:0 0 14px;padding:0;border:0!important;background:none!important;box-shadow:none!important;backdrop-filter:none!important;border-radius:0;font:500 12.5px/1 var(--mono)!important;letter-spacing:.14em;text-transform:uppercase;color:#f3f0ea;text-decoration:none}
+.tow:hover{transform:none}.tow:hover .tow-n{color:#fff}
+.tow i{position:relative;width:8px;height:8px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.16)}
+.tow i::after{display:none}
+.tow b{font:inherit;color:#fff}
+.tow .sep{width:32px;height:1px;background:rgba(255,255,255,.35)}
+.tow-n{padding:0!important;border:0!important;font:500 12.5px/1 var(--mono)!important;letter-spacing:.14em!important;color:var(--o);transition:color .2s}
+.status{font:400 12px/1.2 var(--mono)!important;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,240,234,.62)!important;margin-bottom:22px}
+.status i{width:6px;height:6px}
+.hero-rv{border-radius:3px}
+.est-panel{border-radius:4px;padding:28px;background:rgba(12,12,14,.8)}
+.est-panel h3{letter-spacing:-.01em}
+.opt{min-height:58px;padding:0;border:0;border-bottom:1px solid rgba(255,255,255,.12);border-radius:0;background:none;font:500 16px/1.2 var(--body)}
+.opt:first-of-type{border-top:1px solid rgba(255,255,255,.12)}
+.opt i{background:none!important;width:28px;height:28px;border-radius:0}
+.opt:hover{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.12)}
+.est-go{min-height:60px;border-radius:3px;font-size:13.5px;justify-content:space-between;padding:0 22px}
+/* cards and chips everywhere */
+.chip,.tile,.act,.upl,.fld input,.fld select,.ring-opts,.ring-opts .chips,.m,.sugs button,.chat input,.dock .chip,.cert{border-radius:3px!important}
+.pop,.sheet,.est,.chat,.dock{border-radius:6px!important}
+.cmp,.pair figure,.strip-car,.visit figure,.rep-photo,.row figure{border-radius:4px!important}
+.cmp .tag,.pop-photo.auto .tag,.pair figcaption,.strip-car figcaption{border-radius:2px!important;font-family:var(--mono)!important;font-weight:500!important;letter-spacing:.12em;text-transform:uppercase;font-size:11px!important}
+.ask-b{border-radius:3px!important}
+.rv,.rcard{border-radius:6px}
+/* repairs as a spec sheet */
+.spec{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,7vw,110px);align-items:start}
+.spec-h{position:sticky;top:110px}
+.spec-certs{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.spec-certs li{padding:12px 0;border-bottom:1px solid var(--line);font:500 11.5px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.spec-certs li::before{content:"✓";color:var(--o);margin-right:12px}
+.spec-l{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-2)}
+.svc-row{display:grid;grid-template-columns:52px minmax(0,1fr) auto;align-items:center;gap:18px;width:100%;padding:24px 4px;border:0;border-bottom:1px solid var(--line-2);background:none;color:inherit;text-align:left;cursor:pointer;font:inherit;transition:background .25s,padding .3s cubic-bezier(.2,.8,.2,1)}
+.svc-row .n{font:500 12px var(--mono);letter-spacing:.1em;color:var(--dim-2)}
+.svc-row .t{display:grid;gap:5px}.svc-row b{font:700 clamp(1.2rem,1.7vw,1.5rem)/1.1 var(--display);letter-spacing:-.01em}
+.svc-row small{font-size:14.5px;color:var(--dim)}
+.svc-row .go{display:flex;align-items:center;gap:10px;font:500 11.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--o);opacity:0;transform:translateX(-8px);transition:opacity .25s,transform .3s}
+.svc-row .go svg{width:15px;height:15px}
+.svc-row:hover,.svc-row:focus-visible{background:rgba(255,255,255,.025);padding-left:14px}
+.svc-row:hover .go,.svc-row:focus-visible .go{opacity:1;transform:none}
+.svc-row:hover .n{color:var(--o)}
+/* how it works: hairline timeline */
+.tl{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(255,226,204,.35)}
+.tl li{position:relative;padding:30px 28px 0 0;display:grid;gap:10px;align-content:start}
+.tl li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;background:#ffd9bd}
+.tl .n{font:500 12px var(--mono);letter-spacing:.14em;color:#ffd9bd}
+.tl b{font:700 1.3rem/1.15 var(--display);color:#fff}
+.tl span:last-child{color:rgba(255,244,234,.8);font-size:15px;line-height:1.55}
+.claim.orange .btn-o{background:#fff4ea;color:#1a0b02}.claim.orange .btn-o:hover{background:#fff}
+.claim.orange .btn-g{border-color:rgba(255,226,204,.55);color:#fff4ea}
+/* gallery: editorial grid */
+.gal2{display:grid;gap:14px;margin-top:44px;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:clamp(180px,19vw,280px)}
+.gal2 figure{position:relative;margin:0;overflow:hidden;border-radius:4px;background:#111}
+.gal2 figure:first-child{grid-row:span 2}
+.gal2.n4 figure:nth-child(4){grid-column:span 2}
+.gal2 img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.gal2 figure:hover img{transform:scale(1.04)}
+.gal2 figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;gap:12px;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.75));font:500 11px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#f3f0ea}
+.gal2 figcaption span{color:var(--o)}
+@media (max-width:900px){.spec{grid-template-columns:minmax(0,1fr)}.spec-h{position:static}.tl{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px}}
+@media (max-width:760px){.gal2{grid-template-columns:1fr 1fr;grid-auto-rows:42vw}.gal2 figure:first-child{grid-column:span 2;grid-row:auto}.gal2.n4 figure:nth-child(4){grid-column:auto}.svc-row{grid-template-columns:36px minmax(0,1fr);padding:20px 0}.svc-row .go{display:none}.tl{grid-template-columns:minmax(0,1fr)}.tl li{padding-right:0}}
+@media (prefers-reduced-motion:reduce){.svc-row,.gal2 img{transition:none}}
+.hero .streak{display:none}
+.hero h1 .thin{margin-top:.75em}
+.svc-row{padding:20px 4px}
+.strip-car figcaption,.strip-car figcaption b,.strip-car b{font-family:var(--mono)!important;font-weight:500!important;letter-spacing:.12em!important}
+@media (max-width:760px){.status{font-size:10.5px!important;letter-spacing:.05em}.tow{font-size:11.5px!important;letter-spacing:.1em}.tow-n{font-size:11.5px!important;letter-spacing:.1em!important}.tow .sep{width:18px}
+.gal2.n4 figure:nth-child(4){grid-column:span 2}.gal2 figure:not(:first-child) figcaption{font-size:10px;padding:30px 10px 10px}
+.tl{border-top:0;border-left:1px solid rgba(255,226,204,.35);margin-left:4px;row-gap:28px}.tl li{padding:0 0 0 24px}.tl li::before{top:4px;left:-5px}}
 </style>
 </head>
 <body>
@@ -681,7 +760,7 @@ body{font-family:var(--body)}
   <div class="streak" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <a class="tow" href="tel:+17813216080"><i><svg><use href="#truck"/></svg></i><span class="tow-t"><b>24-hour towing</b><small>Day or night, we come get it</small></span><span class="tow-n">(781) 321-6080</span></a>
+      <a class="tow" href="tel:+17813216080"><i aria-hidden="true"></i><b>24-hour towing</b><span class="sep" aria-hidden="true"></span><span class="tow-n">(781) 321-6080</span></a>
       <p class="status" id="status"><i></i><span>375 Washington St, Malden</span></p>
       <h1>Back to <span class="o">factory.</span><span class="thin">Collision repair in Malden, certified by Tesla, Rivian, Ford and Jaguar Land Rover.</span></h1>
       <p class="hero-sub">We work with your insurance company, help you with a rental and tow it in when it can&#39;t be driven.</p>
@@ -714,13 +793,13 @@ body{font-family:var(--body)}
   <div class="wrap">
     <div class="ba-head rv-in"><div><p class="kick">Before &amp; after <i>01</i></p><h2>Same car.<br><em>Same shop.</em></h2></div><p class="lede" style="margin:0">Real cars from this shop, photographed here in Malden.</p></div>
     <div class="ba">
-      <div class="rv-in"><div class="cmp" style="aspect-ratio:1673/1255">
-        <img src="img/b1-1200.webp" srcset="img/b1-1200.webp 1200w, img/b1.webp 1673w" sizes="(max-width:1240px) 100vw, 1240px" width="1673" height="1255" loading="lazy" alt="White Tesla Model 3 with a dented rear quarter panel and scuffed taillight, before repair">
-        <div class="cmp-a"><img src="img/a1-1200.webp" srcset="img/a1-1200.webp 1200w, img/a1.webp 1673w" sizes="(max-width:1240px) 100vw, 1240px" width="1673" height="1255" loading="lazy" alt="The same Tesla Model 3 after repair, panel straight and new taillight"></div>
+      <div class="rv-in"><div class="cmp" style="aspect-ratio:1968/1476">
+        <img src="img/b1-1200.webp" srcset="img/b1-1200.webp 1200w, img/b1.webp 1968w" sizes="(max-width:1240px) 100vw, 1240px" width="1968" height="1476" loading="lazy" alt="Blue BMW 4 Series with a crushed hood and front end, before repair">
+        <div class="cmp-a"><img src="img/a1-1200.webp" srcset="img/a1-1200.webp 1200w, img/a1.webp 1968w" sizes="(max-width:1240px) 100vw, 1240px" width="1968" height="1476" loading="lazy" alt="The same blue BMW 4 Series after repair"></div>
         <span class="tag b">Before</span><span class="tag a">After</span>
         <div class="cmp-h" aria-hidden="true"><i><svg><use href="#swap"/></svg></i></div>
         <input type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
-      </div><div class="pair-meta"><span><b>Tesla Model 3 · backed into</b></span><span>Rear quarter, bumper and taillight</span></div></div>
+      </div><div class="pair-meta"><span><b>BMW 4 Series · front-end collision</b></span><span>Hood, bumper, headlight and lip</span></div></div>
       <div class="rv-in"><div class="cmp" style="aspect-ratio:2400/1350">
         <img src="img/b2-1200.webp" srcset="img/b2-1200.webp 1200w, img/b2.webp 2400w" sizes="(max-width:1240px) 100vw, 1240px" width="2400" height="1350" loading="lazy" alt="Blue BMW M4 with a smashed front bumper, before repair">
         <div class="cmp-a"><img src="img/a2-1200.webp" srcset="img/a2-1200.webp 1200w, img/a2.webp 2400w" sizes="(max-width:1240px) 100vw, 1240px" width="2400" height="1350" loading="lazy" alt="The same BMW M4 after repair"></div>
@@ -739,23 +818,22 @@ body{font-family:var(--body)}
 </section>
 
 <section class="sec" id="repairs">
-  <div class="wrap">
-    <div class="rv-in"><p class="kick">What we fix <i>03</i></p><h2>Every repair,<br><em>under one roof.</em></h2><p class="lede">Tap a repair to start your estimate.</p></div>
-    <div class="pills"><button type="button" class="pill svc rv-in" data-svc="Accident"><i><svg><use href="#car"/></svg></i>Collision repair</button><button type="button" class="pill svc rv-in" data-svc="Paint"><i><svg><use href="#paint"/></svg></i>Paint</button><button type="button" class="pill svc rv-in" data-svc="Dent or scratch"><i><svg><use href="#wrench"/></svg></i>Dents and scratches</button><button type="button" class="pill svc rv-in" data-svc="Accident"><i><svg><use href="#align"/></svg></i>Frame</button><button type="button" class="pill svc rv-in" data-svc="Accident"><i><svg><use href="#wrench"/></svg></i>Aluminum</button><button type="button" class="pill svc rv-in" data-svc="Glass"><i><svg><use href="#glass"/></svg></i>Auto glass</button><button type="button" class="pill svc rv-in" data-svc="Alignment"><i><svg><use href="#align"/></svg></i>Alignment</button><button type="button" class="pill svc rv-in" data-svc=""><i><svg><use href="#truck"/></svg></i>24-hour towing</button><button type="button" class="pill svc rv-in" data-svc=""><i><svg><use href="#key"/></svg></i>Rental cars</button><button type="button" class="pill svc rv-in" data-svc=""><i><svg><use href="#sparkle"/></svg></i>Free detail</button></div>
-    <p class="cert-line rv-in"><b>Certified:</b><span><svg><use href="#shield"/></svg>Tesla</span><span><svg><use href="#shield"/></svg>Rivian</span><span><svg><use href="#shield"/></svg>Ford</span><span><svg><use href="#shield"/></svg>Jaguar &amp; Land Rover</span><span><svg><use href="#shield"/></svg>I-CAR Gold</span></p>
-    
+  <div class="wrap spec">
+    <div class="spec-h rv-in"><p class="kick">What we fix <i>03</i></p><h2>Every repair,<br><em>under one roof.</em></h2><p class="lede">Pick a repair to start your estimate.</p>
+      <ul class="spec-certs" aria-label="Certifications"><li>Tesla Certified</li><li>Rivian Certified</li><li>Ford Certified</li><li>Jaguar &amp; Land Rover Certified</li><li>I-CAR Gold</li></ul></div>
+    <ol class="spec-l"><li class="rv-in"><button type="button" class="svc-row" data-svc="Accident"><span class="n">01</span><span class="t"><b>Collision repair</b><small>From a door ding to major front and rear damage.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc="Paint"><span class="n">02</span><span class="t"><b>Paint</b><small>Color matched to your car&#39;s factory finish.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc="Dent or scratch"><span class="n">03</span><span class="t"><b>Dents and scratches</b><small>Small damage fixed so you can&#39;t tell it happened.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc="Accident"><span class="n">04</span><span class="t"><b>Frame</b><small>Measured and straightened back to spec.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc="Accident"><span class="n">05</span><span class="t"><b>Aluminum</b><small>The tools and training aluminum bodies need.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc="Glass"><span class="n">06</span><span class="t"><b>Auto glass</b><small>Windshields and windows.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc="Alignment"><span class="n">07</span><span class="t"><b>Alignment</b><small>Back to straight after the repair.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc=""><span class="n">08</span><span class="t"><b>24-hour towing</b><small>We can bring the car to us, day or night.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc=""><span class="n">09</span><span class="t"><b>Rental cars</b><small>Help getting you a car while yours is here.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc=""><span class="n">10</span><span class="t"><b>Free detail</b><small>Your car cleaned up before you get it back.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li></ol>
   </div>
 </section>
 
 <section class="sec claim orange" id="claim">
   <div class="wrap">
     <div class="rv-in"><p class="kick">How it works <i>04</i></p><h2>Wrecked car,<br><em>easy fix.</em></h2><p class="lede">First accident? Most people don't know how this works. Here's how it goes.</p></div>
-    <div class="steps">
-      <div class="step rv-in"><em>1</em><b>Tell us what happened</b><span>Start an estimate on this page or call (781) 321-6080.</span></div>
-      <div class="step rv-in"><em>2</em><b>Bring it in</b><span>Drive it in, or we tow it if it can't be driven.</span></div>
-      <div class="step rv-in"><em>3</em><b>We work with insurance</b><span>We deal with the insurance company so you don't have to.</span></div>
-      <div class="step rv-in"><em>4</em><b>Pick it up fixed</b><span>Drive a rental while we work, then pick up your car.</span></div>
-    </div>
+    <ol class="tl">
+      <li class="rv-in"><span class="n">01</span><b>Tell us what happened</b><span>Start an estimate on this page or call (781) 321-6080.</span></li>
+      <li class="rv-in"><span class="n">02</span><b>Bring it in</b><span>Drive it in, or we tow it if it can't be driven.</span></li>
+      <li class="rv-in"><span class="n">03</span><b>We work with insurance</b><span>We deal with the insurance company so you don't have to.</span></li>
+      <li class="rv-in"><span class="n">04</span><b>Pick it up fixed</b><span>Drive a rental while we work, then pick up your car.</span></li>
+    </ol>
     <div class="claim-cta rv-in"><button class="btn btn-o" data-est type="button">Start an estimate <svg><use href="#arrow"/></svg></button><a class="btn btn-g" href="tel:+17813216080"><svg><use href="#phone"/></svg>Call the shop</a></div>
   </div>
 </section>
@@ -764,7 +842,7 @@ body{font-family:var(--body)}
 <section class="sec" id="shop" style="padding-top:0">
   <div class="wrap">
     <div class="rv-in"><p class="kick">Inside the shop <i>05</i></p><h2>Real cars. <em>Real work.</em></h2></div>
-    <div class="gal" id="gal"></div>
+    <div class="gal2 n4"><figure class="rv-in"><img src="img/g7-1200.webp" srcset="img/g7-1200.webp 1200w, img/g7.webp 2400w" sizes="(max-width:760px) 100vw, 66vw" width="2400" height="1800" loading="lazy" alt="BMW 4 Series halfway through its front-end repair"><figcaption><span>01</span>BMW 4 Series halfway through its front-end repair</figcaption></figure><figure class="rv-in"><img src="img/g8-1200.webp" srcset="img/g8-1200.webp 1200w, img/g8.webp 2400w" sizes="(max-width:760px) 100vw, 33vw" width="2400" height="1800" loading="lazy" alt="Gray Tesla Model 3 with a damaged front fender"><figcaption><span>02</span>Gray Tesla Model 3 with a damaged front fender</figcaption></figure><figure class="rv-in"><img src="img/g3-1200.webp" srcset="img/g3-1200.webp 1200w, img/g3.webp 1086w" sizes="(max-width:760px) 100vw, 33vw" width="1086" height="1448" loading="lazy" alt="Black Tesla Model Y, finished"><figcaption><span>03</span>Black Tesla Model Y, finished</figcaption></figure><figure class="rv-in"><img src="img/g2-1200.webp" srcset="img/g2-1200.webp 1200w, img/g2.webp 2400w" sizes="(max-width:760px) 100vw, 33vw" width="2400" height="1800" loading="lazy" alt="Red Tesla Model X in the shop"><figcaption><span>04</span>Red Tesla Model X in the shop</figcaption></figure></div>
   </div>
 </section>
 
@@ -920,7 +998,7 @@ body{font-family:var(--body)}
   $$('[data-est]').forEach(b => b.addEventListener('click', () => { closeMenu(); openFun(0); }));
   $$('#estPanel .opt').forEach(o => o.addEventListener('click', () => { const pk = o.dataset.pick; let hit = false; $$('#funWhat .chip').forEach(x => { const on = x.textContent.trim() === pk; x.setAttribute('aria-pressed', on ? 'true' : 'false'); hit = hit || on; }); openFun(hit ? 1 : 0); }));
   // a service card opens the estimate with that repair already picked
-  $$('.svc').forEach(c => c.addEventListener('click', () => { const pk = c.dataset.svc; let hit = false; $$('#funWhat .chip').forEach(x => { const on = !!pk && x.textContent.trim() === pk; x.setAttribute('aria-pressed', on ? 'true' : 'false'); hit = hit || on; }); openFun(hit ? 1 : 0); }));
+  $$('[data-svc]').forEach(c => c.addEventListener('click', () => { const pk = c.dataset.svc; let hit = false; $$('#funWhat .chip').forEach(x => { const on = !!pk && x.textContent.trim() === pk; x.setAttribute('aria-pressed', on ? 'true' : 'false'); hit = hit || on; }); openFun(hit ? 1 : 0); }));
   $('#fBack').addEventListener('click', () => show(Math.max(0, s - 1)));
   $('#pics').addEventListener('change', e => { const n = e.target.files.length; $('#picsN').textContent = n ? n + ' photo' + (n > 1 ? 's' : '') + ' added' : 'From your camera or library'; });
   const nudge = el => el.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-6px)' }, { transform: 'translateX(6px)' }, { transform: 'translateX(0)' }], { duration: 260 });
