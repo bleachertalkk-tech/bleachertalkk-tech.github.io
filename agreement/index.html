@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Website Agreement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F6F3EC;--sheet:#FFFDF8;--ink:#1B1F24;--soft:#5A6068;--line:#E3DDD0;--accent:#0F6B5C;--accent-ink:#fff;--warn:#9A5B00;--ok:#0F6B5C}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 "Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,sans-serif;padding:max(16px,env(safe-area-inset-top)) 16px calc(120px + env(safe-area-inset-bottom))}
+[hidden]{display:none!important}
+.wrap{max-width:680px;margin:0 auto}
+.sheet{background:var(--sheet);border:1px solid var(--line);border-radius:14px;padding:28px 22px;box-shadow:0 1px 0 rgba(0,0,0,.03),0 12px 32px -18px rgba(27,31,36,.25)}
+@media(min-width:600px){.sheet{padding:44px 48px}}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);font-weight:600}
+h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(28px,6vw,38px);line-height:1.15;margin:6px 0 4px;text-wrap:balance}
+h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:19px;margin:28px 0 6px}
+.parties{color:var(--soft);font-size:15px;margin:0}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 4px}
+.price div{border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.price b{display:block;font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:600;font-variant-numeric:tabular-nums}
+.price span{font-size:13px;color:var(--soft)}
+.price s{color:var(--soft);font-size:14px;margin-left:4px}
+ol.terms{padding-left:0;list-style:none;counter-reset:t;margin:0}
+ol.terms>li{counter-increment:t;position:relative;padding-left:34px;margin:0 0 4px}
+ol.terms>li::before{content:counter(t);position:absolute;left:0;top:28px;width:24px;height:24px;border-radius:50%;background:var(--paper);border:1px solid var(--line);font-size:12px;font-weight:700;display:grid;place-items:center;color:var(--soft)}
+ol.terms p,ol.terms ul{margin:0 0 6px}
+ol.terms ul{padding-left:18px}
+.sign{margin-top:32px;border-top:2px solid var(--ink);padding-top:22px}
+label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
+input[type=text],input[type=email],input[type=tel]{width:100%;font:inherit;font-size:17px;padding:13px 14px;border:1px solid #CFC7B6;border-radius:10px;background:#fff;color:var(--ink)}
+input:focus-visible,button:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 45%,transparent);outline-offset:2px}
+.sigline{font-family:"Brush Script MT","Segoe Script","Snell Roundhand",cursive;font-size:30px;min-height:48px;border-bottom:1px solid var(--ink);padding:4px 2px 2px;color:#1d3a8a;overflow-wrap:anywhere}
+.small{font-size:13px;color:var(--soft)}
+.check{display:flex;gap:12px;align-items:flex-start;margin:18px 0 6px;font-size:15px;font-weight:500}
+.check input{width:24px;height:24px;flex:none;margin-top:1px;accent-color:var(--accent)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:54px;border:0;border-radius:12px;background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:700;font-size:17px;cursor:pointer;text-decoration:none;margin-top:18px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid #CFC7B6}
+.note{border-radius:10px;padding:12px 14px;font-size:14px;margin-top:14px}
+.note.warn{background:#FFF4DF;color:var(--warn)}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.tabs button{min-height:48px;border:1px solid #CFC7B6;border-radius:10px;background:#fff;font:inherit;font-weight:600;cursor:pointer;color:var(--ink)}
+.tabs button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1 1 200px;min-width:0}
+.linkbox{word-break:break-all;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;margin-top:10px}
+footer{max-width:680px;margin:18px auto 0;text-align:center;font-size:12px;color:var(--soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- Setup: what Addissu fills in at the counter, then hands over the phone -->
+<section class="sheet" id="setup" hidden>
+  <span class="eyebrow">For Addissu</span>
+  <h1>New agreement</h1>
+  <p class="parties">Fill this in, tap Open, then hand them your phone.</p>
+  <div class="tabs" role="group" aria-label="Plan">
+    <button type="button" data-plan="care" aria-pressed="true">Care plan $599 + $149/mo</button>
+    <button type="button" data-plan="own" aria-pressed="false">Own it $800</button>
+  </div>
+  <label for="s-biz">Business name</label><input type="text" id="s-biz" autocomplete="organization" placeholder="Skippy's Automotive">
+  <label for="s-site">Their new website (optional)</label><input type="text" id="s-site" inputmode="url" placeholder="bleachertalkk-tech.github.io/skippys-automotive">
+  <label for="s-email">Owner's email (optional, fills in at checkout)</label><input type="email" id="s-email" autocomplete="off" placeholder="owner@email.com">
+  <button class="btn" id="s-open" type="button">Open the agreement</button>
+  <button class="btn ghost" id="s-copy" type="button">Copy link to text them</button>
+  <div class="linkbox" id="s-link" hidden></div>
+</section>
+
+<!-- The agreement they read and sign -->
+<article class="sheet" id="doc" hidden>
+  <span class="eyebrow" id="d-eyebrow">Website care plan · month to month</span>
+  <h1 id="d-title">Website agreement</h1>
+  <p class="parties">Between <b>Addissu Tsige</b> (130 Alden Street, Malden, MA · 781-518-8769) and <b id="d-biz">your business</b>.</p>
+
+  <div class="price" id="d-price"></div>
+
+  <ol class="terms" id="d-terms"></ol>
+
+  <div class="sign">
+    <span class="eyebrow">Sign</span>
+    <label for="g-name">Your full name</label>
+    <input type="text" id="g-name" autocomplete="name" placeholder="Type your name">
+    <label for="g-title">Your role</label>
+    <input type="text" id="g-title" value="Owner">
+    <div class="sigline" id="g-sig" aria-hidden="true"></div>
+    <p class="small">Signed <span id="g-date"></span> for <span id="g-biz2"></span></p>
+    <label class="check"><input type="checkbox" id="g-ok"><span>I've read this agreement and agree to it. Typing my name and tapping the button below is my signature.</span></label>
+    <button class="btn" id="g-go" type="button" disabled>Sign and pay</button>
+    <p class="small" id="g-after">Next, you'll put your card in on Stripe's secure checkout. You'll get an email receipt.</p>
+    <div class="note warn" id="g-nolink" hidden>Card payment isn't connected yet. Ask Addissu for the payment link.</div>
+  </div>
+</article>
+
+</div>
+<footer>Addissu Tsige · 130 Alden Street, Malden, MA · 781-518-8769 · Agreement version <span id="ver"></span></footer>
+
+<script>
+(() => {
+  // Filled in by stripe-setup.js once the Stripe account exists.
+  const PAY = { care: '', own: '' };
+  const VERSION = 'v1 (Oct 2026)';
+
+  const $ = id => document.getElementById(id);
+  const q = new URLSearchParams(location.search);
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  $('ver').textContent = VERSION;
+
+  const TERMS = {
+    care: {
+      eyebrow: 'Website care plan · month to month',
+      price: '<div><b>$599<s>$799</s></b><span>Setup, paid today</span></div><div><b>$149<s>$150</s></b><span>Per month, cancel anytime</span></div>',
+      button: 'Sign and pay $599 today',
+      terms: b => [
+        ['What you get', '<p>A website for ' + b + ', built and set up by Addissu. While you\'re on the plan, Addissu also:</p><ul><li>keeps the site online (hosting)</li><li>connects your web address</li><li>fixes anything that breaks</li><li>makes small changes when you text him: hours, prices, photos, specials, wording. Usually done within 2 business days.</li></ul>'],
+        ['When it goes live', '<p>Within 7 days of signing, after you check your info (phone, hours, services) is right.</p>'],
+        ['What it costs', '<p>$599 setup, charged today. Then $149 a month on the same card, starting today and renewing on the same day each month. Your $149 rate stays the same as long as you stay on the plan.</p>'],
+        ['Month to month', '<p>No long-term contract. Cancel anytime by text or email before your next billing date, and you won\'t be charged again. The setup fee and a month that has already started are not refunded.</p>'],
+        ['If you cancel', '<p>Your site stays up until the end of the month you paid for. If you want to keep it after that, you can buy it outright instead.</p>'],
+        ['Your stuff stays yours', '<p>Your business name, logo, photos and info belong to you. You give Addissu permission to use them on your site. If a new web address is needed, it\'s registered in your business\'s name.</p>'],
+        ['Not included', '<p>New features beyond the site as shown, a full redesign, paid ads, and other companies\' fees (like a booking app you already pay for). Addissu will tell you the price before doing anything extra.</p>'],
+        ['If a payment fails', '<p>Addissu will text you. You have 14 days to update your card before the site is paused. It comes back as soon as it\'s paid.</p>'],
+        ['The fine print', '<p>Addissu will keep the site running and fix problems fast, but can\'t promise it\'s never down or guarantee a number of customers. If something goes wrong, the most Addissu owes you is what you paid in the last 3 months. Massachusetts law applies.</p>'],
+        ['Signing online', '<p>Typing your name and tapping Sign counts as your signature, the same as signing on paper. Both of you can open this agreement at this link anytime.</p>']
+      ]
+    },
+    own: {
+      eyebrow: 'Website purchase · one time',
+      price: '<div><b>$800</b><span>One time, paid today</span></div><div><b>$0</b><span>Per month</span></div>',
+      button: 'Sign and pay $800',
+      terms: b => [
+        ['What you get', '<p>A website for ' + b + ', built by Addissu, put online and handed over to you.</p>'],
+        ['When it goes live', '<p>Within 7 days of signing, after you check your info (phone, hours, services) is right.</p>'],
+        ['What it costs', '<p>$800, charged once today. No monthly fee.</p>'],
+        ['Fixes', '<p>For 30 days after it goes live, Addissu fixes anything he built wrong for free. After that, keeping the site running is up to you. Hosting and web address fees are yours to pay.</p>'],
+        ['Changes later', '<p>Later changes are paid separately, or you can switch to the care plan anytime.</p>'],
+        ['Your stuff stays yours', '<p>The site, your business name, logo, photos and info belong to you once paid. Any web address is registered in your business\'s name.</p>'],
+        ['Refunds', '<p>If you don\'t like it before it goes live, tell Addissu and he\'ll fix it. Once it\'s live, the payment is not refundable.</p>'],
+        ['The fine print', '<p>Addissu can\'t guarantee a number of customers. The most Addissu owes you is what you paid. Massachusetts law applies.</p>'],
+        ['Signing online', '<p>Typing your name and tapping Sign counts as your signature, the same as signing on paper.</p>']
+      ]
+    }
+  };
+
+  const plan = q.get('plan') === 'own' ? 'own' : 'care';
+  const biz = (q.get('b') || '').trim().slice(0, 80);
+
+  if (!biz) {                                   // setup mode
+    $('setup').hidden = false;
+    let chosen = 'care';
+    document.querySelectorAll('[data-plan]').forEach(btn => btn.addEventListener('click', () => {
+      chosen = btn.dataset.plan;
+      document.querySelectorAll('[data-plan]').forEach(x => x.setAttribute('aria-pressed', x === btn));
+    }));
+    const build = () => {
+      const b = $('s-biz').value.trim();
+      if (!b) { $('s-biz').focus(); return null; }
+      const p = new URLSearchParams({ b });
+      if (chosen === 'own') p.set('plan', 'own');
+      if ($('s-site').value.trim()) p.set('site', $('s-site').value.trim());
+      if ($('s-email').value.trim()) p.set('e', $('s-email').value.trim());
+      return location.origin + location.pathname + '?' + p.toString();
+    };
+    $('s-open').addEventListener('click', () => { const u = build(); if (u) location.href = u; });
+    $('s-copy').addEventListener('click', async () => {
+      const u = build(); if (!u) return;
+      $('s-link').hidden = false; $('s-link').textContent = u;
+      try { await navigator.clipboard.writeText(u); $('s-copy').textContent = 'Copied'; } catch (e) { $('s-copy').textContent = 'Select the link below'; }
+    });
+    return;
+  }
+
+  // agreement mode
+  const T = TERMS[plan], site = (q.get('site') || '').trim();
+  const bizHtml = '<b>' + esc(biz) + '</b>' + (site ? ' (' + esc(site) + ')' : '');
+  document.title = 'Website Agreement · ' + biz;
+  $('doc').hidden = false;
+  $('d-eyebrow').textContent = T.eyebrow;
+  $('d-title').textContent = 'Website agreement for ' + biz;
+  $('d-biz').textContent = biz;
+  $('d-price').innerHTML = T.price;
+  $('d-terms').innerHTML = T.terms(bizHtml).map(([h, body]) => '<li><h2>' + h + '</h2>' + body + '</li>').join('');
+  $('g-biz2').textContent = biz;
+  $('g-go').textContent = T.button;
+  const today = new Date();
+  $('g-date').textContent = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  if (!PAY[plan]) { $('g-nolink').hidden = false; $('g-after').hidden = true; }
+
+  const ready = () => { $('g-go').disabled = !($('g-name').value.trim().length > 2 && $('g-ok').checked && PAY[plan]); };
+  $('g-name').addEventListener('input', () => { $('g-sig').textContent = $('g-name').value; ready(); });
+  $('g-ok').addEventListener('change', ready);
+
+  // The signature rides into Stripe as client_reference_id, so the record (who, which business, when, which version)
+  // sits on the payment itself. Stripe allows letters, numbers, - and _ only, up to 200 characters.
+  const slug = t => t.normalize('NFKD').replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-').slice(0, 60);
+  $('g-go').addEventListener('click', () => {
+    if ($('g-go').disabled) return;
+    const stamp = today.toISOString().slice(0, 16).replace(/[-:T]/g, '') + 'UTC';
+    const ref = [slug(biz), slug($('g-name').value), slug($('g-title').value || 'Owner'), stamp, 'v1'].join('__').slice(0, 200);
+    const u = new URL(PAY[plan]);
+    u.searchParams.set('client_reference_id', ref);
+    if (q.get('e')) u.searchParams.set('prefilled_email', q.get('e'));
+    $('g-go').disabled = true; $('g-go').textContent = 'Opening checkout...';
+    location.href = u.toString();
+  });
+})();
+</script>
+</body>
+</html>
