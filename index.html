@@ -1,3 +1,270 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Website previews</title>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0e0d0c;color:#f3eee6;font:17px/1.6 system-ui,sans-serif;padding:24px;text-align:center}</style></head>
-<body><div><h1 style="font-weight:600">Website previews</h1><p>Each preview has its own private link. If someone sent you one, open that link.</p></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0E1A2B">
+<title>Addissu Tsige · Websites for Malden Businesses</title>
+<meta name="description" content="Websites for local businesses in Malden, MA. I build it first, you see it, and it goes live within a week. $599 setup and $149 a month, or own it for $800.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F4F1;--card:#fff;--ink:#0E1A2B;--ink2:#2B3646;--soft:#5D6775;--line:#E2E5E1;--line2:#CBD1CB;--accent:#0F7A63;--accent-dk:#0A5C4A;--accent-tint:#E7F3EF;--gold:#B7862B;--gold-tint:#FBF3E2;--shadow:0 1px 2px rgba(14,26,43,.05),0 10px 30px -14px rgba(14,26,43,.18)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--accent-dk)}
+:focus-visible{outline:3px solid rgba(15,122,99,.45);outline-offset:2px}
+.in{max-width:1080px;margin:0 auto;padding-inline:16px}
+@media(min-width:700px){.in{padding-inline:24px}}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h2{font-size:clamp(26px,4.6vw,36px);line-height:1.15}
+h3{margin:0 0 4px;font-size:17px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);font-weight:700}
+.lead{color:var(--soft);font-size:17px;max-width:60ch;margin:10px 0 0}
+section{padding-block:64px}
+@media(min-width:900px){section{padding-block:88px}}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;min-width:0}
+.mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#1C9C80,#0F7A63);display:grid;place-items:center;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;flex:none}
+.brand b{display:block;font-size:15px;line-height:1.2}
+.brand span{display:block;font-size:12px;color:#A9B4C2;line-height:1.3}
+nav{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:600}
+nav a{color:#D5DCE4;text-decoration:none}
+nav a:hover{color:#fff}
+.nav-links{display:none}
+@media(min-width:760px){.nav-links{display:flex;gap:22px}}
+.pill{background:var(--accent);color:#fff!important;padding:9px 14px;border-radius:999px;white-space:nowrap}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;padding-block:44px 64px;overflow:hidden}
+.hero .in{display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.hero .in{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}.hero{padding-block:72px 96px}}
+.hero h1{font-size:clamp(36px,7vw,58px);line-height:1.05}
+.hero h1 em{font-style:normal;color:#7FD8BF}
+.hero p{color:#C3CDD8;font-size:18px;max-width:52ch;margin:16px 0 0}
+.ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 22px;border-radius:12px;font-weight:800;text-decoration:none;font-size:16px}
+.btn.main{background:var(--accent);color:#fff;box-shadow:0 10px 24px -12px rgba(15,122,99,.9)}
+.btn.main:hover{background:#12907A}
+.btn.line{border:1px solid #42516A;color:#fff}
+.btn.line:hover{border-color:#8796AC}
+.facts{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;font-size:14px;color:#A9B4C2}
+.facts b{display:block;color:#fff;font-size:20px;font-family:Fraunces,Georgia,serif}
+
+/* phone mock */
+.phone{justify-self:center;width:min(300px,100%);aspect-ratio:9/18.5;border-radius:38px;background:#1B2638;padding:12px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),inset 0 0 0 1px #33415A}
+.screen{height:100%;border-radius:28px;background:#F7F5F0;overflow:hidden;display:flex;flex-direction:column;color:var(--ink)}
+.s-top{background:#1A2230;color:#fff;padding:26px 16px 18px}
+.s-top small{font-size:10px;letter-spacing:.14em;color:#E9B949;font-weight:800}
+.s-top div{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.1;margin-top:4px}
+.s-top .s-stars{font-family:"Plus Jakarta Sans",sans-serif;font-size:12px;line-height:1.4;color:#C9D2DC;margin-top:6px}
+.s-call{margin:14px 14px 0;background:#E9B949;color:#1A2230;border-radius:10px;text-align:center;font-weight:800;font-size:13px;padding:11px}
+.s-row{margin:10px 14px 0;background:#fff;border-radius:10px;padding:10px 12px;font-size:12px;display:flex;justify-content:space-between;box-shadow:0 1px 0 rgba(0,0,0,.05)}
+.s-row b{font-weight:700}
+.s-quote{margin:10px 14px 0;font-size:12px;color:var(--ink2);background:#fff;border-radius:10px;padding:10px 12px;line-height:1.45}
+
+/* who */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:var(--ink2)}
+
+/* features */
+.feat{display:grid;gap:14px;margin-top:28px}
+@media(min-width:640px){.feat{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.feat{grid-template-columns:repeat(3,1fr)}}
+.f{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+.f .ic{width:38px;height:38px;border-radius:10px;background:var(--accent-tint);display:grid;place-items:center;margin-bottom:12px}
+.f p{margin:0;color:var(--soft);font-size:15px}
+
+/* steps */
+.how{background:#fff;border-block:1px solid var(--line)}
+.steps{display:grid;gap:14px;margin-top:28px;counter-reset:s;padding:0;list-style:none}
+@media(min-width:800px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{counter-increment:s;border-top:3px solid var(--accent);padding-top:16px}
+.steps li::before{content:"Step " counter(s);display:block;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-dk);margin-bottom:6px}
+.steps p{margin:0;color:var(--soft);font-size:15px}
+
+/* pricing */
+.plans{display:grid;gap:16px;margin-top:30px}
+@media(min-width:800px){.plans{grid-template-columns:1fr 1fr;align-items:stretch}}
+.plan{position:relative;background:#fff;border:1.5px solid var(--line2);border-radius:16px;padding:26px 22px 22px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}
+.plan.rec{border-color:var(--accent);box-shadow:0 0 0 3px rgba(15,122,99,.12),var(--shadow)}
+.badge{position:absolute;top:-12px;left:20px;background:var(--gold);color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.plan .name{font-weight:800;font-size:18px}
+.amt{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:40px;line-height:1.1;margin:10px 0 0;font-variant-numeric:tabular-nums}
+.amt small{font-family:"Plus Jakarta Sans",sans-serif;font-size:15px;font-weight:600;color:var(--soft)}
+.amt s{font-size:18px;color:var(--soft);font-weight:500}
+.then{font-weight:700;color:var(--ink2);margin:2px 0 14px}
+.plan ul{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:8px;font-size:15px;color:var(--ink2)}
+.plan li{display:flex;gap:10px}
+.plan li svg{flex:none;margin-top:4px}
+.plan li.no{color:var(--soft)}
+.why{background:var(--gold-tint);color:#6B4E14;border-radius:10px;padding:11px 13px;font-size:14px;margin-top:auto}
+.plan .fine{font-size:13px;color:var(--soft);margin:auto 0 0}
+
+/* policies + faq */
+.two{display:grid;gap:16px;margin-top:28px}
+@media(min-width:800px){.two{grid-template-columns:1fr 1fr}}
+.pol{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;min-width:0}
+.pol p{margin:6px 0 0;color:var(--ink2);font-size:15px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 18px;margin-top:10px}
+summary{cursor:pointer;font-weight:700;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;line-height:1;color:var(--accent-dk)}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 16px;color:var(--ink2)}
+
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.contact .lead{color:#C3CDD8}
+.cgrid{display:grid;gap:14px;margin-top:26px}
+@media(min-width:760px){.cgrid{grid-template-columns:repeat(3,1fr)}}
+.c{border:1px solid #2E3B51;border-radius:14px;padding:18px;min-width:0}
+.c span{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8E9BAE;font-weight:700}
+.c a,.c b{color:#fff;font-size:18px;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+footer{background:#0A1320;color:#8E9BAE;font-size:13px;padding-block:24px calc(24px + env(safe-area-inset-bottom))}
+footer .in{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between}
+footer a{color:#C3CDD8}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="in bar">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true">A</span><span><b>Addissu Tsige</b><span>Websites for Malden businesses</span></span></a>
+    <nav><span class="nav-links"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#policies">Policies</a></span><a class="pill" href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="in">
+    <div>
+      <span class="eyebrow" style="color:#7FD8BF">Malden, MA</span>
+      <h1>Your website, <em>built before you pay a cent.</em></h1>
+      <p>I build websites for local businesses: auto shops, insurance and tax offices, laundromats, salons and more. I make yours first and show it to you. If you like it, it goes live within a week. If you don't, you owe nothing.</p>
+      <div class="ctas"><a class="btn main" href="sms:+17815188769">Text 781-518-8769</a><a class="btn line" href="#pricing">See pricing</a></div>
+      <div class="facts"><div><b>7 days</b>to go live</div><div><b>$0</b>until you say yes</div><div><b>No contract</b>cancel anytime</div></div>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <div class="s-top"><small>AUTO REPAIR · MALDEN</small><div>Your Shop Name</div><div class="s-stars">★★★★★ 4.8 · 300+ Google reviews</div></div>
+        <div class="s-call">Tap to call</div>
+        <div class="s-row"><span>Open today</span><b>8 AM – 6 PM</b></div>
+        <div class="s-row"><span>Oil change</span><b>from $49</b></div>
+        <div class="s-row"><span>Get a quote</span><b>2 min →</b></div>
+        <div class="s-quote">Your real Google reviews, word for word, right on the page.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="who">
+  <div class="in">
+    <span class="eyebrow">Who it's for</span>
+    <h2>Small businesses people find on Google.</h2>
+    <p class="lead">If customers look you up before they call, they should land on a site that makes it easy: your number, your hours, your reviews, and a way to reach you in one tap.</p>
+    <div class="chips"><span>Auto repair</span><span>Body shops</span><span>Insurance agents</span><span>Tax preparers</span><span>Laundromats</span><span>Dry cleaners</span><span>Salons and barbers</span><span>Cafés</span><span>Dentists</span><span>Photo studios</span></div>
+
+    <div class="feat">
+      <div class="f"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Made for phones</h3><p>Most of your customers find you on a phone. Every page is built for that first.</p></div>
+      <div class="f"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div><h3>One tap to call</h3><p>Your number is on every screen. Calls, directions and quote requests are one tap away.</p></div>
+      <div class="f"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div><h3>Your real reviews</h3><p>Your Google reviews, quoted word for word. Nothing made up.</p></div>
+      <div class="f"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Hours and directions</h3><p>Open-now status, your hours and a map, so nobody shows up when you're closed.</p></div>
+      <div class="f"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.2L4 17.2z"/><path d="M8 9h8M8 12h5"/></svg></div><h3>Quote and booking requests</h3><p>Customers send you their request in a few taps. You get their name and number.</p></div>
+      <div class="f"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div><h3>Changes by text</h3><p>On the care plan, new hours or prices are a text away. Usually done within 2 business days.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="in">
+    <span class="eyebrow">How it works</span>
+    <h2>You see it before you decide.</h2>
+    <ol class="steps">
+      <li><h3>I build it</h3><p>I make your site from your Google listing: your photos, hours, services and reviews.</p></li>
+      <li><h3>You look at it</h3><p>I show it to you in person or text you the link. Ask for any changes.</p></li>
+      <li><h3>Sign and go live</h3><p>Pick a plan, sign the agreement online, and pay by card. Your site goes live within 7 days.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="in">
+    <span class="eyebrow">Pricing</span>
+    <h2>Two ways to do it.</h2>
+    <p class="lead">Simple prices, no hidden fees. Payments are processed securely by Stripe.</p>
+    <div class="plans">
+      <div class="plan rec">
+        <span class="badge">Recommended</span>
+        <span class="name">Care plan</span>
+        <div class="amt">$599 <s>$799</s> <small>setup</small></div>
+        <p class="then">then $149/month · month to month</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Website built and set up</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Hosting and your web address</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Anything breaks, it gets fixed</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Text changes: hours, prices, photos</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>First month included in setup</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Cancel anytime</li>
+        </ul>
+        <div class="why">Best if you'd rather never deal with the website. Just text me.</div>
+      </div>
+      <div class="plan">
+        <span class="name">Own it</span>
+        <div class="amt">$800 <small>one time</small></div>
+        <p class="then">no monthly fee</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Website built and handed over to you</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>30 days of free fixes after launch</li>
+          <li class="no"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A94A0" stroke-width="3" stroke-linecap="round"><path d="M6 12h12"/></svg>Hosting and web address fees are yours</li>
+          <li class="no"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A94A0" stroke-width="3" stroke-linecap="round"><path d="M6 12h12"/></svg>Later changes are paid separately</li>
+        </ul>
+        <p class="fine">You can switch to the care plan anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="policies">
+  <div class="in">
+    <span class="eyebrow">Policies</span>
+    <h2>Cancellation, refunds and payments.</h2>
+    <div class="two">
+      <div class="pol" id="cancellation"><h3>Cancellation</h3><p>The care plan is month to month. Cancel anytime by text or email before your next billing date, and you won't be charged again. Your site stays up until the end of the month you paid for.</p></div>
+      <div class="pol" id="refunds"><h3>Refunds</h3><p>You see your website before you pay. If something isn't right before launch, I'll fix it. The setup fee, a month that has already started, and the one-time $800 purchase are not refundable once the site is live. Billing mistakes are always refunded in full.</p></div>
+      <div class="pol" id="payments"><h3>Payments</h3><p>All payments are by card through Stripe's secure checkout. I never see or store your card number. You get an email receipt for every charge.</p></div>
+      <div class="pol" id="delivery"><h3>Delivery</h3><p>Your site goes live within 7 days of signing, after you confirm your info (phone, hours, services) is right. Changes on the care plan are usually done within 2 business days.</p></div>
+    </div>
+    <p class="lead" style="font-size:15px">Full terms: <a href="agreement/">website agreement</a> · <a href="privacy/">privacy policy</a></p>
+
+    <div style="margin-top:36px">
+      <span class="eyebrow">Questions</span>
+      <details><summary>Do I need to have a website already?</summary><p>No. Plenty of businesses only have a Google listing. I build the site from that.</p></details>
+      <details><summary>I already have a website. Can you still help?</summary><p>Yes. If yours is old, slow, or hard to use on a phone, I'll build a new one and you can compare them side by side.</p></details>
+      <details><summary>Who owns the website?</summary><p>Your business name, logo, photos and info are always yours. Any web address is registered in your business's name. If you buy the site outright, all of it is yours.</p></details>
+      <details><summary>How do changes work?</summary><p>On the care plan, text me what you want changed. Hours, prices, photos, specials and wording are included.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="in">
+    <span class="eyebrow" style="color:#7FD8BF">Contact</span>
+    <h2>Text me. I'm right here in Malden.</h2>
+    <p class="lead">Questions, changes, billing or canceling: text, call or email.</p>
+    <div class="cgrid">
+      <div class="c"><span>Phone / text</span><a href="tel:+17815188769">781-518-8769</a></div>
+      <div class="c"><span>Email</span><a href="mailto:bleachertalkk@gmail.com">bleachertalkk@gmail.com</a></div>
+      <div class="c"><span>Address</span><b>130 Alden Street<br>Malden, MA 02148</b></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="in"><span>© 2026 Addissu Tsige · Website design and care, Malden, MA</span><span><a href="agreement/">Terms</a> · <a href="privacy/">Privacy</a> · <a href="#refunds">Refunds</a> · <a href="#cancellation">Cancellation</a></span></div>
+</footer>
+</body>
+</html>

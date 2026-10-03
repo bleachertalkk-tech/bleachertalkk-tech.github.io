@@ -173,7 +173,7 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
                 <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Text changes: hours, prices, photos</li>
                 <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>No contract. Month to month</li>
               </ul>
-              <div class="why">Most owners pick this. You never have to touch the website. Just text Addissu.</div>
+              <div class="why">Best if you'd rather never deal with the website. Just text Addissu.</div>
             </button>
             <button type="button" class="plan" role="radio" data-plan="own" aria-checked="false">
               <div class="head"><span class="name">Own it</span><span class="radio" aria-hidden="true"></span></div>
@@ -280,9 +280,10 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
     }
   };
 
-  const biz = (q.get('b') || '').trim().slice(0, 80);
+  const general = !q.has('b') && !q.has('new');            // plain terms, e.g. linked from the business site
+  const biz = general ? 'your business' : (q.get('b') || '').trim().slice(0, 80);
 
-  if (!biz) {                                   // setup mode
+  if (!biz) {                                   // setup mode: /agreement/?new
     $('setup').hidden = false;
     const build = () => {
       const b = $('s-biz').value.trim();
@@ -304,7 +305,9 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
   // owner mode
   $('buy').hidden = false;
   document.title = 'Website Agreement · ' + biz;
-  $('d-title').textContent = 'Website for ' + biz;
+  $('d-title').textContent = general ? 'Website plans and agreement' : 'Website for ' + biz;
+  if (general) { $('sign').hidden = true; $('bar').hidden = true; document.querySelector('.steps').hidden = true;
+    document.querySelector('.grid').style.gridTemplateColumns = 'minmax(0,1fr)'; }
   $('d-biz').textContent = biz;
   $('g-for').textContent = biz;
   const site = (q.get('site') || '').trim();
@@ -340,14 +343,14 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
   });
   $('g-name').addEventListener('input', () => { $('g-sig').textContent = $('g-name').value; ready(); });
   $('g-ok').addEventListener('change', ready);
-  $('bar-go').addEventListener('click', () => { $('agreement').scrollIntoView({ behavior: 'smooth' }); });
+  if (!general) $('bar-go').addEventListener('click', () => { $('agreement').scrollIntoView({ behavior: 'smooth' }); });
 
   // Phone bar: once the sign box is on screen, the bar's job is done.
   const io = 'IntersectionObserver' in window && new IntersectionObserver(es => es.forEach(e => {
     $('bar').hidden = e.isIntersecting;
     if (e.isIntersecting) $('st2').classList.add('on');
   }), { threshold: .15 });
-  if (io) io.observe($('sign'));
+  if (io && !general) io.observe($('sign'));
 
   // The signature rides into Stripe as client_reference_id, so the record (who, which business, when, which version)
   // sits on the payment itself. Stripe allows letters, numbers, - and _ only, up to 200 characters.
