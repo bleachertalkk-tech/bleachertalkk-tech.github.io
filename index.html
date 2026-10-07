@@ -43,9 +43,9 @@ nav a:hover{color:#fff}
 
 /* hero */
 .hero{background:var(--ink);color:#fff;padding-block:44px 64px;overflow:hidden}
-.hero .in{display:grid;gap:40px;align-items:center}
-@media(min-width:900px){.hero .in{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}.hero{padding-block:72px 96px}}
-.hero h1{font-size:clamp(36px,7vw,58px);line-height:1.05}
+.hero .in{display:grid;gap:40px;align-items:center;max-width:1240px}
+@media(min-width:900px){.hero .in{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr)}.hero{padding-block:72px 96px}}
+.hero h1{font-size:clamp(36px,6vw,56px);line-height:1.05}
 .hero h1 em{font-style:normal;color:#7FD8BF}
 .hero p{color:#C3CDD8;font-size:18px;max-width:52ch;margin:16px 0 0}
 .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
@@ -75,17 +75,36 @@ nav a:hover{color:#fff}
 .shot figcaption{text-align:center;font-size:13px;color:#A9B4C2;margin-top:12px}
 .proof{font-size:14px;color:#A9B4C2;margin-top:14px}
 
-/* phone carousel */
-.deck{position:relative;width:min(460px,100%);justify-self:center}
-.deck::before{content:"";display:block;width:min(250px,60%);aspect-ratio:390/780;margin:0 auto;padding:9px}
-.ph{position:absolute;left:50%;top:0;width:min(250px,60%);aspect-ratio:390/780;border-radius:36px;background:#1B2638;padding:9px;box-shadow:0 40px 80px -30px rgba(0,0,0,.8),inset 0 0 0 1px #3A4864;transform:translateX(-50%) scale(.7);opacity:0;transition:transform .8s cubic-bezier(.2,.7,.2,1),opacity .8s,filter .8s}
-.ph img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;border-radius:28px}
-.ph.c{transform:translateX(-50%) scale(1);opacity:1;z-index:3;box-shadow:0 40px 90px -30px rgba(0,0,0,.85),0 0 60px -10px rgba(127,216,191,.35),inset 0 0 0 1px #3A4864}
-.ph.l{transform:translateX(-118%) scale(.8) rotate(-6deg);opacity:.9;z-index:2;filter:brightness(.55)}
-.ph.r{transform:translateX(18%) scale(.8) rotate(6deg);opacity:.9;z-index:2;filter:brightness(.55)}
-.deck-cap{text-align:center;margin-top:18px;font-size:14px;color:#A9B4C2;min-height:2.6em}
-.deck-cap b{display:block;color:#fff;font-size:16px}
-.dots{display:flex;justify-content:center;gap:8px;margin-top:10px}
+/* devices */
+.stage{position:relative;width:min(760px,100%);justify-self:center;padding:0 0 4% 0}
+.mac{position:relative;width:86%;margin-left:2%}
+.lid{position:relative;background:#0A0A0C;border-radius:14px 14px 4px 4px;padding:2.6% 2.6% 3.4%;box-shadow:0 0 0 1px #3B3F47,0 0 0 2px #0A0A0C,0 50px 90px -40px rgba(0,0,0,.9)}
+.lid::before{content:"";position:absolute;top:1.1%;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#1E2229;box-shadow:inset 0 0 0 1.5px #2B313B}
+.scr{position:relative;overflow:hidden;background:#000}
+.mac .scr{aspect-ratio:16/10;border-radius:3px}
+.scr img{position:absolute;left:0;top:0;width:100%;height:auto;max-width:none;will-change:transform}
+.scr::after{content:"";position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,.10),rgba(255,255,255,0) 38%);pointer-events:none}
+.base{position:relative;height:0;padding-bottom:3.6%;width:118%;margin-left:-9%;background:linear-gradient(#D9DCE1,#AEB2B9 55%,#7D8189);border-radius:2px 2px 50% 50%/2px 2px 100% 100%;box-shadow:0 30px 40px -20px rgba(0,0,0,.8)}
+.base::before{content:"";position:absolute;top:0;left:50%;width:15%;height:45%;transform:translateX(-50%);background:linear-gradient(#9EA2A9,#C4C7CC);border-radius:0 0 10px 10px}
+.iph{position:relative;aspect-ratio:71.6/146.6;border-radius:15%/7.4%;padding:1.6%;background:linear-gradient(140deg,#9A9DA3 0%,#4A4D53 22%,#7C7F86 50%,#3A3C41 78%,#8E9197 100%);box-shadow:0 40px 70px -24px rgba(0,0,0,.9),inset 0 0 0 1px rgba(255,255,255,.18)}
+.iph::before,.iph::after{content:"";position:absolute;width:1.8%;border-radius:2px;background:#6F7278}
+.iph::before{left:-1.2%;top:18%;height:13%;box-shadow:0 -60% 0 -0 #6F7278}
+.iph::after{right:-1.2%;top:24%;height:17%}
+.gl{position:relative;height:100%;border-radius:13.6%/6.7%;background:#000;padding:3.4%}
+.gl::after{content:"";position:absolute;top:4.6%;left:50%;width:31%;height:3.6%;transform:translateX(-50%);background:#000;border-radius:999px;z-index:2;box-shadow:inset 0 0 0 1px #121418}
+.dsp{display:flex;flex-direction:column;height:100%;border-radius:11%/5.2%;overflow:hidden;background:#000;container-type:inline-size}
+.sb{flex:none;display:flex;align-items:center;justify-content:space-between;height:12.5cqw;padding:1.2cqw 7cqw 0 9cqw;color:#fff;font:600 4.6cqw/1 -apple-system,"SF Pro Text","Plus Jakarta Sans",sans-serif;letter-spacing:-.01em}
+.sb i{display:flex;align-items:center;gap:1.6cqw}
+.sb svg{height:3.6cqw;width:auto;fill:currentColor}
+.sb svg:last-child{height:3.9cqw}
+.iph .scr{flex:1;min-height:0}
+.stage .iph{position:absolute;right:0;bottom:0;width:27%;z-index:3}
+.stage .scr img{transition:transform 0s linear}
+.stage .fade{transition:opacity .6s}
+.stage .fade.out{opacity:0}
+.dcap{text-align:center;margin-top:22px;font-size:14px;color:#A9B4C2}
+.dcap b{color:#fff;font-size:16px;margin-right:6px}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:12px}
 .dots button{width:9px;height:9px;border-radius:9px;border:0;padding:0;background:#3A4864;cursor:pointer;transition:width .3s,background .3s}
 .dots button.on{width:26px;background:#7FD8BF}
 
@@ -100,12 +119,12 @@ nav a:hover{color:#fff}
 .samples{display:grid;gap:28px 18px;margin-top:40px;grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(min-width:900px){.samples{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}}
 .sm{display:block;text-decoration:none;color:#fff;text-align:center;min-width:0}
-.sm .frame{display:block;border-radius:30px;background:#1B2638;padding:7px;box-shadow:0 30px 60px -24px rgba(0,0,0,.9),inset 0 0 0 1px #3A4864;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
-.sm img{display:block;width:100%;height:auto;border-radius:24px}
-.sm:hover .frame,.sm:focus-visible .frame{transform:translateY(-10px);box-shadow:0 40px 70px -24px rgba(0,0,0,.9),0 0 50px -8px rgba(127,216,191,.45),inset 0 0 0 1px #4E6080}
-.sm b{display:block;font-size:16px;margin-top:16px}
-.sm span{display:block;font-size:13px;color:#9FB5AE;margin-top:2px}
-.sm .open{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:#7FD8BF}
+.sm .iph{width:min(230px,100%);margin:0 auto;transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.sm .iph img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.sm:hover .iph,.sm:focus-visible .iph{transform:translateY(-10px);box-shadow:0 50px 80px -24px rgba(0,0,0,.95),0 0 60px -6px rgba(127,216,191,.4),inset 0 0 0 1px rgba(255,255,255,.25)}
+.sm>b{display:block;font-size:16px;margin-top:16px}
+.sm>span:not(.iph){display:block;font-size:13px;color:#9FB5AE;margin-top:2px}
+.sm>span.open{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:#7FD8BF}
 .note{font-size:14px;color:#9FB5AE;margin-top:28px;text-align:center}
 #pricing{background:var(--accent-tint)}
 #preview.dark .pform{border-color:transparent}
@@ -206,8 +225,12 @@ footer a{color:#C3CDD8}
       <div class="ctas"><a class="btn main" href="#preview">Get my free preview</a></div>
       <div class="facts"><div><b>7 days</b>to go live</div><div><b>$0</b>until you say yes</div><div><b>No contract</b>cancel anytime</div></div>
     </div>
-    <div class="deck" id="deck"><a class="ph" href="https://gregtully-demo.netlify.app/" target="_blank" rel="noopener" data-n="Greg Tully" data-t="Real estate · North Shore"><img src="img/samples/greg-tully.jpg" width="780" height="1560" alt="Greg Tully sample site on a phone"></a><a class="ph" href="https://illustrious-youtiao-789c5e.netlify.app/" target="_blank" rel="noopener" data-n="Supino Insurance" data-t="Insurance agency · Malden"><img src="img/samples/supino-insurance.jpg" width="780" height="1560" alt="Supino Insurance sample site on a phone"></a><a class="ph" href="https://ludwigs-limousine.netlify.app/" target="_blank" rel="noopener" data-n="Ludwig's Limousine" data-t="Wedding cars · Middleton"><img src="img/samples/ludwigs-limousine.jpg" width="780" height="1560" alt="Ludwig's Limousine sample site on a phone"></a><a class="ph" href="atlas-auto-body/" target="_blank" rel="noopener" data-n="Atlas Collision" data-t="Body shop · Revere"><img src="img/samples/atlas-auto-body.jpg" width="780" height="1560" alt="Atlas Collision sample site on a phone"></a>
-      <p class="deck-cap" id="deckCap"></p>
+    <div class="hero-dev">
+      <div class="stage" id="stage">
+        <div class="mac"><div class="lid"><div class="scr fade" id="dScr"><img id="dImg" src="img/samples/greg-tully-desk.jpg" alt="Desktop view of a sample site"></div></div><div class="base"></div></div>
+        <div class="iph"><div class="gl"><div class="dsp"><span class="sb"><b>9:41</b><i><svg viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0zM3.5 6.9a6.4 6.4 0 0 1 9 0l-1.4 1.4a4.4 4.4 0 0 0-6.2 0zM1.3 4.7a9.5 9.5 0 0 1 13.4 0l-1.4 1.4a7.5 7.5 0 0 0-10.6 0z"/></svg><svg viewBox="0 0 27 12" aria-hidden="true"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="24.6" y="4" width="1.8" height="4" rx=".9" opacity=".45"/></svg></i></span><div class="scr fade" id="mScr"><img id="mImg" src="img/samples/greg-tully-mob.jpg" alt="Phone view of the same site"></div></div></div></div>
+      </div>
+      <p class="dcap" id="dcap"><b>Greg Tully</b>Real estate · North Shore</p>
       <div class="dots" id="dots"></div>
     </div>
   </div>
@@ -224,10 +247,10 @@ footer a{color:#C3CDD8}
     <h2>Real sites I built for local businesses.</h2>
     <p class="lead">Tap any phone to open the real site. Yours would be built the same way.</p>
     <div class="samples">
-      <a class="sm" href="https://gregtully-demo.netlify.app/" target="_blank" rel="noopener"><span class="frame"><img src="img/samples/greg-tully.jpg" width="780" height="1560" loading="lazy" alt="Greg Tully sample site"></span><b>Greg Tully</b><span>Real estate · North Shore</span><span class="open">Open the site →</span></a>
-      <a class="sm" href="https://illustrious-youtiao-789c5e.netlify.app/" target="_blank" rel="noopener"><span class="frame"><img src="img/samples/supino-insurance.jpg" width="780" height="1560" loading="lazy" alt="Supino Insurance sample site"></span><b>Supino Insurance</b><span>Insurance agency · Malden</span><span class="open">Open the site →</span></a>
-      <a class="sm" href="https://ludwigs-limousine.netlify.app/" target="_blank" rel="noopener"><span class="frame"><img src="img/samples/ludwigs-limousine.jpg" width="780" height="1560" loading="lazy" alt="Ludwig's Limousine sample site"></span><b>Ludwig's Limousine</b><span>Wedding cars · Middleton</span><span class="open">Open the site →</span></a>
-      <a class="sm" href="atlas-auto-body/" target="_blank" rel="noopener"><span class="frame"><img src="img/samples/atlas-auto-body.jpg" width="780" height="1560" loading="lazy" alt="Atlas Collision sample site"></span><b>Atlas Collision</b><span>Body shop · Revere</span><span class="open">Open the site →</span></a>
+      <a class="sm" href="https://gregtully-demo.netlify.app/" target="_blank" rel="noopener"><span class="iph" style="display:block"><span class="gl" style="display:block"><span class="dsp"><span class="sb"><b>9:41</b><i><svg viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0zM3.5 6.9a6.4 6.4 0 0 1 9 0l-1.4 1.4a4.4 4.4 0 0 0-6.2 0zM1.3 4.7a9.5 9.5 0 0 1 13.4 0l-1.4 1.4a7.5 7.5 0 0 0-10.6 0z"/></svg><svg viewBox="0 0 27 12" aria-hidden="true"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="24.6" y="4" width="1.8" height="4" rx=".9" opacity=".45"/></svg></i></span><span class="scr" style="display:block"><img src="img/samples/greg-tully.jpg" width="780" height="1560" loading="lazy" alt="Greg Tully sample site"></span></span></span></span><b>Greg Tully</b><span>Real estate · North Shore</span><span class="open">Open the site →</span></a>
+      <a class="sm" href="https://illustrious-youtiao-789c5e.netlify.app/" target="_blank" rel="noopener"><span class="iph" style="display:block"><span class="gl" style="display:block"><span class="dsp"><span class="sb"><b>9:41</b><i><svg viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0zM3.5 6.9a6.4 6.4 0 0 1 9 0l-1.4 1.4a4.4 4.4 0 0 0-6.2 0zM1.3 4.7a9.5 9.5 0 0 1 13.4 0l-1.4 1.4a7.5 7.5 0 0 0-10.6 0z"/></svg><svg viewBox="0 0 27 12" aria-hidden="true"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="24.6" y="4" width="1.8" height="4" rx=".9" opacity=".45"/></svg></i></span><span class="scr" style="display:block"><img src="img/samples/supino-insurance.jpg" width="780" height="1560" loading="lazy" alt="Supino Insurance sample site"></span></span></span></span><b>Supino Insurance</b><span>Insurance agency · Malden</span><span class="open">Open the site →</span></a>
+      <a class="sm" href="https://ludwigs-limousine.netlify.app/" target="_blank" rel="noopener"><span class="iph" style="display:block"><span class="gl" style="display:block"><span class="dsp"><span class="sb"><b>9:41</b><i><svg viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0zM3.5 6.9a6.4 6.4 0 0 1 9 0l-1.4 1.4a4.4 4.4 0 0 0-6.2 0zM1.3 4.7a9.5 9.5 0 0 1 13.4 0l-1.4 1.4a7.5 7.5 0 0 0-10.6 0z"/></svg><svg viewBox="0 0 27 12" aria-hidden="true"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="24.6" y="4" width="1.8" height="4" rx=".9" opacity=".45"/></svg></i></span><span class="scr" style="display:block"><img src="img/samples/ludwigs-limousine.jpg" width="780" height="1560" loading="lazy" alt="Ludwig's Limousine sample site"></span></span></span></span><b>Ludwig's Limousine</b><span>Wedding cars · Middleton</span><span class="open">Open the site →</span></a>
+      <a class="sm" href="atlas-auto-body/" target="_blank" rel="noopener"><span class="iph" style="display:block"><span class="gl" style="display:block"><span class="dsp"><span class="sb"><b>9:41</b><i><svg viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0zM3.5 6.9a6.4 6.4 0 0 1 9 0l-1.4 1.4a4.4 4.4 0 0 0-6.2 0zM1.3 4.7a9.5 9.5 0 0 1 13.4 0l-1.4 1.4a7.5 7.5 0 0 0-10.6 0z"/></svg><svg viewBox="0 0 27 12" aria-hidden="true"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="24.6" y="4" width="1.8" height="4" rx=".9" opacity=".45"/></svg></i></span><span class="scr" style="display:block"><img src="img/samples/atlas-auto-body.jpg" width="780" height="1560" loading="lazy" alt="Atlas Collision sample site"></span></span></span></span><b>Atlas Collision</b><span>Body shop · Revere</span><span class="open">Open the site →</span></a>
     </div>
     <p class="note">These are free previews I made to show each owner. They are samples, not paying clients.</p>
   </div>
@@ -354,15 +377,19 @@ footer a{color:#C3CDD8}
 </footer>
 <div class="mbar"><a class="btn line" href="sms:+17815188769">Text me</a><a class="btn main" href="#preview">Free preview</a></div>
 <script>
-(function(){var d=document.getElementById('deck');if(!d)return;var ps=[].slice.call(d.querySelectorAll('.ph')),cap=document.getElementById('deckCap'),dots=document.getElementById('dots'),i=0,n=ps.length,t;
-ps.forEach(function(p,k){var b=document.createElement('button');b.setAttribute('aria-label','Show '+p.dataset.n);b.onclick=function(){go(k);restart()};dots.appendChild(b);
- p.addEventListener('click',function(e){if(!p.classList.contains('c')){e.preventDefault();go(k);restart()}})});
-function go(k){i=(k+n)%n;ps.forEach(function(p,j){p.className='ph'+(j===i?' c':j===(i+n-1)%n?' l':j===(i+1)%n?' r':'')});
- [].forEach.call(dots.children,function(b,j){b.className=j===i?'on':''});cap.innerHTML='<b>'+ps[i].dataset.n+'</b>'+ps[i].dataset.t}
-var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function restart(){clearInterval(t);if(!still)t=setInterval(function(){go(i+1)},3400)}
-d.addEventListener('mouseenter',function(){clearInterval(t)});d.addEventListener('mouseleave',restart);
-go(0);restart()})();
+(function(){var st=document.getElementById('stage');if(!st)return;
+var S=[['greg-tully', 'Greg Tully', 'Real estate · North Shore'], ['supino-insurance', 'Supino Insurance', 'Insurance agency · Malden'], ['ludwigs-limousine', 'Ludwig’s Limousine', 'Wedding cars · Middleton'], ['atlas-auto-body', 'Atlas Collision', 'Body shop · Revere']],i=0,timer,still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var d=document.getElementById('dImg'),m=document.getElementById('mImg'),ds=document.getElementById('dScr'),ms=document.getElementById('mScr'),cap=document.getElementById('dcap'),dots=document.getElementById('dots');
+S.forEach(function(x,k){var b=document.createElement('button');b.setAttribute('aria-label','Show '+x[1]);b.onclick=function(){show(k)};dots.appendChild(b);[new Image,new Image].forEach(function(im,j){im.src='img/samples/'+x[0]+(j?'-mob':'-desk')+'.jpg'})});
+function pan(img,box,ms){var dist=Math.max(0,img.offsetHeight-box.offsetHeight);img.style.transition='transform 0s';img.style.transform='translateY(0)';img.offsetHeight;
+ if(still)return;img.style.transition='transform '+ms+'ms cubic-bezier(.45,0,.55,1)';img.style.transform='translateY(-'+dist+'px)'}
+function ready(img){return img.complete&&img.naturalHeight?Promise.resolve():new Promise(function(r){img.onload=r;img.onerror=r})}
+function show(k){clearTimeout(timer);i=(k+S.length)%S.length;var x=S[i];ds.classList.add('out');ms.classList.add('out');
+ setTimeout(function(){d.src='img/samples/'+x[0]+'-desk.jpg';m.src='img/samples/'+x[0]+'-mob.jpg';cap.innerHTML='<b>'+x[1]+'</b>'+x[2];
+  [].forEach.call(dots.children,function(b,j){b.className=j===i?'on':''});
+  Promise.all([ready(d),ready(m)]).then(function(){pan(d,ds,1);pan(m,ms,1);ds.classList.remove('out');ms.classList.remove('out');
+   setTimeout(function(){pan(d,ds,11000);pan(m,ms,11000)},1400);if(!still)timer=setTimeout(function(){show(i+1)},13600)})},600)}
+show(0)})();
 document.getElementById('pform').addEventListener('submit',function(e){
   e.preventDefault();var f=this,v=function(n){return (f[n].value||'').trim()};
   var msg='Hi Addissu, I want a free website preview.\nBusiness: '+v('biz')+'\nName: '+v('name')+'\nPhone: '+v('phone')+(v('email')?'\nEmail: '+v('email'):'');
