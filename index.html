@@ -210,6 +210,23 @@ details p{margin:0 0 16px;color:var(--ink2)}
 footer{background:#0A1320;color:#8E9BAE;font-size:13px;padding-block:24px calc(24px + env(safe-area-inset-bottom))}
 footer .in{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between}
 footer a{color:#C3CDD8}
+
+/* ===== laptop fills the first screen; phone pops up ===== */
+.hero{padding-block:20px 56px}
+.hero .in{grid-template-columns:minmax(0,1fr)!important;max-width:1320px!important;gap:34px!important}
+.hero-dev{order:-1}
+.hero .in > div:not(.hero-dev){text-align:center;max-width:820px;margin-inline:auto}
+.hero .in > div:not(.hero-dev) p{margin-inline:auto}
+.hero .ctas,.hero .facts{justify-content:center}
+.stage{width:min(1180px,100%,calc((100svh - 130px) * 1.42))!important;padding:0 0 3%}
+.mac{width:100%!important;margin:0!important}
+.lid{border-radius:18px 18px 5px 5px}
+.base{width:112%!important;margin-left:-6%!important}
+.stage .iph{right:-2%!important;bottom:4%!important;width:19%!important;transform:translateY(30%) scale(.55) rotate(6deg);opacity:0;transform-origin:70% 100%;transition:transform .75s cubic-bezier(.34,1.56,.64,1),opacity .35s ease}
+.stage .iph.up{transform:none;opacity:1}
+.stage .iph .scr.fade{transition:none}
+@media(max-width:899px){.hero{padding-top:14px}.stage{width:100%!important;padding-bottom:9%}.stage .iph{width:30%!important;right:0!important;bottom:0!important}}
+@media(prefers-reduced-motion:reduce){.stage .iph{transition:none}}
 </style>
 </head>
 <body>
@@ -398,13 +415,13 @@ function tween(imgs,from,to,ms,tok){return new Promise(function(r){var t0=perfor
 /* hero: laptop + phone */
 var st=document.getElementById('stage');
 if(st){var S=[['greg-tully', 'Greg Tully', 'Real estate · North Shore'], ['supino-insurance', 'Supino Insurance', 'Insurance agency · Malden'], ['ludwigs-limousine', 'Ludwig’s Limousine', 'Wedding cars · Middleton'], ['atlas-auto-body', 'Atlas Collision', 'Body shop · Revere']],i=0,tok={};
- var d=document.getElementById('dImg'),m=document.getElementById('mImg'),ds=document.getElementById('dScr'),ms=document.getElementById('mScr'),cap=document.getElementById('dcap'),dots=document.getElementById('dots');
+ var ph=st.querySelector('.iph'),d=document.getElementById('dImg'),m=document.getElementById('mImg'),ds=document.getElementById('dScr'),ms=document.getElementById('mScr'),cap=document.getElementById('dcap'),dots=document.getElementById('dots');
  S.forEach(function(x,k){var b=document.createElement('button');b.setAttribute('aria-label','Show '+x[1]);b.onclick=function(){run(k)};dots.appendChild(b);(new Image).src='img/samples/'+x[0]+'-desk.jpg';(new Image).src='img/samples/'+x[0]+'-mob.jpg'});
  function run(k){tok.stop=true;var me=tok={};i=(k+S.length)%S.length;var x=S[i];
-  ds.classList.add('out');ms.classList.add('out');
+  ds.classList.add('out');ph.classList.remove('up');
   wait(520).then(function(){if(me.stop)return;d.src='img/samples/'+x[0]+'-desk.jpg';m.src='img/samples/'+x[0]+'-mob.jpg';return Promise.all([ready(d),ready(m)])})
   .then(function(){if(me.stop)return;d.style.transform=m.style.transform='translate3d(0,0,0)';cap.innerHTML='<b>'+x[1]+'</b>'+x[2];
-   [].forEach.call(dots.children,function(b,j){b.className=j===i?'on':''});ds.classList.remove('out');ms.classList.remove('out');
+   [].forEach.call(dots.children,function(b,j){b.className=j===i?'on':''});ds.classList.remove('out');ms.classList.remove('out');setTimeout(function(){if(!me.stop)ph.classList.add('up')},still?0:900);
    if(still)return;return wait(1600).then(function(){if(me.stop)return;return tween([d,m],[0,0],[room(d,ds,.6),room(m,ms,.6)],10000,me)})
    .then(function(){if(!me.stop)return wait(900)}).then(function(){if(!me.stop)run(i+1)})})}
  run(0)}
