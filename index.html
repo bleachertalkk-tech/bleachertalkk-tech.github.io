@@ -247,6 +247,39 @@ nav .btn.pay:hover{background:var(--blue-tint)}
 .x{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:#222B45;color:#fff;font-size:26px;line-height:1;cursor:pointer}
 .x:hover{background:var(--blue)}
 .live h3{padding-right:50px}
+
+.fn .prog{height:6px;border-radius:6px;background:#222B45;margin:4px 56px 18px 0;overflow:hidden}
+.fn .prog i{display:block;height:100%;width:25%;background:var(--blue);border-radius:6px;transition:width .4s cubic-bezier(.2,.8,.2,1)}
+.stepn{font:700 12px/1 "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8FA6FF;margin:0 0 14px}
+.st{display:none}.st.on{display:block;animation:fadein .3s ease}
+@keyframes fadein{from{opacity:0;transform:translateX(14px)}}
+.st h3 em{font-style:normal;color:#8FA6FF}
+.st>p{color:#A7B0C6;margin:10px 0 0}
+.pick{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.pick.g3{grid-template-columns:repeat(3,1fr)}
+.tile{font:inherit;text-align:left;cursor:pointer;color:#fff;background:transparent;border:2px solid #2E3858;border-radius:18px;padding:22px;transition:border-color .2s,background .2s,transform .2s}
+.tile:hover,.tile:focus-visible{border-color:var(--blue);background:rgba(47,91,255,.12);transform:translateY(-2px)}
+.tile b{display:block;font:900 24px/1.05 Archivo,sans-serif;text-transform:uppercase}
+.tile span{display:block;margin-top:8px;color:#A7B0C6;font-size:15px}
+.tile.sm{font-weight:700;font-size:16px;padding:18px}
+.opts .opt{font:inherit;text-align:left;color:#fff;background:transparent;width:100%}
+.opts .opt:hover,.opts .opt:focus-visible{border-color:var(--blue);background:rgba(47,91,255,.12)}
+.fn .opts{margin-top:24px}
+.fn .two{margin-top:22px}
+.fn label small{font-weight:400}
+.fn .fine{text-align:center;color:#7D879E;margin-top:12px}
+.nav2{margin-top:18px}
+.back{font:700 15px "DM Sans",sans-serif;color:#A7B0C6;background:none;border:0;cursor:pointer;padding:8px 0}
+.back:hover{color:#fff}
+.sum{margin-top:20px;border:1px solid #2E3858;border-radius:16px;overflow:hidden}
+.sum div{display:flex;justify-content:space-between;gap:16px;padding:13px 18px;border-top:1px solid #2E3858;color:#C2C9DA;font-size:15px}
+.sum div:first-child{border-top:0}
+.sum div b{color:#fff;text-align:right}
+.sum .tot{background:rgba(47,91,255,.14)}
+.sum .tot b{font:900 22px/1 Archivo,sans-serif}
+.guar2{margin-top:14px;font-size:14px;color:#A7B0C6;border-left:3px solid var(--blue);padding:4px 0 4px 12px}
+.guar2 b{color:#fff}
+@media(max-width:560px){.pick,.pick.g3{grid-template-columns:1fr}.fn .prog{margin-right:50px}}
 @media(max-width:560px){.opts,.live .two{grid-template-columns:1fr}.live{padding:24px 18px}}
 @media(max-width:899px){
   nav .links{display:none}
@@ -455,7 +488,7 @@ nav .btn.pay:hover{background:var(--blue-tint)}
     </form>
 
     <div class="or" id="golive">Already saw your preview?</div>
-    <div class="paycta"><button class="btn main" type="button" data-pay>Pay here · go live</button><span>Pick your plan, sign, and pay by card in 1 minute.</span></div>
+    <div class="paycta"><button class="btn main" type="button" data-pay>Pay here · go live</button><span>Already saw your preview? Confirm your info, pick a plan, sign and pay by card.</span></div>
   </div>
 </section>
 
@@ -504,24 +537,84 @@ nav .btn.pay:hover{background:var(--blue-tint)}
 <footer>
   <div class="in"><span>© 2026 Addissu Tsige · Website design and care, Malden, MA</span><span><a href="agreement/">Terms</a> · <a href="privacy/">Privacy</a> · <a href="#refunds">Refunds</a> · <a href="#cancellation">Cancellation</a></span></div>
 </footer>
-<dialog class="dlg" id="payDlg" aria-label="Pay and go live">
-<form class="live" id="live" method="dialog">
-      <button class="x" type="button" aria-label="Close" data-close>×</button>
-      <h3>Love it? <em style="font-style:normal;color:#8FA6FF">Go live now.</em></h3>
-      <p>Pick a plan, sign with your name, and pay securely with Stripe. Your site goes live within 7 days.</p>
-      <div class="opts" role="radiogroup" aria-label="Plan">
-        <label class="opt"><input type="radio" name="plan" value="care" checked><small>Care plan · most pick this</small><b>$599 today</b><span>$450 setup + your first month. Then $149/month, cancel anytime.</span></label>
-        <label class="opt"><input type="radio" name="plan" value="own"><small>Own it</small><b>$800 once</b><span>No monthly fee. 30 days of free fixes. Hosting is yours.</span></label>
+<dialog class="dlg" id="payDlg" aria-label="Get started">
+  <div class="live fn" id="fn">
+    <button class="x" type="button" aria-label="Close" data-close>×</button>
+    <div class="prog" aria-hidden="true"><i id="fnBar"></i></div>
+    <p class="stepn" id="fnStep">Step 1</p>
+
+    <section class="st on" data-s="start">
+      <h3>Where are you <em>at?</em></h3>
+      <p>Pick one. It takes about a minute either way.</p>
+      <div class="pick">
+        <button type="button" class="tile" data-go="n1"><b>I'm new here</b><span>Build my free preview. No card.</span></button>
+        <button type="button" class="tile" data-go="p1"><b>I saw my preview</b><span>I love it. Let's go live and pay.</span></button>
       </div>
+    </section>
+
+    <section class="st" data-s="n1">
+      <h3>What kind of <em>business?</em></h3>
+      <div class="pick g3" data-field="type">
+        <button type="button" class="tile sm">Auto or body shop</button><button type="button" class="tile sm">Dentist or medical</button><button type="button" class="tile sm">Insurance or tax</button>
+        <button type="button" class="tile sm">Salon or barber</button><button type="button" class="tile sm">Contractor or trades</button><button type="button" class="tile sm">Something else</button>
+      </div>
+      <div class="nav2"><button type="button" class="back" data-go="start">← Not new? Go back</button></div>
+    </section>
+
+    <section class="st" data-s="n2">
+      <h3>Do you have a <em>website now?</em></h3>
+      <div class="pick" data-field="site">
+        <button type="button" class="tile sm">No, just Google</button><button type="button" class="tile sm">Yes, but it's old</button><button type="button" class="tile sm">Yes, and it's fine</button>
+      </div>
+      <div class="nav2"><button type="button" class="back" data-go="n1">← Back</button></div>
+    </section>
+
+    <form class="st" data-s="n3" id="fnNew">
+      <h3>Where should I <em>text your preview?</em></h3>
+      <div class="two">
+        <label class="f">Business name<input name="biz" required autocomplete="organization" placeholder="e.g. Atlas Collision"></label>
+        <label class="f">Your name<input name="name" required autocomplete="name"></label>
+        <label class="f">Cell phone<input name="phone" type="tel" required autocomplete="tel" inputmode="tel"></label>
+        <label class="f">Email <small>(optional)</small><input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <button class="btn main" type="submit">Build my free preview</button>
+      <p class="fine">Free. No card. You'll get the link by text, usually within 2 business days.</p>
+      <div class="nav2"><button type="button" class="back" data-go="n2">← Back</button></div>
+    </form>
+
+    <form class="st" data-s="p1" id="fnP1">
+      <h3>Which site did I <em>build for you?</em></h3>
+      <p>So I can match your payment to your site.</p>
       <div class="two">
         <label class="f">Business name<input name="biz" required autocomplete="organization"></label>
-        <label class="f">Your full name (your signature)<input name="name" required autocomplete="name"></label>
+        <label class="f">Your full name<input name="name" required autocomplete="name"></label>
+        <label class="f">Cell phone<input name="phone" type="tel" required autocomplete="tel" inputmode="tel"></label>
+        <label class="f">Email (for your receipt)<input name="email" type="email" required autocomplete="email"></label>
       </div>
-      <label class="agree"><input type="checkbox" name="ok" required><span>I agree to the <a href="agreement/" target="_blank" rel="noopener">website agreement</a>, including the <a href="#cancellation">cancellation</a> and <a href="#refunds">refund</a> policies. Typing my name above is my signature.</span></label>
+      <button class="btn main" type="submit">Continue</button>
+      <div class="nav2"><button type="button" class="back" data-go="start">← Haven't seen a preview yet? Go back</button></div>
+    </form>
+
+    <section class="st" data-s="p2">
+      <h3>Pick your <em>plan.</em></h3>
+      <div class="opts">
+        <button type="button" class="opt" data-plan-pick="care"><small>Care plan · most pick this</small><b>$599 today</b><span>$450 setup + your first month. Then $149/month. Hosting, fixes and text-a-change included. Cancel anytime.</span></button>
+        <button type="button" class="opt" data-plan-pick="own"><small>Own it</small><b>$800 once</b><span>No monthly fee. 30 days of free fixes. Hosting and later changes are yours.</span></button>
+      </div>
+      <div class="nav2"><button type="button" class="back" data-go="p1">← Back</button></div>
+    </section>
+
+    <form class="st" data-s="p3" id="fnP3">
+      <h3>Review and <em>sign.</em></h3>
+      <div class="sum" id="fnSum"></div>
+      <div class="guar2"><b>See-it-first promise:</b> you already saw your site. If anything needs fixing before launch, I fix it.</div>
+      <label class="agree"><input type="checkbox" name="ok" required><span>I agree to the <a href="agreement/" target="_blank" rel="noopener">website agreement</a>, including the <a href="#cancellation" data-close>cancellation</a> and <a href="#refunds" data-close>refund</a> policies. My name above is my signature.</span></label>
       <button class="btn main" type="submit" id="payBtn" disabled>Pay securely with Stripe</button>
       <div class="secure"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>DISCOVER</span><span>APPLE PAY</span></div>
-      <p class="fine" style="text-align:center;color:#7D879E;margin-top:12px">Checkout runs on Stripe. I never see your card number.</p>
+      <p class="fine">Checkout runs on Stripe. I never see your card number.</p>
+      <div class="nav2"><button type="button" class="back" data-go="p2">← Back</button></div>
     </form>
+  </div>
 </dialog>
 <div class="mbar"><a class="btn line" href="sms:+17815188769">Text</a><button class="btn line" type="button" data-pay>Pay here</button><a class="btn main" href="#preview">Free preview</a></div>
 <script>
@@ -556,22 +649,39 @@ if('IntersectionObserver' in window){new IntersectionObserver(function(es){if(es
 
 (function(){
 var PAY={care:'https://buy.stripe.com/14A9AN8FVg85enQ6wd4ow00',own:'https://buy.stripe.com/5kQ3cp5tJg8593w6wd4ow01'};
-var f=document.getElementById('live'),btn=document.getElementById('payBtn');
-var dlg=document.getElementById('payDlg');
-function openPay(pl){if(pl)f.plan.value=pl;ok();if(dlg.showModal){if(!dlg.open)dlg.showModal()}else dlg.setAttribute('open','');setTimeout(function(){f.biz.focus()},60)}
-[].forEach.call(document.querySelectorAll('[data-pay]'),function(a){a.addEventListener('click',function(e){e.preventDefault();openPay(a.dataset.plan)})});
-dlg.querySelector('[data-close]').addEventListener('click',function(){dlg.close()});
+var dlg=document.getElementById('payDlg'),fn=document.getElementById('fn'),bar=document.getElementById('fnBar'),stepn=document.getElementById('fnStep'),btn=document.getElementById('payBtn');
+var d={plan:'care'},q=new URLSearchParams(location.search);if(q.get('plan')==='own')d.plan='own';
+var STEP={start:[0,3,''],n1:[1,3,'Free preview'],n2:[2,3,'Free preview'],n3:[3,3,'Free preview'],p1:[1,3,'Go live'],p2:[2,3,'Go live'],p3:[3,3,'Go live']};
+function go(s){[].forEach.call(fn.querySelectorAll('.st'),function(x){x.classList.toggle('on',x.dataset.s===s)});var k=STEP[s];bar.style.width=Math.max(8,k[0]/k[1]*100)+'%';stepn.textContent=k[0]?'Step '+k[0]+' of '+k[1]+' · '+k[2]:'Get started';
+ if(s==='p3')summary();var f=fn.querySelector('.st.on input:not([type=checkbox])');if(f&&matchMedia('(pointer:fine)').matches)setTimeout(function(){f.focus()},50)}
+function open(s){if(dlg.showModal){if(!dlg.open)dlg.showModal()}else dlg.setAttribute('open','');go(s||'start')}
+[].forEach.call(document.querySelectorAll('[data-pay]'),function(a){a.addEventListener('click',function(e){e.preventDefault();if(a.dataset.plan){d.plan=a.dataset.plan;d.picked=1}open('p1')})});
+[].forEach.call(document.querySelectorAll('a.btn.main[href="#preview"]'),function(a){if(a.closest('#payDlg'))return;a.addEventListener('click',function(e){e.preventDefault();open('n1')})});
+[].forEach.call(dlg.querySelectorAll('[data-close]'),function(x){x.addEventListener('click',function(){dlg.close()})});
 dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
-if(/^#(golive|pay)$/.test(location.hash))setTimeout(function(){openPay(plan==='own'?'own':null)},400);
-var plan=new URLSearchParams(location.search).get('plan');if(plan==='own')f.plan.value='own';
-function ok(){btn.disabled=!(f.biz.value.trim().length>1&&f.name.value.trim().length>2&&f.ok.checked)}
-f.addEventListener('input',ok);f.addEventListener('change',ok);
-var slug=function(t){return t.normalize('NFKD').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-').slice(0,60)};
-f.addEventListener('submit',function(e){e.preventDefault();if(btn.disabled)return;
- var p=f.plan.value,stamp=new Date().toISOString().slice(0,16).replace(/[-:T]/g,'')+'UTC';
- var u=new URL(PAY[p]);u.searchParams.set('client_reference_id',[slug(f.biz.value),slug(f.name.value),'Owner',p,stamp,'v1'].join('__').slice(0,200));
+[].forEach.call(fn.querySelectorAll('[data-go]'),function(b){b.addEventListener('click',function(){go(b.dataset.go)})});
+[].forEach.call(fn.querySelectorAll('[data-field] .tile'),function(b){b.addEventListener('click',function(){var k=b.parentNode.dataset.field;d[k]=b.textContent;go(k==='type'?'n2':'n3')})});
+[].forEach.call(fn.querySelectorAll('[data-plan-pick]'),function(b){b.addEventListener('click',function(){d.plan=b.dataset.planPick;go('p3')})});
+var v=function(f,n){return (f[n].value||'').trim()};
+document.getElementById('fnNew').addEventListener('submit',function(e){e.preventDefault();var f=this;
+ var msg='Hi Addissu, I want a free website preview.\nBusiness: '+v(f,'biz')+' ('+(d.type||'')+')\nWebsite now: '+(d.site||'')+'\nName: '+v(f,'name')+'\nPhone: '+v(f,'phone')+(v(f,'email')?'\nEmail: '+v(f,'email'):'');
+ var ua=navigator.userAgent,mob=/iphone|ipad|android/i.test(ua);
+ location.href=mob?'sms:+17815188769'+(/iphone|ipad/i.test(ua)?'&':'?')+'body='+encodeURIComponent(msg):'mailto:bleachertalkk@gmail.com?subject='+encodeURIComponent('Free preview: '+v(f,'biz'))+'&body='+encodeURIComponent(msg)});
+var p1=document.getElementById('fnP1');
+p1.addEventListener('submit',function(e){e.preventDefault();d.biz=v(p1,'biz');d.name=v(p1,'name');d.phone=v(p1,'phone');d.email=v(p1,'email');go((q.get('plan')||d.picked)?'p3':'p2')});
+function summary(){var c=d.plan==='care',n=new Date();n.setMonth(n.getMonth()+1);
+ var rows=[['Business',d.biz],['Signed by',d.name],['Plan',c?'Care plan':'Own it']].concat(c?[['Setup','$450'],['First month','$149'],['Then','$149/month from '+n.toLocaleDateString('en-US',{month:'short',day:'numeric'})+', cancel anytime']]:[['Website, one time','$800'],['Monthly','None']]);
+ var s=document.getElementById('fnSum');s.innerHTML='';rows.concat([['Due today',c?'$599':'$800']]).forEach(function(r,i,a){var x=document.createElement('div');if(i===a.length-1)x.className='tot';var l=document.createElement('span');l.textContent=r[0];var b=document.createElement('b');b.textContent=r[1];x.appendChild(l);x.appendChild(b);s.appendChild(x)});ok()}
+var p3=document.getElementById('fnP3');function ok(){btn.disabled=!p3.ok.checked}
+p3.addEventListener('change',ok);
+var slug=function(t){return (t||'').normalize('NFKD').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-').slice(0,50)};
+p3.addEventListener('submit',function(e){e.preventDefault();if(btn.disabled)return;
+ var stamp=new Date().toISOString().slice(0,16).replace(/[-:T]/g,'')+'UTC',u=new URL(PAY[d.plan]);
+ u.searchParams.set('client_reference_id',[slug(d.biz),slug(d.name),slug(d.phone),d.plan,stamp,'v1'].join('__').slice(0,200));
+ if(d.email)u.searchParams.set('prefilled_email',d.email);
  btn.disabled=true;btn.textContent='Opening secure checkout...';location.href=u.toString()});
 addEventListener('pageshow',function(){btn.textContent='Pay securely with Stripe';ok()});
+if(/^#(golive|pay)$/.test(location.hash))setTimeout(function(){if(q.get('plan'))d.picked=1;open('p1')},400);
 })();
 document.getElementById('pform').addEventListener('submit',function(e){
   e.preventDefault();var f=this,v=function(n){return (f[n].value||'').trim()};
