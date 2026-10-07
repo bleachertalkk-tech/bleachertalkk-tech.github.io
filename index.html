@@ -279,6 +279,17 @@ nav .btn.pay:hover{background:var(--blue-tint)}
 .sum .tot b{font:900 22px/1 Archivo,sans-serif}
 .guar2{margin-top:14px;font-size:14px;color:#A7B0C6;border-left:3px solid var(--blue);padding:4px 0 4px 12px}
 .guar2 b{color:#fff}
+
+.seen{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:20px;color:#C2C9DA;font-weight:700;font-size:15px}
+.seen label{display:inline-flex;align-items:center;gap:8px;border:2px solid #2E3858;border-radius:999px;padding:10px 18px;cursor:pointer;min-height:44px}
+.seen label:has(input:checked){border-color:var(--blue);background:rgba(47,91,255,.14);color:#fff}
+.seen input{accent-color:var(--blue);margin:0}
+.guest{margin-top:16px;border:1px dashed #3A4870;border-radius:16px;padding:18px 20px;background:rgba(143,166,255,.06)}
+.guest p{margin:0;color:#C2C9DA;font-size:15px}.guest b{color:#fff}
+.guest .btn{margin-top:12px;padding:16px 22px;font-size:15px}
+.btn.line.light{color:#fff;box-shadow:inset 0 0 0 2px #8FA6FF}
+.btn.line.light:hover{background:rgba(143,166,255,.15)}
+.guest .or2{margin-top:12px;font-size:14px;color:#A7B0C6}
 @media(max-width:560px){.pick,.pick.g3{grid-template-columns:1fr}.fn .prog{margin-right:50px}}
 @media(max-width:560px){.opts,.live .two{grid-template-columns:1fr}.live{padding:24px 18px}}
 @media(max-width:899px){
@@ -487,8 +498,8 @@ nav .btn.pay:hover{background:var(--blue-tint)}
       <p class="fine">Free. No card needed. I'll text you the link.</p>
     </form>
 
-    <div class="or" id="golive">Already saw your preview?</div>
-    <div class="paycta"><button class="btn main" type="button" data-pay>Pay here · go live</button><span>Already saw your preview? Confirm your info, pick a plan, sign and pay by card.</span></div>
+    <div class="or" id="golive">Ready to order?</div>
+    <div class="paycta"><button class="btn main" type="button" data-pay>Pay here · go live</button><span>Seen your preview or not, you can order now. Pick a plan, sign and pay by card.</span></div>
   </div>
 </section>
 
@@ -548,7 +559,7 @@ nav .btn.pay:hover{background:var(--blue-tint)}
       <p>Pick one. It takes about a minute either way.</p>
       <div class="pick">
         <button type="button" class="tile" data-go="n1"><b>I'm new here</b><span>Build my free preview. No card.</span></button>
-        <button type="button" class="tile" data-go="p1"><b>I saw my preview</b><span>I love it. Let's go live and pay.</span></button>
+        <button type="button" class="tile" data-go="p1"><b>I'm ready to order</b><span>Pay and go live, with or without a preview.</span></button>
       </div>
     </section>
 
@@ -583,8 +594,18 @@ nav .btn.pay:hover{background:var(--blue-tint)}
     </form>
 
     <form class="st" data-s="p1" id="fnP1">
-      <h3>Which site did I <em>build for you?</em></h3>
-      <p>So I can match your payment to your site.</p>
+      <h3>Let's get your <em>site live.</em></h3>
+      <p>Seen your free preview already, or want to order without one? Both work.</p>
+      <div class="seen" role="radiogroup" aria-label="Have you seen your preview?">
+        <span>Have you seen your preview?</span>
+        <label><input type="radio" name="seen" value="yes" checked> Yes</label>
+        <label><input type="radio" name="seen" value="no"> Not yet</label>
+      </div>
+      <div class="guest" id="fnGuest" hidden>
+        <p><b>Want to see it first? It's free.</b> I build it, you look, you only pay if you love it.</p>
+        <button type="button" class="btn line light" data-go="n1">Build my free preview first</button>
+        <p class="or2">Or skip it and order now below. You'll still see your site before it goes live.</p>
+      </div>
       <div class="two">
         <label class="f">Business name<input name="biz" required autocomplete="organization"></label>
         <label class="f">Your full name<input name="name" required autocomplete="name"></label>
@@ -592,7 +613,6 @@ nav .btn.pay:hover{background:var(--blue-tint)}
         <label class="f">Email (for your receipt)<input name="email" type="email" required autocomplete="email"></label>
       </div>
       <button class="btn main" type="submit">Continue</button>
-      <div class="nav2"><button type="button" class="back" data-go="start">← Haven't seen a preview yet? Go back</button></div>
     </form>
 
     <section class="st" data-s="p2">
@@ -607,7 +627,7 @@ nav .btn.pay:hover{background:var(--blue-tint)}
     <form class="st" data-s="p3" id="fnP3">
       <h3>Review and <em>sign.</em></h3>
       <div class="sum" id="fnSum"></div>
-      <div class="guar2"><b>See-it-first promise:</b> you already saw your site. If anything needs fixing before launch, I fix it.</div>
+      <div class="guar2" id="fnPromise"></div>
       <label class="agree"><input type="checkbox" name="ok" required><span>I agree to the <a href="agreement/" target="_blank" rel="noopener">website agreement</a>, including the <a href="#cancellation" data-close>cancellation</a> and <a href="#refunds" data-close>refund</a> policies. My name above is my signature.</span></label>
       <button class="btn main" type="submit" id="payBtn" disabled>Pay securely with Stripe</button>
       <div class="secure"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>DISCOVER</span><span>APPLE PAY</span></div>
@@ -668,16 +688,18 @@ document.getElementById('fnNew').addEventListener('submit',function(e){e.prevent
  var ua=navigator.userAgent,mob=/iphone|ipad|android/i.test(ua);
  location.href=mob?'sms:+17815188769'+(/iphone|ipad/i.test(ua)?'&':'?')+'body='+encodeURIComponent(msg):'mailto:bleachertalkk@gmail.com?subject='+encodeURIComponent('Free preview: '+v(f,'biz'))+'&body='+encodeURIComponent(msg)});
 var p1=document.getElementById('fnP1');
-p1.addEventListener('submit',function(e){e.preventDefault();d.biz=v(p1,'biz');d.name=v(p1,'name');d.phone=v(p1,'phone');d.email=v(p1,'email');go((q.get('plan')||d.picked)?'p3':'p2')});
+[].forEach.call(p1.seen,function(r){r.addEventListener('change',function(){document.getElementById('fnGuest').hidden=p1.seen.value!=='no'})});
+p1.addEventListener('submit',function(e){e.preventDefault();d.seen=p1.seen.value;d.biz=v(p1,'biz');d.name=v(p1,'name');d.phone=v(p1,'phone');d.email=v(p1,'email');go((q.get('plan')||d.picked)?'p3':'p2')});
 function summary(){var c=d.plan==='care',n=new Date();n.setMonth(n.getMonth()+1);
- var rows=[['Business',d.biz],['Signed by',d.name],['Plan',c?'Care plan':'Own it']].concat(c?[['Setup','$450'],['First month','$149'],['Then','$149/month from '+n.toLocaleDateString('en-US',{month:'short',day:'numeric'})+', cancel anytime']]:[['Website, one time','$800'],['Monthly','None']]);
+ var rows=[['Business',d.biz],['Signed by',d.name],['Preview',d.seen==='no'?'Not yet, build it first':'Seen it'],['Plan',c?'Care plan':'Own it']].concat(c?[['Setup','$450'],['First month','$149'],['Then','$149/month from '+n.toLocaleDateString('en-US',{month:'short',day:'numeric'})+', cancel anytime']]:[['Website, one time','$800'],['Monthly','None']]);
+ document.getElementById('fnPromise').innerHTML=d.seen==='no'?'<b>See-it-first promise:</b> I build your site and show it to you before it goes live. I make changes until it\u2019s right.':'<b>See-it-first promise:</b> if anything needs fixing before launch, I fix it.';
  var s=document.getElementById('fnSum');s.innerHTML='';rows.concat([['Due today',c?'$599':'$800']]).forEach(function(r,i,a){var x=document.createElement('div');if(i===a.length-1)x.className='tot';var l=document.createElement('span');l.textContent=r[0];var b=document.createElement('b');b.textContent=r[1];x.appendChild(l);x.appendChild(b);s.appendChild(x)});ok()}
 var p3=document.getElementById('fnP3');function ok(){btn.disabled=!p3.ok.checked}
 p3.addEventListener('change',ok);
 var slug=function(t){return (t||'').normalize('NFKD').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-').slice(0,50)};
 p3.addEventListener('submit',function(e){e.preventDefault();if(btn.disabled)return;
  var stamp=new Date().toISOString().slice(0,16).replace(/[-:T]/g,'')+'UTC',u=new URL(PAY[d.plan]);
- u.searchParams.set('client_reference_id',[slug(d.biz),slug(d.name),slug(d.phone),d.plan,stamp,'v1'].join('__').slice(0,200));
+ u.searchParams.set('client_reference_id',[slug(d.biz),slug(d.name),slug(d.phone),d.plan,d.seen==='no'?'nopreview':'seen',stamp,'v1'].join('__').slice(0,200));
  if(d.email)u.searchParams.set('prefilled_email',d.email);
  btn.disabled=true;btn.textContent='Opening secure checkout...';location.href=u.toString()});
 addEventListener('pageshow',function(){btn.textContent='Pay securely with Stripe';ok()});
