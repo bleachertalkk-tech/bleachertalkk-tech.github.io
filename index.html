@@ -209,6 +209,33 @@ footer .in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 footer a{color:#C2C9DA}
 .mbar{display:none}
 
+
+/* go live checkout */
+.or{display:flex;align-items:center;gap:16px;max-width:760px;margin:56px auto 0;color:#7D879E;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px}
+.or::before,.or::after{content:"";flex:1;height:1px;background:#2E3858}
+.live{max-width:760px;margin:40px auto 0;text-align:left;background:var(--night2);border:1px solid #2E3858;border-radius:24px;padding:36px}
+.live h3{font-size:30px;color:#fff}
+.live>p{color:#A7B0C6;margin:10px 0 24px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+.opt{position:relative;display:block;cursor:pointer;border:2px solid #2E3858;border-radius:18px;padding:20px;transition:border-color .2s,background .2s}
+.opt input{position:absolute;opacity:0}
+.opt b{display:block;font:900 30px/1 Archivo,sans-serif;color:#fff}
+.opt span{display:block;margin-top:6px;font-size:14px;color:#A7B0C6}
+.opt small{display:block;font:800 13px/1 Archivo,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:#8FA6FF;margin-bottom:12px}
+.opt:has(input:checked){border-color:var(--blue);background:rgba(47,91,255,.12)}
+.opt:has(input:focus-visible){outline:3px solid var(--blue);outline-offset:3px}
+.live .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.live label.f{display:block;font-size:14px;font-weight:700;color:#C2C9DA}
+.live label.f input{display:block;width:100%;margin-top:8px;font:17px "DM Sans",sans-serif;padding:17px 18px;border-radius:14px;border:1px solid #2E3858;background:var(--night);color:#fff}
+.live label.f input:focus{border-color:var(--blue);outline:none}
+.agree{display:flex;gap:12px;align-items:flex-start;margin:20px 0 4px;color:#C2C9DA;font-size:15px;cursor:pointer}
+.agree input{width:22px;height:22px;flex:none;margin:1px 0 0;accent-color:var(--blue)}
+.agree a{color:#8FA6FF}
+.live .btn{width:100%;margin-top:18px;padding:24px}
+.live .btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.secure{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 14px;margin-top:16px;font-size:13px;color:#7D879E}
+.secure span{border:1px solid #2E3858;border-radius:6px;padding:3px 8px;font-weight:700;letter-spacing:.04em}
+@media(max-width:560px){.opts,.live .two{grid-template-columns:1fr}.live{padding:24px 18px}}
 @media(max-width:899px){
   nav .links{display:none}
   section{padding:80px 0}
@@ -381,7 +408,7 @@ footer a{color:#C2C9DA}
           <li>First month included in setup</li>
           <li>Cancel anytime</li>
         </ul>
-        <a class="btn main" href="#preview">See my site first</a>
+        <a class="btn main" href="#golive" data-plan="care">Go live with this plan</a>
       </div>
       <div class="plan">
         <span class="name">Own it</span>
@@ -394,7 +421,7 @@ footer a{color:#C2C9DA}
           <li class="no">Later changes are paid separately</li>
         </ul>
         <p class="fine">You can switch to the care plan anytime.</p>
-        <a class="btn line" href="#preview">See my site first</a>
+        <a class="btn line" href="#golive" data-plan="own">Go live with this plan</a>
       </div>
     </div>
   </div>
@@ -412,6 +439,24 @@ footer a{color:#C2C9DA}
       <label>Email <small>(optional)</small><input name="email" type="email" autocomplete="email"></label>
       <button class="btn main" type="submit">Build my free preview</button>
       <p class="fine">Free. No card needed. I'll text you the link.</p>
+    </form>
+
+    <div class="or" id="golive">Already saw your preview?</div>
+    <form class="live" id="live">
+      <h3>Love it? <em style="font-style:normal;color:#8FA6FF">Go live now.</em></h3>
+      <p>Pick a plan, sign with your name, and pay securely with Stripe. Your site goes live within 7 days.</p>
+      <div class="opts" role="radiogroup" aria-label="Plan">
+        <label class="opt"><input type="radio" name="plan" value="care" checked><small>Care plan · most pick this</small><b>$599 today</b><span>$450 setup + your first month. Then $149/month, cancel anytime.</span></label>
+        <label class="opt"><input type="radio" name="plan" value="own"><small>Own it</small><b>$800 once</b><span>No monthly fee. 30 days of free fixes. Hosting is yours.</span></label>
+      </div>
+      <div class="two">
+        <label class="f">Business name<input name="biz" required autocomplete="organization"></label>
+        <label class="f">Your full name (your signature)<input name="name" required autocomplete="name"></label>
+      </div>
+      <label class="agree"><input type="checkbox" name="ok" required><span>I agree to the <a href="agreement/" target="_blank" rel="noopener">website agreement</a>, including the <a href="#cancellation">cancellation</a> and <a href="#refunds">refund</a> policies. Typing my name above is my signature.</span></label>
+      <button class="btn main" type="submit" id="payBtn" disabled>Pay securely with Stripe</button>
+      <div class="secure"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>DISCOVER</span><span>APPLE PAY</span></div>
+      <p class="fine" style="text-align:center;color:#7D879E;margin-top:12px">Checkout runs on Stripe. I never see your card number.</p>
     </form>
   </div>
 </section>
@@ -490,6 +535,21 @@ function run(k){tok.stop=true;var me=tok={};i=(k+S.length)%S.length;var x=S[i];
   if(still)return;return wait(1600).then(function(){if(me.stop)return;return tween([d,m],[0,0],[room(d,ds,.6),room(m,ms,.6)],10000,me)})
   .then(function(){if(!me.stop)return wait(900)}).then(function(){if(!me.stop)run(i+1)})})}
 if('IntersectionObserver' in window){new IntersectionObserver(function(es){if(es[0].isIntersecting&&!started){started=true;S.forEach(function(x){(new Image).src='img/samples/'+x[0]+'-mob.jpg'});run(0)}},{rootMargin:'200px'}).observe(st)}else run(0);
+})();
+
+(function(){
+var PAY={care:'https://buy.stripe.com/14A9AN8FVg85enQ6wd4ow00',own:'https://buy.stripe.com/5kQ3cp5tJg8593w6wd4ow01'};
+var f=document.getElementById('live'),btn=document.getElementById('payBtn');
+[].forEach.call(document.querySelectorAll('[data-plan]'),function(a){a.addEventListener('click',function(){f.plan.value=a.dataset.plan})});
+var plan=new URLSearchParams(location.search).get('plan');if(plan==='own')f.plan.value='own';
+function ok(){btn.disabled=!(f.biz.value.trim().length>1&&f.name.value.trim().length>2&&f.ok.checked)}
+f.addEventListener('input',ok);f.addEventListener('change',ok);
+var slug=function(t){return t.normalize('NFKD').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-').slice(0,60)};
+f.addEventListener('submit',function(e){e.preventDefault();if(btn.disabled)return;
+ var p=f.plan.value,stamp=new Date().toISOString().slice(0,16).replace(/[-:T]/g,'')+'UTC';
+ var u=new URL(PAY[p]);u.searchParams.set('client_reference_id',[slug(f.biz.value),slug(f.name.value),'Owner',p,stamp,'v1'].join('__').slice(0,200));
+ btn.disabled=true;btn.textContent='Opening secure checkout...';location.href=u.toString()});
+addEventListener('pageshow',function(){btn.textContent='Pay securely with Stripe';ok()});
 })();
 document.getElementById('pform').addEventListener('submit',function(e){
   e.preventDefault();var f=this,v=function(n){return (f[n].value||'').trim()};
