@@ -235,6 +235,18 @@ footer a{color:#C2C9DA}
 .live .btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
 .secure{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 14px;margin-top:16px;font-size:13px;color:#7D879E}
 .secure span{border:1px solid #2E3858;border-radius:6px;padding:3px 8px;font-weight:700;letter-spacing:.04em}
+
+.paycta{text-align:center;margin-top:28px}.paycta span{display:block;margin-top:12px;font-size:15px;color:#A7B0C6}
+nav .btn.pay{box-shadow:inset 0 0 0 2px var(--blue);color:var(--blue);background:transparent}
+nav .btn.pay:hover{background:var(--blue-tint)}
+.dlg{border:0;padding:0;background:transparent;width:min(760px,calc(100% - 24px));max-height:calc(100dvh - 24px);overflow:auto;color:#fff}
+.dlg::backdrop{background:rgba(6,9,20,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.dlg[open]{animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{opacity:0;transform:translateY(24px) scale(.97)}}
+.dlg .live{margin:0;position:relative;box-shadow:0 40px 100px -30px rgba(47,91,255,.55)}
+.x{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:#222B45;color:#fff;font-size:26px;line-height:1;cursor:pointer}
+.x:hover{background:var(--blue)}
+.live h3{padding-right:50px}
 @media(max-width:560px){.opts,.live .two{grid-template-columns:1fr}.live{padding:24px 18px}}
 @media(max-width:899px){
   nav .links{display:none}
@@ -255,14 +267,15 @@ footer a{color:#C2C9DA}
   .pform{grid-template-columns:1fr}
   .stage{padding-bottom:9%}
   .iph{width:30%;right:0;bottom:0}
-  .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(238,240,244,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 -1px 0 var(--line)}
-  .mbar .btn{padding:16px 10px;font-size:15px}
+  .mbar{display:grid;grid-template-columns:.8fr 1fr 1.25fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(238,240,244,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 -1px 0 var(--line)}
+  .mbar .btn{padding:16px 6px;font-size:14px}
 }
 @media(max-width:560px){
   .in{padding:0 16px}
   .bar{height:64px}
   .brand small{display:none}
   nav .btn{padding:12px 16px;font-size:13px}
+  nav .btn.pay{display:none}
   .hero .btn.main{width:100%}
   .ann{font-size:14px}
   .box,.plan,.steps li{padding:26px}
@@ -277,7 +290,7 @@ footer a{color:#C2C9DA}
 <header id="hdr">
   <div class="in bar">
     <a class="brand" href="#top"><span class="mark" aria-hidden="true">A</span><span><b>Addissu Tsige</b><small>Websites for Malden businesses</small></span></a>
-    <nav><span class="links"><a href="#proof">Samples</a><a href="#offer">What you get</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a></span><a class="btn main" href="#preview">Free preview</a></nav>
+    <nav><span class="links"><a href="#proof">Samples</a><a href="#offer">What you get</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a></span><button class="btn line pay" type="button" data-pay>Pay here</button><a class="btn main" href="#preview">Free preview</a></nav>
   </div>
 </header>
 
@@ -408,7 +421,7 @@ footer a{color:#C2C9DA}
           <li>First month included in setup</li>
           <li>Cancel anytime</li>
         </ul>
-        <a class="btn main" href="#golive" data-plan="care">Go live with this plan</a>
+        <a class="btn main" href="#golive" data-pay data-plan="care">Pay here · go live</a>
       </div>
       <div class="plan">
         <span class="name">Own it</span>
@@ -421,7 +434,7 @@ footer a{color:#C2C9DA}
           <li class="no">Later changes are paid separately</li>
         </ul>
         <p class="fine">You can switch to the care plan anytime.</p>
-        <a class="btn line" href="#golive" data-plan="own">Go live with this plan</a>
+        <a class="btn line" href="#golive" data-pay data-plan="own">Pay here · go live</a>
       </div>
     </div>
   </div>
@@ -442,22 +455,7 @@ footer a{color:#C2C9DA}
     </form>
 
     <div class="or" id="golive">Already saw your preview?</div>
-    <form class="live" id="live">
-      <h3>Love it? <em style="font-style:normal;color:#8FA6FF">Go live now.</em></h3>
-      <p>Pick a plan, sign with your name, and pay securely with Stripe. Your site goes live within 7 days.</p>
-      <div class="opts" role="radiogroup" aria-label="Plan">
-        <label class="opt"><input type="radio" name="plan" value="care" checked><small>Care plan · most pick this</small><b>$599 today</b><span>$450 setup + your first month. Then $149/month, cancel anytime.</span></label>
-        <label class="opt"><input type="radio" name="plan" value="own"><small>Own it</small><b>$800 once</b><span>No monthly fee. 30 days of free fixes. Hosting is yours.</span></label>
-      </div>
-      <div class="two">
-        <label class="f">Business name<input name="biz" required autocomplete="organization"></label>
-        <label class="f">Your full name (your signature)<input name="name" required autocomplete="name"></label>
-      </div>
-      <label class="agree"><input type="checkbox" name="ok" required><span>I agree to the <a href="agreement/" target="_blank" rel="noopener">website agreement</a>, including the <a href="#cancellation">cancellation</a> and <a href="#refunds">refund</a> policies. Typing my name above is my signature.</span></label>
-      <button class="btn main" type="submit" id="payBtn" disabled>Pay securely with Stripe</button>
-      <div class="secure"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>DISCOVER</span><span>APPLE PAY</span></div>
-      <p class="fine" style="text-align:center;color:#7D879E;margin-top:12px">Checkout runs on Stripe. I never see your card number.</p>
-    </form>
+    <div class="paycta"><button class="btn main" type="button" data-pay>Pay here · go live</button><span>Pick your plan, sign, and pay by card in 1 minute.</span></div>
   </div>
 </section>
 
@@ -506,7 +504,26 @@ footer a{color:#C2C9DA}
 <footer>
   <div class="in"><span>© 2026 Addissu Tsige · Website design and care, Malden, MA</span><span><a href="agreement/">Terms</a> · <a href="privacy/">Privacy</a> · <a href="#refunds">Refunds</a> · <a href="#cancellation">Cancellation</a></span></div>
 </footer>
-<div class="mbar"><a class="btn line" href="sms:+17815188769">Text me</a><a class="btn main" href="#preview">Free preview</a></div>
+<dialog class="dlg" id="payDlg" aria-label="Pay and go live">
+<form class="live" id="live" method="dialog">
+      <button class="x" type="button" aria-label="Close" data-close>×</button>
+      <h3>Love it? <em style="font-style:normal;color:#8FA6FF">Go live now.</em></h3>
+      <p>Pick a plan, sign with your name, and pay securely with Stripe. Your site goes live within 7 days.</p>
+      <div class="opts" role="radiogroup" aria-label="Plan">
+        <label class="opt"><input type="radio" name="plan" value="care" checked><small>Care plan · most pick this</small><b>$599 today</b><span>$450 setup + your first month. Then $149/month, cancel anytime.</span></label>
+        <label class="opt"><input type="radio" name="plan" value="own"><small>Own it</small><b>$800 once</b><span>No monthly fee. 30 days of free fixes. Hosting is yours.</span></label>
+      </div>
+      <div class="two">
+        <label class="f">Business name<input name="biz" required autocomplete="organization"></label>
+        <label class="f">Your full name (your signature)<input name="name" required autocomplete="name"></label>
+      </div>
+      <label class="agree"><input type="checkbox" name="ok" required><span>I agree to the <a href="agreement/" target="_blank" rel="noopener">website agreement</a>, including the <a href="#cancellation">cancellation</a> and <a href="#refunds">refund</a> policies. Typing my name above is my signature.</span></label>
+      <button class="btn main" type="submit" id="payBtn" disabled>Pay securely with Stripe</button>
+      <div class="secure"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>DISCOVER</span><span>APPLE PAY</span></div>
+      <p class="fine" style="text-align:center;color:#7D879E;margin-top:12px">Checkout runs on Stripe. I never see your card number.</p>
+    </form>
+</dialog>
+<div class="mbar"><a class="btn line" href="sms:+17815188769">Text</a><button class="btn line" type="button" data-pay>Pay here</button><a class="btn main" href="#preview">Free preview</a></div>
 <script>
 (function(){
 var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -540,7 +557,12 @@ if('IntersectionObserver' in window){new IntersectionObserver(function(es){if(es
 (function(){
 var PAY={care:'https://buy.stripe.com/14A9AN8FVg85enQ6wd4ow00',own:'https://buy.stripe.com/5kQ3cp5tJg8593w6wd4ow01'};
 var f=document.getElementById('live'),btn=document.getElementById('payBtn');
-[].forEach.call(document.querySelectorAll('[data-plan]'),function(a){a.addEventListener('click',function(){f.plan.value=a.dataset.plan})});
+var dlg=document.getElementById('payDlg');
+function openPay(pl){if(pl)f.plan.value=pl;ok();if(dlg.showModal){if(!dlg.open)dlg.showModal()}else dlg.setAttribute('open','');setTimeout(function(){f.biz.focus()},60)}
+[].forEach.call(document.querySelectorAll('[data-pay]'),function(a){a.addEventListener('click',function(e){e.preventDefault();openPay(a.dataset.plan)})});
+dlg.querySelector('[data-close]').addEventListener('click',function(){dlg.close()});
+dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+if(/^#(golive|pay)$/.test(location.hash))setTimeout(function(){openPay(plan==='own'?'own':null)},400);
 var plan=new URLSearchParams(location.search).get('plan');if(plan==='own')f.plan.value='own';
 function ok(){btn.disabled=!(f.biz.value.trim().length>1&&f.name.value.trim().length>2&&f.ok.checked)}
 f.addEventListener('input',ok);f.addEventListener('change',ok);
