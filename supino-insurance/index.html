@@ -34,10 +34,10 @@
    Type: Instrument Serif (headlines), Figtree (everything else)
    ============================================================ */
 :root{
-  --ink:#0C1A36; --harbour:#2358D6; --brick:#F5B544; --paper:#F4F7FC; --granite:#55627A;
-  --ink-2:#132651; --harbour-deep:#1B45AE; --brick-deep:#E9A22A; --paper-deep:#E8EEF9;
+  --ink:#0A1428; --harbour:#0F1D3A; --brick:#D4AF6A; --paper:#F6F2EA; --granite:#5E6573;
+  --ink-2:#13223F; --harbour-deep:#0A1428; --brick-deep:#C49B52; --paper-deep:#ECE5D8;
   --card:#FFFFFF; --line:rgba(12,26,54,.12); --line-strong:rgba(12,26,54,.24);
-  --on-ink:rgba(244,247,252,.78); --error:#B3261E;
+  --on-ink:rgba(240,236,228,.76); --error:#B3261E;
   --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
   --sans:"Figtree", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --max:1200px; --gutter:clamp(20px,5vw,48px); --section:clamp(72px,9vw,120px);
@@ -537,6 +537,67 @@ html.qf-open{overflow:hidden}
   .callbar .btn{flex:1;min-height:48px;padding:0 12px}
   .callbar .btn-light{background:#fff;color:var(--ink)}
 }
+
+/* ===== Navy + gold refresh ===== */
+.site-header{background:rgba(10,20,40,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(212,175,106,.18)}
+.site-header.is-scrolled{background:rgba(10,20,40,.97)}
+.brand-sub{color:rgba(212,175,106,.85)}
+.hero{background:var(--ink)}
+.hero h1 em{color:var(--brick)}
+.proof-dots span{border-color:var(--ink)}
+.btn-primary{background:var(--brick);color:#0A1428}
+.btn-primary:hover{background:#E2C283;box-shadow:0 12px 28px -12px rgba(212,175,106,.75)}
+.btn-blue{background:var(--ink);color:#fff}.btn-blue:hover{background:#13223F}
+.btn-quiet:hover{border-color:var(--brick-deep);color:var(--ink)}
+.jump a{background:rgba(255,255,255,.04);box-shadow:inset 0 0 0 1px rgba(212,175,106,.38)}
+.jump a:hover{background:rgba(212,175,106,.12)}
+.scroll-cue{background:rgba(10,20,40,.85);box-shadow:inset 0 0 0 1px rgba(212,175,106,.3)}
+.coverage{background:var(--harbour);padding-top:var(--section)}
+.cov-grid{grid-template-columns:minmax(0,1fr)!important}
+.coverage .section-head{text-align:center}.coverage .section-head p{margin-inline:auto}
+.coverage .tabs{justify-content:center}
+.product,.coverage .product{background:rgba(255,255,255,.03);box-shadow:inset 0 0 0 1px rgba(212,175,106,.22)}
+.product:hover,.coverage .product:hover{background:rgba(212,175,106,.09);box-shadow:inset 0 0 0 1px rgba(212,175,106,.6)}
+.product svg{color:var(--brick)}
+.companies{text-align:center}
+.services{grid-template-columns:minmax(0,1fr)}
+.svc-list ul{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.coverage .svc{background:transparent;box-shadow:none;border-top:1px solid rgba(212,175,106,.25);border-radius:0;padding:32px 0 0}
+.panel{background:var(--ink);box-shadow:inset 0 0 0 1px rgba(212,175,106,.16)}
+.why{background:var(--ink)}
+.stat b{color:var(--brick)}
+.reviews-band{background:var(--paper);padding-block:clamp(64px,8vw,104px)}
+.reviews-head{display:block;margin:0 0 28px}
+.reviews-head h2{font:400 clamp(2.4rem,4.6vw,3.8rem)/1 var(--serif);letter-spacing:-.01em}
+.reviews-head p{margin-top:10px;color:var(--granite)}
+.reviews-band .rv-card{background:#fff;box-shadow:0 1px 2px rgba(10,20,40,.06),0 18px 40px -26px rgba(10,20,40,.35);color:var(--ink)}
+.reviews-band .rv-card blockquote{font:400 1.45rem/1.3 var(--serif)}
+.reviews-band .rv-card figcaption small{color:var(--granite)}
+.reviews-band.is-paused .rv-lane{animation-play-state:paused}
+.photo-band{position:relative;min-height:clamp(380px,52vw,640px);display:flex;align-items:flex-end;overflow:hidden;color:#fff;isolation:isolate}
+.photo-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:bandDrift 30s ease-in-out infinite alternate}
+.photo-band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(10,20,40,.88) 0%,rgba(10,20,40,.35) 45%,rgba(10,20,40,.05) 100%)}
+.band-quote{padding-block:clamp(40px,6vw,72px);font:400 clamp(2.4rem,5.4vw,4.6rem)/1 var(--serif);letter-spacing:-.01em}
+.band-quote em{color:var(--brick)}
+@keyframes bandDrift{from{transform:scale(1.04) translateY(0)}to{transform:scale(1.12) translateY(-2%)}}
+.contact-top{grid-template-columns:minmax(0,1fr)}
+.team{padding:28px 0 0;border-top:1px solid var(--line)}
+.team h3{font:400 1.8rem/1 var(--serif)}.team > p{max-width:80ch;line-height:1.8}
+.site-footer{background:var(--ink)!important;box-shadow:inset 0 1px 0 rgba(212,175,106,.2)}
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (min-width:901px){
+  .hero{min-height:min(820px,calc(100svh - var(--header-h)));display:flex;align-items:center;padding-block:72px 110px;isolation:isolate}
+  .hero{overflow:hidden}
+  .hero::before{content:"";position:absolute;top:0;right:0;bottom:0;width:50%;z-index:-1;background:linear-gradient(90deg,var(--ink) 0%,var(--ink) 3%,rgba(10,20,40,.72) 20%,rgba(10,20,40,.12) 55%,rgba(10,20,40,0) 100%),linear-gradient(0deg,rgba(10,20,40,.6),transparent 35%),url(images/family-picnic.jpg) 45% 40%/cover;animation:bandDrift 32s ease-in-out infinite alternate;transform-origin:100% 50%}
+  .hero-grid > div:first-child{max-width:min(540px,42vw)}
+  .hero > .wrap{width:100%}
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .hero-card{display:none}
+}
+@media (max-width:760px){.svc-list ul{grid-template-columns:1fr}.reviews-band .rv-card blockquote{font-size:1.25rem}}
+@media (prefers-reduced-motion:reduce){.photo-band img,.hero::before{animation:none}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -605,74 +666,16 @@ html.qf-open{overflow:hidden}
   <a class="scroll-cue" href="#coverage">Scroll to see what we offer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
 </section>
 
+<!-- Real Google reviews, word for word -->
+<section class="reviews-band" id="reviews" aria-labelledby="reviews-title">
+  <div class="wrap"><div class="reviews-head"><h2 id="reviews-title">What Malden says about us</h2><p>Real Google reviews, word for word.</p></div></div>
+  <div class="wrap"><div class="rv-stage" id="rv-stage"><div class="rv-lane"></div></div></div>
+</section>
+
 <!-- ======================= 2. COVERAGE (GEICO-style band with Bumper) ======================= -->
 <section class="coverage" id="coverage" aria-labelledby="coverage-title">
   <div class="wrap">
     <div class="cov-grid">
-      <div class="cov-pitch">
-        <h3>Don't end up like Bumper.</h3>
-        <p class="pitch-sub">And if you do, we've got you covered. One call to us handles the car and the house.</p>
-        <svg class="crash" viewBox="0 0 560 290" role="img" aria-labelledby="crash-title">
-          <title id="crash-title">Bumper, a cartoon dog in a neck brace, sitting dazed in a little yellow convertible that has just rear-ended a blue car</title>
-          <ellipse cx="290" cy="262" rx="270" ry="12" fill="#000" opacity=".3"/>
-          <g class="steam" fill="#E6ECF7"><circle cx="300" cy="138" r="12"/><circle cx="316" cy="124" r="10"/><circle cx="306" cy="110" r="8"/></g>
-          <rect x="130" y="128" width="62" height="24" rx="11" fill="#F4F6FB"/>
-          <rect x="150" y="131" width="20" height="18" rx="4" fill="#2358D6"/>
-          <g transform="translate(160 92) scale(.72) translate(-130 -98)">
-            <g class="crash-head">
-              <path d="M88 64c-22 4-34 30-30 62 2 16 14 20 22 10 6-8 8-24 8-40z" fill="#8B5A3A"/>
-              <path d="M172 64c22 4 34 30 30 62-2 16-14 20-22 10-6-8-8-24-8-40z" fill="#8B5A3A"/>
-              <path d="M76 84c-6 14-6 30-2 42" stroke="#A8744F" stroke-width="5" stroke-linecap="round" fill="none"/>
-              <circle cx="130" cy="98" r="52" fill="#D9A267"/>
-              <path d="M104 50l6-16 6 14 6-18 6 16 7-14 3 18" fill="#C98C52"/>
-              <ellipse cx="150" cy="86" rx="20" ry="17" fill="#B77B45"/>
-              <ellipse cx="130" cy="120" rx="32" ry="24" fill="#F2DDBA"/>
-              <ellipse cx="130" cy="108" rx="11" ry="8" fill="#3B2A22"/>
-              <circle cx="126" cy="105" r="2.5" fill="#fff" opacity=".7"/>
-              <path d="M130 116v8M130 124c-4 6-12 6-14 1M130 124c4 6 12 6 14 1" stroke="#3B2A22" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <g fill="#B77B45"><circle cx="112" cy="122" r="1.6"/><circle cx="106" cy="118" r="1.6"/><circle cx="110" cy="114" r="1.6"/><circle cx="148" cy="122" r="1.6"/><circle cx="154" cy="118" r="1.6"/><circle cx="150" cy="114" r="1.6"/></g>
-              <circle cx="112" cy="90" r="5.5" fill="#1D1411"/><circle cx="150" cy="90" r="5.5" fill="#1D1411"/>
-              <circle cx="114" cy="88" r="1.8" fill="#fff"/><circle cx="152" cy="88" r="1.8" fill="#fff"/>
-              <path d="M102 82l16-6M160 82l-16-6" stroke="#6E4428" stroke-width="3" stroke-linecap="round"/>
-              <!-- head bandage and cheek plaster -->
-              <path d="M90 70c20-22 60-26 84-8l-4 12c-22-14-56-12-76 8z" fill="#F4F6FB"/>
-              <path d="M110 56v10M104 61h12" stroke="#E0564A" stroke-width="3" stroke-linecap="round"/>
-              <rect x="150" y="110" width="22" height="10" rx="4" transform="rotate(-22 161 115)" fill="#F1C9A0"/>
-              <g fill="#D9A574"><circle cx="157" cy="117" r="1"/><circle cx="162" cy="115" r="1"/><circle cx="167" cy="113" r="1"/></g>
-            </g>
-          </g>
-          <g class="stars" fill="#F5B544">
-            <path d="M120 40l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>
-            <path d="M196 30l2.4 5.4 5.6.8-4 4 1 5.6-5-2.6-5 2.6 1-5.6-4-4 5.6-.8z"/>
-            <path d="M152 22l2 4.4 4.6.6-3.4 3.2.8 4.6-4-2.2-4 2.2.8-4.6-3.4-3.2 4.6-.6z"/>
-          </g>
-          <path d="M226 158l24-44h8l-18 44z" fill="#9DC0F2" opacity=".75"/>
-          <ellipse cx="218" cy="152" rx="6" ry="14" fill="#0C1A36" transform="rotate(-20 218 152)"/>
-          <path d="M34 226v-44c0-16 10-26 26-28l56-6h112l58 8c18 3 28 12 30 26l2 10-10 4-8 8 10 6-8 6v10z" fill="#F5B544"/>
-          <path d="M318 162l12 8-8 8 12 6-10 8 12 6-10 8 16 4v16h-24z" fill="#E09A2A"/>
-          <path d="M318 162l12 8-8 8 12 6-10 8 12 6-10 8 16 4" fill="none" stroke="#B87618" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M34 186h290" stroke="#E09A2A" stroke-width="4"/>
-          <path d="M150 158v66" stroke="#E09A2A" stroke-width="3"/>
-          <rect x="164" y="170" width="22" height="6" rx="3" fill="#B87618"/>
-          <circle cx="326" cy="200" r="9" fill="#FFF3C4"/>
-          <path d="M320 195l6 5-3 6M326 200l6-3" stroke="#B87618" stroke-width="2" fill="none"/>
-          <rect x="26" y="208" width="18" height="14" rx="4" fill="#C9D1E4"/>
-          <path d="M318 236h26v-10" stroke="#C9D1E4" stroke-width="10" stroke-linecap="round" fill="none"/>
-          <circle cx="98" cy="236" r="28" fill="#0C1A36"/><circle cx="98" cy="236" r="12" fill="#C9D1E4"/>
-          <circle cx="276" cy="236" r="28" fill="#0C1A36"/><circle cx="276" cy="236" r="6" fill="#55627A"/>
-          <!-- the car Bumper rear-ended -->
-          <path d="M338 226v-38c0-8 4-14 12-16l34-6 26-36c4-6 10-8 16-8h62c10 0 16 4 20 12l14 32 16 4c6 2 10 8 10 16v40z" fill="#5B86EE"/>
-          <path d="M420 130l20-26h40v26zM488 130v-26h14c6 0 10 3 12 8l8 18z" fill="#0C1A36" opacity=".45"/>
-          <path d="M338 204h210" stroke="#3E68D4" stroke-width="3"/>
-          <path d="M338 176l12 6-9 8 11 6-9 8 9 6v16h-14z" fill="#3E68D4"/>
-          <rect x="340" y="168" width="10" height="14" rx="2" fill="#E0564A"/>
-          <path d="M341 171l6 4-4 5" stroke="#FFF3C4" stroke-width="1.6" fill="none"/>
-          <circle cx="392" cy="236" r="28" fill="#0C1A36"/><circle cx="392" cy="236" r="11" fill="#C9D1E4"/>
-          <circle cx="506" cy="236" r="28" fill="#0C1A36"/><circle cx="506" cy="236" r="11" fill="#C9D1E4"/>
-          <path d="M324 106l-8-18M340 100v-20M356 106l8-18" stroke="#F5B544" stroke-width="5" stroke-linecap="round"/>
-          <circle cx="352" cy="262" r="10" fill="#C9D1E4"/><circle cx="352" cy="262" r="4" fill="#8A96AE"/>
-        </svg>
-      </div>
       <div class="cov-main">
     <div class="section-head">
           <h2 id="coverage-title">Get a quote today.</h2>
@@ -701,15 +704,6 @@ html.qf-open{overflow:hidden}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"/></svg><span><b>Real estate</b>Buying or selling? We recommend <a href="https://www.debbiemillersells.com/" target="_blank" rel="noopener">Deb Miller Real Estate</a>.</span></li>
         </ul>
       </div>
-      <form class="svc calc" id="calc" onsubmit="return false" aria-labelledby="calc-title">
-        <h3 id="calc-title">Mortgage calculator</h3>
-        <div class="field"><label for="c-price">Home price</label><input id="c-price" inputmode="numeric" value="650,000" autocomplete="off"></div>
-        <div class="field"><label for="c-down">Down payment</label><input id="c-down" inputmode="numeric" value="130,000" autocomplete="off"></div>
-        <div class="field"><label for="c-rate">Rate (%)</label><input id="c-rate" inputmode="decimal" value="6.5" autocomplete="off"></div>
-        <div class="field"><label for="c-term">Term</label><select id="c-term"><option value="30">30 years</option><option value="20">20 years</option><option value="15">15 years</option></select></div>
-        <div class="calc-out" aria-live="polite"><span>Per month</span><output id="c-out" for="c-price c-down c-rate c-term">$0</output></div>
-        <p class="calc-fine">Principal and interest only. Taxes, insurance and fees not included.</p>
-      </form>
     </div>
   </div>
 </section>
@@ -790,16 +784,12 @@ html.qf-open{overflow:hidden}
         </figcaption>
       </figure>
     </div>
+  </div>
+</section>
 
-    <div class="reviews-head"><h3>What our customers say</h3></div>
-  </div>
-  <!-- Real Google reviews (copied Sept 2026). The row holds its set twice for a seamless loop; the copies are hidden from screen readers. -->
-  <div class="wrap">
-    <div class="rv-stage" id="rv-stage">
-      <div class="rv-lane">
-      </div>
-    </div>
-  </div>
+<section class="photo-band" aria-label="Supino family agency">
+  <img src="images/family-home.jpg" srcset="images/family-home-640.jpg 640w, images/family-home.jpg 960w" sizes="100vw" width="960" height="640" loading="lazy" alt="Parents and three young kids playing together on the living room floor">
+  <div class="wrap"><p class="band-quote">Two offices. One family.<br><em>Here since 1989.</em></p></div>
 </section>
 
 <!-- ======================= 5. CONTACT ======================= -->
@@ -815,9 +805,6 @@ html.qf-open{overflow:hidden}
           <a class="btn btn-quiet" href="tel:+17813344888">Call Lynnfield 781-334-4888</a>
         </div>
       </div>
-      <figure class="contact-photo">
-        <img src="images/family-home.jpg" srcset="images/family-home-640.jpg 640w, images/family-home.jpg 960w" sizes="(max-width: 900px) 100vw, 50vw" width="960" height="640" loading="lazy" alt="Parents and three young kids playing together on the living room floor">
-      </figure>
     </div>
     <div class="contact-grid">
       <div>
@@ -863,18 +850,8 @@ html.qf-open{overflow:hidden}
     </div>
 
     <div class="team">
-      <h3>Our team</h3>
-      <p>Call 781-322-2800 and ask for anyone by extension.</p>
-      <ul class="team-list is-folded" id="team-list">
-        <li><span class="team-avatar" aria-hidden="true">MS</span><span><b>Michael J. Supino</b><small>Owner · Ext. 210</small></span><a href="mailto:mike@supinoinsurance.com">mike@supinoinsurance.com</a></li>
-        <li><span class="team-avatar" aria-hidden="true">EM</span><span><b>Ed McManus</b><small>Ext. 206</small></span><a href="mailto:ed@supinoinsurance.com">ed@supinoinsurance.com</a></li>
-        <li><span class="team-avatar" aria-hidden="true">PN</span><span><b>Patti Nagleri</b><small>Ext. 204</small></span><a href="mailto:patti@supinoinsurance.com">patti@supinoinsurance.com</a></li>
-        <li><span class="team-avatar" aria-hidden="true">JA</span><span><b>John Anzuoni</b><small>Ext. 203</small></span><a href="mailto:john@supinoinsurance.com">john@supinoinsurance.com</a></li>
-        <li><span class="team-avatar" aria-hidden="true">DS</span><span><b>Derek Supino</b><small>Ext. 205</small></span><a href="mailto:derek@supinoinsurance.com">derek@supinoinsurance.com</a></li>
-        <li><span class="team-avatar" aria-hidden="true">BD</span><span><b>Beth Donovan</b><small>Ext. 209</small></span><a href="mailto:beth@supinoinsurance.com">beth@supinoinsurance.com</a></li>
-        <li><span class="team-avatar" aria-hidden="true">JS</span><span><b>John Shea</b><small>Ext. 321</small></span><a href="mailto:johnshea@supinoinsurance.com">johnshea@supinoinsurance.com</a></li>
-      </ul>
-      <button type="button" class="btn btn-quiet btn-sm team-more" id="team-more" aria-controls="team-list" aria-expanded="false">See the whole team (7)</button>
+      <h3>Ask for anyone by name</h3>
+      <p>Call 781-322-2800: Michael Supino, owner (ext. 210) · Ed McManus (206) · Patti Nagleri (204) · John Anzuoni (203) · Derek Supino (205) · Beth Donovan (209) · John Shea (321).</p>
     </div>
   </div>
 </section>
@@ -1172,8 +1149,14 @@ html.qf-open{overflow:hidden}
       lane.appendChild(f);
     });
   });
-  var why = document.getElementById('why');
+  var why = document.getElementById('reviews');
   document.getElementById('rv-stage').addEventListener('click', function(){ why.classList.toggle('is-paused'); });
+
+  /* Reveal on scroll */
+  if (!reduced && 'IntersectionObserver' in window){
+    var ro = new IntersectionObserver(function(es){ es.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); ro.unobserve(en.target); } }); }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.section-head,.tab-panel,.companies,.services,.panel,.stats,.story,.reviews-head,.band-quote,.offices,.form-card,.team').forEach(function(el){ el.classList.add('reveal'); ro.observe(el); });
+  }
 
   /* Big numbers count up once */
   var counts = document.querySelectorAll('[data-count]');
@@ -1188,18 +1171,6 @@ html.qf-open{overflow:hidden}
     counts.forEach(function(c){ c.textContent = '0'; co.observe(c); });
   }
 
-  /* Mortgage calculator */
-  var cP = document.getElementById('c-price'), cD = document.getElementById('c-down'), cR = document.getElementById('c-rate'), cT = document.getElementById('c-term'), cO = document.getElementById('c-out');
-  function num(el){ return parseFloat(String(el.value).replace(/[^0-9.]/g, '')) || 0; }
-  function calc(){
-    var loan = Math.max(num(cP) - num(cD), 0), r = num(cR) / 1200, n = +cT.value * 12;
-    var pay = !loan ? 0 : (r ? loan * r / (1 - Math.pow(1 + r, -n)) : loan / n);
-    cO.textContent = '$' + Math.round(pay).toLocaleString('en-US');
-  }
-  [cP, cD, cR, cT].forEach(function(el){ el.addEventListener('input', calc); });
-  [cP, cD].forEach(function(el){ el.addEventListener('blur', function(){ var v = num(el); if (v) el.value = Math.round(v).toLocaleString('en-US'); }); });
-  calc();
-
   /* Contact form */
   var form = document.getElementById('contact-form'), status = document.getElementById('form-status');
   form.addEventListener('submit', function(e){
@@ -1210,14 +1181,6 @@ html.qf-open{overflow:hidden}
     fetch(form.getAttribute('data-endpoint'), {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
       .then(function(r){ if (!r.ok) throw new Error(); form.reset(); status.dataset.state = 'ok'; status.textContent = 'Thanks. We have your message.'; })
       .catch(function(){ status.dataset.state = 'err'; status.textContent = 'That didn’t send. Please call 781-322-2800.'; });
-  });
-
-  /* Team list folds on phones */
-  var teamBtn = document.getElementById('team-more'), teamList = document.getElementById('team-list');
-  teamBtn.addEventListener('click', function(){
-    var open = !teamList.classList.toggle('is-folded');
-    teamBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    teamBtn.textContent = open ? 'Show fewer' : 'See the whole team (7)';
   });
 
   /* ---------------- Quote flow ---------------- */

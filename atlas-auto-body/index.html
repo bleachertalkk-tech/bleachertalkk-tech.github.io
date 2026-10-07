@@ -715,6 +715,25 @@ body{font-family:var(--body)}
 @media (max-width:760px){.status{font-size:10.5px!important;letter-spacing:.05em}.tow{font-size:11.5px!important;letter-spacing:.1em}.tow-n{font-size:11.5px!important;letter-spacing:.1em!important}.tow .sep{width:18px}
 .gal2.n4 figure:nth-child(4){grid-column:span 2}.gal2 figure:not(:first-child) figcaption{font-size:10px;padding:30px 10px 10px}
 .tl{border-top:0;border-left:1px solid rgba(255,226,204,.35);margin-left:4px;row-gap:28px}.tl li{padding:0 0 0 24px}.tl li::before{top:4px;left:-5px}}
+
+/* ===== refresh: real photos, graded; tighter rhythm ===== */
+.sec{padding-block:clamp(72px,8vw,120px)}
+.hero-bg img,.band img,.spec-ph img,.gal2 img,.bldg img{filter:contrast(1.07) saturate(1.06) brightness(.97)}
+.hero::before{background:linear-gradient(90deg,rgba(10,10,11,.92) 0%,rgba(10,10,11,.7) 38%,rgba(10,10,11,.25) 70%,rgba(10,10,11,.1) 100%),linear-gradient(0deg,rgba(10,10,11,.95) 0%,rgba(10,10,11,0) 45%)!important}
+.spec-ph{margin:34px 0 0;border-radius:4px;overflow:hidden;aspect-ratio:16/10;max-width:460px}
+.spec-ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.spec-ph:hover img{transform:scale(1.04)}
+@media(min-width:900px){.spec-h{position:sticky;top:110px;align-self:start}}
+.band{position:relative;min-height:clamp(380px,56vw,680px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:bandDrift 28s ease-in-out infinite alternate}
+.band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(10,10,11,.92) 0%,rgba(10,10,11,.35) 50%,rgba(10,10,11,.1) 100%)}
+.band .wrap{width:100%;padding-block:clamp(40px,6vw,80px)}
+.band-t{margin:12px 0 0;font-size:clamp(2.6rem,6.4vw,6rem);line-height:.9;font-weight:900;font-stretch:118%;letter-spacing:-.035em;text-transform:uppercase}
+.band-t em{font-style:normal;color:var(--o)}
+@keyframes bandDrift{from{transform:scale(1.03)}to{transform:scale(1.12) translateY(-2%)}}
+.bldg{margin:26px 0 8px;border-radius:4px;overflow:hidden;aspect-ratio:1330/666;max-height:520px;width:100%}
+.bldg img{width:100%;height:100%;object-fit:cover}
+@media (prefers-reduced-motion:reduce){.band img{animation:none}}
 </style>
 </head>
 <body>
@@ -756,7 +775,7 @@ body{font-family:var(--body)}
 
 <main id="main">
 <section class="hero" id="top">
-  <div class="hero-bg"><img src="img/hero-1200.webp" srcset="img/hero-1200.webp 1200w, img/hero.webp 720w" sizes="100vw" width="720" height="406" alt="A car finished at Atlas Auto Body" fetchpriority="high" style="object-position:50% 55%"></div>
+  <div class="hero-bg"><img src="img/hero.jpg" srcset="img/hero-1200.jpg 1200w, img/hero.jpg 1800w" sizes="100vw" width="1800" height="1350" alt="The Atlas shop floor in Revere, full of cars being repaired" fetchpriority="high" style="object-position:50% 45%"></div>
   <div class="streak" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
@@ -764,7 +783,7 @@ body{font-family:var(--body)}
       <p class="status" id="status"><i></i><span>1605 N Shore Rd, Revere</span></p>
       <h1>Back to <span class="o">factory.</span><span class="thin">Auto body and collision repair in Revere.</span></h1>
       <p class="hero-sub">We work with your insurance company and help you with a rental.</p>
-      <a class="hero-rv" href="#reviews"><span class="stars" aria-label="5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><q>I had an accident with a big bus.</q><small>Rachel S. · 4.6★ from 217 Google reviews</small></a>
+      <a class="hero-rv" href="#reviews"><span class="stars" aria-label="5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><q>Simply the best.</q><small>John K. · 4.6★ from 217 Google reviews</small></a>
     </div>
     <div class="est-panel" id="estPanel">
       <h3>Get your estimate</h3>
@@ -782,8 +801,8 @@ body{font-family:var(--body)}
   <div class="wrap">
     <div class="stars-big" id="starsBig" aria-hidden="true"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
     <span class="label"><b>4.6</b> from <b>217</b> Google reviews</span>
-    <h2 id="reviews-title">“I had an accident with a big bus.”</h2>
-    <p class="praise-src">Rachel S. · Google review</p>
+    <h2 id="reviews-title">“Simply the best. My family and I have been going to them for almost 40 years.”</h2>
+    <p class="praise-src">John K. · Google review</p>
   </div>
   <div class="rail" role="region" aria-label="Customer reviews from Google"><div class="rail-track" id="railTrack"></div></div>
   <div class="rail rev" aria-hidden="true"><div class="rail-track" id="railTrack2"></div></div>
@@ -794,9 +813,15 @@ body{font-family:var(--body)}
 <section class="sec" id="repairs">
   <div class="wrap spec">
     <div class="spec-h rv-in"><p class="kick">What we fix <i>01</i></p><h2>Every repair,<br><em>under one roof.</em></h2><p class="lede">Pick a repair to start your estimate.</p>
+      <figure class="spec-ph"><img src="img/tech.jpg" width="1200" height="677" loading="lazy" alt="An Atlas tech working under the hood of a car"></figure>
       </div>
     <ol class="spec-l"><li class="rv-in"><button type="button" class="svc-row" data-svc="Accident"><span class="n">01</span><span class="t"><b>Collision repair</b><small>From a door ding to major front and rear damage.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc="Paint"><span class="n">02</span><span class="t"><b>Paint</b><small>Color matched to your car&#39;s factory finish.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc="Dent or scratch"><span class="n">03</span><span class="t"><b>Dents and scratches</b><small>Small damage fixed so you can&#39;t tell it happened.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc="Accident"><span class="n">04</span><span class="t"><b>Frame</b><small>Measured and straightened back to spec.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc="Glass"><span class="n">05</span><span class="t"><b>Auto glass</b><small>Windshields and windows.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li><li class="rv-in"><button type="button" class="svc-row" data-svc=""><span class="n">06</span><span class="t"><b>Rental cars</b><small>Help getting you a car while yours is here.</small></span><span class="go">Estimate<svg><use href="#arrow"/></svg></span></button></li></ol>
   </div>
+</section>
+
+<section class="band" aria-label="Inside the shop">
+  <img src="img/lift.jpg" width="1500" height="1125" loading="lazy" alt="A car up on the lift inside Atlas Auto Body" style="object-position:50% 35%">
+  <div class="wrap"><p class="kick">Inside the shop</p><p class="band-t">Since 1983 on<br><em>N Shore Rd.</em></p></div>
 </section>
 
 <section class="sec claim orange" id="claim">
@@ -816,7 +841,7 @@ body{font-family:var(--body)}
 <section class="sec" id="shop" style="padding-top:0">
   <div class="wrap">
     <div class="rv-in"><p class="kick">Our work <i>03</i></p><h2>Real cars. <em>Real work.</em></h2></div>
-    <div class="gal2 n4"><figure class="rv-in"><img src="img/g4-1200.webp" srcset="img/g4-1200.webp 1200w, img/g4.webp 768w" sizes="(max-width:760px) 100vw, 66vw" width="768" height="1024" loading="lazy" alt="Ford F-150"><figcaption><span>01</span>Ford F-150</figcaption></figure><figure class="rv-in"><img src="img/n-g006-1200.webp" srcset="img/n-g006-1200.webp 1200w, img/n-g006.webp 1920w" sizes="(max-width:760px) 100vw, 33vw" width="1920" height="1440" loading="lazy" alt="Inside the shop"><figcaption><span>02</span>Inside the shop</figcaption></figure><figure class="rv-in"><img src="img/g2-1200.webp" srcset="img/g2-1200.webp 1200w, img/g2.webp 1280w" sizes="(max-width:760px) 100vw, 33vw" width="1280" height="960" loading="lazy" alt="Body work in progress"><figcaption><span>03</span>Body work in progress</figcaption></figure><figure class="rv-in"><img src="img/g3-1200.webp" srcset="img/g3-1200.webp 1200w, img/g3.webp 1920w" sizes="(max-width:760px) 100vw, 33vw" width="1920" height="1440" loading="lazy" alt="In for repair"><figcaption><span>04</span>In for repair</figcaption></figure></div>
+    <div class="gal2 n4"><figure class="rv-in"><img src="img/tools.jpg" width="1125" height="1500" loading="lazy" alt="Tool cart in the Atlas shop"><figcaption><span>01</span>The right tools</figcaption></figure><figure class="rv-in"><img src="img/floor2.jpg" width="1500" height="1125" loading="lazy" alt="Cars waiting for repair on the shop floor"><figcaption><span>02</span>The shop floor</figcaption></figure><figure class="rv-in"><img src="img/g2-1200.webp" srcset="img/g2-1200.webp 1200w, img/g2.webp 1280w" sizes="(max-width:760px) 100vw, 33vw" width="1280" height="960" loading="lazy" alt="Body work in progress"><figcaption><span>03</span>Body work in progress</figcaption></figure><figure class="rv-in"><img src="img/g3-1200.webp" srcset="img/g3-1200.webp 1200w, img/g3.webp 1920w" sizes="(max-width:760px) 100vw, 33vw" width="1920" height="1440" loading="lazy" alt="In for repair"><figcaption><span>04</span>In for repair</figcaption></figure></div>
   </div>
 </section>
 
@@ -826,6 +851,7 @@ body{font-family:var(--body)}
     <div class="rv-in">
       <p class="kick">Visit <i>04</i></p>
       <h2>Come <em>see us.</em></h2>
+      <figure class="bldg"><img src="img/building.jpg" width="1330" height="666" loading="lazy" alt="The Atlas Auto Body building at 1605 N Shore Rd, Revere"></figure>
       <p class="addr">1605 N Shore Rd<br>Revere, MA 02151</p>
       <table class="hours" id="hours"><tbody></tbody></table>
       <div class="visit-cta"><a class="btn btn-o" href="https://www.google.com/maps/dir/?api=1&amp;destination=1605+N+Shore+Rd%2C+Revere%2C+MA+02151" target="_blank" rel="noopener">Directions <svg><use href="#arrow"/></svg></a><a class="btn btn-g" href="tel:+17812841200"><svg><use href="#phone"/></svg>(781) 284-1200</a></div>
@@ -917,7 +943,7 @@ body{font-family:var(--body)}
     </div>
   </div>
 </div>
-<script>window.BIZ={"name":"Atlas Auto Body","phone":"(781) 284-1200","town":"Revere","street":"1605 N Shore Rd","detail":false,"certs":[],"services":["insurance","rental","glass","frame"],"hours":[["Monday","8 AM–5 PM"],["Tuesday","8 AM–5 PM"],["Wednesday","8 AM–5 PM"],["Thursday","8 AM–5 PM"],["Friday","8 AM–5 PM"],["Saturday","9 AM–12 PM"],["Sunday","Closed"]],"quotes":[{"a":"Alonso T.","t":"⭐⭐⭐⭐⭐ I had a great experience with Atlas Auto Body. The paint and bodywork on my vehicle were absolutely wonderful—the finish looks excellent, and the overall quality of the work really impressed me."},{"a":"Rachel S.","t":"I had a terrific experience with this body shop. I had an accident with a big bus. They had my work done within two weeks of drop off. Progressive does not like to buy new items unless the car has under a certain mileage."},{"a":"S. M.","t":"I'm really happy with the results! From my first visit, Greg provided outstanding customer service and made me feel at home, while Tommy was very professional and kept me updated throughout the process. My car looks great, and the interior is impeccable!"}],"gallery":[[["g4",768,1024,"Ford F-150"],["n-g006",1920,1440,"Inside the shop"]],[["g2",1280,960,"Body work in progress"],["g3",1920,1440,"In for repair"]]]};</script>
+<script>window.BIZ={"name":"Atlas Auto Body","phone":"(781) 284-1200","town":"Revere","street":"1605 N Shore Rd","detail":false,"certs":[],"services":["insurance","rental","glass","frame"],"hours":[["Monday","8 AM–5 PM"],["Tuesday","8 AM–5 PM"],["Wednesday","8 AM–5 PM"],["Thursday","8 AM–5 PM"],["Friday","8 AM–5 PM"],["Saturday","9 AM–12 PM"],["Sunday","Closed"]],"quotes":[{"a": "S. M.", "t": "I'm really happy with the results! From my first visit, Greg provided outstanding customer service and made me feel at home, while Tommy was very professional and kept me updated throughout the process. My car looks great, and the interior is impeccable! I'm extremely satisfied and highly recommend this place! Thank you!"}, {"a": "Keolena S.", "t": "Second time coming here for repairs, the customer service, staffs ( Ian, Craig, Ever, Tommy and others are honest, funny and professional!) The shop works with both progressive and geico, they are organized and makes the experience hassle and stress free."}, {"a": "Micah C.", "t": "Car was brought by insurance, didn't know what to expect. Exceptional service and the car looks good as new, not to mention they cleaned up the interior as well! Would highly recommend this shop to anyone! Extremely grateful for their service and work!"}, {"a": "Colleen D.", "t": "This is the second time I have had to take a car here. Both times because of an accident. They are quick, efficient and honest. I recommend them especially if you are a GEICO customer because they know how to deal with the company."}, {"a": "Michael V.", "t": "I worked with Ian - he was transparent, upfront, and communicated my options to me in laymen terms. The result was fantastic. I’ll go back for any autobody needs."}, {"a": "Jenny C.", "t": "Dropped my car off Tuesday ( a day early than my apt ) and I thought it would be at least a week… it was done within 24 hours.. also came with a good detail inside .. I was super happy with the quick service and great communication with these guys. Thanks again!"}, {"a": "Juliet W.", "t": "Took my Volkswagen here after it was keyed and Atlas made everything very easy. Dropped my car off on Thursday and they had a rental car meet me there. They also got my car finished by Saturday which was great! The car looks like new and everyone was very friendly."}, {"a": "Paige M.", "t": "They did a fantastic job repairing my vehicle after the bumper and tail light were damaged in a hit & run. They were very patient and helpful when I called to check on the status of the repairs, and they even cleaned the interior and buffed out a scratch for no extra cost! My Jeep seriously looked brand new when I picked it up."}, {"a": "Yovanny F.", "t": "Excellent service and helpful staff. They not only took care of the damage done to my vehicle, but went on an impossible mission to find a limited edition rim for my SUV. Great communication through the entire process. 10/10 recommend."}, {"a": "Ron M.", "t": "I have been bringing my family's vehicles to Atlas for body work since 2004. Every time my vehicles come back to me like new and always on time as scheduled; including this incident. 2 to 3 days average turn around time is the most important to me verses weeks or even a month at other shops."}, {"a": "Andrew S.", "t": "Prompt service, friendly staff, fast turnaround time, and a fantastic job on repairs. These guys literally saved my car from being totalled. I hope I don't have to get my car repaired again soon, but I'll definitely choose them when the need arises."}, {"a": "John K.", "t": "Simply the best. My family and I have been going to them for almost 40 years. They say they always guarantee their work. I don’t know what they mean by that as every job they have done was always completed right the first time."}, {"a": "Monique K.", "t": "11 out of 10. This is THE BEST experience we have ever had with an auto body place. USAA recommended and now we know why. If you need auto body work this is the place to go."}, {"a": "Meaghan", "t": "My insurance company sent me here after a car accident and they were OUTSTANDING! All employees I encountered were friendly and welcoming! Greg was especially helpful and extremely accommodating. I couldn’t ask for a better experience from a not so great situation. Thank you so much Atlas for making my car look brand new again!!"}],"gallery":[[["g4",768,1024,"Ford F-150"],["n-g006",1920,1440,"Inside the shop"]],[["g2",1280,960,"Body work in progress"],["g3",1920,1440,"In for repair"]]]};</script>
 <script>(() => {
   const BIZ = window.BIZ, $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -935,11 +961,11 @@ body{font-family:var(--body)}
   const escH = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   // reviews: Greg-style rail that drifts sideways; two identical sets make the loop seamless
   const card = (q, hide) => '<figure class="rcard"><span class="stars"' + (hide ? '' : ' aria-hidden="true"') + '>★★★★★</span><blockquote>' + escH(q.t) + '</blockquote><figcaption><b>' + escH(q.a) + '</b>Google review</figcaption></figure>';
-  const qs = BIZ.quotes.length < 4 ? BIZ.quotes.concat(BIZ.quotes) : BIZ.quotes;
+  const half = Math.ceil(BIZ.quotes.length / 2), qs = BIZ.quotes.slice(0, half);
   $('#railTrack').innerHTML = '<div class="rail-set">' + qs.map(q => card(q)).join('') + '</div><div class="rail-set" aria-hidden="true">' + qs.map(q => card(q, 1)).join('') + '</div>';
   $('#railTrack').style.animationDuration = (qs.length * 13) + 's';
   // second rail: the same reviews in a different order, drifting the other way
-  const qs2 = qs.slice(Math.ceil(qs.length / 2)).concat(qs.slice(0, Math.ceil(qs.length / 2))).reverse();
+  const qs2 = BIZ.quotes.slice(half);
   $('#railTrack2').innerHTML = '<div class="rail-set">' + qs2.map(q => card(q, 1)).join('') + '</div><div class="rail-set">' + qs2.map(q => card(q, 1)).join('') + '</div>';
   $('#railTrack2').style.animationDuration = (qs2.length * 15) + 's';
   // before/after: drag to compare
