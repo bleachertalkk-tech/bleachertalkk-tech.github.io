@@ -1,0 +1,1536 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Supino Insurance | Auto, Home &amp; Business Insurance in Malden &amp; Lynnfield, MA</title>
+<meta name="description" content="Family-run independent insurance agency in Malden and Lynnfield, MA since 1989. Auto, home, life, pet and business insurance from 15+ companies. Call 781-322-2800.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2358D6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232358D6'/%3E%3Cpath d='M14 34 32 18l18 16v16H14z' fill='%23F4F7FC'/%3E%3Crect x='27' y='36' width='10' height='10' fill='%23F5B544'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Supino Insurance | Malden &amp; Lynnfield, MA">
+<meta property="og:image" content="images/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:description" content="The house, the car, covered. Family-run insurance in Malden since 1989. Call 781-322-2800.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"InsuranceAgency","name":"Supino Insurance Agency, Inc.","alternateName":"Supino Insurance","foundingDate":"1989","telephone":"+1-781-322-2800","email":"info@supinoinsurance.com","url":"https://www.supinoinsurance.com","sameAs":["https://www.facebook.com/supino.insurance"],
+"department":[
+{"@type":"InsuranceAgency","name":"Supino Insurance, Malden","telephone":"+1-781-322-2800","address":{"@type":"PostalAddress","streetAddress":"1012 Eastern Ave","addressLocality":"Malden","addressRegion":"MA","postalCode":"02148","addressCountry":"US"},"openingHours":["Mo-Th 09:00-17:00","Fr 09:00-16:00"]},
+{"@type":"InsuranceAgency","name":"Supino Insurance, Lynnfield","telephone":"+1-781-334-4888","address":{"@type":"PostalAddress","streetAddress":"550 Summer Street","addressLocality":"Lynnfield","addressRegion":"MA","postalCode":"01940","addressCountry":"US"},"openingHours":["Mo-Th 09:00-17:00","Fr 09:00-16:00"]}]}
+</script>
+<style>
+/* ============================================================
+   Supino Insurance v2
+   Palette (5):
+   Night      #0C1A36  deep dark: text, dusk sky, dark bands
+   Harbor     #2358D6  primary blue: hero band, links, tabs
+   Porchlight #F5B544  accent: lit windows, primary buttons, big numbers
+   Mist       #F4F7FC  off-white page
+   Slate      #55627A  neutral text and lines
+   Type: Instrument Serif (headlines), Figtree (everything else)
+   ============================================================ */
+:root{
+  --ink:#0C1A36; --harbour:#2358D6; --brick:#F5B544; --paper:#F4F7FC; --granite:#55627A;
+  --ink-2:#132651; --harbour-deep:#1B45AE; --brick-deep:#E9A22A; --paper-deep:#E8EEF9;
+  --card:#FFFFFF; --line:rgba(12,26,54,.12); --line-strong:rgba(12,26,54,.24);
+  --on-ink:rgba(244,247,252,.78); --error:#B3261E;
+  --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
+  --sans:"Figtree", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --max:1200px; --gutter:clamp(20px,5vw,48px); --section:clamp(72px,9vw,120px);
+  --radius:18px; --ease:cubic-bezier(.2,.7,.2,1); --header-h:76px;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 12px)}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:600;line-height:1.1}
+.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
+:focus-visible{outline:3px solid var(--brick);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:16px;top:-60px;z-index:200;background:var(--ink);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
+.skip:focus{top:12px}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.todo{font-family:ui-monospace,Menlo,monospace;font-size:.82em;background:rgba(85,98,122,.12);border:1px dashed var(--granite);border-radius:4px;padding:1px 6px}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:54px;padding:0 28px;border-radius:999px;border:2px solid transparent;font:600 1rem/1.1 var(--sans);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background-color .2s,color .2s,border-color .2s,box-shadow .25s,transform .2s var(--ease);touch-action:manipulation}
+.btn:active{transform:scale(.98)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--brick);color:var(--ink)}
+.btn-primary:hover{background:var(--brick-deep);box-shadow:0 10px 24px -12px rgba(233,162,42,.8)}
+.btn-blue{background:var(--harbour);color:#fff}
+.btn-blue:hover{background:var(--harbour-deep)}
+.btn-outline{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-outline:hover{background:var(--ink);color:#fff}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff;background:transparent}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.btn-quiet{border-color:var(--line-strong);color:var(--ink);background:transparent}
+.btn-quiet:hover{border-color:var(--harbour);color:var(--harbour-deep)}
+.btn-sm{min-height:44px;padding:0 18px;font-size:.94rem}
+.btn[aria-disabled="true"]{background:transparent!important;border-color:rgba(255,255,255,.22)!important;color:rgba(255,255,255,.55)!important;box-shadow:none!important;pointer-events:none}
+
+/* ---------- Header (GEICO-style: part of the blue band, turns navy on scroll) ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:var(--harbour);color:#fff;transition:background-color .35s,box-shadow .35s}
+.site-header.is-scrolled{background:var(--ink);box-shadow:0 10px 30px -18px rgba(0,0,0,.6)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.brand-mark{width:40px;height:40px;flex:none}
+.brand-name{display:block;font:400 1.75rem/1 var(--serif);letter-spacing:-.01em}
+.brand-sub{display:block;margin-top:3px;font-size:.72rem;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.75)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav-links{display:flex;gap:4px}
+.nav-links a{display:block;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.98rem;color:#fff;transition:background-color .2s}
+.nav-links a:hover{background:rgba(255,255,255,.12)}
+.nav-actions{display:flex;align-items:center;gap:14px}
+.nav-phone{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:#fff;text-decoration:none;white-space:nowrap}
+.nav-phone svg{width:18px;height:18px}
+.nav-quote{min-height:46px;padding:0 22px}
+.menu-btn{display:none;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:1.5px solid rgba(255,255,255,.55);border-radius:999px;background:transparent;color:#fff;font-weight:600;cursor:pointer}
+.menu-icon{width:18px;height:12px;position:relative}
+.menu-icon::before,.menu-icon::after{content:"";position:absolute;left:0;right:0;height:2px;background:currentColor;border-radius:2px;transition:transform .25s var(--ease),top .25s var(--ease)}
+.menu-icon::before{top:1px}.menu-icon::after{top:9px}
+.menu-btn[aria-expanded="true"] .menu-icon::before{top:5px;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] .menu-icon::after{top:5px;transform:rotate(-45deg)}
+
+/* ---------- 1. Hero ---------- */
+.hero{background:var(--harbour);color:#fff;padding-top:clamp(28px,5vw,64px);position:relative;z-index:1;overflow-x:clip}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,5vw,72px);align-items:center}
+.proof-line{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;font-size:.98rem;color:rgba(255,255,255,.86)}
+.proof-dots{display:flex}
+.proof-dots span{width:30px;height:30px;border-radius:50%;border:2px solid var(--harbour);display:grid;place-items:center;font-size:.72rem;font-weight:700;color:var(--ink)}
+.proof-dots span+span{margin-left:-8px}
+.hero h1{font:400 clamp(3rem,6.6vw,5.6rem)/.98 var(--serif);letter-spacing:-.015em;max-width:11ch}
+.hero h1 em{font-style:italic}
+.lede{margin:22px 0 32px;max-width:40ch;font-size:clamp(1.08rem,1.5vw,1.25rem);color:rgba(255,255,255,.9)}
+.quote-row{display:flex;gap:10px;max-width:520px}
+.zip-field{position:relative;flex:0 0 170px}
+.zip-field label{position:absolute;left:20px;top:9px;font-size:.72rem;font-weight:700;letter-spacing:.04em;color:var(--granite)}
+.zip-field input{width:100%;height:100%;min-height:62px;padding:24px 20px 8px;border:0;border-radius:999px;background:#fff;color:var(--ink);font-size:1.15rem;font-weight:600;letter-spacing:.04em}
+.zip-field input:focus{outline:3px solid var(--brick);outline-offset:2px}
+.zip-field input[aria-invalid="true"]{outline:3px solid #ffb4ab}
+.quote-row .btn{flex:1;min-height:62px;font-size:1.05rem}
+.quote-alt{margin-top:14px;font-size:.95rem;color:rgba(255,255,255,.82)}
+.quote-alt a{color:#fff;font-weight:600}
+.jump{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:36px;max-width:560px}
+.jump p{width:100%;font-size:.98rem;color:rgba(255,255,255,.88)}
+.jump a{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border-radius:999px;background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4);color:#fff;font-weight:600;text-decoration:none;transition:background-color .2s}
+.jump a:hover{background:rgba(255,255,255,.22)}
+.scroll-cue{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 16px 6px;border-radius:999px;background:rgba(12,26,54,.8);color:#fff;font-size:.88rem;font-weight:600;text-decoration:none;z-index:40;transition:opacity .4s}
+.scroll-cue{white-space:nowrap}
+.scroll-cue svg{width:22px;height:22px;animation:nudge 1.8s ease-in-out infinite}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+.scroll-cue.is-gone{opacity:0;pointer-events:none}
+.steps-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:40px;max-width:520px}
+.step-chip{padding:14px 12px 12px;border-radius:14px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.step-chip svg{width:20px;height:20px;margin-bottom:14px;color:var(--brick)}
+.step-chip b{display:block;font-size:.86rem;font-weight:600;line-height:1.25}
+.step-chip span{display:block;margin-top:8px;padding-top:6px;border-top:1px solid rgba(255,255,255,.28);font-size:.78rem;font-weight:600;color:#fff}
+.hero-card{position:relative;margin-bottom:-120px;border-radius:32px;box-shadow:0 40px 80px -40px rgba(4,12,32,.8)}
+.hero-photo{border-radius:32px;width:100%;height:auto;aspect-ratio:8/7;object-fit:cover;object-position:62% 50%;animation:settle 1.8s var(--ease) both}
+@keyframes settle{from{transform:scale(1.06)}to{transform:none}}
+.hero-caption{position:absolute;left:18px;bottom:18px;display:flex;gap:10px;flex-wrap:wrap}
+.hero-caption a{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(12,26,54,.6);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);color:#fff;text-decoration:none;font-size:.86rem;font-weight:600}
+.hero-caption svg{width:15px;height:15px;color:var(--brick)}
+.crash{width:100%;height:auto;margin:26px 0 20px;overflow:visible}
+.cov-pitch .pitch-sub{margin-top:12px;max-width:36ch}
+.crash .steam circle{animation:steam 2.8s ease-out infinite}
+.crash .steam circle:nth-child(2){animation-delay:.9s}
+.crash .steam circle:nth-child(3){animation-delay:1.8s}
+@keyframes steam{0%{opacity:0;transform:translateY(8px)}30%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
+.crash .stars{transform-origin:160px 36px;animation:dizzy 4s linear infinite}
+@keyframes dizzy{to{transform:rotate(360deg)}}
+.crash .crash-head{transform-origin:130px 130px;animation:wobble 4s ease-in-out infinite}
+@keyframes wobble{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.9)}}
+.mascot .wave{transform-origin:104px 214px;animation:wave 3.2s ease-in-out 1s infinite}
+@keyframes wave{0%,55%,100%{transform:rotate(0)}10%{transform:rotate(-16deg)}20%{transform:rotate(10deg)}30%{transform:rotate(-16deg)}40%{transform:rotate(10deg)}}
+.mascot .head{transform-origin:130px 130px;animation:tilt 3.2s ease-in-out 1s infinite}
+@keyframes tilt{0%,55%,100%{transform:rotate(0)}20%,40%{transform:rotate(-5deg)}}
+
+/* The house: windows switch on at dusk */
+.lit{opacity:0;animation:light-on .9s var(--ease) forwards;animation-delay:var(--d,0s)}
+.glow{opacity:0;animation:light-on 1.6s ease-out forwards;animation-delay:var(--d,0s)}
+@keyframes light-on{0%{opacity:0}35%{opacity:.55}45%{opacity:.25}100%{opacity:1}}
+.star{animation:twinkle 5s ease-in-out infinite;animation-delay:var(--d,0s)}
+@keyframes twinkle{0%,100%{opacity:.9}50%{opacity:.3}}
+
+/* ---------- 2. Bills & claims (night band) ---------- */
+.service{background:var(--paper);color:var(--ink);padding-block:var(--section)}
+.section-head h2{font:400 clamp(2.4rem,4.6vw,3.8rem)/1 var(--serif);letter-spacing:-.01em}
+.section-head p{margin-top:14px;max-width:52ch;font-size:1.1rem}
+.service .section-head p{color:var(--granite)}
+.quick{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:36px}
+.quick a{display:flex;flex-direction:column;gap:18px;min-height:128px;padding:20px;border-radius:var(--radius);background:var(--card);box-shadow:0 1px 2px rgba(12,26,54,.06),0 14px 34px -24px rgba(12,26,54,.35);color:var(--ink);text-decoration:none;font-weight:600;transition:background-color .25s,transform .25s var(--ease)}
+.quick a:hover{transform:translateY(-2px);box-shadow:0 1px 2px rgba(12,26,54,.06),0 20px 40px -22px rgba(12,26,54,.45)}
+.quick svg{width:26px;height:26px;color:var(--harbour)}
+.quick small{display:block;margin-top:4px;font-weight:400;font-size:.86rem;color:var(--granite)}
+.service-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,32px);margin-top:36px;align-items:stretch}
+.panel{padding:clamp(24px,3.5vw,40px);border-radius:24px;background:var(--ink);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.panel h3{font:400 clamp(1.8rem,2.8vw,2.4rem)/1.05 var(--serif)}
+.panel > p{margin-top:10px;color:var(--on-ink)}
+.carrier-pick{margin-top:24px}
+.carrier-pick label{display:block;margin-bottom:8px;font-size:.9rem;font-weight:600}
+.select{position:relative}
+.select select{width:100%;min-height:58px;padding:0 48px 0 20px;border:0;border-radius:14px;background:#fff;color:var(--ink);font-size:1.02rem;font-weight:600;appearance:none;-webkit-appearance:none;cursor:pointer}
+.select::after{content:"";position:absolute;right:20px;top:50%;width:10px;height:10px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.carrier-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.carrier-note{margin-top:14px;font-size:.9rem;color:var(--on-ink)}
+.carrier-note a{color:#fff;font-weight:600}
+.accident{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:start}
+.accident h3{grid-column:1}
+.acc-steps{grid-column:1/-1;display:grid;gap:14px;margin-top:6px;counter-reset:s}
+.acc-steps li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;gap:12px;font-size:.98rem;color:var(--on-ink)}
+.acc-steps li::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:rgba(245,181,68,.16);color:var(--brick);font-weight:700;font-size:.9rem}
+.acc-steps b{color:#fff;font-weight:600}
+.accident .btn{grid-column:1/-1;margin-top:10px}
+
+/* ---------- 3. Coverage (GEICO "get a quote today" tabs) ---------- */
+.cov-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:0 clamp(32px,5vw,64px)!important;gap:0 clamp(16px,2vw,28px);align-items:end}
+.cov-pitch{align-self:start;padding-bottom:0}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:12px;background:var(--harbour-deep);color:var(--brick);font-weight:700;font-size:1rem;letter-spacing:.08em;text-transform:uppercase}
+.badge svg{width:20px;height:20px;color:var(--brick)}
+.cov-pitch h3{margin-top:0;font:400 clamp(2.2rem,3vw,2.8rem)/1 var(--serif)}
+.cov-pitch p:not(.badge){margin-top:12px;color:var(--granite)}
+.mascot{align-self:end;margin-bottom:-6px}
+.mascot svg{width:100%;height:auto;overflow:visible}
+@keyframes peek{0%,82%,100%{transform:rotate(0)}88%{transform:rotate(-8deg)}94%{transform:rotate(3deg)}}
+.cov-main{min-width:0}
+.coverage{background:var(--ink);color:#fff;padding-top:calc(120px + 40px);padding-bottom:var(--section)}
+.coverage .section-head p,.coverage .cov-pitch p:not(.badge),.coverage .companies{color:var(--on-ink)}
+.coverage .companies b{color:#fff}
+.coverage .tabs{border-bottom-color:rgba(255,255,255,.2)}
+.coverage .tab{color:var(--on-ink)}
+.coverage .tab[aria-selected="true"]{color:#fff}
+.coverage .tab::after{background:var(--brick)}
+.coverage .svc{background:var(--ink-2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);color:#fff}
+.coverage .svc svg{color:var(--brick)}
+.coverage .svc p{color:var(--on-ink)}
+.coverage .svc p a{color:#fff}
+.coverage .calc .field label{color:#fff}
+.coverage .field input,.coverage .field select{color:var(--ink)}
+.coverage .calc-out{background:var(--harbour)}
+.coverage .calc-fine{color:var(--on-ink)}
+.tabs{display:flex;gap:6px;margin-top:32px;border-bottom:1px solid var(--line-strong);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{position:relative;padding:14px 18px;border:0;background:none;font-weight:700;font-size:.98rem;letter-spacing:.02em;color:var(--granite);cursor:pointer;white-space:nowrap;min-height:48px}
+.tab::after{content:"";position:absolute;left:12px;right:12px;bottom:-1px;height:4px;border-radius:4px 4px 0 0;background:var(--harbour);transform:scaleX(0);transition:transform .3s var(--ease)}
+.tab[aria-selected="true"]{color:var(--ink)}
+.tab[aria-selected="true"]::after{transform:scaleX(1)}
+.tab-panel{padding-top:24px;animation:fade-in .35s var(--ease)}
+@keyframes fade-in{from{opacity:0;transform:translateY(6px)}}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.products{grid-auto-rows:1fr}
+.products li{display:flex}
+.product{display:flex;align-items:center;gap:16px;width:100%;height:100%;min-height:92px;padding:18px 20px;border:0;border-radius:var(--radius);background:var(--harbour);color:#fff;text-align:left;cursor:pointer;transition:background-color .25s,transform .25s var(--ease)}
+.product:hover{background:var(--harbour-deep);transform:translateY(-2px)}
+.product svg{width:30px;height:30px;flex:none}
+.product b{display:block;font-size:1.06rem;font-weight:600}
+.product small{display:block;margin-top:2px;font-size:.86rem;color:rgba(255,255,255,.9)}
+.product .go{margin-left:auto;font-size:1.2rem;opacity:.7;transition:transform .25s var(--ease),opacity .25s}
+.product:hover .go{transform:translateX(3px);opacity:1}
+.companies{margin-top:22px;font-size:.95rem;color:var(--granite)}
+.companies b{color:var(--ink)}
+.svc-list ul{display:grid;gap:18px;margin-top:18px}
+.svc-list li{display:grid;grid-template-columns:26px 1fr;gap:14px;color:var(--on-ink);font-size:.96rem}
+.svc-list li svg{margin:0}
+.svc-list b{display:block;color:#fff;font-weight:600}
+.svc-list a{color:#fff;font-weight:600}
+.services{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px;margin-top:clamp(48px,6vw,72px)}
+.svc{padding:24px;border-radius:var(--radius);background:var(--card);box-shadow:0 1px 2px rgba(12,26,54,.06),0 14px 34px -24px rgba(12,26,54,.35)}
+.svc svg{width:26px;height:26px;color:var(--harbour);margin-bottom:16px}
+.svc h3{font-size:1.1rem}
+.svc p{margin-top:6px;font-size:.95rem;color:var(--granite)}
+.svc p a{color:var(--harbour-deep);font-weight:600}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.calc h3{grid-column:1/-1;font-size:1.1rem}
+.calc .field input,.calc .field select{min-height:44px;padding:8px 12px}
+.calc-out{grid-column:1/-1;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 16px;border-radius:12px;background:var(--ink);color:#fff}
+.calc-out span{font-size:.82rem;color:var(--on-ink)}
+.calc-out output{font:400 2rem/1 var(--serif)}
+.calc-fine{grid-column:1/-1;font-size:.78rem;color:var(--granite)}
+
+/* ---------- 4. Why Supino (GEICO-style numbers) ---------- */
+.why{background:linear-gradient(180deg,var(--ink) 0%,var(--ink) 55%,var(--harbour-deep) 100%);color:#fff;padding-block:var(--section);overflow:hidden}
+.why .section-head p{color:var(--on-ink)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:clamp(40px,5vw,64px)}
+.stat b{display:block;font:400 clamp(4.2rem,9vw,7.2rem)/.9 var(--serif);color:var(--brick);letter-spacing:-.02em}
+.stat h3{margin-top:14px;font-size:1.02rem;letter-spacing:.02em}
+.stat p{margin-top:8px;max-width:30ch;color:var(--on-ink);font-size:.98rem}
+.story{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);margin-top:clamp(56px,7vw,96px);padding-top:clamp(40px,5vw,56px);border-top:1px solid rgba(255,255,255,.14)}
+.story p{color:var(--on-ink)}
+.story p+p{margin-top:14px}
+.story-photo{position:relative;margin:0}
+.story-photo img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:24px}
+.story-photo figcaption{margin-top:18px;padding-left:18px;border-left:3px solid var(--brick)}
+.story blockquote{margin:0;font:400 clamp(1.4rem,2.2vw,1.8rem)/1.2 var(--serif)}
+.story cite{display:block;margin-top:8px;font-style:normal;font-size:.92rem;color:var(--on-ink)}
+.reviews-head{display:flex;align-items:center;gap:16px;margin-top:clamp(56px,7vw,96px);margin-bottom:24px}
+.reviews-head h3{font:400 clamp(1.8rem,3vw,2.4rem)/1 var(--serif)}
+.rv-stage{overflow:hidden;padding-block:10px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.rv-lane{--gap:18px;display:flex;gap:var(--gap);width:max-content;animation:drift 80s linear infinite}
+.rv-stage:hover .rv-lane,.rv-stage:focus-within .rv-lane,.why.is-paused .rv-lane{animation-play-state:paused}
+@keyframes drift{to{transform:translateX(calc(-50% - var(--gap) / 2))}}
+.rv-card{display:flex;flex-direction:column;gap:20px;width:380px;margin:0;padding:26px;border-radius:var(--radius);background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.rv-card .q{width:30px;height:24px;color:var(--brick)}
+.rv-card blockquote{margin:0;font-size:1.05rem;line-height:1.55}
+.rv-card figcaption{display:flex;align-items:center;gap:12px;margin-top:auto;font-size:.9rem}
+.rv-card figcaption b{display:block}
+.rv-card figcaption small{color:var(--on-ink)}
+.rv-avatar{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--brick);color:var(--ink);font-weight:700;flex:none}
+
+/* ---------- 5. Contact ---------- */
+.contact{padding-block:var(--section)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,5vw,64px);align-items:start;margin-top:36px}
+.offices{display:grid;gap:12px}
+.office{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:22px 24px;border-radius:var(--radius);background:var(--card);box-shadow:0 1px 2px rgba(12,26,54,.06),0 14px 34px -24px rgba(12,26,54,.35)}
+.office-map{grid-column:1/-1;width:100%;height:170px;margin-bottom:14px;border:0;border-radius:12px;background:var(--paper-deep)}
+.office h3{font-size:1.15rem}
+.office address{font-style:normal;color:var(--granite);font-size:.96rem}
+.office .note{grid-column:1/-1;margin-top:6px;font-size:.88rem;color:var(--granite)}
+.office dl{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:12px 0 0;font-size:.95rem}
+.office dt{color:var(--granite)}
+.office dd{margin:0}
+.office .btn{grid-row:2/span 2;grid-column:2;align-self:start}
+.contact-direct{margin-top:18px;font-size:.96rem;color:var(--granite)}
+.contact-direct a{color:var(--ink);font-weight:600}
+.form-card{padding:clamp(24px,3.5vw,36px);border-radius:24px;background:var(--card);box-shadow:0 1px 2px rgba(12,26,54,.06),0 30px 60px -40px rgba(12,26,54,.5)}
+.form-card h3{font:400 2rem/1 var(--serif)}
+.form-card > p{margin-top:8px;color:var(--granite);font-size:.96rem}
+.form-card > p a{color:var(--harbour-deep);font-weight:600}
+.form-warn{margin-top:14px!important;padding:10px 14px;border-radius:12px;background:var(--paper-deep);font-size:.88rem!important;color:var(--ink)!important}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.form-grid .full{grid-column:1/-1}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:20px}
+.form-status[data-state="ok"]{color:#1E7B46;font-weight:600}
+.form-status[data-state="err"]{color:var(--error)}
+.contact-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.contact-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.contact-photo{margin:0;overflow:hidden;border-radius:24px}
+.contact-photo img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;transition:transform .8s var(--ease)}
+.contact-photo:hover img{transform:scale(1.03)}
+.open-now{display:inline-flex!important;align-items:center;gap:10px;margin:0 0 16px!important;padding:8px 14px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);font-size:.92rem!important;font-weight:600;color:var(--ink)!important}
+.open-dot{position:relative;width:10px;height:10px;border-radius:50%;background:#8A96AE}
+.open-now.is-open .open-dot{background:#1E9E5A}
+.open-now.is-open .open-dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid #1E9E5A;animation:ping 2s ease-out infinite}
+@keyframes ping{0%{opacity:.8;transform:scale(.5)}100%{opacity:0;transform:scale(1.4)}}
+.office{transition:transform .3s var(--ease),box-shadow .3s}
+.office:hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(12,26,54,.06),0 24px 44px -26px rgba(12,26,54,.5)}
+.team-photo{position:relative;margin:clamp(48px,6vw,72px) 0 0}
+.team-photo img{width:100%;height:auto;aspect-ratio:21/8;object-fit:cover;object-position:50% 40%;border-radius:24px}
+.team-photo figcaption{position:absolute;left:20px;bottom:20px;padding:12px 18px;border-radius:999px;background:rgba(12,26,54,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;font-weight:600}
+.team-photo figcaption a{color:var(--brick)}
+.team{margin-top:clamp(40px,5vw,56px)}
+.team h3{font:400 2rem/1 var(--serif)}
+.team > p{margin-top:6px;color:var(--granite)}
+.team-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px;margin-top:20px}
+.team-list li{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.team-avatar{grid-row:span 2;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--paper-deep);color:var(--harbour-deep);font-weight:700;font-size:.88rem}
+.team-list b{display:block;font-weight:600}
+.team-list small{color:var(--granite);font-size:.84rem}
+.team-list a{grid-column:2;font-size:.88rem;color:var(--harbour-deep);text-decoration:none;overflow-wrap:anywhere}
+.team-more{display:none;margin-top:12px}
+
+/* ---------- Forms (shared with the quote flow) ---------- */
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.88rem;font-weight:600}
+.field .opt{font-weight:400;color:var(--granite)}
+.field input,.field select,.field textarea{width:100%;min-height:50px;padding:12px 14px;background:var(--card);border:1.5px solid var(--line-strong);border-radius:12px;font-size:1rem;transition:border-color .2s,box-shadow .2s}
+.field textarea{min-height:110px;resize:vertical}
+.field select{appearance:none;-webkit-appearance:none;padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%230C1A36' stroke-width='1.8'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--harbour);box-shadow:0 0 0 3px rgba(35,88,214,.2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+
+/* ---------- Quote flow (dialog) ---------- */
+html.qf-open{overflow:hidden}
+.qf{padding:0;border:0;width:min(640px,calc(100vw - 32px));height:min(720px,calc(100dvh - 48px));max-width:none;max-height:none;border-radius:18px;background:var(--paper);color:var(--ink);box-shadow:0 40px 90px -30px rgba(14,42,71,.65);overflow:hidden}
+.qf::backdrop{background:rgba(14,42,71,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.qf[open]{animation:qf-in .35s var(--ease)}
+@keyframes qf-in{from{opacity:0;transform:translateY(12px)}}
+.qf-shell{display:flex;flex-direction:column;height:100%}
+.qf-top{display:flex;align-items:center;gap:16px;padding:16px 16px 16px 24px;border-bottom:1px solid var(--line)}
+.qf-brand{font:600 1.05rem/1 var(--serif)}
+.qf-progress{flex:1;height:6px;border-radius:99px;background:var(--paper-deep);overflow:hidden}
+.qf-progress i{display:block;height:100%;width:0;border-radius:inherit;background:var(--harbour);transition:width .45s var(--ease)}
+.qf-count{font-size:.82rem;color:var(--granite);white-space:nowrap;font-variant-numeric:tabular-nums}
+.qf-close{display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:8px;background:transparent;cursor:pointer;color:var(--ink)}
+.qf-close:hover{background:var(--paper-deep)}
+.qf-close svg{width:20px;height:20px}
+.qf-body{flex:1;overflow:auto;padding:clamp(28px,5vw,44px) clamp(20px,6vw,48px) 32px;-webkit-overflow-scrolling:touch}
+.qf-step[hidden]{display:none}
+.qf-step{animation:qf-step .35s var(--ease)}
+@keyframes qf-step{from{opacity:0;transform:translateX(10px)}}
+.qf-step h2:focus{outline:none}
+.qf-step h2{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;font-size:clamp(1.65rem,4.4vw,2.2rem);max-width:22ch}
+.qf-step .hint{margin-top:10px;color:var(--granite);max-width:46ch}
+.qf-fields{display:grid;gap:14px;margin-top:26px}
+.qf-fields.two{grid-template-columns:1fr 1fr}
+.qf-fields .full{grid-column:1/-1}
+.qf-group-label{margin:22px 0 10px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--granite)}
+.qf-group-label:first-child{margin-top:0}
+.qf .chips{margin:0}
+.qf-opts{display:grid;gap:10px;margin-top:26px}
+.qf-opts.cols{grid-template-columns:1fr 1fr}
+.opt-tile{position:relative;display:block}
+.opt-tile input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opt-tile span{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;padding:0 18px;background:var(--card);border:1.5px solid var(--line-strong);border-radius:10px;font-weight:500;transition:border-color .2s,background-color .2s}
+.opt-tile span::after{content:"";flex:none;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line-strong);transition:all .2s}
+.opt-tile input[type="checkbox"] + span::after{border-radius:5px}
+.opt-tile:hover span{border-color:var(--ink)}
+.opt-tile input:checked + span{border-color:var(--harbour);background:rgba(47,111,163,.07)}
+.opt-tile input:checked + span::after{border-color:var(--harbour);background:var(--harbour) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='white' stroke-width='2.4'%3E%3Cpath d='M5.5 10.5l3 3 6-7'/%3E%3C/svg%3E") center/14px no-repeat}
+.opt-tile input:focus-visible + span{outline:3px solid var(--harbour);outline-offset:2px}
+.vehicle{padding:18px;border-radius:var(--radius);background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.vehicle + .vehicle{margin-top:12px}
+.vehicle-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-weight:600}
+.vehicle-head button{border:0;background:none;color:var(--granite);font-size:.9rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px;min-height:36px}
+.vehicle .qf-fields{margin-top:0;grid-template-columns:.8fr 1fr 1fr}
+.add-link{display:inline-flex;align-items:center;gap:8px;margin-top:14px;min-height:44px;border:0;background:none;padding:0;font-weight:600;color:var(--harbour-deep);cursor:pointer}
+.check-line{display:flex;align-items:center;gap:10px;margin-top:4px;font-size:.96rem;cursor:pointer}
+.check-line input{width:20px;height:20px;accent-color:var(--harbour)}
+.qf-error{margin-top:16px;color:var(--error);font-size:.95rem;font-weight:500;min-height:1.4em}
+.qf-fine{margin-top:18px;font-size:.85rem;color:var(--granite)}
+.qf-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px)) 24px;border-top:1px solid var(--line);background:var(--paper)}
+.qf-back{min-height:48px;padding:0 6px;border:0;background:none;font-weight:600;color:var(--ink);cursor:pointer}
+.qf-back[hidden]{visibility:hidden;display:block!important}
+.qf-next{min-width:170px}
+.qf-done{text-align:left}
+.qf-done h2{font-size:2.4rem}
+.qf-done .tick{display:grid;place-items:center;width:64px;height:64px;margin-bottom:24px;border-radius:50%;background:var(--harbour);color:#fff}
+.qf-done .tick svg{width:30px;height:30px}
+.qf-done p{margin-top:14px;font-size:1.1rem;max-width:40ch}
+
+
+@media (max-width:760px){
+  .qf{width:100vw;height:100dvh;margin:0;border-radius:0;max-width:100vw}
+  .qf-top{padding:10px 8px 10px 20px;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+  .qf-brand{display:none}
+  .qf-body{padding:28px 20px 24px}
+  .qf-fields.two,.qf-opts.cols{grid-template-columns:minmax(0,1fr)}
+  .qf-opts.compact{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+  .qf-opts.compact .opt-tile span{min-height:56px;padding:8px 12px;font-size:.93rem;line-height:1.25}
+  .qf-opts.compact .opt-tile span::after{width:18px;height:18px}
+  .vehicle .qf-fields{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .vehicle .qf-fields .v-year{grid-column:1/-1}
+  .qf-foot{padding-left:12px}
+  .qf-next{flex:1;min-width:0}
+}
+
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--ink);color:var(--on-ink);padding-block:56px 36px;font-size:.95rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.site-footer h4{margin-bottom:10px;font-size:.95rem;color:#fff}
+.site-footer a{color:#fff;text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer address{font-style:normal}
+.site-footer .brand-name{color:#fff}
+.footer-links{display:grid;gap:6px}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.86rem}
+.callbar{display:none}
+
+/* ---------- Motion ---------- */
+/* No generic fade-ins: the hero photo settle, Bumper's peek, the count-up and the review drift carry the motion. */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .lit,.glow,.hero-photo{animation:none;opacity:1}
+  .star,.rv-lane,.scroll-cue svg,.open-dot::after{animation:none}
+  .rv-stage{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+  .rv-card[aria-hidden="true"]{display:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .crash .steam circle,.crash .stars,.crash .crash-head{animation:none}
+  *{transition-duration:.01ms!important}
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width:1060px){
+  .quick{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-phone span{display:none}
+}
+@media (max-width:900px){
+  .hero-grid,.service-grid,.story,.contact-grid,.contact-top{grid-template-columns:minmax(0,1fr)}
+  .contact-photo{order:-1}
+  .cov-grid{grid-template-columns:minmax(0,1fr)}
+  .crash{max-width:440px}
+  .coverage{padding-top:calc(80px + 32px)}
+  .hero-grid{align-items:end}
+  .cov-main{grid-column:1/-1;margin-top:8px}
+  .cov-pitch{padding-bottom:12px}
+  .hero-card{margin-bottom:-80px}
+
+  .stats{grid-template-columns:1fr 1fr 1fr;gap:18px}
+}
+
+/* ---------- Phone ---------- */
+@media (max-width:760px){
+  :root{--header-h:64px;--section:64px}
+  body{font-size:1rem;padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+  .brand-name{font-size:1.6rem}
+  .brand-sub{display:none}
+  .brand-mark{width:34px;height:34px}
+  .menu-btn{display:inline-flex}
+  .nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:6px var(--gutter) 20px;background:var(--ink)}
+  .nav-links{flex-direction:column;gap:0}
+  .nav-links a{padding:14px 0;border-radius:0;border-bottom:1px solid rgba(255,255,255,.12);font-size:1.05rem}
+  .nav-actions{flex-direction:column;align-items:stretch;gap:10px;margin-top:16px}
+  .nav-phone{justify-content:center;min-height:48px;border:1.5px solid rgba(255,255,255,.4);border-radius:999px}
+  .nav-phone span{display:inline}
+  .site-header{transition:transform .3s var(--ease),background-color .35s}
+  .site-header.is-hidden{transform:translateY(-100%)}
+  .hero h1{font-size:clamp(2.9rem,13vw,3.6rem)}
+  .lede{margin:14px 0 20px;font-size:1.02rem}
+  .proof-line{margin-bottom:14px;font-size:.9rem}
+  .quote-alt{margin-top:10px}
+  .quote-row{flex-direction:column}
+  .zip-field{flex-basis:auto}
+  .zip-field input,.quote-row .btn{min-height:56px}
+  .steps-row{display:none}
+  .jump{margin-top:24px}
+  .jump a{flex:1 1 auto;justify-content:center}
+  .scroll-cue{bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  .hero-grid{gap:24px}
+  .hero-photo{aspect-ratio:4/3}
+  .team-photo img{aspect-ratio:4/3}
+  .team-photo figcaption{left:12px;right:12px;bottom:12px;border-radius:14px;font-size:.9rem}
+  .tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;border:0;overflow:visible}
+  .tab{border-radius:12px;background:var(--ink-2);text-align:center}
+  .tab::after{display:none}
+  .coverage .tab[aria-selected="true"]{background:var(--brick);color:var(--ink)}
+  .hero-card{border-radius:22px;margin-bottom:0;order:-1}
+  .hero-card .hero-photo{aspect-ratio:5/4;border-radius:22px}
+  .hero{padding-bottom:28px}
+  .hero-caption{left:10px;bottom:10px;gap:6px}
+  .hero-caption a{padding:7px 11px;font-size:.78rem}
+
+  .quick{grid-template-columns:1fr 1fr;gap:8px}
+  .quick a{min-height:0;flex-direction:row;align-items:center;gap:12px;padding:16px}
+  .quick a:last-child{grid-column:1/-1}
+  .quick small{display:none}
+  .products{grid-template-columns:minmax(0,1fr);gap:8px}
+  .hero-grid > div:first-child{padding-bottom:0}
+  .coverage{padding-top:calc(56px + 32px)}
+  .cov-pitch h3{font-size:2.1rem}
+  .product{min-height:74px;padding:14px 16px}
+  .services{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:minmax(0,1fr);gap:28px}
+  .stat b{font-size:4.6rem}
+  .rv-card{width:280px;padding:22px}
+  .rv-stage{margin-inline:calc(var(--gutter) * -1)}
+  .office{grid-template-columns:1fr}
+  .office .btn{grid-row:auto;grid-column:1;justify-self:start;margin-top:10px}
+  .form-grid{grid-template-columns:minmax(0,1fr)}
+  .form-foot .btn{width:100%}
+  .contact-cta .btn{flex:1 1 100%}
+  .team-list.is-folded li:nth-child(n+4){display:none}
+  .team-more{display:inline-flex}
+  .footer-grid{grid-template-columns:minmax(0,1fr)}
+  .callbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));background:rgba(12,26,54,.97)}
+  .callbar .btn{flex:1;min-height:48px;padding:0 12px}
+  .callbar .btn-light{background:#fff;color:var(--ink)}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Supino Insurance, back to top">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#F4F7FC"/><path d="M9 21 20 11l11 10v10H9z" fill="#2358D6"/><rect x="17" y="23" width="6" height="8" fill="#F5B544"/></svg>
+      <span><span class="brand-name">Supino</span><span class="brand-sub">Insurance · Malden &amp; Lynnfield</span></span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-icon" aria-hidden="true"></span> Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="#coverage">Insurance</a></li>
+        <li><a href="#service">Claims</a></li>
+        <li><a href="#service">Pay a bill</a></li>
+        <li><a href="#why">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="nav-phone" href="tel:+17813222800"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>781-322-2800</span></a>
+        <a class="btn btn-ghost nav-quote" href="#coverage" data-quote="">Get a quote</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ======================= 1. HERO ======================= -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="proof-line"><span class="proof-dots" aria-hidden="true"><span style="background:#F5B544">35</span><span style="background:#F4F7FC">+</span></span>Family-run in Malden since 1989</p>
+      <h1 id="hero-title">The house, the car, <em>covered.</em></h1>
+      <p class="lede">Auto, home and business insurance from a local agency in Malden and Lynnfield. We compare 15+ insurance companies for you.</p>
+      <form class="quote" id="quick-quote" novalidate>
+        <div class="quote-row">
+          <div class="zip-field">
+            <label for="hero-zip">ZIP code</label>
+            <input id="hero-zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="02148">
+          </div>
+          <button class="btn btn-primary" type="submit">Start my quote</button>
+        </div>
+        <p class="quote-alt">Rather talk to a person? <a href="tel:+17813222800">Call 781-322-2800</a></p>
+      </form>
+      <nav class="jump" aria-label="Jump to">
+        <p>Already a customer? Jump straight to:</p>
+        <a href="#service">Pay a bill</a>
+        <a href="#service">File a claim</a>
+        <a href="#accident">Had an accident?</a>
+      </nav>
+    </div>
+
+    <!-- Hero photo (StockSnap, CC0). Swap for a real Supino client or office photo when available. -->
+    <div class="hero-card">
+      <img class="hero-photo" src="images/family-picnic.jpg" srcset="images/family-picnic-640.jpg 640w, images/family-picnic.jpg 960w" sizes="(max-width: 900px) 100vw, 50vw" width="960" height="640" alt="A family with two kids and their dog on a picnic blanket in the park" fetchpriority="high">
+      <div class="hero-caption">
+        <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>1012 Eastern Ave, Malden</a>
+        <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>550 Summer St, Lynnfield</a>
+      </div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#coverage">Scroll to see what we offer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<!-- ======================= 2. COVERAGE (GEICO-style band with Bumper) ======================= -->
+<section class="coverage" id="coverage" aria-labelledby="coverage-title">
+  <div class="wrap">
+    <div class="cov-grid">
+      <div class="cov-pitch">
+        <h3>Don't end up like Bumper.</h3>
+        <p class="pitch-sub">And if you do, we've got you covered. One call to us handles the car and the house.</p>
+        <svg class="crash" viewBox="0 0 560 290" role="img" aria-labelledby="crash-title">
+          <title id="crash-title">Bumper, a cartoon dog in a neck brace, sitting dazed in a little yellow convertible that has just rear-ended a blue car</title>
+          <ellipse cx="290" cy="262" rx="270" ry="12" fill="#000" opacity=".3"/>
+          <g class="steam" fill="#E6ECF7"><circle cx="300" cy="138" r="12"/><circle cx="316" cy="124" r="10"/><circle cx="306" cy="110" r="8"/></g>
+          <rect x="130" y="128" width="62" height="24" rx="11" fill="#F4F6FB"/>
+          <rect x="150" y="131" width="20" height="18" rx="4" fill="#2358D6"/>
+          <g transform="translate(160 92) scale(.72) translate(-130 -98)">
+            <g class="crash-head">
+              <path d="M88 64c-22 4-34 30-30 62 2 16 14 20 22 10 6-8 8-24 8-40z" fill="#8B5A3A"/>
+              <path d="M172 64c22 4 34 30 30 62-2 16-14 20-22 10-6-8-8-24-8-40z" fill="#8B5A3A"/>
+              <path d="M76 84c-6 14-6 30-2 42" stroke="#A8744F" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <circle cx="130" cy="98" r="52" fill="#D9A267"/>
+              <path d="M104 50l6-16 6 14 6-18 6 16 7-14 3 18" fill="#C98C52"/>
+              <ellipse cx="150" cy="86" rx="20" ry="17" fill="#B77B45"/>
+              <ellipse cx="130" cy="120" rx="32" ry="24" fill="#F2DDBA"/>
+              <ellipse cx="130" cy="108" rx="11" ry="8" fill="#3B2A22"/>
+              <circle cx="126" cy="105" r="2.5" fill="#fff" opacity=".7"/>
+              <path d="M130 116v8M130 124c-4 6-12 6-14 1M130 124c4 6 12 6 14 1" stroke="#3B2A22" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <g fill="#B77B45"><circle cx="112" cy="122" r="1.6"/><circle cx="106" cy="118" r="1.6"/><circle cx="110" cy="114" r="1.6"/><circle cx="148" cy="122" r="1.6"/><circle cx="154" cy="118" r="1.6"/><circle cx="150" cy="114" r="1.6"/></g>
+              <circle cx="112" cy="90" r="5.5" fill="#1D1411"/><circle cx="150" cy="90" r="5.5" fill="#1D1411"/>
+              <circle cx="114" cy="88" r="1.8" fill="#fff"/><circle cx="152" cy="88" r="1.8" fill="#fff"/>
+              <path d="M102 82l16-6M160 82l-16-6" stroke="#6E4428" stroke-width="3" stroke-linecap="round"/>
+              <!-- head bandage and cheek plaster -->
+              <path d="M90 70c20-22 60-26 84-8l-4 12c-22-14-56-12-76 8z" fill="#F4F6FB"/>
+              <path d="M110 56v10M104 61h12" stroke="#E0564A" stroke-width="3" stroke-linecap="round"/>
+              <rect x="150" y="110" width="22" height="10" rx="4" transform="rotate(-22 161 115)" fill="#F1C9A0"/>
+              <g fill="#D9A574"><circle cx="157" cy="117" r="1"/><circle cx="162" cy="115" r="1"/><circle cx="167" cy="113" r="1"/></g>
+            </g>
+          </g>
+          <g class="stars" fill="#F5B544">
+            <path d="M120 40l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>
+            <path d="M196 30l2.4 5.4 5.6.8-4 4 1 5.6-5-2.6-5 2.6 1-5.6-4-4 5.6-.8z"/>
+            <path d="M152 22l2 4.4 4.6.6-3.4 3.2.8 4.6-4-2.2-4 2.2.8-4.6-3.4-3.2 4.6-.6z"/>
+          </g>
+          <path d="M226 158l24-44h8l-18 44z" fill="#9DC0F2" opacity=".75"/>
+          <ellipse cx="218" cy="152" rx="6" ry="14" fill="#0C1A36" transform="rotate(-20 218 152)"/>
+          <path d="M34 226v-44c0-16 10-26 26-28l56-6h112l58 8c18 3 28 12 30 26l2 10-10 4-8 8 10 6-8 6v10z" fill="#F5B544"/>
+          <path d="M318 162l12 8-8 8 12 6-10 8 12 6-10 8 16 4v16h-24z" fill="#E09A2A"/>
+          <path d="M318 162l12 8-8 8 12 6-10 8 12 6-10 8 16 4" fill="none" stroke="#B87618" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M34 186h290" stroke="#E09A2A" stroke-width="4"/>
+          <path d="M150 158v66" stroke="#E09A2A" stroke-width="3"/>
+          <rect x="164" y="170" width="22" height="6" rx="3" fill="#B87618"/>
+          <circle cx="326" cy="200" r="9" fill="#FFF3C4"/>
+          <path d="M320 195l6 5-3 6M326 200l6-3" stroke="#B87618" stroke-width="2" fill="none"/>
+          <rect x="26" y="208" width="18" height="14" rx="4" fill="#C9D1E4"/>
+          <path d="M318 236h26v-10" stroke="#C9D1E4" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <circle cx="98" cy="236" r="28" fill="#0C1A36"/><circle cx="98" cy="236" r="12" fill="#C9D1E4"/>
+          <circle cx="276" cy="236" r="28" fill="#0C1A36"/><circle cx="276" cy="236" r="6" fill="#55627A"/>
+          <!-- the car Bumper rear-ended -->
+          <path d="M338 226v-38c0-8 4-14 12-16l34-6 26-36c4-6 10-8 16-8h62c10 0 16 4 20 12l14 32 16 4c6 2 10 8 10 16v40z" fill="#5B86EE"/>
+          <path d="M420 130l20-26h40v26zM488 130v-26h14c6 0 10 3 12 8l8 18z" fill="#0C1A36" opacity=".45"/>
+          <path d="M338 204h210" stroke="#3E68D4" stroke-width="3"/>
+          <path d="M338 176l12 6-9 8 11 6-9 8 9 6v16h-14z" fill="#3E68D4"/>
+          <rect x="340" y="168" width="10" height="14" rx="2" fill="#E0564A"/>
+          <path d="M341 171l6 4-4 5" stroke="#FFF3C4" stroke-width="1.6" fill="none"/>
+          <circle cx="392" cy="236" r="28" fill="#0C1A36"/><circle cx="392" cy="236" r="11" fill="#C9D1E4"/>
+          <circle cx="506" cy="236" r="28" fill="#0C1A36"/><circle cx="506" cy="236" r="11" fill="#C9D1E4"/>
+          <path d="M324 106l-8-18M340 100v-20M356 106l8-18" stroke="#F5B544" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="352" cy="262" r="10" fill="#C9D1E4"/><circle cx="352" cy="262" r="4" fill="#8A96AE"/>
+        </svg>
+      </div>
+      <div class="cov-main">
+    <div class="section-head">
+          <h2 id="coverage-title">Get a quote today.</h2>
+          <p>Pick what you'd like covered. You can add more along the way.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Kinds of insurance">
+          <button class="tab" role="tab" id="tab-vehicle" aria-controls="panel-vehicle" aria-selected="true">Vehicle</button>
+          <button class="tab" role="tab" id="tab-property" aria-controls="panel-property" aria-selected="false" tabindex="-1">Property</button>
+          <button class="tab" role="tab" id="tab-personal" aria-controls="panel-personal" aria-selected="false" tabindex="-1">Personal</button>
+          <button class="tab" role="tab" id="tab-business" aria-controls="panel-business" aria-selected="false" tabindex="-1">Business</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="panel-vehicle" aria-labelledby="tab-vehicle"><ul class="products" data-group="vehicle"></ul></div>
+        <div class="tab-panel" role="tabpanel" id="panel-property" aria-labelledby="tab-property" hidden><ul class="products" data-group="property"></ul></div>
+        <div class="tab-panel" role="tabpanel" id="panel-personal" aria-labelledby="tab-personal" hidden><ul class="products" data-group="personal"></ul></div>
+        <div class="tab-panel" role="tabpanel" id="panel-business" aria-labelledby="tab-business" hidden><ul class="products" data-group="business"></ul></div>
+      </div>
+    </div>
+    <p class="companies">We're independent, so we shop your policy with <b>15+ companies</b>, including Plymouth Rock, Commerce, Safety, Andover, Vermont Mutual, Hagerty and SBLI.</p>
+
+    <div class="services" id="services">
+      <div class="svc svc-list">
+        <h3>Also at our office</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h4M7 13h10M7 16h6"/><circle cx="16" cy="9" r="1.5"/></svg><span><b>Registry (RMV) service</b>Sales tax, new plates and plate returns, done here. For Supino customers.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><span><b>Notary</b>Documents notarized at our office. Bring a photo ID.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"/></svg><span><b>Real estate</b>Buying or selling? We recommend <a href="https://www.debbiemillersells.com/" target="_blank" rel="noopener">Deb Miller Real Estate</a>.</span></li>
+        </ul>
+      </div>
+      <form class="svc calc" id="calc" onsubmit="return false" aria-labelledby="calc-title">
+        <h3 id="calc-title">Mortgage calculator</h3>
+        <div class="field"><label for="c-price">Home price</label><input id="c-price" inputmode="numeric" value="650,000" autocomplete="off"></div>
+        <div class="field"><label for="c-down">Down payment</label><input id="c-down" inputmode="numeric" value="130,000" autocomplete="off"></div>
+        <div class="field"><label for="c-rate">Rate (%)</label><input id="c-rate" inputmode="decimal" value="6.5" autocomplete="off"></div>
+        <div class="field"><label for="c-term">Term</label><select id="c-term"><option value="30">30 years</option><option value="20">20 years</option><option value="15">15 years</option></select></div>
+        <div class="calc-out" aria-live="polite"><span>Per month</span><output id="c-out" for="c-price c-down c-rate c-term">$0</output></div>
+        <p class="calc-fine">Principal and interest only. Taxes, insurance and fees not included.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 3. BILLS & CLAIMS ======================= -->
+<section class="service" id="service" aria-labelledby="service-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="service-title">Already with us?</h2>
+      <p>No login needed. Pay, report or get help in a couple of taps.</p>
+    </div>
+    <div class="service-grid">
+      <div class="panel" id="carrier-pick">
+        <h3>Pay a bill or file a claim</h3>
+        <p>Choose your insurance company. You'll finish on their site.</p>
+        <div class="carrier-pick">
+          <label for="carrier">Your insurance company</label>
+          <div class="select">
+            <!-- Links from supinoinsurance.com/billing-claims (Sept 2026); Plymouth Rock's pay link updated to its current login page. -->
+            <select id="carrier">
+              <option value="">Choose one</option>
+              <option data-pay="https://ci2.plymouthrock.com/qpay/login" data-claim="https://www.plymouthrock.com/claims">Plymouth Rock</option>
+              <option data-pay="https://www.mapfreinsurance.com/" data-claim="https://www.mapfreinsurance.com/">Commerce (now MAPFRE)</option>
+              <option data-pay="https://www.bunkerhillins.com/customer-eservice/pay-your-bill" data-claim="https://www.pilgrimins.com/policyholders/claims/">Bunker Hill</option>
+              <option data-pay="https://www.pilgrimins.com/policyholders/eservice/pay-your-bill/" data-claim="https://www.pilgrimins.com/policyholders/claims/">Pilgrim Insurance</option>
+              <option data-pay="https://www.andovercompanies.com/" data-claim="https://www.andovercompanies.com/">Andover Companies (Merrimack, Cambridge, Bay State)</option>
+              <option data-pay="https://www.mpiua.com/" data-claim="https://www.mpiua.com/">Mass Property Insurance (MPIUA)</option>
+              <option data-pay="https://www.preferredmutual.com/payments/payment-options/" data-claim="https://www.preferredmutual.com/Claims/ClaimsHome.aspx/">Preferred Mutual</option>
+              <option data-pay="https://www.providencemutual.com/" data-claim="https://www.providencemutual.com/">Providence Mutual</option>
+              <option data-pay="https://www.vermontmutual.com/" data-claim="https://www.vermontmutual.com/claims/report-a-claim/">Vermont Mutual</option>
+              <option data-pay="https://www.ipfs.com/" data-claim="">IPFS (premium financing)</option>
+            </select>
+          </div>
+          <div class="carrier-actions">
+            <a class="btn btn-primary" id="pay-link" href="#carrier-pick" target="_blank" rel="noopener" aria-disabled="true">Pay a bill</a>
+            <a class="btn btn-ghost" id="claim-link" href="#carrier-pick" target="_blank" rel="noopener" aria-disabled="true">File a claim</a>
+          </div>
+          <p class="carrier-note">Not sure who you're with? Call <a href="tel:+17813222800">781-322-2800</a> and we'll look it up.</p>
+        </div>
+      </div>
+
+      <div class="panel accident" id="accident">
+        <h3>Just had an accident?</h3>
+        <ol class="acc-steps">
+          <li><div><b>Get safe.</b> Move out of traffic if you can. Call the police and report any injuries.</div></li>
+          <li><div><b>Swap details.</b> Year, make, model and plate. Driver's name, address, license number and insurance company. Names of passengers and witnesses.</div></li>
+          <li><div><b>Take photos.</b> The cars, the damage, the street, the signs and any skid marks.</div></li>
+          <li><div><b>Call us.</b> We'll help you report it and tell you what happens next.</div></li>
+        </ol>
+        <a class="btn btn-primary" href="tel:+17813222800">Call 781-322-2800</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 4. WHY SUPINO ======================= -->
+<section class="why" id="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="why-title">Why choose Supino</h2>
+      <p>A local agency that answers the phone, compares the market and knows your street.</p>
+    </div>
+    <ul class="stats">
+      <li class="stat"><b><span data-count="35">35</span>+</b><h3>Years in business</h3><p>A Malden family agency since 1989, now in its second generation.</p></li>
+      <li class="stat"><b><span data-count="15">15</span>+</b><h3>Insurance companies</h3><p>We're independent, so we shop your policy instead of selling you one brand.</p></li>
+      <li class="stat"><b><span data-count="2">2</span></b><h3>Local offices</h3><p>Eastern Ave in Malden and Summer Street in Lynnfield.</p></li>
+    </ul>
+    <div class="story">
+      <div>
+        <p>Joseph M. Supino grew up in Everett, served as an Army lieutenant, and worked at Hearthstone Insurance and Allstate. In 1989 he bought a small Malden agency, and his son Michael joined him to run it.</p>
+        <p>Michael bought the agency in 1997 and renamed it Supino Insurance Agency. He opened the Lynnfield office in 2008. Joe coached youth football and served as Lynnfield's Recreation Commissioner. He passed away in February 2025. Michael runs the agency today.</p>
+      </div>
+      <figure class="story-photo">
+        <img src="images/father-son.jpg" srcset="images/father-son-640.jpg 640w, images/father-son.jpg 960w" sizes="(max-width: 900px) 100vw, 45vw" width="960" height="640" loading="lazy" alt="A dad and his young son laughing together outside">
+        <figcaption>
+          <blockquote>&ldquo;It&rsquo;s been our pleasure serving you for over 30+ years.&rdquo;</blockquote>
+          <cite>Michael J. Supino, owner</cite>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="reviews-head"><h3>What our customers say</h3></div>
+  </div>
+  <!-- Real Google reviews (copied Sept 2026). The row holds its set twice for a seamless loop; the copies are hidden from screen readers. -->
+  <div class="wrap">
+    <div class="rv-stage" id="rv-stage">
+      <div class="rv-lane">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 5. CONTACT ======================= -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="contact-top">
+      <div class="section-head">
+        <p class="open-now" id="open-now"><span class="open-dot" aria-hidden="true"></span><span id="open-text">Mon–Thu 9–5 · Fri 9–4</span></p>
+        <h2 id="contact-title">Call, stop by, or write.</h2>
+        <p>Mon–Thu 9:00–5:00 · Fri 9:00–4:00 at both offices.</p>
+        <div class="contact-cta">
+          <a class="btn btn-primary" href="tel:+17813222800">Call Malden 781-322-2800</a>
+          <a class="btn btn-quiet" href="tel:+17813344888">Call Lynnfield 781-334-4888</a>
+        </div>
+      </div>
+      <figure class="contact-photo">
+        <img src="images/family-home.jpg" srcset="images/family-home-640.jpg 640w, images/family-home.jpg 960w" sizes="(max-width: 900px) 100vw, 50vw" width="960" height="640" loading="lazy" alt="Parents and three young kids playing together on the living room floor">
+      </figure>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="offices">
+          <article class="office">
+            <iframe class="office-map" title="Map of the Malden office" src="https://maps.google.com/maps?q=1012+Eastern+Ave,+Malden,+MA+02148&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h3>Malden</h3>
+            <address>1012 Eastern Ave, Malden, MA 02148</address>
+            <a class="btn btn-quiet btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=1012+Eastern+Ave+Malden+MA+02148" target="_blank" rel="noopener">Directions<span class="visually-hidden"> to the Malden office (opens Google Maps)</span></a>
+            <p class="note">Adams Plaza on Route 60, next to the 7-Eleven, just off Broadway (Route 99).</p>
+            <dl><dt>Phone</dt><dd><a href="tel:+17813222800">781-322-2800</a></dd><dt>Fax</dt><dd>781-321-2414</dd></dl>
+          </article>
+          <article class="office">
+            <iframe class="office-map" title="Map of the Lynnfield office" src="https://maps.google.com/maps?q=550+Summer+Street,+Lynnfield,+MA+01940&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h3>Lynnfield</h3>
+            <address>550 Summer Street, Lynnfield, MA 01940</address>
+            <a class="btn btn-quiet btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=550+Summer+Street+Lynnfield+MA+01940" target="_blank" rel="noopener">Directions<span class="visually-hidden"> to the Lynnfield office (opens Google Maps)</span></a>
+            <p class="note">In the middle of town at Pillings Pond, about 2 miles from Lynnfield Center and Route 1.</p>
+            <dl><dt>Phone</dt><dd><a href="tel:+17813344888">781-334-4888</a></dd><dt>Fax</dt><dd>781-321-2414</dd></dl>
+          </article>
+        </div>
+        <p class="contact-direct">Email <a href="mailto:info@supinoinsurance.com">info@supinoinsurance.com</a> · <a href="https://www.facebook.com/supino.insurance" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+
+      <form class="form-card" id="contact-form" data-endpoint="https://formspree.io/f/xnpnlvbv" novalidate aria-labelledby="form-title">
+        <input type="hidden" name="_subject" value="Website message">
+        <h3 id="form-title">Send us a message</h3>
+        <p>We'll get back to you within one business day. Want a price? <a href="#coverage" data-quote="">Start a quote</a>.</p>
+        <p class="form-warn">Coverage can't be started, changed or cancelled by email, voicemail or this form. For that, please call or stop by.</p>
+        <div class="form-grid">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+          <div class="field full"><label for="f-email">Email <span class="opt">(optional)</span></label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="f-topic">It's about</label><select id="f-topic" name="topic"><option>My policy</option><option>A bill or a claim</option><option>Registry (RMV) service</option><option>Notary</option><option>Something else</option></select></div>
+          <div class="field"><label for="f-office">Closest office</label><select id="f-office" name="office"><option>Either</option><option>Malden</option><option>Lynnfield</option></select></div>
+          <div class="field full"><label for="f-msg">Message <span class="opt">(optional)</span></label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        </div>
+        <div class="form-foot">
+          <button class="btn btn-blue" type="submit">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+
+    <div class="team">
+      <h3>Our team</h3>
+      <p>Call 781-322-2800 and ask for anyone by extension.</p>
+      <ul class="team-list is-folded" id="team-list">
+        <li><span class="team-avatar" aria-hidden="true">MS</span><span><b>Michael J. Supino</b><small>Owner · Ext. 210</small></span><a href="mailto:mike@supinoinsurance.com">mike@supinoinsurance.com</a></li>
+        <li><span class="team-avatar" aria-hidden="true">EM</span><span><b>Ed McManus</b><small>Ext. 206</small></span><a href="mailto:ed@supinoinsurance.com">ed@supinoinsurance.com</a></li>
+        <li><span class="team-avatar" aria-hidden="true">PN</span><span><b>Patti Nagleri</b><small>Ext. 204</small></span><a href="mailto:patti@supinoinsurance.com">patti@supinoinsurance.com</a></li>
+        <li><span class="team-avatar" aria-hidden="true">JA</span><span><b>John Anzuoni</b><small>Ext. 203</small></span><a href="mailto:john@supinoinsurance.com">john@supinoinsurance.com</a></li>
+        <li><span class="team-avatar" aria-hidden="true">DS</span><span><b>Derek Supino</b><small>Ext. 205</small></span><a href="mailto:derek@supinoinsurance.com">derek@supinoinsurance.com</a></li>
+        <li><span class="team-avatar" aria-hidden="true">BD</span><span><b>Beth Donovan</b><small>Ext. 209</small></span><a href="mailto:beth@supinoinsurance.com">beth@supinoinsurance.com</a></li>
+        <li><span class="team-avatar" aria-hidden="true">JS</span><span><b>John Shea</b><small>Ext. 321</small></span><a href="mailto:johnshea@supinoinsurance.com">johnshea@supinoinsurance.com</a></li>
+      </ul>
+      <button type="button" class="btn btn-quiet btn-sm team-more" id="team-more" aria-controls="team-list" aria-expanded="false">See the whole team (7)</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="brand-name">Supino</span>
+        <p style="margin-top:12px">An independent, family-run agency since 1989.<br><a href="mailto:info@supinoinsurance.com">info@supinoinsurance.com</a></p>
+      </div>
+      <div><h4>Malden</h4><address>1012 Eastern Ave<br>Malden, MA 02148<br><a href="tel:+17813222800">781-322-2800</a></address></div>
+      <div><h4>Lynnfield</h4><address>550 Summer Street<br>Lynnfield, MA 01940<br><a href="tel:+17813344888">781-334-4888</a></address></div>
+      <div><h4>Quick links</h4><ul class="footer-links"><li><a href="#service">Pay a bill</a></li><li><a href="#service">File a claim</a></li><li><a href="#coverage">Get a quote</a></li><li><a href="https://www.facebook.com/supino.insurance" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; <span id="year">2026</span> Supino Insurance Agency, Inc.</span><span>Mon–Thu 9–5 · Fri 9–4 · Fax 781-321-2414</span></div>
+  </div>
+</footer>
+
+<!-- ================= QUOTE FLOW =================
+     One question per screen. Ends with "we'll call you", not a price.
+     SETUP: create a Formspree form (formspree.io) that delivers to Supino's email and paste its URL
+     (e.g. https://formspree.io/f/abcdwxyz) into data-endpoint below. Until then, the flow runs as a preview and sends nothing. -->
+<dialog class="qf" id="qf" aria-label="Get a quote" data-endpoint="https://formspree.io/f/xnpnlvbv">
+  <form class="qf-shell" id="qf-form" novalidate>
+    <div class="qf-top">
+      <span class="qf-brand">Supino</span>
+      <div class="qf-progress" aria-hidden="true"><i id="qf-bar"></i></div>
+      <span class="qf-count" id="qf-count" aria-live="polite"></span>
+      <button type="button" class="qf-close" id="qf-close" aria-label="Close the quote. Your answers are kept.">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="qf-body" id="qf-body">
+
+      <section class="qf-step" data-step="zip" hidden>
+        <h2 tabindex="-1">Let&rsquo;s start with your ZIP code.</h2>
+        <p class="hint">Rates depend on where you live.</p>
+        <div class="qf-fields"><div class="field zip-big"><label for="q-zip">ZIP code</label><input id="q-zip" name="zip" data-label="ZIP" inputmode="numeric" maxlength="5" autocomplete="postal-code" placeholder="02148" required></div></div>
+      </section>
+
+      <section class="qf-step" data-step="coverage" hidden>
+        <h2 tabindex="-1">What would you like covered?</h2>
+        <p class="hint">Choose everything you&rsquo;d like a quote on. We&rsquo;ll quote it all together.</p>
+        <p class="qf-group-label" style="margin-top:26px">For you and your family</p>
+        <div class="qf-opts cols compact" id="q-personal" style="margin-top:0" data-label="Coverage"></div>
+        <p class="qf-group-label">For your business</p>
+        <div class="qf-opts cols compact" id="q-biz" style="margin-top:0" data-label="Coverage"></div>
+      </section>
+
+      <section class="qf-step" data-step="name" hidden>
+        <h2 tabindex="-1">Let&rsquo;s start with you.</h2>
+        <div class="qf-fields two">
+          <div class="field"><label for="q-first">First name</label><input id="q-first" name="first" autocomplete="given-name" required></div>
+          <div class="field"><label for="q-last">Last name</label><input id="q-last" name="last" autocomplete="family-name" required></div>
+          <div class="field full" id="q-dob-wrap"><label for="q-dob">Date of birth</label><input id="q-dob" name="dob" type="date" autocomplete="bday" required></div>
+          <div class="field full" id="q-bizname-wrap" hidden><label for="q-bizname">Business name</label><input id="q-bizname" name="business_name" autocomplete="organization" required></div>
+        </div>
+      </section>
+
+      <section class="qf-step" data-step="address" hidden>
+        <h2 tabindex="-1">What&rsquo;s your home address?</h2>
+        <div class="qf-fields two">
+          <div class="field full"><label for="q-street">Street address</label><input id="q-street" name="street" autocomplete="address-line1" required></div>
+          <div class="field"><label for="q-apt">Apt or unit <span class="opt">(optional)</span></label><input id="q-apt" name="apt" autocomplete="address-line2"></div>
+          <div class="field"><label for="q-city">Town</label><input id="q-city" name="city" autocomplete="address-level2" required></div>
+        </div>
+      </section>
+
+      <section class="qf-step" data-step="vehicles" hidden>
+        <h2 tabindex="-1">Which vehicles should we cover?</h2>
+        <div id="q-vehicles" class="qf-fields"></div>
+        <button type="button" class="add-link" id="q-add-vehicle">+ Add another vehicle</button>
+        <datalist id="makes"><option>Acura</option><option>Audi</option><option>BMW</option><option>Buick</option><option>Cadillac</option><option>Chevrolet</option><option>Chrysler</option><option>Dodge</option><option>Ford</option><option>GMC</option><option>Harley-Davidson</option><option>Honda</option><option>Hyundai</option><option>Jeep</option><option>Kawasaki</option><option>Kia</option><option>Lexus</option><option>Mazda</option><option>Mercedes-Benz</option><option>Nissan</option><option>Ram</option><option>Subaru</option><option>Tesla</option><option>Toyota</option><option>Volkswagen</option><option>Volvo</option><option>Yamaha</option></datalist>
+      </section>
+
+      <section class="qf-step" data-step="ownership" hidden>
+        <h2 tabindex="-1">Is it owned, financed or leased?</h2>
+        <div class="qf-opts" data-label="Ownership" data-required>
+          <label class="opt-tile"><input type="radio" name="ownership" value="Owned outright"><span>Owned outright</span></label>
+          <label class="opt-tile"><input type="radio" name="ownership" value="Financed"><span>Financed</span></label>
+          <label class="opt-tile"><input type="radio" name="ownership" value="Leased"><span>Leased</span></label>
+          <label class="opt-tile"><input type="radio" name="ownership" value="A mix"><span>A mix (more than one vehicle)</span></label>
+        </div>
+      </section>
+
+      <section class="qf-step" data-step="drivers" hidden>
+        <h2 tabindex="-1">Who drives?</h2>
+        <p class="qf-group-label" style="margin-top:26px">Drivers in your household</p>
+        <div class="qf-opts cols" style="margin-top:0" data-label="Drivers" data-required>
+          <label class="opt-tile"><input type="radio" name="drivers" value="Just me"><span>Just me</span></label>
+          <label class="opt-tile"><input type="radio" name="drivers" value="Me + 1"><span>Me + 1</span></label>
+          <label class="opt-tile"><input type="radio" name="drivers" value="Me + 2"><span>Me + 2</span></label>
+          <label class="opt-tile"><input type="radio" name="drivers" value="Me + 3 or more"><span>Me + 3 or more</span></label>
+        </div>
+        <p class="qf-group-label">Any accidents or tickets in the last 5 years?</p>
+        <div class="qf-opts cols" style="margin-top:0" data-label="Accidents or tickets (5 yrs)" data-required>
+          <label class="opt-tile"><input type="radio" name="history" value="No"><span>No</span></label>
+          <label class="opt-tile"><input type="radio" name="history" value="Yes"><span>Yes</span></label>
+        </div>
+      </section>
+
+      <section class="qf-step" data-step="property" hidden>
+        <h2 tabindex="-1">Tell us about the property.</h2>
+        <p class="qf-group-label" style="margin-top:26px">What kind of building?</p>
+        <div class="qf-opts cols" style="margin-top:0" data-label="Home type" data-required>
+          <label class="opt-tile"><input type="radio" name="home_type" value="Single-family"><span>Single-family</span></label>
+          <label class="opt-tile"><input type="radio" name="home_type" value="Condo"><span>Condo</span></label>
+          <label class="opt-tile"><input type="radio" name="home_type" value="2-4 family"><span>2&ndash;4 family</span></label>
+          <label class="opt-tile"><input type="radio" name="home_type" value="Something else"><span>Something else</span></label>
+        </div>
+        <div class="qf-fields"><div class="field" style="max-width:280px"><label for="q-built">Roughly when was it built?</label>
+          <select id="q-built" name="year_built"><option>Not sure</option><option>Before 1940</option><option>1940&ndash;1979</option><option>1980&ndash;1999</option><option>2000&ndash;2014</option><option>2015 or newer</option></select>
+        </div></div>
+      </section>
+
+      <section class="qf-step" data-step="business" hidden>
+        <h2 tabindex="-1">Tell us about the business.</h2>
+        <div class="qf-fields two">
+          <div class="field full"><label for="q-bizwhat">What does the business do?</label><input id="q-bizwhat" name="business_type" placeholder="e.g. landscaping, a restaurant, an accounting office" required></div>
+          <div class="field full"><label for="q-biztown">Where is it?</label><input id="q-biztown" name="business_location" placeholder="Street and town" required></div>
+          <div class="field"><label for="q-bizemp">Employees</label><select id="q-bizemp" name="employees"><option>Just me</option><option>2&ndash;5</option><option>6&ndash;20</option><option>21&ndash;50</option><option>More than 50</option></select></div>
+          <div class="field"><label for="q-bizyrs">Years in business</label><select id="q-bizyrs" name="years_in_business"><option>Just starting</option><option>1&ndash;3</option><option>4&ndash;10</option><option>More than 10</option></select></div>
+        </div>
+      </section>
+
+      <section class="qf-step" data-step="other" hidden>
+        <h2 tabindex="-1">A few more details.</h2>
+        <p class="hint">A rough idea is fine. We&rsquo;ll go over the rest on the phone.</p>
+        <div class="qf-fields" id="q-other-fields"></div>
+      </section>
+
+      <section class="qf-step" data-step="current" hidden>
+        <h2 tabindex="-1">Who insures you now?</h2>
+        <p class="hint">So we can compare. Leave it blank if you&rsquo;re not sure.</p>
+        <div class="qf-fields two">
+          <div class="field full"><label for="q-insurer">Current insurance company</label><input id="q-insurer" name="current_insurer" list="insurers" autocomplete="off"></div>
+          <label class="check-line full"><input type="checkbox" id="q-none" name="no_current" data-label="No coverage right now" value="Yes"> I don&rsquo;t have coverage right now</label>
+          <div class="field"><label for="q-renew">When does it renew?</label><select id="q-renew" name="renewal"><option>Not sure</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option></select></div>
+        </div>
+        <datalist id="insurers"><option>Plymouth Rock</option><option>Commerce</option><option>Bunker Hill</option><option>Safety</option><option>Arbella</option><option>Progressive</option><option>GEICO</option><option>Allstate</option><option>Liberty Mutual</option><option>State Farm</option><option>Travelers</option></datalist>
+      </section>
+
+      <section class="qf-step" data-step="contact" hidden>
+        <h2 tabindex="-1">How should we reach you?</h2>
+        <p class="hint">An agent will call you within one business day with your quote.</p>
+        <div class="qf-fields two">
+          <div class="field"><label for="q-phone">Phone</label><input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="q-email">Email</label><input id="q-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="q-time">Best time to call</label><select id="q-time" name="best_time"><option>Any time</option><option>Morning</option><option>Afternoon</option></select></div>
+          <div class="field"><label for="q-office">Closest office</label><select id="q-office" name="office"><option>Either</option><option>Malden</option><option>Lynnfield</option></select></div>
+        </div>
+        <p class="qf-fine">By sending this, you agree that Supino Insurance can contact you about your quote by phone, text or email.</p>
+      </section>
+
+      <section class="qf-step qf-done" data-step="done" hidden>
+        <div class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <h2 tabindex="-1" id="q-done-title">Thanks. We&rsquo;ve got it.</h2>
+        <p id="q-done-text">An agent will call you within one business day to go over your quote.</p>
+        <p>Need us sooner? Call <a href="tel:+17813222800"><strong>781-322-2800</strong></a>.</p>
+        <p id="q-done-note" hidden><span class="todo">[FORM ENDPOINT TO CONFIRM]</span> Preview only. Nothing was sent.</p>
+      </section>
+
+      <p class="qf-error" id="qf-error" role="alert"></p>
+    </div>
+
+    <div class="qf-foot">
+      <button type="button" class="qf-back" id="qf-back">&larr; Back</button>
+      <button type="submit" class="btn btn-primary qf-next" id="qf-next">Continue</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="callbar" aria-label="Quick actions">
+  <a class="btn btn-primary" href="tel:+17813222800">Call us</a>
+  <a class="btn btn-light" href="#coverage" data-quote="">Get a quote</a>
+</div>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mq = window.matchMedia('(max-width: 760px)');
+  var header = document.querySelector('.site-header'), menuBtn = document.querySelector('.menu-btn'), nav = document.getElementById('site-nav');
+
+  /* Header: blue over the hero, navy after; hides on scroll-down on phones */
+  var lastY = window.scrollY;
+  function onScroll(){
+    var y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 40);
+    header.classList.toggle('is-hidden', mq.matches && y > 260 && y > lastY && menuBtn.getAttribute('aria-expanded') !== 'true');
+    lastY = y;
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* Mobile menu */
+  function setMenu(open){ menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); nav.hidden = !open; }
+  function syncNav(){ if (mq.matches) setMenu(false); else nav.hidden = false; }
+  mq.addEventListener ? mq.addEventListener('change', syncNav) : mq.addListener(syncNav);
+  syncNav();
+  menuBtn.addEventListener('click', function(){ setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'); });
+  nav.addEventListener('click', function(e){ if (mq.matches && e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true'){ setMenu(false); menuBtn.focus(); } });
+
+  /* Gentle reveal on a few key blocks */
+  var items = document.querySelectorAll('.reveal');
+  if (reduced || !('IntersectionObserver' in window)) items.forEach(function(el){ el.classList.add('is-in'); });
+  else {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  /* Carrier picker */
+  var carrier = document.getElementById('carrier'), pay = document.getElementById('pay-link'), claim = document.getElementById('claim-link');
+  carrier.addEventListener('change', function(){
+    var o = carrier.options[carrier.selectedIndex], p = o.getAttribute('data-pay'), c = o.getAttribute('data-claim');
+    pay.href = p || '#carrier-pick'; pay.setAttribute('aria-disabled', p ? 'false' : 'true');
+    claim.href = c || '#carrier-pick'; claim.setAttribute('aria-disabled', c ? 'false' : 'true');
+    claim.textContent = (p && !c) ? 'Claims: call us' : 'File a claim';
+  });
+
+  /* Coverage tabs */
+  var ICON = {
+    'Auto':'<path d="M5 17h14M3 17v-4l2.2-5h13.6L21 13v4M6 17v2.5M18 17v2.5"/><circle cx="7.5" cy="13.5" r="1"/><circle cx="16.5" cy="13.5" r="1"/>',
+    'Motorcycle':'<circle cx="5.5" cy="16" r="3.5"/><circle cx="18.5" cy="16" r="3.5"/><path d="M5.5 16l4.5-6h4.5l4 6M13.5 6H17l1.5 4M10 10L8.5 7.5H6"/>',
+    'Boat & watercraft':'<path d="M3 16.5l2.2 3.5h13.6l2.2-3.5zM12 3v13.5M12 4.5l6 9.5h-6M12 7l-4.5 7H12"/>',
+    'Classic car':'<path d="M2.5 16v-3l2.5-1 2.3-4.5h7.4L18 12l3.5 1v3M2.5 16h19"/><circle cx="7" cy="16.5" r="2"/><circle cx="17" cy="16.5" r="2"/>',
+    'Homeowners':'<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
+    'Condo':'<rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"/>',
+    'Renters':'<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/>',
+    'Rental property':'<path d="M2 20v-8l6-5 6 5v8zM14 11l4-3.5 4 3.5v9h-8M6 20v-4h4v4"/>',
+    'Flood':'<path d="M2 16c2 0 2-1.5 4-1.5S8 16 10 16s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 20.5c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M12 3v8M9 8l3 3 3-3"/>',
+    'Life':'<path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/>',
+    'Umbrella':'<path d="M3 12a9 9 0 0 1 18 0zM12 12v6.5a2 2 0 0 1-4 0"/>',
+    'Pet':'<circle cx="6.5" cy="9.5" r="1.8"/><circle cx="10" cy="5.8" r="1.8"/><circle cx="14" cy="5.8" r="1.8"/><circle cx="17.5" cy="9.5" r="1.8"/><path d="M12 11.5c-3 0-5.5 3.7-5.5 5.8 0 1.5 1.2 2.2 2.5 2.2 1.2 0 2-.7 3-.7s1.8.7 3 .7c1.3 0 2.5-.7 2.5-2.2 0-2.1-2.5-5.8-5.5-5.8z"/>',
+    'Business owners policy':'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/>',
+    'Commercial auto':'<path d="M2 17V7h12v10M14 10h4l4 4v3h-8M2 17h2M10 17h4"/><circle cx="7" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/>',
+    'General liability':'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+    'Commercial property':'<path d="M3 21V8l6-4v17M9 21V10h12v11M13 14h4M13 17h4M5 11h2M5 15h2"/>',
+    "Workers' comp":'<path d="M4 18a8 8 0 0 1 16 0zM12 6v4M9 7l1 3M15 7l-1 3M2 18h20"/>',
+    'Contractors':'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.6-.4-.4-2.6z"/>',
+    'Surety bonds':'<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 14l2 2 4-4"/>',
+    'Employment practices liability':'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2 .8-3.8 2-4.8 2.5.2 4 2.3 4 4.8"/>',
+    'Commercial umbrella':'<path d="M3 12a9 9 0 0 1 18 0zM12 12v6.5a2 2 0 0 1-4 0M12 3V1.5"/>'
+  };
+  var GROUPS = {
+    vehicle:[['Auto','Your daily driver and the family car'],['Motorcycle','Two- and three-wheeled bikes'],['Boat & watercraft','Covered for the whole year'],['Classic car','For the car that comes out on Sundays']],
+    property:[['Homeowners','Your house and what’s inside it'],['Condo','Your unit and your belongings'],['Renters','Your stuff, wherever you rent'],['Rental property','For the places you rent out'],['Flood','Most home policies don’t cover it']],
+    personal:[['Life','So the people you love are looked after'],['Umbrella','Extra liability over home and auto'],['Pet','Vet bills for the dog and the cat']],
+    business:[['Business owners policy','Property and liability in one'],['Commercial auto','Vans, trucks and company cars'],['General liability','If a customer is hurt or a job goes wrong'],['Commercial property','Your building, equipment and stock'],["Workers' comp",'Your team, if they’re hurt on the job'],['Contractors','For the trades'],['Surety bonds','Contract, license and permit bonds'],['Employment practices liability','For claims made by employees'],['Commercial umbrella','More liability on top']]
+  };
+  document.querySelectorAll('.products').forEach(function(ul){
+    GROUPS[ul.getAttribute('data-group')].forEach(function(p){
+      var li = document.createElement('li'), b = document.createElement('button');
+      b.type = 'button'; b.className = 'product'; b.setAttribute('data-quote', p[0]);
+      b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICON[p[0]] + '</svg><span><b></b><small></small></span><span class="go" aria-hidden="true">&rsaquo;</span>';
+      b.querySelector('b').textContent = p[0]; b.querySelector('small').textContent = p[1];
+      li.appendChild(b); ul.appendChild(li);
+    });
+  });
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function selectTab(t, focus){
+    tabs.forEach(function(x){
+      var on = x === t;
+      x.setAttribute('aria-selected', on ? 'true' : 'false'); x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) t.focus();
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ selectTab(t); });
+    t.addEventListener('keydown', function(e){
+      var n = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (n){ e.preventDefault(); selectTab(tabs[(i + n + tabs.length) % tabs.length], true); }
+    });
+  });
+
+  /* Reviews (real Google reviews), built twice for the seamless drift */
+  var REVIEWS = [
+    ['Great agency and my agent Ed knows his stuff. He follows up with claims and hand delivers your check.','Paul S.','5 years ago'],
+    ['Great staff at Supino! Always friendly and helpful!!','Paul G.','a year ago'],
+    ['Excellent service. Patty is the best!','Gem T.','2 years ago'],
+    ['Great customer service.','R. Q.','3 years ago']
+  ];
+  var lane = document.querySelector('.rv-lane');
+  [false, true].forEach(function(clone){
+    REVIEWS.forEach(function(r){
+      var f = document.createElement('figure'); f.className = 'rv-card'; if (clone) f.setAttribute('aria-hidden', 'true');
+      f.innerHTML = '<svg class="q" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V14C0 6 4 1 12 0l1 4c-4 1-6 4-6 8h5v12zm17 0V14c0-8 4-13 12-14l1 4c-4 1-6 4-6 8h5v12z"/></svg><blockquote></blockquote><figcaption><span class="rv-avatar" aria-hidden="true"></span><span><b></b><small></small></span></figcaption>';
+      f.querySelector('blockquote').textContent = '“' + r[0] + '”';
+      f.querySelector('.rv-avatar').textContent = r[1].charAt(0);
+      f.querySelector('b').textContent = r[1];
+      f.querySelector('small').textContent = 'Google review · ' + r[2];
+      lane.appendChild(f);
+    });
+  });
+  var why = document.getElementById('why');
+  document.getElementById('rv-stage').addEventListener('click', function(){ why.classList.toggle('is-paused'); });
+
+  /* Big numbers count up once */
+  var counts = document.querySelectorAll('[data-count]');
+  if (!reduced && 'IntersectionObserver' in window){
+    var co = new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if (!en.isIntersecting) return; co.unobserve(en.target);
+        var el = en.target, end = +el.dataset.count, t0 = performance.now();
+        (function step(t){ var k = Math.min((t - t0) / 1200, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); })(t0);
+      });
+    }, {threshold:.6});
+    counts.forEach(function(c){ c.textContent = '0'; co.observe(c); });
+  }
+
+  /* Mortgage calculator */
+  var cP = document.getElementById('c-price'), cD = document.getElementById('c-down'), cR = document.getElementById('c-rate'), cT = document.getElementById('c-term'), cO = document.getElementById('c-out');
+  function num(el){ return parseFloat(String(el.value).replace(/[^0-9.]/g, '')) || 0; }
+  function calc(){
+    var loan = Math.max(num(cP) - num(cD), 0), r = num(cR) / 1200, n = +cT.value * 12;
+    var pay = !loan ? 0 : (r ? loan * r / (1 - Math.pow(1 + r, -n)) : loan / n);
+    cO.textContent = '$' + Math.round(pay).toLocaleString('en-US');
+  }
+  [cP, cD, cR, cT].forEach(function(el){ el.addEventListener('input', calc); });
+  [cP, cD].forEach(function(el){ el.addEventListener('blur', function(){ var v = num(el); if (v) el.value = Math.round(v).toLocaleString('en-US'); }); });
+  calc();
+
+  /* Contact form */
+  var form = document.getElementById('contact-form'), status = document.getElementById('form-status');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var missing = Array.prototype.filter.call(form.querySelectorAll('[required]'), function(f){ return !f.value.trim(); });
+    if (missing.length){ status.dataset.state = 'err'; status.textContent = 'Please add your name and phone number.'; missing[0].focus(); return; }
+    status.dataset.state = ''; status.textContent = 'Sending…';
+    fetch(form.getAttribute('data-endpoint'), {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+      .then(function(r){ if (!r.ok) throw new Error(); form.reset(); status.dataset.state = 'ok'; status.textContent = 'Thanks. We have your message.'; })
+      .catch(function(){ status.dataset.state = 'err'; status.textContent = 'That didn’t send. Please call 781-322-2800.'; });
+  });
+
+  /* Team list folds on phones */
+  var teamBtn = document.getElementById('team-more'), teamList = document.getElementById('team-list');
+  teamBtn.addEventListener('click', function(){
+    var open = !teamList.classList.toggle('is-folded');
+    teamBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    teamBtn.textContent = open ? 'Show fewer' : 'See the whole team (7)';
+  });
+
+  /* ---------------- Quote flow ---------------- */
+  var PERSONAL = ['Auto','Homeowners','Condo','Renters','Rental property','Flood','Life','Umbrella','Pet','Motorcycle','Boat & watercraft','Classic car'];
+  var BUSINESS = ['Business owners policy','Commercial auto','General liability','Commercial property',"Workers' comp",'Contractors','Surety bonds','Employment practices liability','Commercial umbrella'];
+  var PROPERTY = ['Homeowners','Condo','Renters','Rental property','Flood'];
+  var VEHICLE = ['Auto','Motorcycle','Classic car'];
+  var OTHER_COPY = {
+    'Life': ['Life insurance', 'Who is it for, and roughly how much coverage?'],
+    'Pet': ['Pet insurance', 'Dog or cat, breed and age.'],
+    'Boat & watercraft': ['Boat or watercraft', 'What kind, the length and year, and where you keep it.'],
+    'Umbrella': ['Umbrella', 'Which home and auto policies you have now, and who they are with.']
+  };
+
+  var dlg = document.getElementById('qf'), qform = document.getElementById('qf-form'), qbody = document.getElementById('qf-body');
+  var bar = document.getElementById('qf-bar'), count = document.getElementById('qf-count');
+  var backBtn = document.getElementById('qf-back'), nextBtn = document.getElementById('qf-next');
+  var errBox = document.getElementById('qf-error');
+  var steps = {};
+  qform.querySelectorAll('.qf-step').forEach(function(s){ steps[s.dataset.step] = s; });
+  var zipIn = document.getElementById('q-zip'), vehiclesBox = document.getElementById('q-vehicles');
+  var otherBox = document.getElementById('q-other-fields');
+  var current = 'zip', finished = false, sending = false;
+
+  function el(tag, attrs, text){
+    var n = document.createElement(tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (text) n.textContent = text;
+    return n;
+  }
+  function tile(name, value){
+    var l = el('label', {'class':'opt-tile'});
+    l.appendChild(el('input', {type:'checkbox', name:name, value:value}));
+    l.appendChild(el('span', {}, value));
+    return l;
+  }
+  PERSONAL.forEach(function(v){ document.getElementById('q-personal').appendChild(tile('coverage', v)); });
+  BUSINESS.forEach(function(v){ document.getElementById('q-biz').appendChild(tile('coverage', v)); });
+
+  function chosen(){ return Array.prototype.map.call(qform.querySelectorAll('input[name="coverage"]:checked'), function(i){ return i.value; }); }
+  function has(list){ return chosen().some(function(c){ return list.indexOf(c) > -1; }); }
+  function hasPersonal(){ return has(PERSONAL); }
+  function hasBiz(){ return has(BUSINESS); }
+  function niceList(arr){
+    arr = arr.map(function(a){ return a.toLowerCase(); });
+    return arr.length < 2 ? arr.join('') : arr.slice(0, -1).join(', ') + ' and ' + arr[arr.length - 1];
+  }
+
+  function sequence(){
+    var c = chosen(), s = ['zip', 'coverage', 'name'];
+    if (hasPersonal()) s.push('address');
+    if (has(VEHICLE)) s.push('vehicles', 'ownership', 'drivers');
+    if (has(PROPERTY)) s.push('property');
+    if (hasBiz()) s.push('business');
+    if (has(Object.keys(OTHER_COPY))) s.push('other');
+    if (!(c.length === 1 && c[0] === 'Life')) s.push('current');
+    s.push('contact');
+    return s;
+  }
+
+  function yearOptions(){
+    var y = new Date().getFullYear() + 1, s = el('select', {'data-v':'year', 'aria-label':'Year'});
+    s.appendChild(el('option', {value:''}, 'Year'));
+    for (; y >= 1950; y--) s.appendChild(el('option', {}, String(y)));
+    s.appendChild(el('option', {}, 'Older'));
+    return s;
+  }
+  function addVehicle(){
+    var n = vehiclesBox.children.length + 1;
+    if (n > 4) return;
+    var v = el('div', {'class':'vehicle'}), head = el('div', {'class':'vehicle-head'});
+    head.appendChild(el('span', {}, 'Vehicle ' + n));
+    if (n > 1){
+      var rm = el('button', {type:'button'}, 'Remove');
+      rm.addEventListener('click', function(){ v.remove(); renumber(); });
+      head.appendChild(rm);
+    }
+    var f = el('div', {'class':'qf-fields'}), id = 'v' + Date.now() + n;
+    var yWrap = el('div', {'class':'field v-year'});
+    yWrap.appendChild(el('label', {'for':id + 'y'}, 'Year'));
+    var ys = yearOptions(); ys.id = id + 'y'; ys.required = true; yWrap.appendChild(ys);
+    var mWrap = el('div', {'class':'field'});
+    mWrap.appendChild(el('label', {'for':id + 'm'}, 'Make'));
+    mWrap.appendChild(el('input', {id:id + 'm', 'data-v':'make', list:'makes', placeholder:'e.g. Toyota', required:'', autocomplete:'off'}));
+    var oWrap = el('div', {'class':'field'});
+    oWrap.appendChild(el('label', {'for':id + 'o'}, 'Model'));
+    oWrap.appendChild(el('input', {id:id + 'o', 'data-v':'model', placeholder:'e.g. RAV4', required:'', autocomplete:'off'}));
+    f.appendChild(yWrap); f.appendChild(mWrap); f.appendChild(oWrap);
+    v.appendChild(head); v.appendChild(f);
+    vehiclesBox.appendChild(v);
+    renumber();
+    return v;
+  }
+  function renumber(){
+    Array.prototype.forEach.call(vehiclesBox.children, function(v, i){ v.querySelector('.vehicle-head span').textContent = 'Vehicle ' + (i + 1); });
+    document.getElementById('q-add-vehicle').hidden = vehiclesBox.children.length >= 4;
+  }
+  document.getElementById('q-add-vehicle').addEventListener('click', function(){
+    var v = addVehicle(); if (v) v.querySelector('select').focus();
+  });
+
+  var noneBox = document.getElementById('q-none'), insurer = document.getElementById('q-insurer'), renew = document.getElementById('q-renew');
+  noneBox.addEventListener('change', function(){ insurer.disabled = renew.disabled = noneBox.checked; });
+
+  function prepare(id){
+    if (id === 'name'){
+      document.getElementById('q-dob-wrap').hidden = !hasPersonal();
+      document.getElementById('q-bizname-wrap').hidden = !hasBiz();
+    }
+    if (id === 'vehicles' && !vehiclesBox.children.length) addVehicle();
+    if (id === 'ownership'){
+      steps.ownership.querySelector('h2').textContent = vehiclesBox.children.length > 1 ? 'Are they owned, financed or leased?' : 'Is it owned, financed or leased?';
+    }
+    if (id === 'other'){
+      var keep = {};
+      otherBox.querySelectorAll('textarea').forEach(function(t){ keep[t.dataset.label] = t.value; });
+      otherBox.innerHTML = '';
+      chosen().forEach(function(c){
+        if (!OTHER_COPY[c]) return;
+        var w = el('div', {'class':'field'}), tid = 'q-other-' + c.replace(/\W/g, '');
+        var lab = el('label', {'for':tid}, OTHER_COPY[c][0]);
+        var t = el('textarea', {id:tid, rows:'3', 'data-label':OTHER_COPY[c][0], placeholder:OTHER_COPY[c][1], name:tid, required:''});
+        t.value = keep[OTHER_COPY[c][0]] || '';
+        w.appendChild(lab); w.appendChild(t); otherBox.appendChild(w);
+      });
+    }
+  }
+
+  function nextLabel(){
+    if (current === 'coverage'){
+      var n = chosen().length;
+      nextBtn.textContent = n ? 'Continue with ' + n + (n === 1 ? ' item' : ' items') : 'Continue';
+    }
+    else if (current === 'contact') nextBtn.textContent = 'Send my quote request';
+    else nextBtn.textContent = 'Continue';
+    var seq = sequence();
+    if (current !== 'done') count.textContent = chosen().length ? 'Step ' + (seq.indexOf(current) + 1) + ' of ' + seq.length : 'Getting started';
+  }
+  qform.addEventListener('change', function(e){ if (e.target.name === 'coverage') nextLabel(); });
+
+  function show(id){
+    var seq = sequence(), i = seq.indexOf(id);
+    current = id;
+    prepare(id);
+    Object.keys(steps).forEach(function(k){ steps[k].hidden = k !== id; });
+    errBox.textContent = '';
+    if (id === 'done'){
+      bar.style.width = '100%'; count.textContent = 'Sent';
+      backBtn.hidden = true; nextBtn.textContent = 'Close';
+    } else {
+      bar.style.width = Math.round(i / seq.length * 100) + '%';
+      backBtn.hidden = i === 0;
+      nextLabel();
+    }
+    qbody.scrollTop = 0;
+    if (id === 'zip') zipIn.focus();
+    else { var h = steps[id].querySelector('h2'); if (h) h.focus({preventScroll:true}); }
+  }
+
+  function visibleFields(step){
+    return Array.prototype.filter.call(step.querySelectorAll('input,select,textarea'), function(f){ var h = f.closest('[hidden]'); return (!h || h === step) && !f.disabled; });
+  }
+  function fail(msg, field){
+    errBox.textContent = msg;
+    if (field){ field.setAttribute('aria-invalid', 'true'); field.focus(); }
+    return false;
+  }
+  function validate(id){
+    var step = steps[id];
+    step.querySelectorAll('[aria-invalid]').forEach(function(f){ f.removeAttribute('aria-invalid'); });
+    if (id === 'coverage' && !chosen().length) return fail('Choose at least one thing to quote.');
+    var groups = step.querySelectorAll('[data-required]');
+    for (var g = 0; g < groups.length; g++){
+      if (!groups[g].querySelector('input:checked')) return fail('Choose one: ' + groups[g].dataset.label.toLowerCase() + '.', groups[g].querySelector('input'));
+    }
+    var fields = visibleFields(step);
+    for (var i = 0; i < fields.length; i++){
+      var f = fields[i], v = (f.value || '').trim();
+      if (f === zipIn && !/^\d{5}$/.test(v)) return fail('Enter a 5-digit ZIP code.', f);
+      if (f.required && !v) return fail('Please fill in everything marked above.', f);
+      if (f.name === 'phone' && v.replace(/\D/g, '').length < 10) return fail('Enter a 10-digit phone number.', f);
+      if (f.type === 'email' && v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return fail('Check your email address.', f);
+      if (f.name === 'dob' && v){
+        var age = (Date.now() - new Date(v).getTime()) / 31557600000;
+        if (!(age > 14 && age < 110)) return fail('Check your date of birth.', f);
+      }
+    }
+    return true;
+  }
+
+  function collect(){
+    var rows = [];
+    function put(label, val){
+      var r = rows.find(function(x){ return x[0] === label; });
+      if (r) r[1] += ', ' + val; else rows.push([label, val]);
+    }
+    sequence().forEach(function(id){
+      var step = steps[id];
+      if (id === 'vehicles'){
+        Array.prototype.forEach.call(vehiclesBox.children, function(v, i){
+          put('Vehicle ' + (i + 1), ['year', 'make', 'model'].map(function(k){ return v.querySelector('[data-v="' + k + '"]').value.trim(); }).join(' '));
+        });
+        return;
+      }
+      visibleFields(step).forEach(function(f){
+        if ((f.type === 'radio' || f.type === 'checkbox') && !f.checked) return;
+        var v = (f.value || '').trim(); if (!v) return;
+        var holder = f.closest('[data-label]'), lab = step.querySelector('label[for="' + f.id + '"]');
+        var label = f.dataset.label || (holder && holder.dataset.label) || (lab ? lab.textContent.replace(/\(optional\)/, '').trim() : f.name);
+        put(label, v);
+      });
+    });
+    return rows;
+  }
+
+  function send(){
+    var rows = collect(), endpoint = dlg.getAttribute('data-endpoint');
+    var first = document.getElementById('q-first').value.trim();
+    var summary = rows.map(function(r){ return r[0] + ': ' + r[1]; }).join('\n');
+    function done(preview){
+      document.getElementById('q-done-title').textContent = 'Thanks, ' + first + '. We’ve got it.';
+      document.getElementById('q-done-text').textContent = 'An agent will call you at ' + document.getElementById('q-phone').value.trim() + ' within one business day to go over your ' + niceList(chosen()) + ' quote. You’ll hear from Ed, Patti or someone else on our team.';
+      document.getElementById('q-done-note').hidden = !preview;
+      finished = true;
+      show('done');
+    }
+    if (!endpoint){ if (window.console) console.log('Quote request (preview, not sent):\n' + summary); done(true); return; }
+
+    var fd = new FormData();
+    fd.append('_subject', 'Quote request: ' + chosen().join(', ') + ' / ' + first + ' ' + document.getElementById('q-last').value.trim());
+    rows.forEach(function(r){ fd.append(r[0], r[1]); });
+    fd.append('Summary', summary);
+    sending = true; nextBtn.disabled = true; nextBtn.textContent = 'Sending…';
+    fetch(endpoint, {method:'POST', body:fd, headers:{'Accept':'application/json'}})
+      .then(function(r){ if (!r.ok) throw new Error(); done(false); })
+      .catch(function(){ fail('That didn’t go through. Please call us at 781-322-2800 and we’ll take it by phone.'); nextBtn.textContent = 'Try again'; })
+      .then(function(){ sending = false; nextBtn.disabled = false; });
+  }
+
+  qform.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (sending) return;
+    if (current === 'done'){ dlg.close(); return; }
+    if (!validate(current)) return;
+    if (current === 'contact'){ send(); return; }
+    var seq = sequence();
+    show(seq[seq.indexOf(current) + 1]);
+  });
+  backBtn.addEventListener('click', function(){
+    var seq = sequence(), i = seq.indexOf(current);
+    if (i > 0) show(seq[i - 1]);
+  });
+  document.getElementById('qf-close').addEventListener('click', function(){ dlg.close(); });
+  dlg.addEventListener('close', function(){ document.documentElement.classList.remove('qf-open'); });
+
+  function resetFlow(){
+    qform.reset();
+    vehiclesBox.innerHTML = '';
+    otherBox.innerHTML = '';
+    insurer.disabled = renew.disabled = false;
+    finished = false;
+    current = 'zip';
+  }
+  /* Opens the flow. A coverage card adds its coverage to whatever is already picked. */
+  function openQuote(type, zip){
+    if (finished) resetFlow();
+    if (type){
+      var box = qform.querySelector('input[name="coverage"][value="' + type.replace(/"/g, '') + '"]');
+      if (box) box.checked = true;
+    }
+    if (zip && /^\d{5}$/.test(zip) && !zipIn.value) zipIn.value = zip;
+    document.documentElement.classList.add('qf-open');
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+    var early = current === 'zip' || current === 'coverage';
+    if (early && /^\d{5}$/.test(zipIn.value)) show('coverage');
+    else show(current);
+  }
+
+  var heroZip = document.getElementById('hero-zip');
+  heroZip.addEventListener('input', function(){ heroZip.value = heroZip.value.replace(/\D/g, '').slice(0, 5); heroZip.removeAttribute('aria-invalid'); });
+  zipIn.addEventListener('input', function(){ zipIn.value = zipIn.value.replace(/\D/g, '').slice(0, 5); });
+  document.getElementById('quick-quote').addEventListener('submit', function(e){
+    e.preventDefault();
+    if (heroZip.value && !/^\d{5}$/.test(heroZip.value)){ heroZip.setAttribute('aria-invalid', 'true'); heroZip.focus(); return; }
+    if (heroZip.value) zipIn.value = heroZip.value;
+    openQuote('', heroZip.value);
+  });
+  document.querySelectorAll('[data-quote]').forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); openQuote(a.getAttribute('data-quote'), heroZip.value); });
+  });
+
+
+
+  /* Contact: live open/closed status (Mon-Thu 9-5, Fri 9-4, Boston time) */
+  (function(){
+    var el = document.getElementById('open-now'), txt = document.getElementById('open-text');
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', {timeZone:'America/New_York', weekday:'short', hour:'numeric', minute:'numeric', hour12:false}).formatToParts(new Date());
+      var get = function(t){ return (parts.find(function(p){ return p.type === t; }) || {}).value; };
+      var day = get('weekday'), now = (+get('hour') % 24) + (+get('minute')) / 60;
+      var close = {Mon:17, Tue:17, Wed:17, Thu:17, Fri:16}[day];
+      if (close && now >= 9 && now < close){ el.classList.add('is-open'); txt.textContent = 'Open now \u00B7 until ' + (close - 12) + ' pm'; }
+      else {
+        var when = (close && now < 9) ? 'today' : (day === 'Fri' || day === 'Sat' || day === 'Sun') ? 'Monday' : 'tomorrow';
+        txt.textContent = 'Closed now \u00B7 opens ' + when + ' at 9 am';
+      }
+    } catch(e){}
+  })();
+  var cue = document.querySelector('.scroll-cue');
+  window.addEventListener('scroll', function(){ cue.classList.toggle('is-gone', window.scrollY > 120); }, {passive:true});
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
