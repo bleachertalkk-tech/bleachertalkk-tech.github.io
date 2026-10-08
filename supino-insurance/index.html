@@ -501,6 +501,16 @@ html.qf-open{overflow:hidden}
   .callbar .btn{flex:1;min-height:50px;padding:0 12px}
   .callbar .btn-light{background:var(--linen);color:var(--ink)}
 }
+
+/* Wide phones + narrow windows (480-760): keep ZIP and button side by side, photo shorter */
+@media (min-width:480px) and (max-width:760px){
+  .quote-row{flex-direction:row}
+  .zip-field{flex:0 0 150px}
+  .hero-frame{aspect-ratio:16/9!important}
+}
+@media (max-width:760px){
+  .hero-frame{max-height:56svh}
+}
 </style>
 </head>
 <body>
