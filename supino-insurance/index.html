@@ -511,6 +511,14 @@ html.qf-open{overflow:hidden}
 @media (max-width:760px){
   .hero-frame{max-height:56svh}
 }
+
+/* Photo centered at every width: equal space both sides, all corners rounded */
+.hero-media{margin:clamp(40px,5vw,64px) max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter))) clamp(32px,4vw,48px) 0}
+.hero-frame{border-radius:28px}
+.hero-bar{left:28px;right:28px;border-radius:999px}
+.hero-photo{object-position:50% 45%}
+@media (max-width:900px){.hero-media{margin:0 var(--gutter) 36px}}
+@media (max-width:760px){.hero-media{margin:0 var(--gutter) 28px}.hero-frame{border-radius:22px}.hero-bar{left:18px;right:18px}}
 </style>
 </head>
 <body>
