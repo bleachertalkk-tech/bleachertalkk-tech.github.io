@@ -95,6 +95,31 @@ img{max-width:100%;display:block}a{color:inherit}button{font:inherit;color:inher
 .offer-in p{margin-top:14px;max-width:40ch;color:rgba(247,235,214,.9)}
 .offer-in .hero-cta .ghost{color:var(--cream)}
 
+/* booking: party, day, time from the real hours */
+.book{padding-bottom:var(--sec)}
+.book-card{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,70px);align-items:start;background:var(--green);color:var(--cream);border-radius:26px;border:3px solid var(--char);box-shadow:10px 10px 0 var(--mustard);padding:clamp(26px,4vw,56px)}
+.book-card .script{display:block;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--mustard);transform:rotate(-3deg);transform-origin:left}
+.book-card h2{font-size:clamp(2.8rem,5.4vw,4.8rem)}
+.book-card .lede{margin-top:14px;color:rgba(247,235,214,.85);max-width:36ch}
+.book-card .lede a{color:var(--cream);font-weight:700}
+.bk-lab{margin:0 0 10px;font:700 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--mustard)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip,.day,.slot{border:0;background:rgba(247,235,214,.1);color:var(--cream);box-shadow:inset 0 0 0 1.5px rgba(247,235,214,.25);font:700 14px/1 var(--body)}
+.chip{min-height:44px;padding:0 18px;border-radius:999px}
+.chip[aria-pressed=true],.day[aria-pressed=true],.slot[aria-pressed=true]{background:var(--mustard);color:var(--ink);box-shadow:none}
+.days{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;margin-bottom:22px}.days::-webkit-scrollbar{display:none}
+.day{flex:0 0 64px;display:grid;gap:3px;place-items:center;padding:10px 0;border-radius:14px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+.day b{font:400 1.7rem/1 var(--poster)}
+.day:disabled{opacity:.3;cursor:not-allowed}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;min-height:44px}
+.slot{min-height:44px;border-radius:12px;font-variant-numeric:tabular-nums}
+.none{grid-column:1/-1;color:rgba(247,235,214,.75);font-size:14.5px}
+.who{display:none;gap:10px;margin-top:20px}.who.on{display:grid}
+.who input{min-height:52px;border-radius:12px;border:2px solid rgba(247,235,214,.3);background:rgba(20,18,16,.25);padding:0 16px;font:500 16px/1 var(--body);color:var(--cream)}
+.who input::placeholder{color:rgba(247,235,214,.6)}.who input:focus{outline:none;border-color:var(--mustard)}
+.who .btn{width:100%}
+.ok{padding:24px 0}.ok b{display:block;font:400 2.6rem/1 var(--poster);text-transform:uppercase;color:var(--mustard)}.ok p{margin-top:10px;color:rgba(247,235,214,.88)}
+
 /* 6. reviews */
 .reviews{background:var(--char);color:var(--cream);padding-block:var(--sec);overflow:hidden}
 .reviews .kick{color:var(--mustard)}
@@ -141,7 +166,7 @@ footer{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,80px) 0
 .later{display:block;margin:10px auto 0;min-height:44px;padding:0 16px;border:0;background:none;color:var(--soft);font:700 13px/1 var(--body);letter-spacing:.1em;text-transform:uppercase}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
-@media (max-width:1000px){.nav{display:none}.about-grid,.visit-grid,.offer-card{grid-template-columns:minmax(0,1fr)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1000px){.nav{display:none}.about-grid,.visit-grid,.offer-card,.book-card{grid-template-columns:minmax(0,1fr)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){
   body{font-size:16px}
   .hero h1{font-size:clamp(3.6rem,19vw,6rem)}.hero h1.long{font-size:clamp(2.8rem,13vw,4.4rem)}
@@ -192,7 +217,7 @@ footer{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,80px) 0
 <section class="food" id="food" aria-labelledby="food-title">
   <div class="wrap">
     <div class="food-head"><div><span class="script">straight from the kitchen</span><h2 class="poster h2" id="food-title">The food.</h2></div><a class="btn red" href="tel:+17812177527">Call to order</a></div>
-    <div class="grid"><figure><img src="img/p10-1200.webp" srcset="img/p10-1200.webp 1200w, img/p10.webp 572w" sizes="(max-width:1000px) 50vw, 25vw" width="572" height="600" loading="lazy" alt="A square cheese pie from Pisa Pizza"></figure><figure><img src="img/p03-1200.webp" srcset="img/p03-1200.webp 1200w, img/p03.webp 560w" sizes="(max-width:1000px) 50vw, 25vw" width="560" height="420" loading="lazy" alt="Food from Pisa Pizza Malden"></figure><figure><img src="img/p01-1200.webp" srcset="img/p01-1200.webp 1200w, img/p01.webp 427w" sizes="(max-width:1000px) 50vw, 25vw" width="427" height="600" loading="lazy" alt="Food from Pisa Pizza Malden"></figure><figure><img src="img/p07-1200.webp" srcset="img/p07-1200.webp 1200w, img/p07.webp 640w" sizes="(max-width:1000px) 50vw, 25vw" width="640" height="549" loading="lazy" alt="Food from Pisa Pizza Malden"></figure><figure><img src="img/p09-1200.webp" srcset="img/p09-1200.webp 1200w, img/p09.webp 640w" sizes="(max-width:1000px) 50vw, 25vw" width="640" height="520" loading="lazy" alt="Food from Pisa Pizza Malden"></figure></div>
+    <div class="grid"><figure><img src="img/p10-1200.webp" srcset="img/p10-1200.webp 1200w, img/p10.webp 572w" sizes="(max-width:1000px) 50vw, 25vw" width="572" height="600" loading="lazy" alt="A square cheese pie from Pisa Pizza"></figure><figure><img src="img/p03-1200.webp" srcset="img/p03-1200.webp 1200w, img/p03.webp 2400w" sizes="(max-width:1000px) 50vw, 25vw" width="2400" height="1800" loading="lazy" alt="Food from Pisa Pizza Malden"></figure><figure><img src="img/p01-1200.webp" srcset="img/p01-1200.webp 1200w, img/p01.webp 1800w" sizes="(max-width:1000px) 50vw, 25vw" width="1800" height="2400" loading="lazy" alt="Food from Pisa Pizza Malden"></figure><figure><img src="img/p07-1200.webp" srcset="img/p07-1200.webp 1200w, img/p07.webp 1440w" sizes="(max-width:1000px) 50vw, 25vw" width="1440" height="1920" loading="lazy" alt="Food from Pisa Pizza Malden"></figure><figure><img src="img/p09-1200.webp" srcset="img/p09-1200.webp 1200w, img/p09.webp 640w" sizes="(max-width:1000px) 50vw, 25vw" width="640" height="520" loading="lazy" alt="Food from Pisa Pizza Malden"></figure></div>
   </div>
 </section>
 
@@ -204,6 +229,8 @@ footer{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,80px) 0
       <div class="hero-cta"><a class="btn mus" href="tel:+17812177527">Call to order</a><a class="btn ghost" href="tel:+17812177527">(781) 217-7527</a></div></div>
   </div>
 </div></section>
+
+
 
 <section class="reviews" id="reviews" aria-labelledby="rv-title">
   <div class="wrap rv-head"><div><p class="kick">Google reviews</p><h2 class="poster h2" id="rv-title">What people say.</h2></div><div class="score"><b>4.6★</b><span>from 1,158 Google reviews</span></div></div>
@@ -232,7 +259,7 @@ footer{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,80px) 0
 <div class="dlg" id="pop" role="dialog" aria-modal="true" aria-labelledby="popT">
   <div class="sheet">
     <button class="x" type="button" data-close aria-label="Close">×</button>
-    <div class="ph"><img src="img/p03-1200.webp" srcset="img/p03-1200.webp 1200w, img/p03.webp 560w" sizes="440px" width="560" height="420" loading="lazy" alt=""></div>
+    <div class="ph"><img src="img/p03-1200.webp" srcset="img/p03-1200.webp 1200w, img/p03.webp 2400w" sizes="440px" width="2400" height="1800" loading="lazy" alt=""></div>
     <div class="in"><span class="script">hey, hungry?</span><h3 id="popT">Call it in.</h3><p>Pisa Pizza Malden · 133 Pearl St, Malden</p>
       <div class="hero-cta"><a class="btn red" href="tel:+17812177527">Call to order</a><a class="btn ghost" href="tel:+17812177527">Call</a></div><button class="later" type="button" data-close>Not now</button></div>
   </div>
@@ -250,6 +277,24 @@ footer{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,80px) 0
   if ($('#hours')) $('#hours tbody').innerHTML = B.hours.map(([d, h]) => '<tr' + (d === today ? ' class="today"' : '') + '><td>' + d + '</td><td>' + h.replace(/–/g, ' – ') + '</td></tr>').join('');
   const sp = parse(hoursOf(today)), on = !!sp && hr >= sp[0] && hr < sp[1];
   const o = $('#open'); if (!B.hours.length) o.hidden = true; o.classList.toggle('on', on); o.querySelector('span').textContent = on ? 'Open now · until ' + fmt(sp[1]) : (sp && hr < sp[0] ? 'Opens today at ' + fmt(sp[0]) : 'Closed right now');
+  // booking: next 14 days from the real hours, 30-minute slots, last one an hour before close
+  const days = $('#days');
+  if (days) {
+    const slots = $('#slots'), who = $('#who'), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+    const pick = (g, b) => $$('[aria-pressed]', g).forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+    let party = '1–2', day = 0, slot = '';
+    $$('#party .chip').forEach(c => c.addEventListener('click', () => { party = c.textContent; pick($('#party'), c); }));
+    const list = [...Array(14)].map((_, i) => { const d = new Date(now); d.setDate(now.getDate() + i); return d; });
+    days.innerHTML = list.map((d, i) => { const s = parse(hoursOf(D7[d.getDay()])); const late = i === 0 && s && hr > s[1] - 1.5; return '<button type="button" class="day" data-i="' + i + '" aria-pressed="false"' + (!s || late ? ' disabled' : '') + '>' + (i === 0 ? 'Today' : D7[d.getDay()].slice(0, 3)) + '<b>' + d.getDate() + '</b>' + d.toLocaleString('en-US', { month: 'short' }) + '</button>'; }).join('');
+    const show = () => { const s = parse(hoursOf(D7[list[day].getDay()])); const out = []; if (s) for (let t = Math.ceil(s[0] * 2) / 2; t <= s[1] - 1; t += .5) { if (day === 0 && t < hr + .75) continue; out.push(t); }
+      slots.innerHTML = out.length ? out.map(t => '<button type="button" class="slot" aria-pressed="false">' + fmt(t) + '</button>').join('') : '<p class="none">No times left this day. Try another day.</p>'; slot = ''; who.classList.remove('on'); };
+    days.addEventListener('click', e => { const b = e.target.closest('.day'); if (!b || b.disabled) return; day = +b.dataset.i; pick(days, b); show(); });
+    slots.addEventListener('click', e => { const b = e.target.closest('.slot'); if (!b) return; slot = b.textContent; pick(slots, b); who.classList.add('on'); });
+    const first = days.querySelector('.day:not(:disabled)'); if (first) first.click();
+    who.addEventListener('submit', e => { e.preventDefault(); const n = $('#fn'), p = $('#fp'); if (!n.value.trim()) return n.focus(); if (p.value.replace(/D/g, '').length < 10) return p.focus();
+      const d = list[day]; $('#okT').textContent = 'Table for ' + party + ', ' + D7[d.getDay()] + ' ' + d.toLocaleString('en-US', { month: 'short', day: 'numeric' }) + ' at ' + slot + '. ' + B.name + ' will text ' + p.value + ' to confirm. Questions? Call ' + B.phone + '.';
+      $('#bkMain').hidden = true; $('#ok').hidden = false; });
+  }
   const hdr = $('#hdr'), mbar = $('#mbar'); const onS = () => { hdr.classList.toggle('solid', scrollY > 40); mbar.classList.toggle('show', scrollY > innerHeight * .6); };
   addEventListener('scroll', onS, { passive: true }); onS();
   const rail = $('#rail');

@@ -95,6 +95,31 @@ img{max-width:100%;display:block}a{color:inherit}button{font:inherit;color:inher
 .offer-in p{margin-top:14px;max-width:40ch;color:rgba(247,235,214,.9)}
 .offer-in .hero-cta .ghost{color:var(--cream)}
 
+/* booking: party, day, time from the real hours */
+.book{padding-bottom:var(--sec)}
+.book-card{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,70px);align-items:start;background:var(--green);color:var(--cream);border-radius:26px;border:3px solid var(--char);box-shadow:10px 10px 0 var(--mustard);padding:clamp(26px,4vw,56px)}
+.book-card .script{display:block;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--mustard);transform:rotate(-3deg);transform-origin:left}
+.book-card h2{font-size:clamp(2.8rem,5.4vw,4.8rem)}
+.book-card .lede{margin-top:14px;color:rgba(247,235,214,.85);max-width:36ch}
+.book-card .lede a{color:var(--cream);font-weight:700}
+.bk-lab{margin:0 0 10px;font:700 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--mustard)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip,.day,.slot{border:0;background:rgba(247,235,214,.1);color:var(--cream);box-shadow:inset 0 0 0 1.5px rgba(247,235,214,.25);font:700 14px/1 var(--body)}
+.chip{min-height:44px;padding:0 18px;border-radius:999px}
+.chip[aria-pressed=true],.day[aria-pressed=true],.slot[aria-pressed=true]{background:var(--mustard);color:var(--ink);box-shadow:none}
+.days{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;margin-bottom:22px}.days::-webkit-scrollbar{display:none}
+.day{flex:0 0 64px;display:grid;gap:3px;place-items:center;padding:10px 0;border-radius:14px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+.day b{font:400 1.7rem/1 var(--poster)}
+.day:disabled{opacity:.3;cursor:not-allowed}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;min-height:44px}
+.slot{min-height:44px;border-radius:12px;font-variant-numeric:tabular-nums}
+.none{grid-column:1/-1;color:rgba(247,235,214,.75);font-size:14.5px}
+.who{display:none;gap:10px;margin-top:20px}.who.on{display:grid}
+.who input{min-height:52px;border-radius:12px;border:2px solid rgba(247,235,214,.3);background:rgba(20,18,16,.25);padding:0 16px;font:500 16px/1 var(--body);color:var(--cream)}
+.who input::placeholder{color:rgba(247,235,214,.6)}.who input:focus{outline:none;border-color:var(--mustard)}
+.who .btn{width:100%}
+.ok{padding:24px 0}.ok b{display:block;font:400 2.6rem/1 var(--poster);text-transform:uppercase;color:var(--mustard)}.ok p{margin-top:10px;color:rgba(247,235,214,.88)}
+
 /* 6. reviews */
 .reviews{background:var(--char);color:var(--cream);padding-block:var(--sec);overflow:hidden}
 .reviews .kick{color:var(--mustard)}
@@ -141,7 +166,7 @@ footer{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,80px) 0
 .later{display:block;margin:10px auto 0;min-height:44px;padding:0 16px;border:0;background:none;color:var(--soft);font:700 13px/1 var(--body);letter-spacing:.1em;text-transform:uppercase}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
-@media (max-width:1000px){.nav{display:none}.about-grid,.visit-grid,.offer-card{grid-template-columns:minmax(0,1fr)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1000px){.nav{display:none}.about-grid,.visit-grid,.offer-card,.book-card{grid-template-columns:minmax(0,1fr)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){
   body{font-size:16px}
   .hero h1{font-size:clamp(3.6rem,19vw,6rem)}.hero h1.long{font-size:clamp(2.8rem,13vw,4.4rem)}
@@ -160,7 +185,7 @@ footer{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,80px) 0
 <a class="skip" href="#main">Skip to content</a>
 <header class="hdr" id="hdr"><div class="wrap">
   <a class="brand" href="#top">FLAMING GRILL BUFFET</a>
-  <nav class="nav" aria-label="Main"><a href="#food">Food</a><a href="#about">About</a><a href="#visit">Hours</a></nav>
+  <nav class="nav" aria-label="Main"><a href="#food">Food</a><a href="#about">About</a><a href="#book">Book a table</a><a href="#visit">Hours</a></nav>
   <a class="btn red" href="tel:+17812028808">Call to order</a>
 </div></header>
 
@@ -171,7 +196,7 @@ footer{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,80px) 0
   <div class="wrap">
     <span class="script">Buffet on 52 Broadway</span>
     <h1 class="poster long" id="hero-title">FLAMING GRILL BUFFET</h1>
-    <div class="hero-cta"><a class="btn red" href="tel:+17812028808">Call to order</a><a class="btn ghost" href="tel:+17812028808">Call (781) 202-8808</a></div>
+    <div class="hero-cta"><a class="btn red" href="tel:+17812028808">Call to order</a><a class="btn mus" href="#book">Book a table</a><a class="btn ghost" href="tel:+17812028808">Call (781) 202-8808</a></div>
   </div>
 </section>
 
@@ -205,6 +230,25 @@ footer{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,80px) 0
   </div>
 </div></section>
 
+<section class="book" id="book" aria-labelledby="book-title"><div class="wrap">
+  <div class="book-card">
+    <div><span class="script">save your seat</span><h2 class="poster" id="book-title">Book a table.</h2>
+      <p class="lede">Pick how many, the day and the time. FLAMING GRILL BUFFET texts you to confirm. Big group or same-day? Call <a href="tel:+17812028808">(781) 202-8808</a>.</p></div>
+    <div id="bkMain">
+      <p class="bk-lab">How many?</p>
+      <div class="chips" id="party"><button type="button" class="chip" aria-pressed="true">1–2</button><button type="button" class="chip" aria-pressed="false">3–4</button><button type="button" class="chip" aria-pressed="false">5–6</button><button type="button" class="chip" aria-pressed="false">7+</button></div>
+      <p class="bk-lab">Day</p><div class="days" id="days"></div>
+      <p class="bk-lab">Time</p><div class="slots" id="slots"></div>
+      <form class="who" id="who" novalidate>
+        <input id="fn" autocomplete="name" placeholder="Your name" aria-label="Your name" required>
+        <input id="fp" type="tel" inputmode="tel" autocomplete="tel" placeholder="Mobile number" aria-label="Mobile number" required>
+        <button class="btn red" type="submit">Request this table</button>
+      </form>
+    </div>
+    <div class="ok" id="ok" hidden><b>Request sent.</b><p id="okT"></p></div>
+  </div>
+</div></section>
+
 
 
 <section class="visit" id="visit" aria-labelledby="visit-title">
@@ -231,7 +275,7 @@ footer{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,80px) 0
     <button class="x" type="button" data-close aria-label="Close">×</button>
     <div class="ph"><img src="img/p09-1200.webp" srcset="img/p09-1200.webp 1200w, img/p09.webp 1807w" sizes="440px" width="1807" height="2400" loading="lazy" alt=""></div>
     <div class="in"><span class="script">hey, hungry?</span><h3 id="popT">Call it in.</h3><p>FLAMING GRILL BUFFET · 52 Broadway, Malden</p>
-      <div class="hero-cta"><a class="btn red" href="tel:+17812028808">Call to order</a><a class="btn ghost" href="tel:+17812028808">Call</a></div><button class="later" type="button" data-close>Not now</button></div>
+      <div class="hero-cta"><a class="btn red" href="tel:+17812028808">Call to order</a><a class="btn mus" href="#book" data-close>Book a table</a></div><button class="later" type="button" data-close>Not now</button></div>
   </div>
 </div>
 
@@ -247,6 +291,24 @@ footer{background:var(--green);color:var(--cream);padding:clamp(48px,7vw,80px) 0
   if ($('#hours')) $('#hours tbody').innerHTML = B.hours.map(([d, h]) => '<tr' + (d === today ? ' class="today"' : '') + '><td>' + d + '</td><td>' + h.replace(/–/g, ' – ') + '</td></tr>').join('');
   const sp = parse(hoursOf(today)), on = !!sp && hr >= sp[0] && hr < sp[1];
   const o = $('#open'); if (!B.hours.length) o.hidden = true; o.classList.toggle('on', on); o.querySelector('span').textContent = on ? 'Open now · until ' + fmt(sp[1]) : (sp && hr < sp[0] ? 'Opens today at ' + fmt(sp[0]) : 'Closed right now');
+  // booking: next 14 days from the real hours, 30-minute slots, last one an hour before close
+  const days = $('#days');
+  if (days) {
+    const slots = $('#slots'), who = $('#who'), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+    const pick = (g, b) => $$('[aria-pressed]', g).forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+    let party = '1–2', day = 0, slot = '';
+    $$('#party .chip').forEach(c => c.addEventListener('click', () => { party = c.textContent; pick($('#party'), c); }));
+    const list = [...Array(14)].map((_, i) => { const d = new Date(now); d.setDate(now.getDate() + i); return d; });
+    days.innerHTML = list.map((d, i) => { const s = parse(hoursOf(D7[d.getDay()])); const late = i === 0 && s && hr > s[1] - 1.5; return '<button type="button" class="day" data-i="' + i + '" aria-pressed="false"' + (!s || late ? ' disabled' : '') + '>' + (i === 0 ? 'Today' : D7[d.getDay()].slice(0, 3)) + '<b>' + d.getDate() + '</b>' + d.toLocaleString('en-US', { month: 'short' }) + '</button>'; }).join('');
+    const show = () => { const s = parse(hoursOf(D7[list[day].getDay()])); const out = []; if (s) for (let t = Math.ceil(s[0] * 2) / 2; t <= s[1] - 1; t += .5) { if (day === 0 && t < hr + .75) continue; out.push(t); }
+      slots.innerHTML = out.length ? out.map(t => '<button type="button" class="slot" aria-pressed="false">' + fmt(t) + '</button>').join('') : '<p class="none">No times left this day. Try another day.</p>'; slot = ''; who.classList.remove('on'); };
+    days.addEventListener('click', e => { const b = e.target.closest('.day'); if (!b || b.disabled) return; day = +b.dataset.i; pick(days, b); show(); });
+    slots.addEventListener('click', e => { const b = e.target.closest('.slot'); if (!b) return; slot = b.textContent; pick(slots, b); who.classList.add('on'); });
+    const first = days.querySelector('.day:not(:disabled)'); if (first) first.click();
+    who.addEventListener('submit', e => { e.preventDefault(); const n = $('#fn'), p = $('#fp'); if (!n.value.trim()) return n.focus(); if (p.value.replace(/D/g, '').length < 10) return p.focus();
+      const d = list[day]; $('#okT').textContent = 'Table for ' + party + ', ' + D7[d.getDay()] + ' ' + d.toLocaleString('en-US', { month: 'short', day: 'numeric' }) + ' at ' + slot + '. ' + B.name + ' will text ' + p.value + ' to confirm. Questions? Call ' + B.phone + '.';
+      $('#bkMain').hidden = true; $('#ok').hidden = false; });
+  }
   const hdr = $('#hdr'), mbar = $('#mbar'); const onS = () => { hdr.classList.toggle('solid', scrollY > 40); mbar.classList.toggle('show', scrollY > innerHeight * .6); };
   addEventListener('scroll', onS, { passive: true }); onS();
   const rail = $('#rail');
