@@ -704,9 +704,9 @@ footer.site a{color:var(--canvas)}
   }
   // photo row arrows
   $$('[data-row]').forEach(b => b.addEventListener('click', () => { const t = $('#row'); t.scrollBy({ left: (+b.dataset.row) * Math.min(440, t.clientWidth * .85), behavior: reduce ? 'auto' : 'smooth' }); }));
-  // "Been in an accident?" once per visit, after a few seconds, never over another window
-  const pop = $('#pop'); let seen = false; try { seen = !!sessionStorage.getItem('pop'); } catch (e) {}
-  const showPop = () => { if (seen) return; if (anyOpen()) return setTimeout(showPop, 8000); seen = true; try { sessionStorage.setItem('pop', '1'); } catch (e) {} open(pop); };
+  // "Get an estimate now" pop-up on every page load, after a few seconds, never over another window
+  const pop = $('#pop'); let seen = false;
+  const showPop = () => { if (seen) return; if (anyOpen()) return setTimeout(showPop, 8000); seen = true; open(pop); };
   setTimeout(showPop, 3500);
   $$('[data-svc],[data-est]', pop).forEach(x => x.addEventListener('click', () => pop.classList.remove('open')));
 })();</script>

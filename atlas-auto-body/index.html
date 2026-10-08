@@ -265,6 +265,22 @@ footer.site a{color:var(--canvas)}
 .mnav > a{font:900 italic 2.2rem/1.2 var(--display);font-stretch:112%;text-transform:uppercase;text-decoration:none;padding:10px 0;border-bottom:1px solid var(--line)}
 .mnav .x{top:calc(12px + env(safe-area-inset-top,0px));right:var(--gut)}
 
+/* pop-up, free box, moving reviews (same as the body shop master) */
+.pop-ph{aspect-ratio:16/9;background:var(--night);overflow:hidden;border-radius:18px 18px 0 0}
+.pop-ph img{width:100%;height:100%;object-fit:cover}
+.pop .f-body{padding-top:24px}
+.pop .opt{min-height:60px}
+.rail{padding-top:16px;padding-bottom:24px}
+.rcard{transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.rcard:hover{transform:translateY(-8px) scale(1.03);box-shadow:inset 0 0 0 1px var(--line),0 24px 50px -24px rgba(13,14,17,.45)}
+.big-go{width:100%;min-height:56px;margin-top:16px;font-size:16px}
+.free-box{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;margin-top:14px;min-height:150px;padding:30px 28px;border:0;border-radius:14px;background:var(--signal);color:var(--ink);text-align:left;transition:transform .25s var(--ease),background-color .25s}
+.free-box:hover{background:#FF7633;transform:translateY(-2px)}
+.free-box b{display:block;font-size:clamp(1.7rem,2.8vw,2.5rem)}
+.free-box small{display:block;margin-top:10px;font-size:15px;max-width:34ch}
+.free-box i{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--ink);color:var(--canvas);flex:none}
+.free-box i svg{width:22px;height:22px}
+.later{display:block;margin:14px auto 0;min-height:44px;padding:0 16px;border:0;background:none;color:var(--steel);font:600 14px/1 var(--body)}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .hero-bg img{animation:none}
@@ -400,7 +416,8 @@ footer.site a{color:var(--canvas)}
         <button type="button" class="opt" data-pick="Paint"><i><svg><use href="#paint"/></svg></i>Paint<svg><use href="#arrow"/></svg></button>
         <button type="button" class="opt" data-pick="Not sure"><i><svg><use href="#spark"/></svg></i>Not sure yet<svg><use href="#arrow"/></svg></button>
       </div>
-      <div class="est-note"><span>Takes about a minute</span><a href="tel:+17812841200">Or call (781) 284-1200</a></div>
+      <button type="button" class="free-box" data-est><span><b class="slant">Get an estimate for free</b><small>Tell us what happened and we'll call you back. Takes about a minute.</small></span><i><svg><use href="#arrow"/></svg></i></button>
+      <div class="est-note"><span>No cost, no pressure</span><a href="tel:+17812841200">Or call (781) 284-1200</a></div>
     </div>
   </div>
 </section>
@@ -508,6 +525,22 @@ footer.site a{color:var(--canvas)}
   <div class="msgs" id="msgs" aria-live="polite"></div>
   <div class="sugs" id="sugs"><button type="button">Are you open now?</button><button type="button">Where are you?</button><button type="button">Can you work with my insurance?</button><button type="button">How much will it cost?</button></div>
   <form id="chatF"><input id="chatI" placeholder="Ask about hours, services, location…" autocomplete="off" aria-label="Your question"><button type="submit" aria-label="Send"><svg><use href="#send"/></svg></button></form>
+</div>
+<div class="dlg pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="popT">
+  <div class="sheet">
+    <div class="pop-ph"><img src="img/hero-1200.webp" width="1200" height="900" loading="lazy" alt=""></div>
+    <button class="x" type="button" data-close aria-label="Close"><svg><use href="#close"/></svg></button>
+    <div class="f-body">
+      <div class="f-step on"><h3 id="popT">Get an estimate now</h3><p class="q">Free, and it takes about a minute. What happened?</p></div>
+      <div class="opts">
+        <button type="button" class="opt" data-svc="Accident"><i><svg><use href="#car"/></svg></i>Accident<svg><use href="#arrow"/></svg></button>
+        <button type="button" class="opt" data-svc="Dent or scratch"><i><svg><use href="#wrench"/></svg></i>Dent or scratch<svg><use href="#arrow"/></svg></button>
+        <button type="button" class="opt" data-svc="Paint"><i><svg><use href="#paint"/></svg></i>Paint<svg><use href="#arrow"/></svg></button>
+      </div>
+      <button class="btn btn-o big-go" type="button" data-est>Get an estimate now <svg><use href="#arrow"/></svg></button>
+      <button class="later" type="button" data-close>Not now</button>
+    </div>
+  </div>
 </div>
 <!-- estimate funnel -->
 <div class="dlg" id="fun" role="dialog" aria-modal="true" aria-labelledby="funT">
@@ -663,6 +696,31 @@ footer.site a{color:var(--canvas)}
   const ask = t => { if (!t.trim()) return; say(t, 'me'); setTimeout(() => say(answer(t)), reduce ? 0 : 420); };
   $('#chatF').addEventListener('submit', e => { e.preventDefault(); ask($('#chatI').value); $('#chatI').value = ''; });
   $('#sugs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) ask(b.textContent); });
+  // reviews drift slowly in a loop; hover, touch, focus or the arrows pause it
+  const rail = $('#railTrack');
+  if (!reduce && rail.children.length > 1) {
+    rail.insertAdjacentHTML('beforeend', rail.innerHTML.replace(/<figure class="rcard"/g, '<figure class="rcard" aria-hidden="true"'));
+    rail.style.scrollSnapType = 'none';
+    let x = 0, hold = 0, over = false;
+    const pause = ms => { hold = performance.now() + ms; };
+    rail.addEventListener('pointerenter', () => { over = true; }); rail.addEventListener('pointerleave', () => { over = false; x = rail.scrollLeft; });
+    rail.addEventListener('focusin', () => { over = true; }); rail.addEventListener('focusout', () => { over = false; });
+    rail.addEventListener('touchstart', () => pause(4000), { passive: true });
+    $$('[data-rail]').forEach(b => b.addEventListener('click', () => pause(1500)));
+    const step = t => {
+      const half = rail.scrollWidth / 2;
+      if (over || rail.matches(':hover') || t < hold || document.hidden) x = rail.scrollLeft;
+      else { x += .4; rail.scrollLeft = x; }
+      if (x >= half) { x -= half; rail.scrollLeft = x; }
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  // "Get an estimate now" pop-up on every page load, after a few seconds, never over another window
+  const pop = $('#pop'); let seen = false;
+  const showPop = () => { if (seen) return; if (anyOpen()) return setTimeout(showPop, 8000); seen = true; open(pop); };
+  setTimeout(showPop, 3500);
+  $$('[data-svc],[data-est]', pop).forEach(x => x.addEventListener('click', () => pop.classList.remove('open')));
 })();</script>
 </body>
 </html>
