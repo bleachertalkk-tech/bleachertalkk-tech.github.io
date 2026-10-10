@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#2F5BFF">
 <title>Addissu Tsige · Websites for Malden Businesses</title>
-<meta name="description" content="Websites for local businesses in Malden, MA. I build it first, you see it, and it goes live within a week. $599 setup and $149 a month, or own it for $800.">
+<meta name="description" content="Websites for local businesses in Malden, MA. I build it first, you see it, and it goes live within a week. Own it for $599, or $499 to start and $217 a month with changes anytime.">
 <meta property="og:title" content="See your new website before you pay a cent">
 <meta property="og:description" content="Free website previews for Malden businesses. Live in 7 days if you love it. $0 if you don't.">
 <meta property="og:image" content="https://bleachertalkk-tech.github.io/img/samples/supino-insurance-card.jpg">
@@ -449,19 +449,20 @@ nav .btn.pay:hover{background:var(--blue-tint)}
 <section id="pricing" style="padding-top:0">
   <div class="in">
     <span class="eyebrow">Pricing</span>
-    <h2>$599 to start. <em>Live in 7 days.</em></h2>
+    <h2>$599 to own it. <em>Live in 7 days.</em></h2>
     <p class="lead">Simple prices, no hidden fees. Payments are processed securely by Stripe.</p>
     <div class="plans">
       <div class="plan rec">
         <span class="flag">Most owners pick this</span>
         <span class="name">Care plan</span>
-        <div class="amt">$599 <small>setup</small></div>
-        <p class="then">then $149/month · month to month</p>
+        <div class="amt">$499 <small>today</small></div>
+        <p class="then">then $217/month · month to month</p>
         <ul>
           <li>Website built and set up</li>
           <li>Hosting and your web address</li>
           <li>Anything breaks, it gets fixed</li>
-          <li>Text changes: hours, prices, photos</li>
+          <li>Change anything, anytime: photos, menu, prices, hours, colors</li>
+          <li>Help 24/7 by text</li>
           <li>First month included in setup</li>
           <li>Cancel anytime</li>
         </ul>
@@ -469,7 +470,7 @@ nav .btn.pay:hover{background:var(--blue-tint)}
       </div>
       <div class="plan">
         <span class="name">Own it</span>
-        <div class="amt">$800 <small>one time</small></div>
+        <div class="amt">$599 <small>one time</small></div>
         <p class="then">no monthly fee</p>
         <ul>
           <li>Website built and handed over to you</li>
@@ -522,7 +523,7 @@ nav .btn.pay:hover{background:var(--blue-tint)}
       <h3 style="font-size:30px">Cancellation, refunds and payments</h3>
       <div class="pols">
         <div class="pol" id="cancellation"><h3>Cancellation</h3><p>The care plan is month to month. Cancel anytime by text or email before your next billing date, and you won't be charged again. Your site stays up until the end of the month you paid for.</p></div>
-        <div class="pol" id="refunds"><h3>Refunds</h3><p>You see your website before you pay. If something isn't right before launch, I'll fix it. The setup fee, a month that has already started, and the one-time $800 purchase are not refundable once the site is live. Billing mistakes are always refunded in full.</p></div>
+        <div class="pol" id="refunds"><h3>Refunds</h3><p>You see your website before you pay. If something isn't right before launch, I'll fix it. The setup fee, a month that has already started, and the one-time $599 purchase are not refundable once the site is live. Billing mistakes are always refunded in full.</p></div>
         <div class="pol" id="payments"><h3>Payments</h3><p>All payments are by card through Stripe's secure checkout. I never see or store your card number. You get an email receipt for every charge.</p></div>
         <div class="pol" id="delivery"><h3>Delivery</h3><p>Your site goes live within 7 days of signing, after you confirm your info (phone, hours, services) is right. Changes on the care plan are usually done within 2 business days.</p></div>
       </div>
@@ -618,8 +619,8 @@ nav .btn.pay:hover{background:var(--blue-tint)}
     <section class="st" data-s="p2">
       <h3>Pick your <em>plan.</em></h3>
       <div class="opts">
-        <button type="button" class="opt" data-plan-pick="care"><small>Care plan · most pick this</small><b>$599 today</b><span>$450 setup + your first month. Then $149/month. Hosting, fixes and text-a-change included. Cancel anytime.</span></button>
-        <button type="button" class="opt" data-plan-pick="own"><small>Own it</small><b>$800 once</b><span>No monthly fee. 30 days of free fixes. Hosting and later changes are yours.</span></button>
+        <button type="button" class="opt" data-plan-pick="care"><small>Care plan · most pick this</small><b>$499 today</b><span>Setup + your first month. Then $217/month. Change anything anytime, help 24/7. Hosting, fixes and text-a-change included. Cancel anytime.</span></button>
+        <button type="button" class="opt" data-plan-pick="own"><small>Own it</small><b>$599 once</b><span>No monthly fee. 30 days of free fixes. Hosting and later changes are yours.</span></button>
       </div>
       <div class="nav2"><button type="button" class="back" data-go="p1">← Back</button></div>
     </section>
@@ -668,7 +669,7 @@ if('IntersectionObserver' in window){new IntersectionObserver(function(es){if(es
 })();
 
 (function(){
-var PAY={care:'https://buy.stripe.com/14A9AN8FVg85enQ6wd4ow00',own:'https://buy.stripe.com/5kQ3cp5tJg8593w6wd4ow01'};
+var PAY={care:'https://buy.stripe.com/5kQ00de0f5tr7Zs9Ip4ow04',own:'https://buy.stripe.com/5kQfZb8FV2hf7Zsg6N4ow02'};
 var dlg=document.getElementById('payDlg'),fn=document.getElementById('fn'),bar=document.getElementById('fnBar'),stepn=document.getElementById('fnStep'),btn=document.getElementById('payBtn');
 var d={plan:'care'},q=new URLSearchParams(location.search);if(q.get('plan')==='own')d.plan='own';
 var STEP={start:[0,3,''],n1:[1,3,'Free preview'],n2:[2,3,'Free preview'],n3:[3,3,'Free preview'],p1:[1,3,'Go live'],p2:[2,3,'Go live'],p3:[3,3,'Go live']};
@@ -691,9 +692,9 @@ var p1=document.getElementById('fnP1');
 [].forEach.call(p1.seen,function(r){r.addEventListener('change',function(){document.getElementById('fnGuest').hidden=p1.seen.value!=='no'})});
 p1.addEventListener('submit',function(e){e.preventDefault();d.seen=p1.seen.value;d.biz=v(p1,'biz');d.name=v(p1,'name');d.phone=v(p1,'phone');d.email=v(p1,'email');go((q.get('plan')||d.picked)?'p3':'p2')});
 function summary(){var c=d.plan==='care',n=new Date();n.setMonth(n.getMonth()+1);
- var rows=[['Business',d.biz],['Signed by',d.name],['Preview',d.seen==='no'?'Not yet, build it first':'Seen it'],['Plan',c?'Care plan':'Own it']].concat(c?[['Setup','$450'],['First month','$149'],['Then','$149/month from '+n.toLocaleDateString('en-US',{month:'short',day:'numeric'})+', cancel anytime']]:[['Website, one time','$800'],['Monthly','None']]);
+ var rows=[['Business',d.biz],['Signed by',d.name],['Preview',d.seen==='no'?'Not yet, build it first':'Seen it'],['Plan',c?'Care plan':'Own it']].concat(c?[['Setup','$282'],['First month','$217'],['Then','$217/month from '+n.toLocaleDateString('en-US',{month:'short',day:'numeric'})+', cancel anytime']]:[['Website, one time','$599'],['Monthly','None']]);
  document.getElementById('fnPromise').innerHTML=d.seen==='no'?'<b>See-it-first promise:</b> I build your site and show it to you before it goes live. I make changes until it\u2019s right.':'<b>See-it-first promise:</b> if anything needs fixing before launch, I fix it.';
- var s=document.getElementById('fnSum');s.innerHTML='';rows.concat([['Due today',c?'$599':'$800']]).forEach(function(r,i,a){var x=document.createElement('div');if(i===a.length-1)x.className='tot';var l=document.createElement('span');l.textContent=r[0];var b=document.createElement('b');b.textContent=r[1];x.appendChild(l);x.appendChild(b);s.appendChild(x)});ok()}
+ var s=document.getElementById('fnSum');s.innerHTML='';rows.concat([['Due today',c?'$499':'$599']]).forEach(function(r,i,a){var x=document.createElement('div');if(i===a.length-1)x.className='tot';var l=document.createElement('span');l.textContent=r[0];var b=document.createElement('b');b.textContent=r[1];x.appendChild(l);x.appendChild(b);s.appendChild(x)});ok()}
 var p3=document.getElementById('fnP3');function ok(){btn.disabled=!p3.ok.checked}
 p3.addEventListener('change',ok);
 var slug=function(t){return (t||'').normalize('NFKD').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-').slice(0,50)};

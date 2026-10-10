@@ -204,8 +204,8 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
         <span class="eyebrow">What they'll see</span>
         <div class="pv-title" id="s-pv">Website for your business</div>
         <div class="pv-plans">
-          <div class="pv-plan rec"><b>Care plan</b><strong>$599</strong>then $149/mo</div>
-          <div class="pv-plan"><b>Own it</b><strong>$800</strong>one time</div>
+          <div class="pv-plan rec"><b>Care plan</b><strong>$499</strong>then $217/mo</div>
+          <div class="pv-plan"><b>Own it</b><strong>$599</strong>one time</div>
         </div>
       </div>
     </div>
@@ -228,19 +228,19 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
             <button type="button" class="plan" role="radio" data-plan="care" aria-checked="true">
               <span class="badge">Recommended</span>
               <div class="head"><span class="name">Care plan</span><span class="radio" aria-hidden="true"></span></div>
-              <div class="amt">$599<s>$799</s> <small>today</small></div>
-              <p class="then">then $149/month · cancel anytime</p>
+              <div class="amt">$499 <small>today</small></div>
+              <p class="then">setup + first month. Then $217/month · cancel anytime</p>
               <ul>
                 <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Hosting and your web address</li>
                 <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Anything breaks, it gets fixed</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Text changes: hours, prices, photos</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>No contract. Month to month</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Change anything, anytime: photos, menu, prices, hours, colors</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Help 24/7 by text. No contract</li>
               </ul>
               <div class="why">Best if you'd rather never deal with the website. Just text Addissu.</div>
             </button>
             <button type="button" class="plan" role="radio" data-plan="own" aria-checked="false">
               <div class="head"><span class="name">Own it</span><span class="radio" aria-hidden="true"></span></div>
-              <div class="amt">$800 <small>once</small></div>
+              <div class="amt">$599 <small>once</small></div>
               <p class="then">no monthly fee</p>
               <ul>
                 <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F7A63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Website built and handed over</li>
@@ -289,7 +289,7 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
       </aside>
     </div>
   </main>
-  <div class="bar" id="bar"><div class="t"><span id="bar-plan">Care plan</span><b id="bar-total">$599 today</b></div><button type="button" id="bar-go">Review and sign</button></div>
+  <div class="bar" id="bar"><div class="t"><span id="bar-plan">Care plan</span><b id="bar-total">$499 today</b></div><button type="button" id="bar-go">Review and sign</button></div>
 </div>
 
 <footer>Addissu Tsige · Malden, MA · 781-518-8769 · Agreement version <span class="ver"></span></footer>
@@ -297,8 +297,8 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
 <script>
 (() => {
   // Filled in by stripe-setup.js once the Stripe account exists.
-  const PAY = { care: 'https://buy.stripe.com/14A9AN8FVg85enQ6wd4ow00', own: 'https://buy.stripe.com/5kQ3cp5tJg8593w6wd4ow01' };
-  const VERSION = 'v1 (Oct 2026)';
+  const PAY = { care: 'https://buy.stripe.com/5kQ00de0f5tr7Zs9Ip4ow04', own: 'https://buy.stripe.com/5kQfZb8FV2hf7Zsg6N4ow02' };
+  const VERSION = 'v2 (Oct 10, 2026)';
 
   const $ = id => document.getElementById(id);
   const q = new URLSearchParams(location.search);
@@ -308,13 +308,13 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
   const PLANS = {
     care: {
       label: 'Care plan', eyebrow: 'Website care plan · month to month',
-      lines: [['Website setup', '<s style="color:#8A94A0;font-weight:500">$799</s> $599'], ['First month of care', 'Included']],
-      total: '$599', renew: 'Then $149 a month on the same card, starting next month. Cancel anytime.',
-      button: 'Sign and pay $599',
+      lines: [['Website setup', '$282'], ['First month of care', '$217']],
+      total: '$499', renew: 'Then $217 a month on the same card, starting next month. Cancel anytime.',
+      button: 'Sign and pay $499',
       terms: b => [
-        ['What you get', '<p>A website for ' + b + ', built and set up by Addissu. While you\'re on the plan, Addissu also:</p><ul><li>keeps the site online (hosting)</li><li>connects your web address</li><li>fixes anything that breaks</li><li>makes small changes when you text him: hours, prices, photos, specials, wording. Usually done within 2 business days.</li></ul>'],
+        ['What you get', '<p>A website for ' + b + ', built and set up by Addissu. While you\'re on the plan, Addissu also:</p><ul><li>keeps the site online (hosting)</li><li>connects your web address</li><li>fixes anything that breaks</li><li>makes changes anytime you text him: photos, menu, prices, hours, colors, specials, wording. Usually done within 2 business days.</li><li>answers your questions by text, 24/7</li></ul>'],
         ['When it goes live', '<p>Within 7 days of signing, after you check your info (phone, hours, services) is right.</p>'],
-        ['What it costs', '<p>$599 setup, charged today, which covers your first month. Then $149 a month on the same card, starting one month from today. Your $149 rate stays the same as long as you stay on the plan.</p>'],
+        ['What it costs', '<p>$499 charged today, which covers setup and your first month. Then $217 a month on the same card, starting one month from today. Your $217 rate stays the same as long as you stay on the plan.</p>'],
         ['Month to month', '<p>No long-term contract. Cancel anytime by text or email before your next billing date, and you won\'t be charged again. The setup fee and a month that has already started are not refunded.</p>'],
         ['If you cancel', '<p>Your site stays up until the end of the month you paid for. If you want to keep it after that, you can buy it outright instead.</p>'],
         ['Your stuff stays yours', '<p>Your business name, logo, photos and info belong to you. You give Addissu permission to use them on your site. If a new web address is needed, it\'s registered in your business\'s name.</p>'],
@@ -326,13 +326,13 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
     },
     own: {
       label: 'Own it', eyebrow: 'Website purchase · one time',
-      lines: [['Website, built and handed over', '$800'], ['30 days of fixes', 'Included']],
-      total: '$800', renew: 'One payment. No monthly fee.',
-      button: 'Sign and pay $800',
+      lines: [['Website, built and handed over', '$599'], ['30 days of fixes', 'Included']],
+      total: '$599', renew: 'One payment. No monthly fee.',
+      button: 'Sign and pay $599',
       terms: b => [
         ['What you get', '<p>A website for ' + b + ', built by Addissu, put online and handed over to you.</p>'],
         ['When it goes live', '<p>Within 7 days of signing, after you check your info (phone, hours, services) is right.</p>'],
-        ['What it costs', '<p>$800, charged once today. No monthly fee.</p>'],
+        ['What it costs', '<p>$599, charged once today. No monthly fee.</p>'],
         ['Fixes', '<p>For 30 days after it goes live, Addissu fixes anything he built wrong for free. After that, keeping the site running is up to you. Hosting and web address fees are yours to pay.</p>'],
         ['Changes later', '<p>Later changes are paid separately, or you can switch to the care plan anytime.</p>'],
         ['Your stuff stays yours', '<p>The site, your business name, logo, photos and info belong to you once paid. Any web address is registered in your business\'s name.</p>'],
@@ -407,7 +407,7 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
     $('o-total').textContent = P.total;
     $('o-renew').textContent = P.renew;
     $('g-go').textContent = P.button;
-    $('bar-plan').textContent = P.label + (plan === 'care' ? ' · then $149/mo' : '');
+    $('bar-plan').textContent = P.label + (plan === 'care' ? ' · then $217/mo' : '');
     $('bar-total').textContent = P.total + ' today';
     $('g-nolink').hidden = !!PAY[plan];
     ready();
@@ -435,7 +435,7 @@ footer{max-width:1080px;margin:0 auto;padding:0 16px 24px;font-size:12px;color:v
   $('g-go').addEventListener('click', () => {
     if ($('g-go').disabled) return;
     const stamp = today.toISOString().slice(0, 16).replace(/[-:T]/g, '') + 'UTC';
-    const ref = [slug(biz), slug($('g-name').value), slug($('g-title').value || 'Owner'), plan, stamp, 'v1'].join('__').slice(0, 200);
+    const ref = (q.get('rep') ? ['rep-' + slug(q.get('rep')).slice(0, 20)] : []).concat([slug(biz), slug($('g-name').value), slug($('g-title').value || 'Owner'), plan, stamp, 'v2']).join('__').slice(0, 200);
     const u = new URL(PAY[plan]);
     u.searchParams.set('client_reference_id', ref);
     if (q.get('e')) u.searchParams.set('prefilled_email', q.get('e'));
