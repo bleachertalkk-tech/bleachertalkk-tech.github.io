@@ -7,7 +7,7 @@
 <title>Addissu Tsige · Websites for Malden Businesses</title>
 <meta name="description" content="Websites for local businesses in Malden, MA. I build it first, you see it, and it goes live within a week. Own it for $599, or $499 to start and $217 a month with changes anytime.">
 <meta property="og:title" content="See your new website before you pay a cent">
-<meta property="og:description" content="Free website previews for Malden businesses. Live in 7 days if you love it. $0 if you don't.">
+<meta property="og:description" content="Websites for Malden businesses. Find the site we built for yours. Live in 7 days.">
 <meta property="og:image" content="https://bleachertalkk-tech.github.io/img/samples/supino-insurance-card.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
@@ -180,7 +180,18 @@ nav .btn{padding:14px 22px;font-size:14px}
 .pform input:focus{border-color:var(--blue);outline:none}
 .pform .btn{grid-column:1/-1;margin-top:8px;padding:24px}
 .pform .fine{grid-column:1/-1;text-align:center;color:#A7B0C6}
-#preview{text-align:center}#preview .lead{margin-inline:auto}
+#find{text-align:center}#find .lead{margin-inline:auto}
+.finder{max-width:640px;margin:26px auto 0;text-align:left}
+.finder input{width:100%;font:17px inherit;padding:15px 16px;border-radius:12px;border:2px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:inherit}
+.finder input::placeholder{color:rgba(255,255,255,.55)}
+.fchips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.fchips button{font:700 13px inherit;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:inherit;border-radius:999px;padding:8px 12px;cursor:pointer}
+.fchips button[aria-pressed="true"]{background:#fff;color:#0A0F1F;border-color:#fff}
+.flist{list-style:none;margin:0;padding:0;display:grid;gap:8px;max-height:420px;overflow-y:auto}
+.flist a{display:flex;justify-content:space-between;gap:12px;align-items:center;text-decoration:none;color:inherit;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:12px 14px}
+.flist a:hover{border-color:#fff}
+.flist b{font-weight:700}.flist span{font-size:13px;opacity:.7;white-space:nowrap}
+.flist a::after{content:"Open →";font-weight:700;font-size:13px;white-space:nowrap}
 
 /* faq + policies */
 details{border-top:1px solid var(--line);padding:4px 0}
@@ -330,11 +341,11 @@ nav .btn.pay:hover{background:var(--blue-tint)}
 </head>
 <body>
 
-<div class="ann">Free website previews for Malden businesses. No card, no contract. <a href="#preview">Get yours</a></div>
+<div class="ann">We built websites for 225 local businesses. Is yours one of them? <a href="#find">Find yours</a></div>
 <header id="hdr">
   <div class="in bar">
     <a class="brand" href="#top"><span class="mark" aria-hidden="true">A</span><span><b>Addissu Tsige</b><small>Websites for Malden businesses</small></span></a>
-    <nav><span class="links"><a href="#proof">Samples</a><a href="#offer">What you get</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a></span><button class="btn line pay" type="button" data-pay>Pay here</button><a class="btn main" href="#preview">Free preview</a></nav>
+    <nav><span class="links"><a href="#find">Find yours</a><a href="#proof">Samples</a><a href="#offer">What you get</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a></span><button class="btn line pay" type="button" data-pay>Pay here</button><a class="btn main" href="#find">Find my site</a></nav>
   </div>
 </header>
 
@@ -343,9 +354,9 @@ nav .btn.pay:hover{background:var(--blue-tint)}
   <div class="in">
     <span class="eyebrow">Malden, MA · Local business websites</span>
     <h1>Want more calls from people who <em>Google you?</em></h1>
-    <p class="sub">I build your new website first, from your Google listing. You see it before you pay a cent. Love it, and it's live in 7 days. Don't, and you owe nothing.</p>
-    <a class="btn main" href="#preview">Yes, build my free preview</a>
-    <span class="under">Takes 1 minute. No card.</span>
+    <p class="sub">I already built websites for local businesses across Malden, from their Google listings. Search your business to see yours. Love it, and it's live in 7 days.</p>
+    <a class="btn main" href="#find">Find my website</a>
+    <span class="under">Or <a href="#proof" style="color:inherit">see sites I've built</a>.</span>
   </div>
   <div class="fan" id="fan" aria-label="Sample sites I built">
     <a class="card c1" href="https://gregtully-demo.netlify.app/" target="_blank" rel="noopener"><span class="chrome"><i></i><i></i><i></i><span>Greg Tully · Real estate</span></span><img src="img/samples/greg-tully-card.jpg" width="960" height="600" alt="Greg Tully real estate sample site"><span class="tag">Open the site →</span></a>
@@ -357,7 +368,7 @@ nav .btn.pay:hover{background:var(--blue-tint)}
 
 <div class="stats">
   <div class="in">
-    <div class="stat"><b>150+</b><span>Free previews built</span></div>
+    <div class="stat"><b>225</b><span>Websites built</span></div>
     <div class="stat"><b>7 days</b><span>To go live</span></div>
     <div class="stat"><b>$0</b><span>Until you say yes</span></div>
     <div class="stat"><b>1 text</b><span>To reach me directly</span></div>
@@ -379,8 +390,8 @@ nav .btn.pay:hover{background:var(--blue-tint)}
     </div>
     <p class="dcap" id="dcap"><b>Greg Tully</b>Real estate · North Shore</p>
     <div class="dots" id="dots"></div>
-    <p class="note">These are free previews I made to show each owner. They are samples, not paying clients.</p>
-    <div class="again"><a class="btn main" href="#preview">Yes, build mine free</a></div>
+    <p class="note">Sites I designed for local businesses to show each owner. They are samples, not paying clients.</p>
+    <div class="again"><a class="btn main" href="#find">Find my website</a></div>
   </div>
 </section>
 
@@ -416,7 +427,7 @@ nav .btn.pay:hover{background:var(--blue-tint)}
       <div class="row"><span class="n">04</span><div><h3>Hours, open-now status and a map</h3><p>Nobody shows up when you're closed or calls to ask where you are.</p></div></div>
       <div class="row"><span class="n">05</span><div><h3>Quote and booking requests</h3><p>Customers send you what they need in a few taps. You get their name and number.</p></div></div>
       <div class="row"><span class="n">06</span><div><h3>Hosting, your web address and fixes</h3><p>On the care plan it's all handled. Something breaks, it gets fixed. New hours or prices are a text away.</p></div></div>
-      <div class="total"><span class="big">All of it, built before you pay.</span><a class="btn main" href="#preview">Build my free preview</a></div>
+      <div class="total"><span class="big">All of it, built before you pay.</span><a class="btn main" href="#find">Find my website</a></div>
     </div>
   </div>
 </section>
@@ -485,22 +496,21 @@ nav .btn.pay:hover{background:var(--blue-tint)}
   </div>
 </section>
 
-<section id="preview" class="dark">
+<section id="find" class="dark">
   <div class="in">
-    <span class="eyebrow">Free preview</span>
-    <h2>Want to see yours? <em>It's free.</em></h2>
-    <p class="lead">Three quick things and I'll start building. You'll get the link by text.</p>
-    <form class="pform" id="pform">
-      <label>Business name<input name="biz" required autocomplete="organization" placeholder="e.g. Atlas Collision"></label>
-      <label>Your name<input name="name" required autocomplete="name"></label>
-      <label>Cell phone (for the text)<input name="phone" type="tel" required autocomplete="tel" inputmode="tel"></label>
-      <label>Email <small>(optional)</small><input name="email" type="email" autocomplete="email"></label>
-      <button class="btn main" type="submit">Build my free preview</button>
-      <p class="fine">Free. No card needed. I'll text you the link.</p>
-    </form>
+    <span class="eyebrow">Our work</span>
+    <h2>Did I build one for you? <em>Search your business.</em></h2>
+    <p class="lead">Type your business name or street. Tap it to open the site I made for you.</p>
+    <div class="finder">
+      <input id="fq" type="search" placeholder="e.g. Atlas, pizza, Main St" aria-label="Search your business" autocomplete="off">
+      <div class="fchips" id="fchips"></div>
+      <ol class="flist" id="flist"></ol>
+      <p class="fine" id="fcount"></p>
+      <p class="fine">Not on the list? <a href="sms:+17815188769" style="color:inherit;font-weight:700">Text 781-518-8769</a> and I'll take a look.</p>
+    </div>
 
-    <div class="or" id="golive">Ready to order?</div>
-    <div class="paycta"><button class="btn main" type="button" data-pay>Pay here · go live</button><span>Seen your preview or not, you can order now. Pick a plan, sign and pay by card.</span></div>
+<div class="or" id="golive">Ready to order?</div>
+    <div class="paycta"><button class="btn main" type="button" data-pay>Pay here · go live</button><span>Found your site and want it live? Pick a plan, sign and pay by card.</span></div>
   </div>
 </section>
 
@@ -509,8 +519,8 @@ nav .btn.pay:hover{background:var(--blue-tint)}
     <span class="eyebrow">Questions</span>
     <h2>What owners <em>ask me.</em></h2>
     <div class="faq">
-      <details><summary>Why would you build it for free?</summary><p>Because showing beats telling. Most owners can't picture a new site until they see their own. If you like it, you keep it. If not, no hard feelings.</p></details>
-      <details><summary>What's the catch?</summary><p>There isn't one. No card, no contract, nothing to sign until you've seen your site and want it live.</p></details>
+      <details><summary>Why did you build a site for my business?</summary><p>Because showing beats telling. Most owners can't picture a new site until they see their own. If you like it, it can be live in 7 days. If not, no hard feelings.</p></details>
+      <details><summary>What's the catch?</summary><p>There isn't one. Nothing to sign or pay until you've seen your site and want it live.</p></details>
       <details><summary>What if I don't like it?</summary><p>Tell me what to change and I'll change it. If it's still not right, you walk away and owe nothing.</p></details>
       <details><summary>Do I need a website already?</summary><p>No. Plenty of businesses only have a Google listing. I build the site from that.</p></details>
       <details><summary>I already have a website. Can you still help?</summary><p>Yes. If yours is old, slow, or hard to use on a phone, I'll build a new one and you can compare them side by side.</p></details>
@@ -559,8 +569,8 @@ nav .btn.pay:hover{background:var(--blue-tint)}
       <h3>Where are you <em>at?</em></h3>
       <p>Pick one. It takes about a minute either way.</p>
       <div class="pick">
-        <button type="button" class="tile" data-go="n1"><b>I'm new here</b><span>Build my free preview. No card.</span></button>
-        <button type="button" class="tile" data-go="p1"><b>I'm ready to order</b><span>Pay and go live, with or without a preview.</span></button>
+        <a class="tile" href="#find" data-close><b>I'm new here</b><span>Find the website I built for you.</span></a>
+        <button type="button" class="tile" data-go="p1"><b>I'm ready to order</b><span>Pick a plan, sign and pay by card.</span></button>
       </div>
     </section>
 
@@ -596,15 +606,15 @@ nav .btn.pay:hover{background:var(--blue-tint)}
 
     <form class="st" data-s="p1" id="fnP1">
       <h3>Let's get your <em>site live.</em></h3>
-      <p>Seen your free preview already, or want to order without one? Both work.</p>
-      <div class="seen" role="radiogroup" aria-label="Have you seen your preview?">
-        <span>Have you seen your preview?</span>
+      <p>Seen the site I built for you, or want to order without seeing it? Both work.</p>
+      <div class="seen" role="radiogroup" aria-label="Have you seen your site?">
+        <span>Have you seen your site?</span>
         <label><input type="radio" name="seen" value="yes" checked> Yes</label>
         <label><input type="radio" name="seen" value="no"> Not yet</label>
       </div>
       <div class="guest" id="fnGuest" hidden>
-        <p><b>Want to see it first? It's free.</b> I build it, you look, you only pay if you love it.</p>
-        <button type="button" class="btn line light" data-go="n1">Build my free preview first</button>
+        <p><b>Want to see it first?</b> Search your business name to find the site I built.</p>
+        <a class="btn line light" href="#find" data-close>Find my website</a>
         <p class="or2">Or skip it and order now below. You'll still see your site before it goes live.</p>
       </div>
       <div class="two">
@@ -637,7 +647,7 @@ nav .btn.pay:hover{background:var(--blue-tint)}
     </form>
   </div>
 </dialog>
-<div class="mbar"><a class="btn line" href="sms:+17815188769">Text</a><button class="btn line" type="button" data-pay>Pay here</button><a class="btn main" href="#preview">Free preview</a></div>
+<div class="mbar"><a class="btn line" href="sms:+17815188769">Text</a><button class="btn line" type="button" data-pay>Pay here</button><a class="btn main" href="#find">Find my site</a></div>
 <script>
 (function(){
 var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -692,7 +702,7 @@ var p1=document.getElementById('fnP1');
 [].forEach.call(p1.seen,function(r){r.addEventListener('change',function(){document.getElementById('fnGuest').hidden=p1.seen.value!=='no'})});
 p1.addEventListener('submit',function(e){e.preventDefault();d.seen=p1.seen.value;d.biz=v(p1,'biz');d.name=v(p1,'name');d.phone=v(p1,'phone');d.email=v(p1,'email');go((q.get('plan')||d.picked)?'p3':'p2')});
 function summary(){var c=d.plan==='care',n=new Date();n.setMonth(n.getMonth()+1);
- var rows=[['Business',d.biz],['Signed by',d.name],['Preview',d.seen==='no'?'Not yet, build it first':'Seen it'],['Plan',c?'Care plan':'Own it']].concat(c?[['Setup','$282'],['First month','$217'],['Then','$217/month from '+n.toLocaleDateString('en-US',{month:'short',day:'numeric'})+', cancel anytime']]:[['Website, one time','$599'],['Monthly','None']]);
+ var rows=[['Business',d.biz],['Signed by',d.name],['Your site',d.seen==='no'?'Not seen yet':'Seen it'],['Plan',c?'Care plan':'Own it']].concat(c?[['Setup','$282'],['First month','$217'],['Then','$217/month from '+n.toLocaleDateString('en-US',{month:'short',day:'numeric'})+', cancel anytime']]:[['Website, one time','$599'],['Monthly','None']]);
  document.getElementById('fnPromise').innerHTML=d.seen==='no'?'<b>See-it-first promise:</b> I build your site and show it to you before it goes live. I make changes until it\u2019s right.':'<b>See-it-first promise:</b> if anything needs fixing before launch, I fix it.';
  var s=document.getElementById('fnSum');s.innerHTML='';rows.concat([['Due today',c?'$499':'$599']]).forEach(function(r,i,a){var x=document.createElement('div');if(i===a.length-1)x.className='tot';var l=document.createElement('span');l.textContent=r[0];var b=document.createElement('b');b.textContent=r[1];x.appendChild(l);x.appendChild(b);s.appendChild(x)});ok()}
 var p3=document.getElementById('fnP3');function ok(){btn.disabled=!p3.ok.checked}
@@ -706,13 +716,15 @@ p3.addEventListener('submit',function(e){e.preventDefault();if(btn.disabled)retu
 addEventListener('pageshow',function(){btn.textContent='Pay securely with Stripe';ok()});
 if(/^#(golive|pay)$/.test(location.hash))setTimeout(function(){if(q.get('plan'))d.picked=1;open('p1')},400);
 })();
-document.getElementById('pform').addEventListener('submit',function(e){
-  e.preventDefault();var f=this,v=function(n){return (f[n].value||'').trim()};
-  var msg='Hi Addissu, I want a free website preview.\nBusiness: '+v('biz')+'\nName: '+v('name')+'\nPhone: '+v('phone')+(v('email')?'\nEmail: '+v('email'):'');
-  var mobile=/iphone|ipad|android/i.test(navigator.userAgent);
-  location.href=mobile?'sms:+17815188769'+(/iphone|ipad/i.test(navigator.userAgent)?'&':'?')+'body='+encodeURIComponent(msg)
-    :'mailto:bleachertalkk@gmail.com?subject='+encodeURIComponent('Free preview: '+v('biz'))+'&body='+encodeURIComponent(msg);
-});
+(function(){var B=[["3 Amigos Bar & Grill","Restaurant","Malden","3-amigos-bar-and-grill"],["Access Dental: Ning Zhang, DMD","Dentist","Malden","access-dental-ning-zhang-dmd"],["Adonai Beauty Salon","Salon & barber","Malden","adonai-beauty-salon"],["American Dental","Dentist","Malden","american-dental"],["Atlantic Dental Partners","Dentist","Malden","atlantic-dental-partners"],["Azeza Dental","Dentist","Malden","azeza-dental"],["Aziz BarberShop","Salon & barber","Malden","aziz-barbershop"],["B2 Cafe","Restaurant","Malden","b2-cafe"],["Big A Sub Shop","Restaurant","Malden","big-a-sub-shop"],["Bond Realty Inc","Real estate","Malden","bond-realty-inc"],["Boston Family Dental","Dentist","Malden","boston-family-dental"],["Cesar's community barbershop","Salon & barber","Malden","cesar-s-community-barbershop"],["Cosmos Caribbean Restaurant","Restaurant","Malden","cosmos-caribbean-restaurant"],["D.R Beauty Salon","Salon & barber","Malden","d-r-beauty-salon"],["D2 Dental Associates","Dentist","Malden","d2-dental-associates"],["Dairy Delight","Restaurant","Malden","dairy-delight"],["Dell Realty","Real estate","Malden","dell-realty"],["DiPietro's Pizza Restaurant","Restaurant","Malden","dipietro-s-pizza-restaurant"],["District Kitchen","Restaurant","Malden","district-kitchen"],["Donut Villa Diner","Restaurant","Malden","donut-villa-diner"],["DP Saigon Subs","Restaurant","Malden","dp-saigon-subs"],["Dr. Patricia Wu, DMD","Dentist","Malden","dr-patricia-wu-dmd"],["El Mexsal Authentic Latin Food","Restaurant","Malden","el-mexsal-authentic-latin-food"],["El Potro Mexican Bar & Grill","Restaurant","Malden","el-potro-mexican-bar-and-grill"],["Evelyn Dongo Realtor","Real estate","Malden","evelyn-dongo"],["Exchange Street Bistro","Restaurant","Malden","exchange-street-bistro"],["Expert Eyebrow Threading","Salon & barber","Malden","expert-eyebrow-threading"],["Family Dental","Dentist","Malden","family-dental"],["Family Dental and Implant Center of Malden","Dentist","Malden","family-dental-and-implant-center-of-malden"],["Fernandez Style Barber Shop","Salon & barber","Malden","fernandez-style-barber-shop"],["FLAMING GRILL BUFFET (Malden Location)","Restaurant","Malden","flaming-grill-buffet-malden-location"],["Franny's","Restaurant","Malden","franny-s"],["Fresco's Roast Beef & Seafood","Restaurant","Malden","fresco-s-roast-beef-and-seafood"],["Gar Auto Body","Auto body","Malden","gar-auto-body"],["Giovannis Roast Beef and Pizza","Restaurant","Malden","giovannis-roast-beef-and-pizza"],["Habesha Restaurant","Restaurant","Malden","habesha-restaurant"],["HoneyHoney Dessert Cafe","Restaurant","Malden","honeyhoney-dessert-cafe"],["I Love Nails & Spa inc.","Salon & barber","Malden","i-love-nails-and-spa-inc"],["Impact Collision Center","Auto body","Malden","impact-collision-center"],["Jay's Pizza, Ice Cream and momo","Restaurant","Malden","jay-s-pizza-ice-cream-and-momo"],["Juan \"Tito\" Pabon","Real estate","Malden","juan-pabon"],["KASA","Restaurant","Malden","kasa"],["Kenneth Wen","Real estate","Malden","kenneth-wen"],["Kevin Hoang","Real estate","Malden","kevin-hoang"],["King Bibis Malden","Restaurant","Malden","king-bibis-malden"],["Kristin Gennetti of Century 21 North East","Real estate","Malden","kristin-gennetti"],["Lash Lash Mama","Salon & barber","Malden","lash-lash-mama"],["Ll studio barbershop","Salon & barber","Malden","ll-studio-barbershop"],["Logan Automotive Inc","Auto body","Malden","logan-automotive-inc"],["Lucky Fast Food","Restaurant","Malden","lucky-fast-food"],["Magnolia Dental","Dentist","Malden","magnolia-dental"],["Malden Broadway Auto Body Inc","Auto body","Malden","malden-broadway-auto-body-inc"],["Malden Cosmetic Dentistry & Implants","Dentist","Malden","malden-cosmetic-dentistry-and-implants"],["Maria's Beauty Salon","Salon & barber","Malden","maria-s-beauty-salon"],["Martin Tokos","Real estate","Malden","martin-tokos"],["Master Team Barbershop","Salon & barber","Malden","master-team-barbershop"],["Mineirão Steakhouse","Restaurant","Malden","mineirao-steakhouse"],["Ming's Seafood Restaurant INC","Restaurant","Malden","ming-s-seafood-restaurant-inc"],["Moreno Barber Shop","Salon & barber","Malden","moreno-barber-shop"],["Mulu Ethiopian Restaurant","Restaurant","Malden","mulu-ethiopian-restaurant"],["Mystic Station","Restaurant","Malden","mystic-station"],["Nails For You & Spa","Salon & barber","Malden","nails-for-you-and-spa"],["New York Pizza","Restaurant","Malden","new-york-pizza"],["Patrick's","Restaurant","Malden","patrick-s"],["Pisa Pizza Malden","Restaurant","Malden","pisa-pizza-malden"],["Pleasant Care Dental","Dentist","Malden","pleasant-care-dental"],["Premier Dental Center of Malden","Dentist","Malden","premier-dental-center-of-malden"],["Saigon NV","Restaurant","Malden","saigon-nv"],["Six Twenty-One Tavern & Grill","Restaurant","Malden","six-twenty-one-tavern-and-grill"],["SKY DENTAL","Dentist","Malden","sky-dental"],["Smart Dental: Dr. Jeong Lee, DMD","Dentist","Malden","smart-dental-dr-jeong-lee-dmd"],["Stoney Brook Family & Cosmetic Dentistry","Dentist","Malden","stoney-brook-family-and-cosmetic-dentistry"],["Tabrizi Dental Associates","Dentist","Malden","tabrizi-dental-associates"],["Ten Seconds","Restaurant","Malden","ten-seconds"],["Today's Collision Malden","Auto body","Malden","todays-collision-malden"],["Tony's Autobody Malden","Auto body","Malden","tony-s-autobody-malden"],["WM Body Work","Auto body","Malden","wm-body-work"],["Zuru Zuru Ramen and Donburi","Restaurant","Malden","zuru-zuru-ramen-and-donburi"],["4 Buyers Real Estate","Real estate","Cambridge","4-buyers-real-estate"],["A Perfect Detail","Auto body","Wakefield","a-perfect-detail"],["Abby Niles, REALTOR - Coldwell Banker Realty","Real estate","Cambridge","abby-niles"],["ADVANCED Automotive","Auto body","East Boston","advanced-automotive"],["Affordable Family Dental","Dentist","Chelsea","affordable-family-dental"],["Alberto Ovalle","Real estate","Cambridge","alberto-ovalle"],["Alex Auto Body Inc.","Auto body","Charlestown","alex-auto-body-inc"],["Alex Pinck, MBA, Realtor - Coldwell Banker Realty - Cambridge","Real estate","Cambridge","alex-pinck"],["All Care Dental Of Everett","Dentist","Everett","all-care-dental-of-everett"],["All Pro Dental","Dentist","Revere","all-pro-dental"],["Amanda R. James Leverage Real Estate group","Real estate","Cambridge","amanda-r-james-leverage-real-estate-group"],["Amicone Auto Body","Auto body","Saugus","amicone-auto-body"],["Anda Real Estate LLC","Real estate","Cambridge","anda-real-estate-llc"],["Annese Dental","Dentist","Revere","annese-dental"],["Anthony P. Parrella, DMD","Dentist","Somerville","anthony-p-parrella-dmd"],["Areeva Dental","Dentist","Everett","areeva-dental"],["Arlington Auto Detailing","Auto body","Arlington","arlington-auto-detailing"],["Arlington Center Auto Body","Auto body","Arlington","arlington-center-auto-body"],["Artisan Detailing","Auto body","Stoneham","artisan-detailing"],["Atlas Auto Body","Auto body","Revere","atlas-auto-body"],["Avalon Dental Center Cambridge","Dentist","Cambridge","avalon-dental-center-cambridge"],["Barbara Currier","Real estate","Cambridge","barbara-currier"],["Benoit Real Estate Group, LLC","Real estate","Somerville","benoit-real-estate-group-llc"],["Bob's Auto Body","Auto body","Revere","bob-s-auto-body"],["Broad Sound Real Estate","Real estate","Revere","broad-sound-real-estate"],["Calif Trinh - Real Estate - Compass","Real estate","Cambridge","calif-trinh"],["Camberville Dental","Dentist","Cambridge","camberville-dental"],["Cambridge Biomimetic & Microscope Dentistry","Dentist","Cambridge","cambridge-biomimetic-and-microscope-dentistry"],["Cambridge Family Dental","Dentist","Cambridge","cambridge-family-dental"],["Cambridge Family Dentistry","Dentist","Cambridge","cambridge-family-dentistry"],["Cambridge Sage Real Estate","Real estate","Cambridge","cambridge-sage-real-estate"],["Cambridgeside Dental Associates","Dentist","Cambridge","cambridgeside-dental-associates"],["Cancado Dental Digital","Dentist","Medford","cancado-dental-digital"],["Capitol Square Realty, Inc","Real estate","Arlington","capitol-square-realty-inc"],["CATALLO Team at Realty ONE Group Cosmopolitan","Real estate","Medford","catallo-team"],["Central Square Dental","Dentist","Cambridge","central-square-dental"],["CityRoots Realty","Real estate","Somerville","cityroots-realty"],["Clifton Verdieu","Real estate","Everett","clifton-verdieu"],["Costas Theocharidis","Real estate","Cambridge","costas-theocharidis"],["Currier, Lane, and Young","Real estate","Cambridge","currier-lane-and-young"],["D & R Realty","Real estate","Cambridge","d-r-realty"],["Dads Auto Detailing Services","Auto body","Cambridge","dads-auto-detailing-services"],["Dana Schaefer, REALTOR","Real estate","Cambridge","dana-schaefer"],["Dental Delights","Dentist","Medford","dental-delights"],["Dental Health International","Dentist","Chelsea","dental-health-international"],["Dental Services, P.C.","Dentist","Cambridge","dental-services-p-c"],["Dina's Realty, LLC","Real estate","Revere","dina-s-realty-llc"],["Doug Hills","Real estate","Cambridge","doug-hills"],["Douglas Paul Real Estate","Real estate","Cambridge","douglas-paul-real-estate"],["Dr. Isabelle Jaillet DMD","Dentist","Medford","dr-isabelle-jaillet-dmd"],["Eastern Ave Auto Body INC.","Auto body","Chelsea","eastern-ave-auto-body-inc"],["Edward Jones","Real estate","Cambridge","edward-jones"],["Element Dental","Dentist","Medford","element-dental"],["Ella Mobasseri @ Keller Williams Cambridge","Real estate","Cambridge","ella-mobasseri-keller-williams-cambridge"],["Eric Walbridge - Realtor at Sotheby's International Realty","Real estate","Cambridge","eric-walbridge"],["Euro Tech Auto Body, Inc.","Auto body","Cambridge","euro-tech-auto-body-inc"],["European Collision Works","Auto body","Revere","european-collision-works"],["Everett Dental Associates","Dentist","Everett","everett-dental-associates"],["Everett Dental Wellness","Dentist","Everett","everett-dental-wellness"],["Evermont Real Estate","Real estate","Cambridge","evermont-real-estate"],["Fayth Cregg, REALTOR with Leading Edge Real Estate","Real estate","Cambridge","fayth-cregg"],["First Dental","Dentist","Medford","first-dental"],["Flyhomes","Real estate","Cambridge","flyhomes"],["Francis Bane DMD","Dentist","Cambridge","francis-bane-dmd"],["Gail Roberts, Ed Feijo & Team","Real estate","Cambridge","gail-roberts"],["Global Dental","Dentist","Everett","global-dental"],["Goldpath Real Estate Group","Real estate","Revere","goldpath-real-estate-group"],["Grace Dental Care","Dentist","Medford","grace-dental-care"],["Great Smiles Dental","Dentist","Everett","great-smiles-dental"],["Guy Contaldi, Realtor-Remax Andrew Realty","Real estate","Medford","guy-contaldi"],["Holden Lewis - Lewis Carroll Team - Compass Realty, Cambridge, MA","Real estate","Cambridge","holden-lewis"],["Homes For Dreams","Real estate","Revere","homes-for-dreams"],["Horizon Capital Realty","Real estate","Cambridge","horizon-capital-realty"],["Inspired Dental Studio of Medford","Dentist","Medford","inspired-dental-studio-of-medford"],["Jason Niles, REALTOR - Coldwell Banker Realty - Cambridge","Real estate","Cambridge","jason-niles"],["JC Dental","Dentist","Revere","jc-dental"],["JJ Gallant at Dina's Realty","Real estate","Revere","jj-gallant"],["JM Auto Body","Auto body","Wakefield","jm-auto-body"],["John Miro Realtor @ Century 21 North East","Real estate","Revere","john-miro"],["JR Associates","Real estate","Cambridge","jr-associates"],["Kappa Dental Group","Dentist","Somerville","kappa-dental-group"],["Karen Morgan, Coldwell Banker Realty - Cambridge, MA","Real estate","Cambridge","karen-morgan"],["Kendall Square Dental Associates","Dentist","Cambridge","kendall-square-dental-associates"],["Liz & Ellie Local, Liz Lyster & Ellie Botshon, Compass","Real estate","Cambridge","liz-ellie-local-liz-lyster-ellie-botshon-compass"],["Logan Jacobs, Greater Boston Realtor","Real estate","Cambridge","logan-jacobs"],["Lorna Lally DMD","Dentist","Somerville","lorna-lally-dmd"],["Mac’s Auto Body","Auto body","Somerville","mac-s-auto-body"],["Main street Dentistry and Orthodontics","Dentist","Medford","main-street-dentistry-and-orthodontics"],["Maria Fabiano - Maria Fabiano Realty","Real estate","Medford","maria-fabiano"],["Mario's Auto Body","Auto body","Revere","mario-s-auto-body"],["Matt Slowik","Real estate","Cambridge","matt-slowik"],["Max Dental Care Somerville","Dentist","Somerville","max-dental-care-somerville"],["Medford Family Dental Care, Dr Zahka","Dentist","Medford","medford-family-dental-care-dr-zahka"],["Medford Main Street Dental","Dentist","Medford","medford-main-street-dental"],["Medford Square Dentistry & Implants","Dentist","Medford","medford-square-dentistry-and-implants"],["Mena Boone - Keller Williams Realty","Real estate","Cambridge","mena-boone"],["Merrill Berkery","Real estate","Cambridge","merrill-berkery"],["Michael Glenmullen, Realtor, Coldwell Banker","Real estate","Cambridge","michael-glenmullen"],["Mystic Dental Studio","Dentist","Chelsea","mystic-dental-studio"],["Nathan Ingham, Coldwell Banker Realty - Cambridge, MA","Real estate","Cambridge","nathan-ingham"],["New England Collision Center","Auto body","Somerville","new-england-collision-center"],["NEW ENGLAND DETAILING AND TIRE CENTER","Auto body","Lynn","new-england-detailing-and-tire-center"],["Nick Schmalensee- Vice President at Compass","Real estate","Cambridge","nick-schmalensee"],["Nickole Auto Body, Inc.","Auto body","Saugus","nickole-auto-body-inc"],["Page Family Dental","Dentist","Revere","page-family-dental"],["Peggy Pratt, Realtor","Real estate","Revere","peggy-pratt"],["proActive RE Team","Real estate","Cambridge","proactive-re-team"],["Prospect Dental Group - Cambridge","Dentist","Cambridge","prospect-dental-group-cambridge"],["Ray Suppa - Coldwell Banker Realty","Real estate","Cambridge","ray-suppa"],["Reading Square Auto Body","Auto body","Reading","reading-square-auto-body"],["Realtor Paloma Correa","Real estate","Everett","realtor-paloma-correa"],["Renato Carpinito DMD","Dentist","Medford","renato-carpinito-dmd"],["Revere Family Dental","Dentist","Revere","revere-family-dental"],["Riverside Automobile Detail","Auto body","Medford","riverside-automobile-detail"],["Rob Ramsdell at Gibson Sotheby’s International Realty","Real estate","Cambridge","rob-ramsdell"],["RS Dental","Dentist","Everett","rs-dental"],["Sandrine Deschaux, RE/MAX Real Estate Center","Real estate","Cambridge","sandrine-deschaux"],["Smiles By Rosie","Dentist","Somerville","smiles-by-rosie"],["Smiles Forever","Dentist","Medford","smiles-forever"],["Smiles Over Cambridge","Dentist","Cambridge","smiles-over-cambridge"],["Somerville Auto Center","Auto body","Somerville","somerville-auto-center"],["Somerville Family Dental","Dentist","Somerville","somerville-family-dental"],["South Medford Auto Body & Repair Shop","Auto body","Medford","south-medford-auto-body-and-repair-shop"],["Splice Realty","Real estate","Cambridge","splice-realty"],["Steve Bremis Realty Group","Real estate","Somerville","steve-bremis-realty-group"],["Stoneham Auto Detailing","Auto body","Stoneham","stoneham-auto-detailing"],["Super Detail Auto Body","Auto body","Melrose","super-detail-auto-body"],["Sweet Spot Dental of Cambridge","Dentist","Cambridge","sweet-spot-dental-of-cambridge"],["Tamela Roche, RE/MAX Real Estate Center","Real estate","Cambridge","tamela-roche"],["Thalia Tringo Real Estate","Real estate","Somerville","thalia-tringo-real-estate"],["The Classic Smile","Dentist","Medford","the-classic-smile"],["The Denman Group","Real estate","Cambridge","the-denman-group"],["The detail shop","Auto body","Medford","the-detail-shop"],["The Petrowsky Jones Group","Real estate","Cambridge","the-petrowsky-jones-group"],["The Restorative Dental Group of Cambridge","Dentist","Cambridge","the-restorative-dental-group-of-cambridge"],["The Team - Real Estate Advisors","Real estate","Cambridge","the-team"],["Thiago Mendes","Real estate","Somerville","thiago-mendes"],["TMC Detailing & Ceramic Coating Stoneham","Auto body","Stoneham","tmc-detailing-and-ceramic-coating-stoneham"],["Tom Sheehan - Compass","Real estate","Cambridge","tom-sheehan"],["Torii Homes","Real estate","Cambridge","torii-homes"],["Toucan Collision Repair Auto Body Shop","Auto body","Somerville","toucan-collision-repair-auto-body-shop"],["Tracy Boehme Realty Group","Real estate","Cambridge","tracy-boehme-realty-group"],["Ultimate Dental of Cambridge","Dentist","Cambridge","ultimate-dental-of-cambridge"],["Unity Realty","Real estate","Medford","unity-realty"],["Walker Dental","Dentist","Cambridge","walker-dental"],["Webster Auto Body","Auto body","Somerville","webster-auto-body"],["Windsor Realty","Real estate","Cambridge","windsor-realty"]],q=document.getElementById('fq'),ol=document.getElementById('flist'),ch=document.getElementById('fchips'),ct=document.getElementById('fcount'),k='All';
+['All','Restaurant','Auto body','Salon & barber','Dentist','Real estate'].forEach(function(t){var b=document.createElement('button');b.type='button';b.textContent=t;b.onclick=function(){k=t;draw()};ch.appendChild(b)});
+function draw(){var v=(q.value||'').toLowerCase().trim();[].forEach.call(ch.children,function(b){b.setAttribute('aria-pressed',b.textContent===k?'true':'false')});
+ var r=B.filter(function(x){return (k==='All'||x[1]===k)&&(!v||(x[0]+' '+x[1]+' '+x[2]).toLowerCase().indexOf(v)>-1)});ol.innerHTML='';
+ r.slice(0,60).forEach(function(x){var li=document.createElement('li'),a=document.createElement('a');a.href=x[3]+'/';a.target='_blank';a.rel='noopener';var n=document.createElement('b');n.textContent=x[0];var m=document.createElement('span');m.textContent=x[1]+(x[2]?' · '+x[2]:'');var w=document.createElement('div');w.appendChild(n);w.appendChild(document.createElement('br'));w.appendChild(m);a.appendChild(w);li.appendChild(a);ol.appendChild(li)});
+ ct.textContent=r.length?('Showing '+Math.min(r.length,60)+' of '+r.length+(r.length>60?'. Type to narrow it down.':'')):'No match. Try one word from your business name.'}
+q.addEventListener('input',draw);draw();
+[].forEach.call(document.querySelectorAll('#payDlg a[href="#find"]'),function(a){a.addEventListener('click',function(){var d=document.getElementById('payDlg');if(d.close)d.close();else d.removeAttribute('open')})});
+})();
 </script>
 </body>
 </html>
